@@ -1,5 +1,13 @@
 module.exports = [
   {
+    slug: "state-wide",
+    name: "State-wide",
+    description: "State-wide races and ballot questions — all Maine voters",
+    county: null,
+    electionDate: "2026-06-09",
+    logo: null
+  },
+  {
     slug: "south-portland",
     name: "South Portland",
     description: "City of South Portland, Maine",

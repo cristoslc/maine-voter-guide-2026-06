@@ -1,7 +1,8 @@
 module.exports = [
   // ── US SENATE - DEMOCRATIC ─────────────────────────────────────────────────
+
   {
-    jurisdiction: "south-portland",
+    jurisdiction: "state-wide",
     slug: "us-senate-democratic",
     title: "US Senate — Democratic Primary",
     office: "US Senate",
@@ -88,7 +89,7 @@ module.exports = [
 
   // ── US SENATE - REPUBLICAN ─────────────────────────────────────────────────
   {
-    jurisdiction: "south-portland",
+    jurisdiction: "state-wide",
     slug: "us-senate-republican",
     title: "US Senate — Republican Primary",
     office: "US Senate",
@@ -149,7 +150,7 @@ module.exports = [
 
   // ── GOVERNOR - DEMOCRATIC ──────────────────────────────────────────────────
   {
-    jurisdiction: "south-portland",
+    jurisdiction: "state-wide",
     slug: "governor-democratic",
     title: "Governor — Democratic Primary",
     office: "Governor",
@@ -310,7 +311,7 @@ module.exports = [
 
     // ── GOVERNOR - REPUBLICAN ──────────────────────────────────────────────────
   {
-    jurisdiction: "south-portland",
+    jurisdiction: "state-wide",
     slug: "governor-republican",
     title: "Governor — Republican Primary",
     office: "Governor",
@@ -484,7 +485,7 @@ module.exports = [
 
   // ── CD1 - REPUBLICAN ───────────────────────────────────────────────────────
   {
-    jurisdiction: "south-portland",
+    jurisdiction: "state-wide",
     slug: "cd1-republican",
     title: "Congressional District 1 — Republican Primary",
     office: "US Representative",
