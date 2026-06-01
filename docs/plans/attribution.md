@@ -68,18 +68,6 @@ Software/tools used in production:
 ### 6. Prior Art and Inspirations
 Projects that influenced methodology, design, or scope:
 
-- **South Portland School Budget FY27 Analysis** (`~/projects/south-portland-school-budget-FY27/`)
-  - Contributed: PDF extraction pipeline for municipal documents
-  - Reused: Budget-line normalization approach
-  
-- **South Portland School Board Review** (`~/projects/south-portland-school-board-review/`)
-  - Contributed: Candidate background research framework
-  - Reused: Structured comparison table pattern
-
-- **SoPo ALPR Awareness** (`~/projects/sopo-alpr-awareness/`)
-  - Contributed: Public records request templates and tracking
-  - Reused: Evidence-pool accumulation methodology
-
 - **Ballotpedia** — structural inspiration for candidate comparison tables; we differ by being local-depth rather than national-breadth
 
 - **Project Vote Smart** — citation density standard and fact-checking methodology

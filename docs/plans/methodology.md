@@ -22,7 +22,7 @@ A public-facing methodology statement explaining how this voter guide is researc
 Describe the actual tools and workflow:
 
 - **candidate-website-crawler**: Python script (`tools/crawl-candidates.py`) that fetches campaign platform pages, extracts text, and diffs for changes. Saves snapshots to `research/snapshots/`.
-- **research-keeper (rk)**: CLI tool at `~/code/research-keeper/` for ingesting, tagging, and querying sources. Project library at `~/projects/boswell/`.
+- **research-keeper (rk)**: CLI tool at `https://github.com/cristoslc/research-keeper/` for ingesting, tagging, and querying sources.
 - **media-summary skill**: Automated download/transcription/summarization of YouTube debates, podcasts, news articles. Output goes to `research/media-summaries/`.
 - **Upstream project pooling**: 
   - `~/projects/south-portland-school-board-review/`
@@ -32,7 +32,7 @@ Describe the actual tools and workflow:
 - **Manual verification**: All claims checked against at least two independent sources before publication
 
 ### 3. Drafting Process
-- Each race starts with a **research spike** — 2-4 hour focused session collecting sources
+- Each race starts with a **research spike** — focused session collecting sources
 - **Structured data entry** into `_data/races.js` following the race→party→candidate→primary/secondary schema
 - **Platform positions** extracted from campaign sites/issue pages (not marketing copy)
 - **Controversies** require multiple corroborating sources; single-source allegations noted as "according to [source]"

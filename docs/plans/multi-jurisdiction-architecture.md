@@ -13,7 +13,7 @@ Current architecture assumes a single jurisdiction (South Portland). User wants 
 
 ## Proposed Architecture
 
-### Option A: Single Build with Jurisdiction Prefix (Recommended)
+### [APPROVED] Option A: Single Build with Jurisdiction Prefix (Recommended)
 
 Keep one Eleventy build. Add `jurisdiction` field to race data.
 
@@ -45,12 +45,12 @@ race = {
 **Pros:** One build, one deploy, shared assets
 **Cons:** All jurisdictions build together; can't deploy one without others
 
-### Option B: Worktree/Dynamic Build per Jurisdiction
+### ~~Option B: Worktree/Dynamic Build per Jurisdiction~~
 
-Each jurisdiction gets its own git branch/worktree with jurisdiction-specific data.
+~~Each jurisdiction gets its own git branch/worktree with jurisdiction-specific data.~~
 
-**Pros:** Independent deployments, jurisdiction-specific customization
-**Cons:** Duplicated template/CSS code, harder to maintain consistency
+~~**Pros:** Independent deployments, jurisdiction-specific customization~~
+~~**Cons:** Duplicated template/CSS code, harder to maintain consistency~~
 
 ### Recommended: Option A with Jurisdiction Switching
 
