@@ -58,4 +58,13 @@ pagination:
   </a>
 {% endif %}
 {% endfor %}
+{% for b in ballotQuestions %}
+{% if b.jurisdiction == jurisdiction.slug %}
+  <a href="{{ b.url }}" class="race-card">
+    <span class="card-tag referendum">{{ b.office }}</span>
+    <h2>{{ b.title }}</h2>
+    <p class="card-sub">{{ b.voting }}</p>
+  </a>
+{% endif %}
+{% endfor %}
 </div>
