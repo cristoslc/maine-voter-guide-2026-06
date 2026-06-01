@@ -1,8 +1,14 @@
+const fs = require('fs');
+
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "public/css": "css" });
   eleventyConfig.addPassthroughCopy({ "public/*.png": "./" });
   eleventyConfig.addPassthroughCopy({ "public/*.ico": "./" });
-  eleventyConfig.addPassthroughCopy({ ".nojekyll": "./" });
+
+  // Create .nojekyll after build to prevent GitHub Pages from running Jekyll
+  eleventyConfig.on('eleventy.after', () => {
+    fs.writeFileSync('./_site/.nojekyll', '');
+  });
 
   const prefix = process.env.PATH_PREFIX || "/";
   if (prefix !== "/") {
