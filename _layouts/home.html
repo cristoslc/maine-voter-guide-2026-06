@@ -1,6 +1,8 @@
 ---
 layout: base
 templateEngineOverride: njk,md
+eleventyComputed:
+  title: "{% if jurisdiction %}{{ jurisdiction.name }} Voter Guide{% else %}Maine Voter Guide{% endif %}"
 ---
 
 {{ content }}

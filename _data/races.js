@@ -1,6 +1,7 @@
 module.exports = [
   // ── US SENATE - DEMOCRATIC ─────────────────────────────────────────────────
   {
+    jurisdiction: "south-portland",
     slug: "us-senate-democratic",
     title: "US Senate — Democratic Primary",
     office: "US Senate",
@@ -87,6 +88,7 @@ module.exports = [
 
   // ── US SENATE - REPUBLICAN ─────────────────────────────────────────────────
   {
+    jurisdiction: "south-portland",
     slug: "us-senate-republican",
     title: "US Senate — Republican Primary",
     office: "US Senate",
@@ -147,6 +149,7 @@ module.exports = [
 
   // ── GOVERNOR - DEMOCRATIC ──────────────────────────────────────────────────
   {
+    jurisdiction: "south-portland",
     slug: "governor-democratic",
     title: "Governor — Democratic Primary",
     office: "Governor",
@@ -307,6 +310,7 @@ module.exports = [
 
     // ── GOVERNOR - REPUBLICAN ──────────────────────────────────────────────────
   {
+    jurisdiction: "south-portland",
     slug: "governor-republican",
     title: "Governor — Republican Primary",
     office: "Governor",
@@ -480,6 +484,7 @@ module.exports = [
 
   // ── CD1 - REPUBLICAN ───────────────────────────────────────────────────────
   {
+    jurisdiction: "south-portland",
     slug: "cd1-republican",
     title: "Congressional District 1 — Republican Primary",
     office: "US Representative",
@@ -561,6 +566,7 @@ module.exports = [
 
   // ── STATE SENATE 29 - DEMOCRATIC ───────────────────────────────────────────
   {
+    jurisdiction: "south-portland",
     slug: "state-senate-29-democratic",
     title: "State Senate District 29 — Democratic Primary",
     office: "State Senator",
@@ -608,6 +614,7 @@ module.exports = [
 
   // ── STATE SENATE 29 - REPUBLICAN ──────────────────────────────────────────
   {
+    jurisdiction: "south-portland",
     slug: "state-senate-29-republican",
     title: "State Senate District 29 — Republican Primary",
     office: "State Senator",
@@ -643,6 +650,7 @@ module.exports = [
 
   // ── STATE HOUSE - DEMOCRATIC ───────────────────────────────────────────────
   {
+    jurisdiction: "south-portland",
     slug: "state-rep-democratic",
     title: "State Representative — Democratic Primaries",
     office: "State Representative",
@@ -711,6 +719,7 @@ module.exports = [
 
   // ── STATE HOUSE - REPUBLICAN ───────────────────────────────────────────────
   {
+    jurisdiction: "south-portland",
     slug: "state-rep-republican",
     title: "State Representative — Republican Primaries",
     office: "State Representative",

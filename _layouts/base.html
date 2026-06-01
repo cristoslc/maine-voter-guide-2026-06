@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Nonpartisan voter guide for South Portland, Maine — June 2026 election. Candidate information, ballot questions, polling locations, and key dates.">
   <meta name="color-scheme" content="light dark">
-  <title>{{ title }} — South Portland Voter Guide</title>
+  <title>{% if title %}{{ title }}{% else %}Voter Guide{% endif %} — Maine Voter Guide</title>
   <link rel="stylesheet" href="{{ '/css/style.css' | url }}">
   <script>
-    (function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})();
+    (function(){var t=localStorage.getItem('theme');if(!t){t='light';localStorage.setItem('theme',t);}document.documentElement.setAttribute('data-theme',t);})();
   </script>
 </head>
 <body>
@@ -16,7 +16,7 @@
 
   <header class="site-header">
     <div class="container">
-      <a href="{{ '/' | url }}" class="site-title">South Portland Voter Guide</a>
+      <a href="{{ '/' | url }}" class="site-title">Maine Voter Guide</a>
       <nav aria-label="Main">
         <ul class="nav-links">
           <li><a href="{{ '/' | url }}">Home</a></li>
@@ -34,7 +34,7 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p>South Portland Voter Guide — June 2026. Nonpartisan.</p>
+      <p>Maine Voter Guide — June 2026. Nonpartisan.</p>
       <p>Sources: <a href="https://www.maine.gov/sos/elections-voting">Maine Secretary of State</a>, <a href="https://www.southportland.org/195/Elections-Voter-Registration">South Portland City Clerk</a>.</p>
       <p>This guide is an independent project. It does not endorse any candidate.</p>
     </div>

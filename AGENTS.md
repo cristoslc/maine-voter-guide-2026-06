@@ -32,3 +32,13 @@ Agent-specific detail lives in `.agents/agents-md-detail/`:
 
 - `project-navigation.md` — How to orient in this repo
 - `content-guidelines.md` — Nonpartisan writing standards, sourcing rules
+
+## Plans Require Explicit User Approval
+
+Any plan document written to `docs/plans/` (e.g., architecture changes, methodology drafts, attribution policies) **requires explicit user approval** before implementation. The agent must:
+
+1. Write the plan and save it to `docs/plans/`
+2. **Wait for the user to review and approve**
+3. Only then execute the planned changes
+
+Approval must come from the user, not from any automated or plugin-based system. Do not self-approve or skip the review step.
