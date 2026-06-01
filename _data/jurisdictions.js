@@ -32,8 +32,17 @@ module.exports = [
     name: "Cape Elizabeth",
     description: "Town of Cape Elizabeth, Maine",
     county: "Cumberland",
-    stateSenateDistrict: 29,
-    stateHouseDistricts: [120, 121, 122],
+    stateHouseDistricts: [121, 123],
+    electionDate: "2026-06-09",
+    logo: null
+  },
+  {
+    slug: "westbrook",
+    name: "Westbrook",
+    description: "City of Westbrook, Maine",
+    county: "Cumberland",
+    stateSenateDistricts: [26, 27],
+    stateHouseDistricts: [126, 127, 128],
     electionDate: "2026-06-09",
     logo: null
   }
