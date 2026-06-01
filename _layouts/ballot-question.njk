@@ -13,7 +13,7 @@ templateEngineOverride: njk,md
 
 <div class="ballot-group">
   <div class="ballot-primary">
-    {{ content }}
+    {{ content | safe }}
   </div>
 
   {% if sidebar %}
