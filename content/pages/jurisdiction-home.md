@@ -15,7 +15,11 @@ pagination:
 </div>
 
 <div class="callout">
-  <p><strong>Your jurisdiction:</strong> {{ jurisdiction.name }}, {{ jurisdiction.county }} County. Not your city? <a href="{{ '/' | url }}">Choose a different jurisdiction →</a></p>
+  <p><strong>Your jurisdiction:</strong> {{ jurisdiction.name }}{% if jurisdiction.county %}, {{ jurisdiction.county }} County{% endif %}. Not your city? <a href="{{ '/' | url }}">Choose a different jurisdiction →</a></p>
+</div>
+
+<div class="callout">
+  <p><strong>AI research project — read with care.</strong> This guide was produced by an AI-assisted research project. It is a private work, not affiliated with the League of Women Voters, State of Maine, or any other official organization. Information may contain errors, omissions, or unintended bias. Always cross-check candidate positions and ballot question details with primary sources before voting.</p>
 </div>
 
 ## Democratic Primary Ballot
