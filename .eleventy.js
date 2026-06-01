@@ -2,6 +2,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "public/css": "css" });
   eleventyConfig.addPassthroughCopy({ "public/*.png": "./" });
   eleventyConfig.addPassthroughCopy({ "public/*.ico": "./" });
+  eleventyConfig.addPassthroughCopy({ ".nojekyll": "./" });
 
   const prefix = process.env.PATH_PREFIX || "/";
   if (prefix !== "/") {
