@@ -1,0 +1,202 @@
+# June 9, 2026 — State Primary Election & School Budget Referendum
+# South Portland, Maine
+# Source: Maine Secretary of State, Primary Candidate List 3/16/2026 (FINAL)
+# Source: South Portland City Clerk
+
+election:
+  id: 2026-06-primary
+  title: "June 2026 State Primary Election & School Budget Referendum"
+  date: 2026-06-09
+  jurisdiction: "South Portland, Cumberland County, Maine"
+  type: primary
+
+key-dates:
+  - date: 2026-05-11
+    description: Absentee ballots available; in-person absentee voting begins at City Hall
+    source: "South Portland City Clerk"
+    type: absentee-voting
+  - date: 2026-05-19
+    description: Last day to register online or by mail (by 5 PM)
+    source: "Maine Secretary of State"
+    type: registration
+  - date: 2026-06-02
+    description: Last day to register at BMV
+    source: "Maine Secretary of State"
+    type: registration
+  - date: 2026-06-04
+    description: Last day to request absentee ballot
+    source: "South Portland City Clerk"
+    type: absentee-request
+  - date: 2026-06-09
+    description: Election Day — polls open 7 AM to 8 PM
+    source: "South Portland City Clerk"
+    type: election-day
+
+races:
+  - id: us-senate-d
+    title: "US Senator — Democratic Primary"
+    jurisdiction: Statewide
+    type: partisan
+    seats-available: 1
+    candidates:
+      - id: platner-graham
+        name: "Graham C. Platner"
+        party: D
+        residence: Sullivan
+        campaign-website: "https://www.grahamforsenate.com"
+      - id: costello-david
+        name: "David A. Costello"
+        party: D
+        residence: Brunswick
+
+  - id: governor-d
+    title: "Governor — Democratic Primary"
+    jurisdiction: Statewide
+    type: partisan
+    rcv: true
+    seats-available: 1
+    candidates:
+      - id: bellows-shenna
+        name: "Shenna Bellows"
+        party: D
+        residence: Manchester
+      - id: jackson-troy
+        name: "Troy Dale Jackson"
+        party: D
+        residence: Allagash
+      - id: king-angus-iii
+        name: "Angus King III"
+        party: D
+        residence: Portland
+      - id: pingree-hannah
+        name: "Hannah M. Pingree"
+        party: D
+        residence: North Haven
+      - id: shah-nirav
+        name: "Nirav D. Shah"
+        party: D
+        residence: Brunswick
+
+  - id: governor-r
+    title: "Governor — Republican Primary"
+    jurisdiction: Statewide
+    type: partisan
+    seats-available: 1
+    candidates:
+      - id: bush-jonathan
+        name: "Jonathan J. Bush"
+        party: R
+        residence: Cape Elizabeth
+      - id: charles-robert
+        name: "Robert B. Charles"
+        party: R
+        residence: Leeds
+      - id: jones-david
+        name: "David J. Jones"
+        party: R
+        residence: Falmouth
+      - id: libby-james
+        name: "James D. Libby"
+        party: R
+        residence: Standish
+      - id: mason-garrett
+        name: "Garrett Paul Mason"
+        party: R
+        residence: Lisbon
+      - id: mccarthy-owen
+        name: "Owen Z. McCarthy"
+        party: R
+        residence: Gorham
+      - id: midgley-benjamin
+        name: "Benjamin T. Midgley"
+        party: R
+        residence: Kennebunkport
+      - id: wessels-robert
+        name: "Robert J. Wessels"
+        party: R
+        residence: Paris
+
+  - id: cd1-r
+    title: "US Representative CD1 — Republican Primary"
+    jurisdiction: "Congressional District 1"
+    type: partisan
+    seats-available: 1
+    candidates:
+      - id: pietrowicz-joshua
+        name: "Joshua James Pietrowicz"
+        party: R
+        residence: New Gloucester
+      - id: russell-ronald
+        name: "Ronald C. Russell"
+        party: R
+        residence: Kennebunkport
+
+  - id: ss29
+    title: "State Senator — District 29"
+    jurisdiction: "Cape Elizabeth, South Portland, part of Scarborough"
+    type: partisan
+    seats-available: 1
+    notes: "Anne Carney (D) is incumbent"
+    candidates:
+      - id: carney-anne
+        name: "Anne M. Carney"
+        party: D
+        residence: Cape Elizabeth
+        incumbent: true
+        campaign-website: "https://www.anneformaine.com"
+      - id: maietta-vincent
+        name: "Vincent A. Maietta"
+        party: R
+        residence: South Portland
+
+  - id: sr120
+    title: "State Representative — District 120"
+    jurisdiction: "South Portland"
+    type: partisan
+    seats-available: 1
+    notes: "Open seat — Rep. Deqa Dhalac (D) not seeking re-election"
+    candidates:
+      - id: shedlock-jason
+        name: "Jason J. Shedlock"
+        party: D
+        residence: South Portland
+        campaign-website: "https://www.jasonshedlock.me"
+      - id: dougherty-michael
+        name: "Michael J. Dougherty"
+        party: R
+        residence: South Portland
+
+  - id: sr121
+    title: "State Representative — District 121"
+    jurisdiction: "South Portland"
+    type: partisan
+    seats-available: 1
+    candidates:
+      - id: cameron-robert
+        name: "Robert Cameron"
+        party: D
+        residence: South Portland
+      - id: smith-meagan
+        name: "Meagan J. Smith"
+        party: R
+        residence: South Portland
+
+  - id: sr122
+    title: "State Representative — District 122"
+    jurisdiction: "South Portland"
+    type: partisan
+    seats-available: 1
+    notes: "Unopposed Democratic primary"
+    candidates:
+      - id: beck-matthew
+        name: "Matthew D. Beck"
+        party: D
+        residence: South Portland
+
+ballot-questions:
+  - id: school-budget-fy27
+    title: "School Budget Validation Referendum — FY27"
+    jurisdiction: "South Portland"
+    type: referendum
+    department: "South Portland School Department"
+    notes: "Voters approve or reject the school budget for fiscal year 2027. Sample ballot and warrant PDF available at southportland.gov"

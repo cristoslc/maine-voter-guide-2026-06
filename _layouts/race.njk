@@ -1,0 +1,150 @@
+---
+layout: base
+templateEngineOverride: njk,md
+eleventyComputed:
+  title: "{{ race.title }}"
+---
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <a href="/">Home</a> &raquo; {{ race.title }}
+</nav>
+
+<div class="race-header">
+  <h1>{{ race.title }}</h1>
+</div>
+
+<p>{{ race.voting }}</p>
+{% if race.officeDesc %}<p><strong>What a {{ race.office }} does</strong>: {{ race.officeDesc | safe }}</p>{% endif %}
+{% if race.context %}<p><strong>Context</strong>: {{ race.context | safe }}</p>{% endif %}
+
+{% for party in race.parties %}
+  {% for sec in party.raceWideSecondary %}
+    <div class="race-wide-box">
+      <h3>{{ sec.heading }}</h3>
+      {% if sec.rows %}
+        <table class="poll-mini">
+          {% for row in sec.rows %}
+            <tr><td>{{ row[0] }}</td><td>{{ row[1] | safe }}</td></tr>
+          {% endfor %}
+        </table>
+      {% elif sec.text %}
+        {{ sec.text | safe }}
+      {% endif %}
+      {% if sec.source %}
+        <p class="source-ref">{{ sec.source | safe }}</p>
+      {% endif %}
+    </div>
+  {% endfor %}
+
+  {% for candidate in party.candidates %}
+    <div class="candidate-group">
+      <div class="candidate-primary">
+        <div class="candidate-head">
+          <h2>{{ candidate.name }}</h2>
+          {% for t in candidate.secondaryTags %}
+            <span class="party-tag {{ t }}">{{ t | capitalize }}</span>
+          {% endfor %}
+          <span class="party-tag {{ candidate.tag }}">
+            {% if candidate.tag == "d" %}Democrat{% elif candidate.tag == "r" %}Republican{% else %}{{ candidate.tag }}{% endif %}
+          </span>
+        </div>
+
+        {% if candidate.meta %}<div class="candidate-meta">{{ candidate.meta | safe }}</div>{% endif %}
+
+        {% if candidate.primaryContent and candidate.primaryContent | length %}
+          <h3>Platform</h3>
+          {% for pos in candidate.primaryContent %}
+            <div class="position">
+              {% if pos.issue %}<div class="issue-label">{{ pos.issue }}</div>{% endif %}
+              <div class="issue-text">{{ pos.text | safe }}</div>
+              {% if pos.sourceUrl %}
+                <div class="source-ref"><a href="{{ pos.sourceUrl }}">{{ pos.sourceLabel if pos.sourceLabel else pos.sourceUrl }}</a></div>
+              {% endif %}
+            </div>
+          {% endfor %}
+        {% endif %}
+      </div>
+
+      {% if candidate.secondaryContent and candidate.secondaryContent | length %}
+        <aside class="candidate-secondary">
+          {% for sec in candidate.secondaryContent %}
+            <div class="context-section">
+              <h4>{{ sec.heading }}</h4>
+              {{ sec.text | safe }}
+            </div>
+          {% endfor %}
+        </aside>
+      {% endif %}
+    </div>
+  {% endfor %}
+
+  {% if party.compareTable %}
+    <hr>
+    <h2>Comparison</h2>
+    <table class="compare-table">
+      <thead>
+        <tr><th></th>
+          {% for h in party.compareTable.headers %}
+            <th>{{ h }}</th>
+          {% endfor %}
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in party.compareTable.rows %}
+          <tr>
+            <td data-label="Issue"><strong>{{ row.issue }}</strong></td>
+            {% for h in party.compareTable.headers %}
+              <td data-label="{{ h }}">{{ row[h | lower] | safe }}</td>
+            {% endfor %}
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% endif %}
+
+  {% if party.crossPartyPreview and party.crossPartyPreview | length %}
+    <hr>
+    <h2>Who You'd Face in November</h2>
+    <div class="callout">
+      <p><strong>Note:</strong> You vote in only one primary. The {{ party.crossPartyPreview[0].party }} field is shown below so you can evaluate how this primary's candidates match up in the general election.</p>
+    </div>
+    {% for opp in party.crossPartyPreview %}
+      <div class="candidate-card">
+        <div class="candidate-head">
+          <h3 style="margin:0">{{ opp.name }}</h3>
+          <span class="party-tag {{ opp.tag }}">{{ opp.party }}</span>
+        </div>
+        {% if opp.meta %}<div class="candidate-meta">{{ opp.meta | safe }}</div>{% endif %}
+        {% for pos in opp.primaryContent %}
+          <div class="position">
+            {% if pos.issue %}<div class="issue-label">{{ pos.issue }}</div>{% endif %}
+            <div class="issue-text">{{ pos.text | safe }}</div>
+            {% if pos.sourceUrl %}
+              <div class="source-ref"><a href="{{ pos.sourceUrl }}">{{ pos.sourceLabel if pos.sourceLabel else pos.sourceUrl }}</a></div>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+
+{% if race.sourcesMain and race.sourcesMain | length %}
+  <hr>
+  <h3>Sources</h3>
+  <p>
+    {% for s in race.sourcesMain %}
+      <a href="{{ s.url }}">{{ s.label }}</a>{% if not loop.last %} · {% endif %}
+    {% endfor %}
+  </p>
+{% endif %}
+
+{% if race.sourcesSidebar and race.sourcesSidebar | length %}
+  <p>
+    {% for s in race.sourcesSidebar %}
+      <a href="{{ s.url }}">{{ s.label }}</a>{% if not loop.last %} · {% endif %}
+    {% endfor %}
+  </p>
+{% endif %}
+
+<p><em>Last updated: May 31, 2026.</em></p>

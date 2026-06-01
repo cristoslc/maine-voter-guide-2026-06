@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Nonpartisan voter guide for South Portland, Maine — June 2026 election. Candidate information, ballot questions, polling locations, and key dates.">
+  <meta name="color-scheme" content="light dark">
+  <title>{{ title }} — South Portland Voter Guide</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <script>
+    (function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})();
+  </script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="/" class="site-title">South Portland Voter Guide</a>
+      <nav aria-label="Main">
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/voter-resources/">Voter Resources</a></li>
+          <li><a href="https://www.vote411.org/ballot" class="nav-vote411">VOTE411 →</a></li>
+          <li><button class="theme-toggle" onclick="document.documentElement.setAttribute('data-theme',document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark');localStorage.setItem('theme',document.documentElement.getAttribute('data-theme'))" aria-label="Toggle theme">☀︎ / ☾</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>South Portland Voter Guide — June 2026. Nonpartisan.</p>
+      <p>Sources: <a href="https://www.maine.gov/sos/elections-voting">Maine Secretary of State</a>, <a href="https://www.southportland.org/195/Elections-Voter-Registration">South Portland City Clerk</a>.</p>
+      <p>This guide is an independent project. It does not endorse any candidate.</p>
+    </div>
+  </footer>
+</body>
+</html>

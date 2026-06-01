@@ -52,4 +52,6 @@ Desktop.ini
 # Build output
 dist/
 _site/
-.output/
+.output/.playwright-cli/
+_site/
+.playwright-cli/
