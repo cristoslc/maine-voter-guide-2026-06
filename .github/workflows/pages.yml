@@ -24,7 +24,7 @@ jobs:
           node-version: 20
           cache: 'npm'
       - run: npm ci
-      - run: npm run build
+      - run: PATH_PREFIX="/maine-voter-guide-2026-06/" npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

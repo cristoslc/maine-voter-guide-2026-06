@@ -6,7 +6,7 @@
   <meta name="description" content="Nonpartisan voter guide for South Portland, Maine — June 2026 election. Candidate information, ballot questions, polling locations, and key dates.">
   <meta name="color-scheme" content="light dark">
   <title>{{ title }} — South Portland Voter Guide</title>
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="{{ '/css/style.css' | url }}">
   <script>
     (function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})();
   </script>
@@ -16,11 +16,11 @@
 
   <header class="site-header">
     <div class="container">
-      <a href="/" class="site-title">South Portland Voter Guide</a>
+      <a href="{{ '/' | url }}" class="site-title">South Portland Voter Guide</a>
       <nav aria-label="Main">
         <ul class="nav-links">
-          <li><a href="/">Home</a></li>
-          <li><a href="/voter-resources/">Voter Resources</a></li>
+          <li><a href="{{ '/' | url }}">Home</a></li>
+          <li><a href="{{ '/voter-resources/' | url }}">Voter Resources</a></li>
           <li><a href="https://www.vote411.org/ballot" class="nav-vote411">VOTE411 →</a></li>
           <li><button class="theme-toggle" onclick="document.documentElement.setAttribute('data-theme',document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark');localStorage.setItem('theme',document.documentElement.getAttribute('data-theme'))" aria-label="Toggle theme">☀︎ / ☾</button></li>
         </ul>

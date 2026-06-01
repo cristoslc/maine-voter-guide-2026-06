@@ -3,6 +3,15 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "public/*.png": "./" });
   eleventyConfig.addPassthroughCopy({ "public/*.ico": "./" });
 
+  const prefix = process.env.PATH_PREFIX || "/";
+  if (prefix !== "/") {
+    eleventyConfig.addTransform("prefixUrls", function(content, outputPath) {
+      if (!outputPath || !outputPath.endsWith('.html')) return content;
+      return content.replace(/href="\//g, `href="${prefix}`)
+                    .replace(/src="\//g, `src="${prefix}`);
+    });
+  }
+
   return {
     dir: {
       input: "content",
@@ -11,6 +20,6 @@ module.exports = function (eleventyConfig) {
       includes: "../_includes",
       layouts: "../_layouts",
     },
-    pathPrefix: process.env.PATH_PREFIX || "/",
+    pathPrefix: "/",
   };
 };
