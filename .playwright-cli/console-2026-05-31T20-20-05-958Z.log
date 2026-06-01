@@ -1,0 +1,6 @@
+[     517ms] [ERROR] Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID @ https://www.googletagmanager.com/gtag/js?id=G-Z8FX8GWH08:0
+[     534ms] [ERROR] Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID @ https://cdn.popt.in/pixel.js?id=e6bf4c278b4c5:0
+[     542ms] [ERROR] Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID @ https://ssl.google-analytics.com/ga.js:0
+[    8063ms] [ERROR] Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID @ https://www.googletagmanager.com/gtag/js?id=G-Z8FX8GWH08:0
+[    8063ms] [ERROR] Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID @ https://ssl.google-analytics.com/ga.js:0
+[    8077ms] [ERROR] Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID @ https://cdn.popt.in/pixel.js?id=e6bf4c278b4c5:0

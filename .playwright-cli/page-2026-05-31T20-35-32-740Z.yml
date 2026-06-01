@@ -1,0 +1,412 @@
+- generic [active] [ref=e1]:
+  - link "Skip to main navigation" [ref=e2] [cursor=pointer]:
+    - /url: "#main-menu"
+  - generic [ref=e4]:
+    - banner [ref=e5]:
+      - generic [ref=e6]:
+        - generic [ref=e8]:
+          - link "Vote411 Logo" [ref=e9] [cursor=pointer]:
+            - /url: /
+            - img "Vote411 Logo" [ref=e10]
+          - button "Toggle Menu" [ref=e12] [cursor=pointer]:
+            - img "Open menu" [ref=e13]
+            - generic [ref=e14]: Menu
+        - generic [ref=e16]:
+          - button "English" [ref=e18] [cursor=pointer]
+          - link "Register to Vote" [ref=e19] [cursor=pointer]:
+            - /url: /register
+          - link "Donate" [ref=e20] [cursor=pointer]:
+            - /url: https://www.lwv.org/VOTE411give
+      - generic:
+        - generic:
+          - generic:
+            - generic [ref=e21] [cursor=pointer]:
+              - generic [ref=e22]: Voting in My State
+              - generic [ref=e23]:
+                - combobox "Select Your State" [ref=e24]:
+                  - option "Select your State" [selected]
+                  - option "Alabama"
+                  - option "Alaska"
+                  - option "Arizona"
+                  - option "Arkansas"
+                  - option "California"
+                  - option "Colorado"
+                  - option "Connecticut"
+                  - option "Delaware"
+                  - option "District Of Columbia"
+                  - option "Florida"
+                  - option "Georgia"
+                  - option "Hawaii"
+                  - option "Idaho"
+                  - option "Illinois"
+                  - option "Indiana"
+                  - option "Iowa"
+                  - option "Kansas"
+                  - option "Kentucky"
+                  - option "Louisiana"
+                  - option "Maine"
+                  - option "Maryland"
+                  - option "Massachusetts"
+                  - option "Michigan"
+                  - option "Minnesota"
+                  - option "Mississippi"
+                  - option "Missouri"
+                  - option "Montana"
+                  - option "Nebraska"
+                  - option "Nevada"
+                  - option "New Hampshire"
+                  - option "New Jersey"
+                  - option "New Mexico"
+                  - option "New York"
+                  - option "North Carolina"
+                  - option "North Dakota"
+                  - option "Ohio"
+                  - option "Oklahoma"
+                  - option "Oregon"
+                  - option "Pennsylvania"
+                  - option "Rhode Island"
+                  - option "South Carolina"
+                  - option "South Dakota"
+                  - option "Tennessee"
+                  - option "Texas"
+                  - option "Utah"
+                  - option "Vermont"
+                  - option "Virginia"
+                  - option "Washington"
+                  - option "West Virginia"
+                  - option "Wisconsin"
+                  - option "Wyoming"
+                - link "Compare State Issues" [ref=e26]:
+                  - /url: /search-by-topic
+                  - text: Compare State Issues
+                  - img [ref=e27]
+            - generic [ref=e36] [cursor=pointer]:
+              - generic [ref=e37]: Voter Registration
+              - list [ref=e38]:
+                - listitem [ref=e39]:
+                  - link "Registration Deadlines" [ref=e40]:
+                    - /url: /select-state
+                    - text: Registration Deadlines
+                    - img [ref=e41]
+                - listitem [ref=e46]:
+                  - link "Register to Vote" [ref=e47]:
+                    - /url: /register
+                    - text: Register to Vote
+                    - img [ref=e48]
+            - generic [ref=e53] [cursor=pointer]:
+              - generic [ref=e54]: Voter Guides
+              - list [ref=e55]:
+                - listitem [ref=e56]:
+                  - link "Candidate and Ballot Measure Information" [ref=e57]:
+                    - /url: /ballot
+                    - text: Candidate and Ballot Measure Information
+                    - img [ref=e58]
+                - listitem [ref=e63]:
+                  - link "Make Your Voting Plan" [ref=e64]:
+                    - /url: /make-your-plan
+                    - text: Make Your Voting Plan
+                    - img [ref=e65]
+                - listitem [ref=e70]:
+                  - link "Nationwide Voting Rules Quick View" [ref=e71]:
+                    - /url: /voting-rules
+                    - text: Nationwide Voting Rules Quick View
+                    - img [ref=e72]
+            - generic [ref=e77] [cursor=pointer]:
+              - generic [ref=e78]: About Vote411
+              - list [ref=e79]:
+                - listitem [ref=e80]:
+                  - link "About" [ref=e81]:
+                    - /url: /about
+                    - text: About
+                    - img [ref=e82]
+                - listitem [ref=e87]:
+                  - link "Sponsors and Partnerships" [ref=e88]:
+                    - /url: /sponsors
+                    - text: Sponsors and Partnerships
+                    - img [ref=e89]
+                - listitem [ref=e94]:
+                  - link "Support VOTE411" [ref=e95]:
+                    - /url: https://www.lwv.org/VOTE411give
+                    - text: Support VOTE411
+                    - img [ref=e96]
+    - article [ref=e105]:
+      - generic [ref=e107]:
+        - generic [ref=e111]:
+          - generic [ref=e113]: Voter Guides
+          - generic [ref=e114]:
+            - heading "Your Voters' Guide" [level=1] [ref=e115]
+            - paragraph [ref=e116]: Personalized Ballot and Candidate Information
+        - generic [ref=e125]:
+          - generic [ref=e127]:
+            - paragraph [ref=e128]: Your Voters' Guide
+            - button "View Full Screen" [ref=e129] [cursor=pointer]:
+              - img [ref=e132]
+              - paragraph [ref=e135]: View Full Screen
+          - generic [ref=e9072]:
+            - generic [ref=e9074]:
+              - button "Back to candidates" [ref=e9079] [cursor=pointer]:
+                - img [ref=e9080]
+                - generic [ref=e9083]: Back to candidates
+              - generic [ref=e9084]:
+                - heading "Race Details" [level=3] [ref=e9085]
+                - paragraph [ref=e9086]: Learn about all races and candidates on your ballot!
+              - alert [ref=e9088]:
+                - img [ref=e9090]
+                - generic [ref=e9092]:
+                  - text: You are viewing a standalone race.
+                  - button "Enter your address" [ref=e9093] [cursor=pointer]
+                  - text: to view all your local elections.
+            - generic [ref=e9094]:
+              - generic [ref=e9095]:
+                - paragraph [ref=e9096]:
+                  - text: Ranked Choice Race
+                  - button "You can select multiple candidates, and then rank them afterwards." [ref=e9097] [cursor=pointer]:
+                    - img [ref=e9098]
+                - generic [ref=e9101]:
+                  - heading "Maine State House District 120, Democratic Primary" [level=4] [ref=e9102]
+                  - button "Copy link to race" [ref=e9103] [cursor=pointer]:
+                    - img [ref=e9104]
+                - paragraph [ref=e9106]: Rank up to 1 candidates
+                - paragraph [ref=e9108]: You can select up to 1 candidates to rank in this race. First, select the candidates you wish to rank. Once you have finished selecting, you can rank these candidates in your preferred order.
+              - generic [ref=e9109]:
+                - img [ref=e9111]
+                - paragraph [ref=e9114]: Can select up to 1 more candidate for ranking
+              - generic [ref=e9118]:
+                - img [ref=e9120]
+                - paragraph [ref=e9124]: Select candidates to compare their responses on issues that matter to you
+              - generic [ref=e9125]:
+                - heading "Meet the candidates" [level=5] [ref=e9126]
+                - generic [ref=e9129]:
+                  - generic [ref=e9130]:
+                    - button "Jason J Shedlock" [ref=e9131] [cursor=pointer]:
+                      - img "Jason J Shedlock" [ref=e9133]
+                    - generic [ref=e9134]:
+                      - generic [ref=e9136] [cursor=pointer]:
+                        - generic [ref=e9137]:
+                          - checkbox "View Answers" [ref=e9138]
+                          - img [ref=e9139]
+                        - generic [ref=e9142]: View Answers
+                      - button "Democratic Jason J Shedlock" [ref=e9143] [cursor=pointer]:
+                        - generic [ref=e9144]:
+                          - paragraph [ref=e9145]: Democratic
+                          - paragraph [ref=e9146]: Jason J Shedlock
+                  - button "Select to rank" [ref=e9148] [cursor=pointer]
+          - button "Edit Comparison Selections" [ref=e9151] [cursor=pointer]:
+            - img [ref=e9152]
+            - generic [ref=e9155]: Edit Comparison Selections
+          - generic [ref=e144]:
+            - generic [ref=e145]:
+              - paragraph [ref=e146]: ©2026 League of Women Voters Education Fund. All rights reserved.
+              - paragraph [ref=e147]: The League of Women Voters does not support or oppose any candidates or parties. All responses come directly from the candidates and are unedited by the League. The League does not certify the accuracy of the candidate’s statements. The League reserves the right to remove or redact portions of candidate responses that violate state or federal law or the voter guide rules that are provided to all candidates before participating in the voter guide.
+            - generic [ref=e148]:
+              - button "All Races" [ref=e150] [cursor=pointer]
+              - button "All Candidates" [ref=e152] [cursor=pointer]
+        - generic [ref=e155]:
+          - generic [ref=e159]:
+            - heading "Voting Guides" [level=4] [ref=e160]: Voting Guides
+            - list [ref=e162]:
+              - listitem [ref=e163]:
+                - link "NJ Congressional District 2 Democratic Primary Candidate Forum" [ref=e164] [cursor=pointer]:
+                  - /url: https://vimeo.com/1193451870?share=copy&fl=sv&fe=ci
+                  - generic [ref=e165]: NJ Congressional District 2 Democratic Primary Candidate Forum
+              - listitem [ref=e166]:
+                - link "NJ Congressional District 4 Democratic Primary Candidate Forum" [ref=e167] [cursor=pointer]:
+                  - /url: https://lwvmonmouth.org/vid100.php
+                  - generic [ref=e168]: NJ Congressional District 4 Democratic Primary Candidate Forum
+              - listitem [ref=e169]:
+                - 'link "NM: LWV Santa Fe County Voter Guide" [ref=e170] [cursor=pointer]':
+                  - /url: https://vote411-prod.s3.amazonaws.com/2026-05/2026%20Primary%20Election%20Voter%20Guide.pdf
+                  - generic [ref=e171]: "NM: LWV Santa Fe County Voter Guide"
+              - listitem [ref=e172]:
+                - 'link "NY: May 19th, 2026 Tompkins County School Board Elections" [ref=e173] [cursor=pointer]':
+                  - /url: https://vote411-prod.s3.amazonaws.com/2026-05/2026%20School%20Board%20Elections%20for%20VOTE%20411%20and%20for%20LWVTC%20Website_rev.pdf
+                  - generic [ref=e174]: "NY: May 19th, 2026 Tompkins County School Board Elections"
+              - listitem [ref=e175]:
+                - link "Union County PA 2026 Primary Voter Guide" [ref=e176] [cursor=pointer]:
+                  - /url: https://vote411-prod.s3.amazonaws.com/2026-04/Union%20County%20PA%20Spring%202026%20Voters%20Guide.pdf
+                  - generic [ref=e177]: Union County PA 2026 Primary Voter Guide
+          - generic [ref=e180]:
+            - generic [ref=e181]:
+              - heading "Candidate Debate Videos" [level=4] [ref=e182]: Candidate Debate Videos
+              - list [ref=e184]:
+                - listitem [ref=e185]:
+                  - link "2026 LWV Kansas City, MO Candidate Forums" [ref=e186] [cursor=pointer]:
+                    - /url: https://www.youtube.com/playlist?list=PLOGFYk7DGuk1KUtspY3xkHI2z_NFWuns3
+                    - generic [ref=e187]: 2026 LWV Kansas City, MO Candidate Forums
+                - listitem [ref=e188]:
+                  - link "Alameda County CA Board of Supervisors District 2 Candidate Forum" [ref=e189] [cursor=pointer]:
+                    - /url: https://www.youtube.com/watch?v=KfGb6IPYhTk
+                    - generic [ref=e190]: Alameda County CA Board of Supervisors District 2 Candidate Forum
+                - listitem [ref=e191]:
+                  - link "Alameda County CA Board of Supervisors, District 2" [ref=e192] [cursor=pointer]:
+                    - /url: https://www.youtube.com/watch?v=KfGb6IPYhTk
+                    - generic [ref=e193]: Alameda County CA Board of Supervisors, District 2
+                - listitem [ref=e194]:
+                  - link "CA Assembly District 42 Candidate Forum" [ref=e195] [cursor=pointer]:
+                    - /url: https://www.youtube.com/watch?v=KUCUIPYvdWU
+                    - generic [ref=e196]: CA Assembly District 42 Candidate Forum
+                - listitem [ref=e197]:
+                  - link "CA Governor Candidate Forum Claremont" [ref=e198] [cursor=pointer]:
+                    - /url: https://www.youtube.com/live/1ikN8crwsFM
+                    - generic [ref=e199]: CA Governor Candidate Forum Claremont
+                - listitem [ref=e200]:
+                  - link "CA Governor Candidate Forum Los Angeles" [ref=e201] [cursor=pointer]:
+                    - /url: https://www.youtube.com/live/6o0pu2huVvc
+                    - generic [ref=e202]: CA Governor Candidate Forum Los Angeles
+                - listitem [ref=e203]:
+                  - link "CA Governor Candidate Forum Los Angeles Feb 26" [ref=e204] [cursor=pointer]:
+                    - /url: https://www.youtube.com/live/mH-ZKGUUlv0
+                    - generic [ref=e205]: CA Governor Candidate Forum Los Angeles Feb 26
+                - listitem [ref=e206]:
+                  - link "CA Governor Candidate Forum San Francisco" [ref=e207] [cursor=pointer]:
+                    - /url: https://www.youtube.com/watch?v=-_LHkpd7PcM
+                    - generic [ref=e208]: CA Governor Candidate Forum San Francisco
+                - listitem [ref=e209]:
+                  - link "CA Governor Candidate Forum San Francisco April 22" [ref=e210] [cursor=pointer]:
+                    - /url: https://www.youtube.com/watch?v=cKIUJua6iCI
+                    - generic [ref=e211]: CA Governor Candidate Forum San Francisco April 22
+                - listitem [ref=e212]:
+                  - link "CA Insurance Commissioner Candidate Forum April 29" [ref=e213] [cursor=pointer]:
+                    - /url: https://www.youtube.com/watch?v=97nTcNHYbOM&t=251s
+                    - generic [ref=e214]: CA Insurance Commissioner Candidate Forum April 29
+            - navigation "Pagination" [ref=e215]:
+              - heading "Pagination" [level=4] [ref=e216]
+              - list [ref=e217]:
+                - listitem [ref=e218]:
+                  - link "Current page 1" [ref=e219] [cursor=pointer]:
+                    - /url: "?page=%2C0%2C0"
+                    - generic [ref=e220]: Current page
+                    - text: "1"
+                - listitem [ref=e221]:
+                  - link "Page 2" [ref=e222] [cursor=pointer]:
+                    - /url: "?page=%2C0%2C1"
+                    - generic [ref=e223]: Page
+                    - text: "2"
+                - listitem [ref=e224]:
+                  - link "Page 3" [ref=e225] [cursor=pointer]:
+                    - /url: "?page=%2C0%2C2"
+                    - generic [ref=e226]: Page
+                    - text: "3"
+                - listitem [ref=e227]:
+                  - link "Next page" [ref=e228] [cursor=pointer]:
+                    - /url: "?page=%2C0%2C1"
+                    - generic [ref=e229]: Next page
+                    - text: Next ›
+        - generic [ref=e232]:
+          - iframe [ref=e235]:
+            - generic [active] [ref=f1e1]:
+              - generic "YouTube Video Player" [ref=f1e3]
+              - generic [ref=f1e5]:
+                - generic:
+                  - generic:
+                    - button "Play video" [ref=f1e10] [cursor=pointer]:
+                      - generic [ref=f1e54]:
+                        - img
+                    - button "Hide player controls" [ref=f1e12] [cursor=pointer]
+                    - generic [ref=f1e14]:
+                      - generic [ref=f1e19]:
+                        - generic [ref=f1e20]:
+                          - link "Your Vote411 Voter Guide" [ref=f1e21] [cursor=pointer]:
+                            - /url: https://www.youtube.com/watch?v=pWrltElaHRE
+                          - link "League of Women Voters" [ref=f1e22] [cursor=pointer]:
+                            - /url: /channel/UCzd5f5VyMYYrtCZKM3dYaXQ
+                            - generic [ref=f1e23]: League of Women Voters
+                        - generic [ref=f1e24]:
+                          - button "thumbnail-image" [ref=f1e55] [cursor=pointer]:
+                            - img "thumbnail-image" [ref=f1e56]
+                          - generic [ref=f1e27]:
+                            - generic: League of Women Voters
+                            - generic: 3.64K subscribers
+                      - generic [ref=f1e28]:
+                        - button "Share" [ref=f1e31] [cursor=pointer]:
+                          - generic [ref=f1e35]:
+                            - img
+                        - link "Watch on YouTube" [ref=f1e42] [cursor=pointer]:
+                          - /url: https://www.youtube.com/watch?v=pWrltElaHRE
+                          - generic [ref=f1e45]:
+                            - text: Watch on
+                            - img [ref=f1e47]:
+                              - generic [ref=f1e49]:
+                                - img
+          - generic [ref=e238]:
+            - heading "Get Other Personalized Voting Information" [level=2] [ref=e239]:
+              - generic [ref=e240]: Get Other Personalized Voting Information
+            - paragraph
+            - paragraph
+            - list [ref=e241]:
+              - listitem [ref=e242]: See What's On Your Ballot
+              - listitem [ref=e243]: Find Your Polling Place
+              - listitem [ref=e244]: Discover Upcoming Debates And Forums In Your Area
+              - listitem [ref=e245]: and much more!
+            - paragraph [ref=e246]
+            - link "Get Started" [ref=e247] [cursor=pointer]:
+              - /url: /plan-your-vote
+    - contentinfo [ref=e248]:
+      - generic [ref=e251]:
+        - generic [ref=e252]:
+          - heading "Election day problems?" [level=2] [ref=e253]
+          - paragraph [ref=e254]: "Report an election problem by calling:"
+        - generic [ref=e255]:
+          - generic [ref=e256]: 1-866-OUR-VOTE (866-687-8683)
+          - generic [ref=e257]: 1-888-VE-Y-VOTA (en Español)
+        - generic [ref=e258]:
+          - generic [ref=e259]: 1-888-API-VOTE (Asian multilingual assistance)
+          - generic [ref=e260]: 1-844-YALLA-US (Arabic)
+      - generic [ref=e263]:
+        - generic [ref=e264]:
+          - heading "Donate" [level=2] [ref=e265]
+          - paragraph [ref=e266]: Help us provide accurate and unbiased voting information by donating today!
+          - link "Make a donation" [ref=e267] [cursor=pointer]:
+            - /url: https://www.lwv.org/VOTE411give
+        - generic [ref=e268]:
+          - heading "Your Voting Guide" [level=2] [ref=e269]
+          - paragraph [ref=e270]: Find what's on your ballot
+          - link "Explore Now" [ref=e271] [cursor=pointer]:
+            - /url: /plan-your-vote
+      - generic [ref=e273]:
+        - generic [ref=e274]:
+          - generic [ref=e275]:
+            - img "VOTE411 Logo" [ref=e276]
+            - paragraph [ref=e277]: VOTE411 is committed to ensuring voters have the information they need to successfully participate in every election. Whether it's local, state or federal, every election is important to ensuring our laws and policies reflect the values and beliefs of our communities.
+            - img "webby-2020-banner" [ref=e279]
+          - generic [ref=e288]:
+            - list [ref=e290]:
+              - listitem [ref=e291]:
+                - link "Contact Us" [ref=e292] [cursor=pointer]:
+                  - /url: mailto:voterinformation@lwv.org
+              - listitem [ref=e293]:
+                - link "About Us" [ref=e294] [cursor=pointer]:
+                  - /url: /about
+              - listitem [ref=e295]:
+                - link "Get Involved" [ref=e296] [cursor=pointer]:
+                  - /url: https://www.lwv.org/local-leagues/find-local-league?field_zip_code_value=
+              - listitem [ref=e297]:
+                - link "Sponsors & Partners" [ref=e298] [cursor=pointer]:
+                  - /url: /sponsors
+            - generic [ref=e299]:
+              - heading "Follow us" [level=2] [ref=e300]
+              - list [ref=e301]:
+                - listitem [ref=e302]:
+                  - link "Facebook" [ref=e303] [cursor=pointer]:
+                    - /url: https://www.facebook.com/vote411/
+                - listitem [ref=e304]:
+                  - link "Instagram" [ref=e305] [cursor=pointer]:
+                    - /url: https://www.instagram.com/vote411/
+                - listitem [ref=e306]:
+                  - link "Twitter" [ref=e307] [cursor=pointer]:
+                    - /url: https://twitter.com/vote411
+                - listitem [ref=e308]:
+                  - link "YouTube" [ref=e309] [cursor=pointer]:
+                    - /url: https://www.youtube.com/watch?v=HoR-26mgFv0&list=PL33IAmThHpVDf2z3amFL9FzGxN0Ikfluc
+                - listitem
+            - generic [ref=e310]:
+              - heading "Brought to you by" [level=2] [ref=e311]
+              - link "League of Women Voters" [ref=e312] [cursor=pointer]:
+                - /url: https://www.lwv.org/about-us
+                - img "League of Women Voters Logo" [ref=e313]
+        - generic [ref=e314]:
+          - paragraph [ref=e316]: ©2026 League of Women Voters Education Fund. All rights reserved.
+          - link "Terms of Use" [ref=e318] [cursor=pointer]:
+            - /url: legal
+          - link "Privacy Policy" [ref=e320] [cursor=pointer]:
+            - /url: legal#privacy-policy

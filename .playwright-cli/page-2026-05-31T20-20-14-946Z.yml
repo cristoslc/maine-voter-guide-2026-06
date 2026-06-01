@@ -1,0 +1,204 @@
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - generic [ref=e4]:
+    - banner [ref=e5]:
+      - generic:
+        - generic:
+          - generic:
+            - generic [ref=e6]:
+              - generic [ref=e7]:
+                - link [ref=e8] [cursor=pointer]:
+                  - /url: http://www.facebook.com/LWVME?ref=ts
+                  - generic [ref=e9]: 
+                - link [ref=e10] [cursor=pointer]:
+                  - /url: https://www.youtube.com/channel/UCgHJ5yR1SNwI1U6hXuDILpQ
+                  - generic [ref=e11]: 
+                - link [ref=e12] [cursor=pointer]:
+                  - /url: https://www.instagram.com/lwvme/
+                  - generic [ref=e13]: 
+              - generic [ref=e15] [cursor=pointer]: 
+            - link "JOIN" [ref=e16] [cursor=pointer]:
+              - /url: /member
+            - link "DONATE" [ref=e17] [cursor=pointer]:
+              - /url: https://www.lwvme.org/donatenow
+            - link [ref=e18] [cursor=pointer]:
+              - /url: /
+              - img [ref=e19]
+            - link [ref=e20] [cursor=pointer]:
+              - /url: /
+              - img [ref=e21]
+        - navigation "LWV menu" [ref=e22]:
+          - heading "LWV menu" [level=2] [ref=e23]
+          - list:
+            - listitem [ref=e24]:
+              - link "Elections + Vote" [ref=e25] [cursor=pointer]:
+                - /url: /VoteInMaine
+            - listitem [ref=e26]:
+              - link "Resources" [ref=e27] [cursor=pointer]:
+                - /url: /Voters
+            - listitem [ref=e28]:
+              - link "Advocacy" [ref=e29] [cursor=pointer]:
+                - /url: https://www.lwvme.org/MaineAction
+            - listitem [ref=e30]:
+              - link "Get Involved" [ref=e31] [cursor=pointer]:
+                - /url: /getinvolved
+            - listitem [ref=e32]:
+              - link "About Us" [ref=e33] [cursor=pointer]:
+                - /url: /about
+            - listitem [ref=e34]:
+              - link "News" [ref=e35] [cursor=pointer]:
+                - /url: /articles
+            - listitem [ref=e36]:
+              - link "Events" [ref=e37] [cursor=pointer]:
+                - /url: /events
+    - img [ref=e38]
+    - main [ref=e40]:
+      - generic [ref=e43]:
+        - heading "How to Vote in Maine" [level=1] [ref=e44]
+        - article [ref=e45]:
+          - generic [ref=e46]:
+            - link "Voter Eligibility" [ref=e47] [cursor=pointer]:
+              - /url: "#1"
+            - link "Student Voting" [ref=e48] [cursor=pointer]:
+              - /url: "#2"
+            - link "Register to Vote" [ref=e49] [cursor=pointer]:
+              - /url: "#3"
+            - link "Polling Place" [ref=e50] [cursor=pointer]:
+              - /url: "#4"
+            - link "Absentee Voting" [ref=e51] [cursor=pointer]:
+              - /url: "#5"
+            - link "Accessible Voting" [ref=e52] [cursor=pointer]:
+              - /url: "#6"
+            - link "Voter Rights" [ref=e53] [cursor=pointer]:
+              - /url: "#7"
+            - link "Party Enrollment" [ref=e54] [cursor=pointer]:
+              - /url: "#8"
+          - generic [ref=e56]:
+            - generic [ref=e58]:
+              - heading "Voter Eligibility" [level=3] [ref=e59]
+              - generic:
+                - generic:
+                  - generic [ref=e61]:
+                    - paragraph [ref=e62]:
+                      - text: In order to vote in Maine, you must first
+                      - link "register to vote" [ref=e63] [cursor=pointer]:
+                        - /url: https://www.maine.gov/sos/cec/elec/voter-info/voterguide.html
+                      - text: ". You can vote in Maine if you are:"
+                    - list [ref=e64]:
+                      - listitem [ref=e65]: A citizen of the United States
+                      - listitem [ref=e66]: An established resident in the town where you intend to register and vote
+                      - listitem [ref=e67]: At least 18 years of age
+                    - paragraph [ref=e68]: You cannot be turned away from your voting place if you meet the requirements listed above.
+                    - paragraph [ref=e69]: "Your voting rights:"
+                    - list [ref=e70]:
+                      - listitem [ref=e71]: Registered voters are not required to show ID in order to vote.
+                      - listitem [ref=e72]: You must be allowed to vote a challenged ballot even if you don't have ID or proof of where you live.
+                      - listitem [ref=e73]: As of January 1, 2020, you may pre-register when you are 16, but you must be 18 years old to vote.
+                      - listitem [ref=e74]: Registered voters who are 17 years old may vote in primary elections if they will be 18 by the general election.
+                    - heading [level=3] [ref=e75]
+                    - heading "Questions?" [level=3] [ref=e76]
+                    - list [ref=e77]:
+                      - listitem [ref=e78]: The State's Elections Division is available at (207) 624-7650.
+                    - heading [level=3] [ref=e79]
+                    - heading "More Information:" [level=3] [ref=e80]
+                    - list [ref=e81]:
+                      - listitem [ref=e82]:
+                        - link "Click here" [ref=e83] [cursor=pointer]:
+                          - /url: http://www.maine.gov/sos/cec/elec/voter-info/resident.html
+                        - text: for more information on establishing residency from the Maine Secretary of State's web site.
+                      - listitem [ref=e84]:
+                        - text: For more information on voting rights in Maine,
+                        - link "click here" [ref=e85] [cursor=pointer]:
+                          - /url: http://www.maine.gov/sos/cec/elec/voter-info/right.html
+                        - text: .
+                  - generic [ref=e87]:
+                    - paragraph [ref=e88]:
+                      - link [ref=e89] [cursor=pointer]:
+                        - /url: https://www.lwvme.org/node/2957
+                      - link [ref=e91] [cursor=pointer]:
+                        - /url: https://www.lwvme.org/node/2958
+                      - link [ref=e93] [cursor=pointer]:
+                        - /url: https://www.lwvme.org/node/2960
+                      - link [ref=e95] [cursor=pointer]:
+                        - /url: https://www.lwvme.org/node/2959
+                      - link [ref=e97] [cursor=pointer]:
+                        - /url: https://www.lwvme.org/node/2961
+                      - link "button for Chinese" [ref=e99] [cursor=pointer]:
+                        - /url: https://www.lwvme.org/node/3081
+                        - img "button for Chinese" [ref=e101]
+                      - link "button for Vietnamese" [ref=e102] [cursor=pointer]:
+                        - /url: https://www.lwvme.org/node/3082
+                        - img "button for Vietnamese" [ref=e104]
+                      - link "button for khmer" [ref=e105] [cursor=pointer]:
+                        - /url: https://www.lwvme.org/node/3083
+                        - img "button for khmer" [ref=e107]
+                      - link "button for Haitian Creole" [ref=e108] [cursor=pointer]:
+                        - /url: https://www.lwvme.org/node/3084
+                        - img "button for Haitian Creole" [ref=e110]
+                    - paragraph [ref=e111]
+                    - heading "Need assistance?" [level=4] [ref=e112]
+                    - paragraph [ref=e113]: "Call or text our voter hotline: (207) 558-3333"
+                    - paragraph [ref=e114]: _____________
+                    - heading "Related links:" [level=4] [ref=e115]
+                    - paragraph [ref=e116]:
+                      - link "What's on your ballot?" [ref=e117] [cursor=pointer]:
+                        - /url: https://www.Vote411.org
+                        - generic [ref=e118]:
+                          - generic [ref=e119]: 
+                          - text: What's on your ballot?
+                    - paragraph [ref=e120]:
+                      - 'link "How-to: Ranked Choice Voting" [ref=e121] [cursor=pointer]':
+                        - /url: https://www.lwvme.org/node/2962
+                        - generic [ref=e122]:
+                          - generic [ref=e123]: 
+                          - text: "How-to: Ranked Choice Voting"
+                    - paragraph [ref=e124]:
+                      - 'link "Map: Absentee Ballot Dropbox Locations" [ref=e125] [cursor=pointer]':
+                        - /url: https://www.lwvme.org/AbsenteeMap
+                        - generic [ref=e126]:
+                          - generic [ref=e127]: 
+                          - text: "Map: Absentee Ballot Dropbox Locations"
+                    - paragraph [ref=e128]
+            - generic:   
+            - generic:   
+            - generic:   
+            - generic:    
+            - generic:   
+            - generic:   
+            - generic:   
+    - contentinfo [ref=e129]:
+      - generic [ref=e132]:
+        - link "BECOME A MEMBER" [ref=e134] [cursor=pointer]:
+          - /url: /member
+        - generic [ref=e136]:
+          - strong [ref=e138]: Get in touch.
+          - generic [ref=e139]:
+            - text: PO Box 18187
+            - text: Portland ME 04112
+          - generic [ref=e140]:
+            - generic [ref=e141]: 
+            - text: (207) 622-0256
+            - generic [ref=e142]: 
+            - text: info@lwvme.org
+          - generic [ref=e143]:
+            - link [ref=e144] [cursor=pointer]:
+              - /url: http://www.facebook.com/LWVME?ref=ts
+              - generic [ref=e145]: 
+            - link [ref=e146] [cursor=pointer]:
+              - /url: https://www.instagram.com/lwvme/
+              - generic [ref=e147]: 
+            - link [ref=e148] [cursor=pointer]:
+              - /url: https://www.youtube.com/channel/UCgHJ5yR1SNwI1U6hXuDILpQ
+              - generic [ref=e149]: 
+        - generic [ref=e150]:
+          - paragraph [ref=e151]:
+            - strong [ref=e152]: "Privacy Policy:"
+            - text: We do not use cookies, nor do we collect information about users. Any form data is used only to satisfy the purpose of that form (for example, send an email in response to a question).
+          - paragraph [ref=e153]:
+            - strong [ref=e154]: "Disclaimer:"
+            - text: All links to other web sites are provided for your convience only. The League of Women Voters of Maine exercises no control of the information or opinions contained on them. Provision of these links on our site does not indicate an endorsement of their contents by the LWV of Maine.
+        - link [ref=e156] [cursor=pointer]:
+          - /url: https://www.democracymaine.org
+          - img [ref=e157]
+        - generic [ref=e158]: © 2025 League of Women Voters of Maine. All rights reserved.

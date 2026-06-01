@@ -1,0 +1,820 @@
+- generic [active] [ref=e1]:
+  - link "Skip to main navigation" [ref=e2] [cursor=pointer]:
+    - /url: "#main-menu"
+  - generic [ref=e4]:
+    - banner [ref=e5]:
+      - generic [ref=e6]:
+        - generic [ref=e8]:
+          - link "Vote411 Logo" [ref=e9] [cursor=pointer]:
+            - /url: /
+            - img "Vote411 Logo" [ref=e10]
+          - button "Toggle Menu" [ref=e12] [cursor=pointer]:
+            - img "Open menu" [ref=e13]
+            - generic [ref=e14]: Menu
+        - generic [ref=e16]:
+          - button "English" [ref=e18] [cursor=pointer]
+          - link "Register to Vote" [ref=e19] [cursor=pointer]:
+            - /url: /register
+          - link "Donate" [ref=e20] [cursor=pointer]:
+            - /url: https://www.lwv.org/VOTE411give
+      - generic:
+        - generic:
+          - generic:
+            - generic [ref=e21] [cursor=pointer]:
+              - generic [ref=e22]: Voting in My State
+              - generic [ref=e23]:
+                - combobox "Select Your State" [ref=e24]:
+                  - option "Select your State" [selected]
+                  - option "Alabama"
+                  - option "Alaska"
+                  - option "Arizona"
+                  - option "Arkansas"
+                  - option "California"
+                  - option "Colorado"
+                  - option "Connecticut"
+                  - option "Delaware"
+                  - option "District Of Columbia"
+                  - option "Florida"
+                  - option "Georgia"
+                  - option "Hawaii"
+                  - option "Idaho"
+                  - option "Illinois"
+                  - option "Indiana"
+                  - option "Iowa"
+                  - option "Kansas"
+                  - option "Kentucky"
+                  - option "Louisiana"
+                  - option "Maine"
+                  - option "Maryland"
+                  - option "Massachusetts"
+                  - option "Michigan"
+                  - option "Minnesota"
+                  - option "Mississippi"
+                  - option "Missouri"
+                  - option "Montana"
+                  - option "Nebraska"
+                  - option "Nevada"
+                  - option "New Hampshire"
+                  - option "New Jersey"
+                  - option "New Mexico"
+                  - option "New York"
+                  - option "North Carolina"
+                  - option "North Dakota"
+                  - option "Ohio"
+                  - option "Oklahoma"
+                  - option "Oregon"
+                  - option "Pennsylvania"
+                  - option "Rhode Island"
+                  - option "South Carolina"
+                  - option "South Dakota"
+                  - option "Tennessee"
+                  - option "Texas"
+                  - option "Utah"
+                  - option "Vermont"
+                  - option "Virginia"
+                  - option "Washington"
+                  - option "West Virginia"
+                  - option "Wisconsin"
+                  - option "Wyoming"
+                - link "Compare State Issues" [ref=e26]:
+                  - /url: /search-by-topic
+                  - text: Compare State Issues
+                  - img [ref=e27]
+            - generic [ref=e36] [cursor=pointer]:
+              - generic [ref=e37]: Voter Registration
+              - list [ref=e38]:
+                - listitem [ref=e39]:
+                  - link "Registration Deadlines" [ref=e40]:
+                    - /url: /select-state
+                    - text: Registration Deadlines
+                    - img [ref=e41]
+                - listitem [ref=e46]:
+                  - link "Register to Vote" [ref=e47]:
+                    - /url: /register
+                    - text: Register to Vote
+                    - img [ref=e48]
+            - generic [ref=e53] [cursor=pointer]:
+              - generic [ref=e54]: Voter Guides
+              - list [ref=e55]:
+                - listitem [ref=e56]:
+                  - link "Candidate and Ballot Measure Information" [ref=e57]:
+                    - /url: /ballot
+                    - text: Candidate and Ballot Measure Information
+                    - img [ref=e58]
+                - listitem [ref=e63]:
+                  - link "Make Your Voting Plan" [ref=e64]:
+                    - /url: /make-your-plan
+                    - text: Make Your Voting Plan
+                    - img [ref=e65]
+                - listitem [ref=e70]:
+                  - link "Nationwide Voting Rules Quick View" [ref=e71]:
+                    - /url: /voting-rules
+                    - text: Nationwide Voting Rules Quick View
+                    - img [ref=e72]
+            - generic [ref=e77] [cursor=pointer]:
+              - generic [ref=e78]: About Vote411
+              - list [ref=e79]:
+                - listitem [ref=e80]:
+                  - link "About" [ref=e81]:
+                    - /url: /about
+                    - text: About
+                    - img [ref=e82]
+                - listitem [ref=e87]:
+                  - link "Sponsors and Partnerships" [ref=e88]:
+                    - /url: /sponsors
+                    - text: Sponsors and Partnerships
+                    - img [ref=e89]
+                - listitem [ref=e94]:
+                  - link "Support VOTE411" [ref=e95]:
+                    - /url: https://www.lwv.org/VOTE411give
+                    - text: Support VOTE411
+                    - img [ref=e96]
+    - article [ref=e105]:
+      - generic [ref=e107]:
+        - generic [ref=e111]:
+          - generic [ref=e113]: Voter Guides
+          - generic [ref=e114]:
+            - heading "Your Voters' Guide" [level=1] [ref=e115]
+            - paragraph [ref=e116]: Personalized Ballot and Candidate Information
+        - generic [ref=e125]:
+          - generic [ref=e127]:
+            - paragraph [ref=e128]: Your Voters' Guide
+            - button "View Full Screen" [ref=e129] [cursor=pointer]:
+              - img [ref=e132]
+              - paragraph [ref=e135]: View Full Screen
+          - generic [ref=e136]:
+            - button "Back to State List" [ref=e677] [cursor=pointer]
+            - generic [ref=e678]:
+              - heading "All Races and Measures for Maine" [level=3] [ref=e679]
+              - paragraph [ref=e680]: Viewing all races and measures that are currently published for this state or category.
+            - generic [ref=e682]:
+              - generic [ref=e684]:
+                - generic [ref=e685]: Search by Race Name
+                - textbox "Search by Race Name" [ref=e686]:
+                  - /placeholder: Enter Keyword
+              - button "Governor of Maine, Democratic Primary" [ref=e690] [cursor=pointer]
+              - button "Governor of Maine, Republican Primary" [ref=e694] [cursor=pointer]
+              - button "United States Senator for Maine, Democratic Primary" [ref=e698] [cursor=pointer]
+              - button "United States Senator for Maine, Republican Primary" [ref=e702] [cursor=pointer]
+              - button "US House District 2, Republican Primary" [ref=e706] [cursor=pointer]
+              - button "US House District 2, Democratic Primary" [ref=e710] [cursor=pointer]
+              - button "US House District 1, Democratic Primary" [ref=e714] [cursor=pointer]
+              - button "US House District 1, Republican Primary" [ref=e718] [cursor=pointer]
+              - button "Maine State Senate District 29, Democratic Primary" [ref=e722] [cursor=pointer]
+              - button "Maine State Senate District 35, Democratic Primary" [ref=e726] [cursor=pointer]
+              - button "Maine State Senate District 11, Democratic Primary" [ref=e730] [cursor=pointer]
+              - button "Maine State Senate District 10, Democratic Primary" [ref=e734] [cursor=pointer]
+              - button "Maine State Senate District 11, Republican Primary" [ref=e738] [cursor=pointer]
+              - button "Maine State Senate District 35, Republican Primary" [ref=e742] [cursor=pointer]
+              - button "Maine State Senate District 12, Democratic Primary" [ref=e746] [cursor=pointer]
+              - button "Maine State Senate District 14, Democratic Primary" [ref=e750] [cursor=pointer]
+              - button "Maine State Senate District 13, Democratic Primary" [ref=e754] [cursor=pointer]
+              - button "Maine State Senate District 32, Democratic Primary" [ref=e758] [cursor=pointer]
+              - button "Maine State Senate District 31, Republican Primary" [ref=e762] [cursor=pointer]
+              - button "Maine State Senate District 7, Republican Primary" [ref=e766] [cursor=pointer]
+              - button "Maine State Senate District 33, Republican Primary" [ref=e770] [cursor=pointer]
+              - button "Maine State Senate District 8, Democratic Primary" [ref=e774] [cursor=pointer]
+              - button "Maine State Senate District 8, Republican Primary" [ref=e778] [cursor=pointer]
+              - button "Maine State Senate District 9, Democratic Primary" [ref=e782] [cursor=pointer]
+              - button "Maine State Senate District 33, Democratic Primary" [ref=e786] [cursor=pointer]
+              - button "Maine State Senate District 34, Democratic Primary" [ref=e790] [cursor=pointer]
+              - button "Maine State Senate District 34, Republican Primary" [ref=e794] [cursor=pointer]
+              - button "Maine State Senate District 10, Republican Primary" [ref=e798] [cursor=pointer]
+              - button "Maine State Senate District 17, Democratic Primary" [ref=e802] [cursor=pointer]
+              - button "Maine State Senate District 17, Republican Primary" [ref=e806] [cursor=pointer]
+              - button "Maine State Senate District 18, Republican Primary" [ref=e810] [cursor=pointer]
+              - button "Maine State Senate District 19, Republican Primary" [ref=e814] [cursor=pointer]
+              - button "Maine State Senate District 18, Democratic Primary" [ref=e818] [cursor=pointer]
+              - button "Maine State Senate District 14, Republican Primary" [ref=e822] [cursor=pointer]
+              - button "Maine State Senate District 15, Democratic Primary" [ref=e826] [cursor=pointer]
+              - button "Maine State Senate District 16, Republican Primary" [ref=e830] [cursor=pointer]
+              - button "Maine State Senate District 15, Republican Primary" [ref=e834] [cursor=pointer]
+              - button "Maine State Senate District 16, Democratic Primary" [ref=e838] [cursor=pointer]
+              - button "Maine State Senate District 22, Republican Primary" [ref=e842] [cursor=pointer]
+              - button "Maine State Senate District 1, Republican Primary" [ref=e846] [cursor=pointer]
+              - button "Maine State Senate District 22, Democratic Primary" [ref=e850] [cursor=pointer]
+              - button "Maine State Senate District 23, Democratic Primary" [ref=e854] [cursor=pointer]
+              - button "Maine State Senate District 1, Democratic Primary" [ref=e858] [cursor=pointer]
+              - button "Maine State Senate District 23, Republican Primary" [ref=e862] [cursor=pointer]
+              - button "Maine State Senate District 2, Democratic Primary" [ref=e866] [cursor=pointer]
+              - button "Maine State Senate District 25, Democratic Primary" [ref=e870] [cursor=pointer]
+              - button "Maine State Senate District 3, Republican Primary" [ref=e874] [cursor=pointer]
+              - button "Maine State Senate District 24, Democratic Primary" [ref=e878] [cursor=pointer]
+              - button "Maine State Senate District 2, Republican Primary" [ref=e882] [cursor=pointer]
+              - button "Maine State Senate District 19, Democratic Primary" [ref=e886] [cursor=pointer]
+              - button "Maine State Senate District 20, Republican Primary" [ref=e890] [cursor=pointer]
+              - button "Maine State Senate District 21, Democratic Primary" [ref=e894] [cursor=pointer]
+              - button "Maine State Senate District 20, Democratic Primary" [ref=e898] [cursor=pointer]
+              - button "Maine State Senate District 29, Republican Primary" [ref=e902] [cursor=pointer]
+              - button "Maine State Senate District 5, Republican Primary" [ref=e906] [cursor=pointer]
+              - button "Maine State Senate District 5, Democratic Primary" [ref=e910] [cursor=pointer]
+              - button "Maine State Senate District 30, Democratic Primary" [ref=e914] [cursor=pointer]
+              - button "Maine State Senate District 30, Republican Primary" [ref=e918] [cursor=pointer]
+              - button "Maine State Senate District 6, Republican Primary" [ref=e922] [cursor=pointer]
+              - button "Maine State Senate District 7, Democratic Primary" [ref=e926] [cursor=pointer]
+              - button "Maine State Senate District 31, Democratic Primary" [ref=e930] [cursor=pointer]
+              - button "Maine State Senate District 26, Republican Primary" [ref=e934] [cursor=pointer]
+              - button "Maine State Senate District 3, Democratic Primary" [ref=e938] [cursor=pointer]
+              - button "Maine State Senate District 4, Republican Primary" [ref=e942] [cursor=pointer]
+              - button "Maine State Senate District 26, Democratic Primary" [ref=e946] [cursor=pointer]
+              - button "Maine State Senate District 27, Democratic Primary" [ref=e950] [cursor=pointer]
+              - button "Maine State Senate District 4, Democratic Primary" [ref=e954] [cursor=pointer]
+              - button "Maine State Senate District 28, Democratic Primary" [ref=e958] [cursor=pointer]
+              - button "Maine State House District 84, Democratic Primary" [ref=e962] [cursor=pointer]
+              - button "Maine State House District 84, Republican Primary" [ref=e966] [cursor=pointer]
+              - button "Maine State House District 1, Democratic Primary" [ref=e970] [cursor=pointer]
+              - button "Maine State House District 85, Republican Primary" [ref=e974] [cursor=pointer]
+              - button "Maine State House District 85, Democratic Primary" [ref=e978] [cursor=pointer]
+              - button "Maine State House District 1, Republican Primary" [ref=e982] [cursor=pointer]
+              - button "Maine State House District 81, Republican Primary" [ref=e986] [cursor=pointer]
+              - button "Maine State House District 82, Democratic Primary" [ref=e990] [cursor=pointer]
+              - button "Maine State House District 83, Democratic Primary" [ref=e994] [cursor=pointer]
+              - button "Maine State House District 82, Republican Primary" [ref=e998] [cursor=pointer]
+              - button "Maine State House District 83, Republican Primary" [ref=e1002] [cursor=pointer]
+              - button "Maine State House District 89, Republican Primary" [ref=e1006] [cursor=pointer]
+              - button "Maine State House District 5, Democratic Primary" [ref=e1010] [cursor=pointer]
+              - button "Maine State House District 89, Democratic Primary" [ref=e1014] [cursor=pointer]
+              - button "Maine State House District 5, Republican Primary" [ref=e1018] [cursor=pointer]
+              - button "Maine State House District 90, Republican Primary" [ref=e1022] [cursor=pointer]
+              - button "Maine State House District 6, Democratic Primary" [ref=e1026] [cursor=pointer]
+              - button "Maine State House District 90, Democratic Primary" [ref=e1030] [cursor=pointer]
+              - button "Maine State House District 6, Republican Primary" [ref=e1034] [cursor=pointer]
+              - button "Maine State House District 91, Democratic Primary" [ref=e1038] [cursor=pointer]
+              - button "Maine State House District 7, Republican Primary" [ref=e1042] [cursor=pointer]
+              - button "Maine State House District 86, Republican Primary" [ref=e1046] [cursor=pointer]
+              - button "Maine State House District 86, Democratic Primary" [ref=e1050] [cursor=pointer]
+              - button "Maine State House District 2, Republican Primary" [ref=e1054] [cursor=pointer]
+              - button "Maine State House District 87, Green Primary" [ref=e1058] [cursor=pointer]
+              - button "Maine State House District 3, Republican Primary" [ref=e1062] [cursor=pointer]
+              - button "Maine State House District 2, Democratic Primary" [ref=e1066] [cursor=pointer]
+              - button "Maine State House District 87, Republican Primary" [ref=e1070] [cursor=pointer]
+              - button "Maine State House District 88, Democratic Primary" [ref=e1074] [cursor=pointer]
+              - button "Maine State House District 4, Republican Primary" [ref=e1078] [cursor=pointer]
+              - button "Maine State House District 88, Republican Primary" [ref=e1082] [cursor=pointer]
+              - button "Maine State House District 3, Democratic Primary" [ref=e1086] [cursor=pointer]
+              - button "Maine State House District 74, Republican Primary" [ref=e1090] [cursor=pointer]
+              - button "Maine State House District 74, Democratic Primary" [ref=e1094] [cursor=pointer]
+              - button "Maine State House District 75, Republican Primary" [ref=e1098] [cursor=pointer]
+              - button "Maine State House District 76, Democratic Primary" [ref=e1102] [cursor=pointer]
+              - button "Maine State House District 75, Democratic Primary" [ref=e1106] [cursor=pointer]
+              - button "Maine State House District 71, Democratic Primary" [ref=e1110] [cursor=pointer]
+              - button "Maine State House District 72, Democratic Primary" [ref=e1114] [cursor=pointer]
+              - button "Maine State House District 73, Republican Primary" [ref=e1118] [cursor=pointer]
+              - button "Maine State House District 72, Republican Primary" [ref=e1122] [cursor=pointer]
+              - button "Maine State House District 73, Democratic Primary" [ref=e1126] [cursor=pointer]
+              - button "Maine State House District 79, Republican Primary" [ref=e1130] [cursor=pointer]
+              - button "Maine State House District 78, Democratic Primary" [ref=e1134] [cursor=pointer]
+              - button "Maine State House District 79, Democratic Primary" [ref=e1138] [cursor=pointer]
+              - button "Maine State House District 80, Republican Primary" [ref=e1142] [cursor=pointer]
+              - button "Maine State House District 81, Democratic Primary" [ref=e1146] [cursor=pointer]
+              - button "Maine State House District 76, Republican Primary" [ref=e1150] [cursor=pointer]
+              - button "Maine State House District 77, Republican Primary" [ref=e1154] [cursor=pointer]
+              - button "Maine State House District 77, Democratic Primary" [ref=e1158] [cursor=pointer]
+              - button "Maine State House District 78, Republican Primary" [ref=e1162] [cursor=pointer]
+              - button "Maine State House District 106, Republican Primary" [ref=e1166] [cursor=pointer]
+              - button "Maine State House District 22, Republican Primary" [ref=e1170] [cursor=pointer]
+              - button "Maine State House District 105, Democratic Primary" [ref=e1174] [cursor=pointer]
+              - button "Maine State House District 21, Democratic Primary" [ref=e1178] [cursor=pointer]
+              - button "Maine State House District 106, Democratic Primary" [ref=e1182] [cursor=pointer]
+              - button "Maine State House District 22, Democratic Primary" [ref=e1186] [cursor=pointer]
+              - button "Maine State House District 107, Democratic Primary" [ref=e1190] [cursor=pointer]
+              - button "Maine State House District 23, Republican Primary" [ref=e1194] [cursor=pointer]
+              - button "Maine State House District 108, Republican Primary" [ref=e1198] [cursor=pointer]
+              - button "Maine State House District 107, Republican Primary" [ref=e1202] [cursor=pointer]
+              - button "Maine State House District 23, Democratic Primary" [ref=e1206] [cursor=pointer]
+              - button "Maine State House District 19, Democratic Primary" [ref=e1210] [cursor=pointer]
+              - button "Maine State House District 102, Republican Primary" [ref=e1214] [cursor=pointer]
+              - button "Maine State House District 103, Democratic Primary" [ref=e1218] [cursor=pointer]
+              - button "Maine State House District 102, Democratic Primary" [ref=e1222] [cursor=pointer]
+              - button "Maine State House District 20, Republican Primary" [ref=e1226] [cursor=pointer]
+              - button "Maine State House District 104, Republican Primary" [ref=e1230] [cursor=pointer]
+              - button "Maine State House District 21, Republican Primary" [ref=e1234] [cursor=pointer]
+              - button "Maine State House District 20, Democratic Primary" [ref=e1238] [cursor=pointer]
+              - button "Maine State House District 105, Republican Primary" [ref=e1242] [cursor=pointer]
+              - button "Maine State House District 27, Democratic Primary" [ref=e1246] [cursor=pointer]
+              - button "Maine State House District 26, Republican Primary" [ref=e1250] [cursor=pointer]
+              - button "Maine State House District 111, Democratic Primary" [ref=e1254] [cursor=pointer]
+              - button "Maine State House District 27, Republican Primary" [ref=e1258] [cursor=pointer]
+              - button "Maine State House District 112, Democratic Primary" [ref=e1262] [cursor=pointer]
+              - button "Maine State House District 112, Republican Primary" [ref=e1266] [cursor=pointer]
+              - button "Maine State House District 113, Democratic Primary" [ref=e1270] [cursor=pointer]
+              - button "Maine State House District 28, Republican Primary" [ref=e1274] [cursor=pointer]
+              - button "Maine State House District 29, Democratic Primary" [ref=e1278] [cursor=pointer]
+              - button "Maine State House District 28, Democratic Primary" [ref=e1282] [cursor=pointer]
+              - button "Maine State House District 113, Republican Primary" [ref=e1286] [cursor=pointer]
+              - button "Maine State House District 108, Democratic Primary" [ref=e1290] [cursor=pointer]
+              - button "Maine State House District 24, Democratic Primary" [ref=e1294] [cursor=pointer]
+              - button "Maine State House District 25, Democratic Primary" [ref=e1298] [cursor=pointer]
+              - button "Maine State House District 109, Republican Primary" [ref=e1302] [cursor=pointer]
+              - button "Maine State House District 110, Republican Primary" [ref=e1306] [cursor=pointer]
+              - button "Maine State House District 109, Democratic Primary" [ref=e1310] [cursor=pointer]
+              - button "Maine State House District 25, Republican Primary" [ref=e1314] [cursor=pointer]
+              - button "Maine State House District 110, Democratic Primary" [ref=e1318] [cursor=pointer]
+              - button "Maine State House District 95, Democratic Primary" [ref=e1322] [cursor=pointer]
+              - button "Maine State House District 94, Democratic Primary" [ref=e1326] [cursor=pointer]
+              - button "Maine State House District 10, Democratic Primary" [ref=e1330] [cursor=pointer]
+              - button "Maine State House District 11, Democratic Primary" [ref=e1334] [cursor=pointer]
+              - button "Maine State House District 96, Republican Primary" [ref=e1338] [cursor=pointer]
+              - button "Maine State House District 12, Republican Primary" [ref=e1342] [cursor=pointer]
+              - button "Maine State House District 95, Republican Primary" [ref=e1346] [cursor=pointer]
+              - button "Maine State House District 11, Republican Primary" [ref=e1350] [cursor=pointer]
+              - button "Maine State House District 96, Democratic Primary" [ref=e1354] [cursor=pointer]
+              - button "Maine State House District 13, Democratic Primary" [ref=e1358] [cursor=pointer]
+              - button "Maine State House District 91, Republican Primary" [ref=e1362] [cursor=pointer]
+              - button "Maine State House District 7, Democratic Primary" [ref=e1366] [cursor=pointer]
+              - button "Maine State House District 93, Democratic Primary" [ref=e1370] [cursor=pointer]
+              - button "Maine State House District 9, Republican Primary" [ref=e1374] [cursor=pointer]
+              - button "Maine State House District 92, Republican Primary" [ref=e1378] [cursor=pointer]
+              - button "Maine State House District 8, Republican Primary" [ref=e1382] [cursor=pointer]
+              - button "Maine State House District 93, Republican Primary" [ref=e1386] [cursor=pointer]
+              - button "Maine State House District 9, Democratic Primary" [ref=e1390] [cursor=pointer]
+              - button "Maine State House District 94, Republican Primary" [ref=e1394] [cursor=pointer]
+              - button "Maine State House District 10, Republican Primary" [ref=e1398] [cursor=pointer]
+              - button "Maine State House District 99, Republican Primary" [ref=e1402] [cursor=pointer]
+              - button "Maine State House District 17, Republican Primary" [ref=e1406] [cursor=pointer]
+              - button "Maine State House District 16, Republican Primary" [ref=e1410] [cursor=pointer]
+              - button "Maine State House District 17, Democratic Primary" [ref=e1414] [cursor=pointer]
+              - button "Maine State House District 100, Democratic Primary" [ref=e1418] [cursor=pointer]
+              - button "Maine State House District 101, Democratic Primary" [ref=e1422] [cursor=pointer]
+              - button "Maine State House District 100, Republican Primary" [ref=e1426] [cursor=pointer]
+              - button "Maine State House District 18, Democratic Primary" [ref=e1430] [cursor=pointer]
+              - button "Maine State House District 101, Republican Primary" [ref=e1434] [cursor=pointer]
+              - button "Maine State House District 19, Republican Primary" [ref=e1438] [cursor=pointer]
+              - button "Maine State House District 18, Republican Primary" [ref=e1442] [cursor=pointer]
+              - button "Maine State House District 97, Republican Primary" [ref=e1446] [cursor=pointer]
+              - button "Maine State House District 13, Republican Primary" [ref=e1450] [cursor=pointer]
+              - button "Maine State House District 98, Republican Primary" [ref=e1454] [cursor=pointer]
+              - button "Maine State House District 14, Democratic Primary" [ref=e1458] [cursor=pointer]
+              - button "Maine State House District 97, Democratic Primary" [ref=e1462] [cursor=pointer]
+              - button "Maine State House District 14, Republican Primary" [ref=e1466] [cursor=pointer]
+              - button "Maine State House District 15, Democratic Primary" [ref=e1470] [cursor=pointer]
+              - button "Maine State House District 99, Democratic Primary" [ref=e1474] [cursor=pointer]
+              - button "Maine State House District 98, Democratic Primary" [ref=e1478] [cursor=pointer]
+              - button "Maine State House District 16, Democratic Primary" [ref=e1482] [cursor=pointer]
+              - button "Maine State House District 135, Democratic Primary" [ref=e1486] [cursor=pointer]
+              - button "Maine State House District 42, Republican Primary" [ref=e1490] [cursor=pointer]
+              - button "Maine State House District 136, Democratic Primary" [ref=e1494] [cursor=pointer]
+              - button "Maine State House District 43, Republican Primary" [ref=e1498] [cursor=pointer]
+              - button "Maine State House District 42, Democratic Primary" [ref=e1502] [cursor=pointer]
+              - button "Maine State House District 136, Republican Primary" [ref=e1506] [cursor=pointer]
+              - button "Maine State House District 137, Democratic Primary" [ref=e1510] [cursor=pointer]
+              - button "Maine State House District 137, Republican Primary" [ref=e1514] [cursor=pointer]
+              - button "Maine State House District 43, Democratic Primary" [ref=e1518] [cursor=pointer]
+              - button "Maine State House District 130, Democratic Primary" [ref=e1522] [cursor=pointer]
+              - button "Maine State House District 40, Republican Primary" [ref=e1526] [cursor=pointer]
+              - button "Maine State House District 39, Republican Primary" [ref=e1530] [cursor=pointer]
+              - button "Maine State House District 40, Democratic Primary" [ref=e1534] [cursor=pointer]
+              - button "Maine State House District 131, Democratic Primary" [ref=e1538] [cursor=pointer]
+              - button "Maine State House District 133, Democratic Primary" [ref=e1542] [cursor=pointer]
+              - button "Maine State House District 132, Democratic Primary" [ref=e1546] [cursor=pointer]
+              - button "Maine State House District 41, Democratic Primary" [ref=e1550] [cursor=pointer]
+              - button "Maine State House District 134, Democratic Primary" [ref=e1554] [cursor=pointer]
+              - button "Maine State House District 41, Republican Primary" [ref=e1558] [cursor=pointer]
+              - button "Maine State House District 48, Republican Primary" [ref=e1562] [cursor=pointer]
+              - button "Maine State House District 140, Democratic Primary" [ref=e1566] [cursor=pointer]
+              - button "Maine State House District 141, Democratic Primary" [ref=e1570] [cursor=pointer]
+              - button "Maine State House District 141, Republican Primary" [ref=e1574] [cursor=pointer]
+              - button "Maine State House District 48, Democratic Primary" [ref=e1578] [cursor=pointer]
+              - button "Maine State House District 49, Republican Primary" [ref=e1582] [cursor=pointer]
+              - button "Maine State House District 142, Democratic Primary" [ref=e1586] [cursor=pointer]
+              - button "Maine State House District 142, Republican Primary" [ref=e1590] [cursor=pointer]
+              - button "Maine State House District 49, Democratic Primary" [ref=e1594] [cursor=pointer]
+              - button "Maine State House District 138, Republican Primary" [ref=e1598] [cursor=pointer]
+              - button "Maine State House District 44, Republican Primary" [ref=e1602] [cursor=pointer]
+              - button "Maine State House District 45, Republican Primary" [ref=e1606] [cursor=pointer]
+              - button "Maine State House District 138, Democratic Primary" [ref=e1610] [cursor=pointer]
+              - button "Maine State House District 139, Republican Primary" [ref=e1614] [cursor=pointer]
+              - button "Maine State House District 139, Democratic Primary" [ref=e1618] [cursor=pointer]
+              - button "Maine State House District 46, Democratic Primary" [ref=e1622] [cursor=pointer]
+              - button "Maine State House District 140, Republican Primary" [ref=e1626] [cursor=pointer]
+              - button "Maine State House District 47, Republican Primary" [ref=e1630] [cursor=pointer]
+              - button "Maine State House District 47, Democratic Primary" [ref=e1634] [cursor=pointer]
+              - button "Maine State House District 119, Republican Primary" [ref=e1638] [cursor=pointer]
+              - button "Maine State House District 32, Republican Primary" [ref=e1642] [cursor=pointer]
+              - button "Maine State House District 31, Republican Primary" [ref=e1646] [cursor=pointer]
+              - button "Maine State House District 33, Democratic Primary" [ref=e1650] [cursor=pointer]
+              - button "Maine State House District 120, Republican Primary" [ref=e1654] [cursor=pointer]
+              - button "Maine State House District 121, Democratic Primary" [ref=e1658] [cursor=pointer]
+              - button "Maine State House District 120, Democratic Primary" [ref=e1662] [cursor=pointer]
+              - button "Maine State House District 33, Republican Primary" [ref=e1666] [cursor=pointer]
+              - button "Maine State House District 121, Republican Primary" [ref=e1670] [cursor=pointer]
+              - button "Maine State House District 34, Republican Primary" [ref=e1674] [cursor=pointer]
+              - button "Maine State House District 29, Republican Primary" [ref=e1678] [cursor=pointer]
+              - button "Maine State House District 115, Democratic Primary" [ref=e1682] [cursor=pointer]
+              - button "Maine State House District 114, Democratic Primary" [ref=e1686] [cursor=pointer]
+              - button "Maine State House District 116, Democratic Primary" [ref=e1690] [cursor=pointer]
+              - button "Maine State House District 30, Democratic Primary" [ref=e1694] [cursor=pointer]
+              - button "Maine State House District 30, Republican Primary" [ref=e1698] [cursor=pointer]
+              - button "Maine State House District 117, Democratic Primary" [ref=e1702] [cursor=pointer]
+              - button "Maine State House District 119, Democratic Primary" [ref=e1706] [cursor=pointer]
+              - button "Maine State House District 118, Democratic Primary" [ref=e1710] [cursor=pointer]
+              - button "Maine State House District 31, Democratic Primary" [ref=e1714] [cursor=pointer]
+              - button "Maine State House District 37, Republican Primary" [ref=e1718] [cursor=pointer]
+              - button "Maine State House District 126, Democratic Primary" [ref=e1722] [cursor=pointer]
+              - button "Maine State House District 125, Democratic Primary" [ref=e1726] [cursor=pointer]
+              - button "Maine State House District 126, Republican Primary" [ref=e1730] [cursor=pointer]
+              - button "Maine State House District 38, Democratic Primary" [ref=e1734] [cursor=pointer]
+              - button "Maine State House District 38, Republican Primary" [ref=e1738] [cursor=pointer]
+              - button "Maine State House District 127, Democratic Primary" [ref=e1742] [cursor=pointer]
+              - button "Maine State House District 129, Democratic Primary" [ref=e1746] [cursor=pointer]
+              - button "Maine State House District 128, Democratic Primary" [ref=e1750] [cursor=pointer]
+              - button "Maine State House District 39, Democratic Primary" [ref=e1754] [cursor=pointer]
+              - button "Maine State House District 35, Democratic Primary" [ref=e1758] [cursor=pointer]
+              - button "Maine State House District 34, Democratic Primary" [ref=e1762] [cursor=pointer]
+              - button "Maine State House District 122, Democratic Primary" [ref=e1766] [cursor=pointer]
+              - button "Maine State House District 35, Republican Primary" [ref=e1770] [cursor=pointer]
+              - button "Maine State House District 123, Republican Primary" [ref=e1774] [cursor=pointer]
+              - button "Maine State House District 123, Democratic Primary" [ref=e1778] [cursor=pointer]
+              - button "Maine State House District 124, Republican Primary" [ref=e1782] [cursor=pointer]
+              - button "Maine State House District 36, Democratic Primary" [ref=e1786] [cursor=pointer]
+              - button "Maine State House District 37, Democratic Primary" [ref=e1790] [cursor=pointer]
+              - button "Maine State House District 36, Republican Primary" [ref=e1794] [cursor=pointer]
+              - button "Maine State House District 124, Democratic Primary" [ref=e1798] [cursor=pointer]
+              - button "Maine State House District 62, Democratic Primary" [ref=e1802] [cursor=pointer]
+              - button "Maine State House District 63, Republican Primary" [ref=e1806] [cursor=pointer]
+              - button "Maine State House District 64, Democratic Primary" [ref=e1810] [cursor=pointer]
+              - button "Maine State House District 63, Democratic Primary" [ref=e1814] [cursor=pointer]
+              - button "Maine State House District 64, Republican Primary" [ref=e1818] [cursor=pointer]
+              - button "Maine State House District 60, Republican Primary" [ref=e1822] [cursor=pointer]
+              - button "Maine State House District 59, Republican Primary" [ref=e1826] [cursor=pointer]
+              - button "Maine State House District 60, Democratic Primary" [ref=e1830] [cursor=pointer]
+              - button "Maine State House District 61, Republican Primary" [ref=e1834] [cursor=pointer]
+              - button "Maine State House District 62, Republican Primary" [ref=e1838] [cursor=pointer]
+              - button "Maine State House District 61, Democratic Primary" [ref=e1842] [cursor=pointer]
+              - button "Maine State House District 69, Democratic Primary" [ref=e1846] [cursor=pointer]
+              - button "Maine State House District 68, Republican Primary" [ref=e1850] [cursor=pointer]
+              - button "Maine State House District 69, Republican Primary" [ref=e1854] [cursor=pointer]
+              - button "Maine State House District 70, Democratic Primary" [ref=e1858] [cursor=pointer]
+              - button "Maine State House District 71, Republican Primary" [ref=e1862] [cursor=pointer]
+              - button "Maine State House District 70, Republican Primary" [ref=e1866] [cursor=pointer]
+              - button "Maine State House District 65, Democratic Primary" [ref=e1870] [cursor=pointer]
+              - button "Maine State House District 66, Republican Primary" [ref=e1874] [cursor=pointer]
+              - button "Maine State House District 65, Republican Primary" [ref=e1878] [cursor=pointer]
+              - button "Maine State House District 67, Republican Primary" [ref=e1882] [cursor=pointer]
+              - button "Maine State House District 67, Democratic Primary" [ref=e1886] [cursor=pointer]
+              - button "Maine State House District 146, Republican Primary" [ref=e1890] [cursor=pointer]
+              - button "Maine State House District 52, Republican Primary" [ref=e1894] [cursor=pointer]
+              - button "Maine State House District 147, Democratic Primary" [ref=e1898] [cursor=pointer]
+              - button "Maine State House District 53, Republican Primary" [ref=e1902] [cursor=pointer]
+              - button "Maine State House District 146, Democratic Primary" [ref=e1906] [cursor=pointer]
+              - button "Maine State House District 53, Democratic Primary" [ref=e1910] [cursor=pointer]
+              - button "Maine State House District 148, Republican Primary" [ref=e1914] [cursor=pointer]
+              - button "Maine State House District 54, Democratic Primary" [ref=e1918] [cursor=pointer]
+              - button "Maine State House District 148, Democratic Primary" [ref=e1922] [cursor=pointer]
+              - button "Maine State House District 54, Republican Primary" [ref=e1926] [cursor=pointer]
+              - button "Maine State House District 143, Democratic Primary" [ref=e1930] [cursor=pointer]
+              - button "Maine State House District 50, Democratic Primary" [ref=e1934] [cursor=pointer]
+              - button "Maine State House District 50, Republican Primary" [ref=e1938] [cursor=pointer]
+              - button "Maine State House District 51, Republican Primary" [ref=e1942] [cursor=pointer]
+              - button "Maine State House District 143, Republican Primary" [ref=e1946] [cursor=pointer]
+              - button "Maine State House District 145, Republican Primary" [ref=e1950] [cursor=pointer]
+              - button "Maine State House District 144, Republican Primary" [ref=e1954] [cursor=pointer]
+              - button "Maine State House District 51, Democratic Primary" [ref=e1958] [cursor=pointer]
+              - button "Maine State House District 145, Democratic Primary" [ref=e1962] [cursor=pointer]
+              - button "Maine State House District 52, Democratic Primary" [ref=e1966] [cursor=pointer]
+              - button "Maine State House District 57, Republican Primary" [ref=e1970] [cursor=pointer]
+              - button "Maine State House District 58, Republican Primary" [ref=e1974] [cursor=pointer]
+              - button "Maine State House District 59, Democratic Primary" [ref=e1978] [cursor=pointer]
+              - button "Maine State House District 149, Republican Primary" [ref=e1982] [cursor=pointer]
+              - button "Maine State House District 149, Democratic Primary" [ref=e1986] [cursor=pointer]
+              - button "Maine State House District 55, Democratic Primary" [ref=e1990] [cursor=pointer]
+              - button "Maine State House District 150, Democratic Primary" [ref=e1994] [cursor=pointer]
+              - button "Maine State House District 55, Republican Primary" [ref=e1998] [cursor=pointer]
+              - button "Maine State House District 56, Democratic Primary" [ref=e2002] [cursor=pointer]
+              - button "Maine State House District 56, Republican Primary" [ref=e2006] [cursor=pointer]
+              - button "Maine State House District 150, Republican Primary" [ref=e2010] [cursor=pointer]
+              - button "Maine State House District 57, Democratic Primary" [ref=e2014] [cursor=pointer]
+              - button "Maine State House District 151, Democratic Primary" [ref=e2018] [cursor=pointer]
+              - button "Maine State House District 151, Republican Primary" [ref=e2022] [cursor=pointer]
+              - button "County Commissioner, Androscoggin County District 2" [ref=e2026] [cursor=pointer]
+              - button "County Commissioner, Androscoggin County District 3" [ref=e2030] [cursor=pointer]
+              - button "County Commissioner, Cumberland County District 4" [ref=e2034] [cursor=pointer]
+              - button "County Commissioner, Androscoggin County District 5" [ref=e2038] [cursor=pointer]
+              - button "County Commissioner, Androscoggin County District 7" [ref=e2042] [cursor=pointer]
+              - button "County Commissioner, Cumberland County District 5" [ref=e2046] [cursor=pointer]
+              - button "County Commissioner, Aroostook County District 1" [ref=e2050] [cursor=pointer]
+              - button "County Commissioner, Franklin County District 4" [ref=e2054] [cursor=pointer]
+              - button "County Commissioner, Cumberland County District 3" [ref=e2058] [cursor=pointer]
+              - button "County Commissioner, Sagadahoc County District 2" [ref=e2062] [cursor=pointer]
+              - button "County Treasurer, Penobscot County" [ref=e2066] [cursor=pointer]
+              - button "County Treasurer, Piscataquis County" [ref=e2070] [cursor=pointer]
+              - button "County Commissioner, Waldo County District 1" [ref=e2074] [cursor=pointer]
+              - button "County Commissioner, Hancock County District 2" [ref=e2078] [cursor=pointer]
+              - button "County Commissioner, Kennebec County District 2" [ref=e2082] [cursor=pointer]
+              - button "County Commissioner, Washington County District 3" [ref=e2086] [cursor=pointer]
+              - button "County Treasurer, Sagadahoc County" [ref=e2090] [cursor=pointer]
+              - button "County Treasurer, Franklin County" [ref=e2094] [cursor=pointer]
+              - button "County Treasurer, York County" [ref=e2098] [cursor=pointer]
+              - button "Cumberland School Board" [ref=e2102] [cursor=pointer]
+              - button "County Commissioner, Knox County District 1" [ref=e2106] [cursor=pointer]
+              - button "County Commissioner, York County District 1" [ref=e2110] [cursor=pointer]
+              - button "County Commissioner, Lincoln County District 2" [ref=e2114] [cursor=pointer]
+              - button "County Commissioner, York County District 2" [ref=e2118] [cursor=pointer]
+              - button "County Treasurer, Hancock County" [ref=e2122] [cursor=pointer]
+              - button "County Treasurer, Kennebec County" [ref=e2126] [cursor=pointer]
+              - button "County Commissioner, York County District 3" [ref=e2130] [cursor=pointer]
+              - button "County Commissioner, Oxford County District 3" [ref=e2134] [cursor=pointer]
+              - button "County Commissioner, Penobscot County District 3" [ref=e2138] [cursor=pointer]
+              - button "County Treasurer, Lincoln County" [ref=e2142] [cursor=pointer]
+              - button "County Treasurer, Oxford County" [ref=e2146] [cursor=pointer]
+              - button "County Commissioner, Piscataquis County District 1" [ref=e2150] [cursor=pointer]
+              - button "County Commissioner, Franklin County District 5" [ref=e2154] [cursor=pointer]
+              - button "Judge of Probate Cumberland County" [ref=e2158] [cursor=pointer]
+              - button "Judge of Probate Androscoggin County" [ref=e2162] [cursor=pointer]
+              - button "Judge of Probate Washington County" [ref=e2166] [cursor=pointer]
+              - button "Judge of Probate Franklin County" [ref=e2170] [cursor=pointer]
+              - button "Judge of Probate Hancock County" [ref=e2174] [cursor=pointer]
+              - button "Judge of Probate Knox County" [ref=e2178] [cursor=pointer]
+              - button "Judge of Probate Penobscot County" [ref=e2182] [cursor=pointer]
+              - button "Register of Probate Washington County" [ref=e2186] [cursor=pointer]
+              - button "Register of Probate Lincoln County" [ref=e2190] [cursor=pointer]
+              - button "Register of Deeds, Washington County" [ref=e2194] [cursor=pointer]
+              - button "District Attorney, District 3" [ref=e2198] [cursor=pointer]
+              - button "District Attorney, District 2" [ref=e2202] [cursor=pointer]
+              - button "District Attorney, District 1" [ref=e2206] [cursor=pointer]
+              - button "District Attorney, District 8" [ref=e2210] [cursor=pointer]
+              - button "District Attorney, District 6" [ref=e2214] [cursor=pointer]
+              - button "District Attorney, District 5" [ref=e2218] [cursor=pointer]
+              - button "District Attorney, District 4" [ref=e2222] [cursor=pointer]
+              - button "Sheriff, York County" [ref=e2226] [cursor=pointer]
+              - button "Sheriff, Washington County" [ref=e2230] [cursor=pointer]
+              - button "Sheriff, Waldo County" [ref=e2234] [cursor=pointer]
+              - button "Sheriff, Piscataquis County" [ref=e2238] [cursor=pointer]
+              - button "Sheriff, Penobscot County" [ref=e2242] [cursor=pointer]
+              - button "Sheriff, Oxford County" [ref=e2246] [cursor=pointer]
+              - button "Sheriff, Lincoln County" [ref=e2250] [cursor=pointer]
+              - button "Sheriff, Knox County" [ref=e2254] [cursor=pointer]
+              - button "Sheriff, Hancock County" [ref=e2258] [cursor=pointer]
+              - button "Sheriff, Cumberland County" [ref=e2262] [cursor=pointer]
+              - button "Sheriff, Androscoggin County" [ref=e2266] [cursor=pointer]
+              - button "Register of Deeds, Aroostook County South" [ref=e2270] [cursor=pointer]
+              - button "Register of Deeds, Oxford County" [ref=e2274] [cursor=pointer]
+              - button "Register of Deeds, Penobscot County" [ref=e2278] [cursor=pointer]
+              - button "Register of Deeds, Franklin County" [ref=e2282] [cursor=pointer]
+              - button "Register of Deeds, Hancock County" [ref=e2286] [cursor=pointer]
+              - button "Register of Deeds, Piscataquis County" [ref=e2290] [cursor=pointer]
+              - button "Register of Deeds, Sagadahoc County" [ref=e2294] [cursor=pointer]
+              - button "Register of Deeds, Kennebec County" [ref=e2298] [cursor=pointer]
+              - button "Register of Deeds, Lincoln County" [ref=e2302] [cursor=pointer]
+              - button "Register of Deeds, Aroostook County North" [ref=e2306] [cursor=pointer]
+              - button "Register of Deeds, Waldo County" [ref=e2310] [cursor=pointer]
+              - button "Falmouth School Board" [ref=e2314] [cursor=pointer]
+              - button "Falmouth Town Council" [ref=e2318] [cursor=pointer]
+              - button "Cumberland Town Council Center" [ref=e2322] [cursor=pointer]
+              - button "Standish Planning Board Area 1" [ref=e2326] [cursor=pointer]
+              - button "Standish Town Council At Large" [ref=e2330] [cursor=pointer]
+              - button "Standish Town Council Area 2" [ref=e2334] [cursor=pointer]
+              - button "Standish Town Council Area 4" [ref=e2338] [cursor=pointer]
+              - button "Standish Budget Committee At Large- For Three Years" [ref=e2342] [cursor=pointer]
+              - button "Standish Budget Committee At Large- for Two Years" [ref=e2346] [cursor=pointer]
+              - button "Standish Planning Board At Large" [ref=e2350] [cursor=pointer]
+              - button "Bar Harbor Town Council, 3 Year Term" [ref=e2354] [cursor=pointer]
+              - button "Bar Harbor Warrant Committee, 1 Year Term" [ref=e2358] [cursor=pointer]
+              - button "Bar Harbor Warrant Committee, 3 Year Term" [ref=e2362] [cursor=pointer]
+              - button "Bar Harbor Superintending School Committee, 3 Year Term" [ref=e2366] [cursor=pointer]
+              - button "MDI School District Trustee, 3 Year Term" [ref=e2370] [cursor=pointer]
+              - button "Cumberland Town Council at Large" [ref=e2374] [cursor=pointer]
+              - button "Buxton Municipal Clerk" [ref=e2378] [cursor=pointer]
+              - button "Buxton Planning Board Three Year Term" [ref=e2382] [cursor=pointer]
+              - button "Buxton Budget Committee Member Three Year Term" [ref=e2386] [cursor=pointer]
+              - button "School Board Director At-Large, Town of Buxton Resident, Three Year Term" [ref=e2390] [cursor=pointer]
+              - button "School Board Director At-Large, Town of Limington Resident, Three Year Term" [ref=e2394] [cursor=pointer]
+              - button "School Board Director At-Large, Town of Standish Resident, Three Year Term" [ref=e2398] [cursor=pointer]
+              - button "Buxton Selectman, Assessor, and Overseer of the Poor" [ref=e2402] [cursor=pointer]
+              - button "Berwick Member MSAD60 Board of Directors, 3 Year Term" [ref=e2406] [cursor=pointer]
+              - button "Berwick Select Board Member/Assessor/Overseer of the Poor, 3 Year Term" [ref=e2410] [cursor=pointer]
+              - button "Hermon Town Councilperson" [ref=e2414] [cursor=pointer]
+              - button "Hermon School Committeeperson" [ref=e2418] [cursor=pointer]
+              - button "Fairfield MSAD 49 School Board Member" [ref=e2422] [cursor=pointer]
+              - button "Gray Town Council" [ref=e2426] [cursor=pointer]
+              - button "Kennebunk Select Board, 3 year Term" [ref=e2430] [cursor=pointer]
+              - 'button "RSU #21 Board of Directors, 3 year Term" [ref=e2434] [cursor=pointer]'
+              - 'button "RSU #21 Board of Directors, 1 year Term" [ref=e2438] [cursor=pointer]'
+              - button "Kennebunk Light and Power District Trustee" [ref=e2442] [cursor=pointer]
+              - 'button "RSU #21 Board of Directors, 2 year Term" [ref=e2446] [cursor=pointer]'
+              - button "Yarmouth Town Council" [ref=e2450] [cursor=pointer]
+              - button "Yarmouth Water District" [ref=e2454] [cursor=pointer]
+              - button "Yarmouth School Committee" [ref=e2458] [cursor=pointer]
+              - button "Waterboro Town Council, 3 year Term" [ref=e2462] [cursor=pointer]
+              - button "Waterboro Water District Board Member, 3 year Term" [ref=e2466] [cursor=pointer]
+              - button "Waterboro School Board Member, 3 year Term" [ref=e2470] [cursor=pointer]
+              - button "Kennebunk, Kennebunkport, Wells, Water District Trustee" [ref=e2474] [cursor=pointer]
+              - button "Portland Water District Trustee serving Cumberland and Falmouth" [ref=e2478] [cursor=pointer]
+            - generic [ref=e2482]:
+              - heading "Want to see your races only?" [level=4] [ref=e2483]:
+                - generic [ref=e2484]: Want to see your races only?
+              - generic [ref=e2485]: If you'd rather, you can view all the races and measures on your specific ballot by entering your address or using your current location.
+              - button "Enter Address" [ref=e2488] [cursor=pointer]
+          - generic [ref=e171]:
+            - generic [ref=e172]:
+              - paragraph [ref=e173]: ©2026 League of Women Voters Education Fund. All rights reserved.
+              - paragraph [ref=e174]: The League of Women Voters does not support or oppose any candidates or parties. All responses come directly from the candidates and are unedited by the League. The League does not certify the accuracy of the candidate’s statements. The League reserves the right to remove or redact portions of candidate responses that violate state or federal law or the voter guide rules that are provided to all candidates before participating in the voter guide.
+            - generic [ref=e175]:
+              - button "All Races" [ref=e177] [cursor=pointer]
+              - button "All Candidates" [ref=e179] [cursor=pointer]
+        - generic [ref=e182]:
+          - generic [ref=e186]:
+            - heading "Voting Guides" [level=4] [ref=e187]: Voting Guides
+            - list [ref=e189]:
+              - listitem [ref=e190]:
+                - link "NJ Congressional District 2 Democratic Primary Candidate Forum" [ref=e191] [cursor=pointer]:
+                  - /url: https://vimeo.com/1193451870?share=copy&fl=sv&fe=ci
+                  - generic [ref=e192]: NJ Congressional District 2 Democratic Primary Candidate Forum
+              - listitem [ref=e193]:
+                - link "NJ Congressional District 4 Democratic Primary Candidate Forum" [ref=e194] [cursor=pointer]:
+                  - /url: https://lwvmonmouth.org/vid100.php
+                  - generic [ref=e195]: NJ Congressional District 4 Democratic Primary Candidate Forum
+              - listitem [ref=e196]:
+                - 'link "NM: LWV Santa Fe County Voter Guide" [ref=e197] [cursor=pointer]':
+                  - /url: https://vote411-prod.s3.amazonaws.com/2026-05/2026%20Primary%20Election%20Voter%20Guide.pdf
+                  - generic [ref=e198]: "NM: LWV Santa Fe County Voter Guide"
+              - listitem [ref=e199]:
+                - 'link "NY: May 19th, 2026 Tompkins County School Board Elections" [ref=e200] [cursor=pointer]':
+                  - /url: https://vote411-prod.s3.amazonaws.com/2026-05/2026%20School%20Board%20Elections%20for%20VOTE%20411%20and%20for%20LWVTC%20Website_rev.pdf
+                  - generic [ref=e201]: "NY: May 19th, 2026 Tompkins County School Board Elections"
+              - listitem [ref=e202]:
+                - link "Union County PA 2026 Primary Voter Guide" [ref=e203] [cursor=pointer]:
+                  - /url: https://vote411-prod.s3.amazonaws.com/2026-04/Union%20County%20PA%20Spring%202026%20Voters%20Guide.pdf
+                  - generic [ref=e204]: Union County PA 2026 Primary Voter Guide
+          - generic [ref=e207]:
+            - generic [ref=e208]:
+              - heading "Candidate Debate Videos" [level=4] [ref=e209]: Candidate Debate Videos
+              - list [ref=e211]:
+                - listitem [ref=e212]:
+                  - link "2026 LWV Kansas City, MO Candidate Forums" [ref=e213] [cursor=pointer]:
+                    - /url: https://www.youtube.com/playlist?list=PLOGFYk7DGuk1KUtspY3xkHI2z_NFWuns3
+                    - generic [ref=e214]: 2026 LWV Kansas City, MO Candidate Forums
+                - listitem [ref=e215]:
+                  - link "Alameda County CA Board of Supervisors District 2 Candidate Forum" [ref=e216] [cursor=pointer]:
+                    - /url: https://www.youtube.com/watch?v=KfGb6IPYhTk
+                    - generic [ref=e217]: Alameda County CA Board of Supervisors District 2 Candidate Forum
+                - listitem [ref=e218]:
+                  - link "Alameda County CA Board of Supervisors, District 2" [ref=e219] [cursor=pointer]:
+                    - /url: https://www.youtube.com/watch?v=KfGb6IPYhTk
+                    - generic [ref=e220]: Alameda County CA Board of Supervisors, District 2
+                - listitem [ref=e221]:
+                  - link "CA Assembly District 42 Candidate Forum" [ref=e222] [cursor=pointer]:
+                    - /url: https://www.youtube.com/watch?v=KUCUIPYvdWU
+                    - generic [ref=e223]: CA Assembly District 42 Candidate Forum
+                - listitem [ref=e224]:
+                  - link "CA Governor Candidate Forum Claremont" [ref=e225] [cursor=pointer]:
+                    - /url: https://www.youtube.com/live/1ikN8crwsFM
+                    - generic [ref=e226]: CA Governor Candidate Forum Claremont
+                - listitem [ref=e227]:
+                  - link "CA Governor Candidate Forum Los Angeles" [ref=e228] [cursor=pointer]:
+                    - /url: https://www.youtube.com/live/6o0pu2huVvc
+                    - generic [ref=e229]: CA Governor Candidate Forum Los Angeles
+                - listitem [ref=e230]:
+                  - link "CA Governor Candidate Forum Los Angeles Feb 26" [ref=e231] [cursor=pointer]:
+                    - /url: https://www.youtube.com/live/mH-ZKGUUlv0
+                    - generic [ref=e232]: CA Governor Candidate Forum Los Angeles Feb 26
+                - listitem [ref=e233]:
+                  - link "CA Governor Candidate Forum San Francisco" [ref=e234] [cursor=pointer]:
+                    - /url: https://www.youtube.com/watch?v=-_LHkpd7PcM
+                    - generic [ref=e235]: CA Governor Candidate Forum San Francisco
+                - listitem [ref=e236]:
+                  - link "CA Governor Candidate Forum San Francisco April 22" [ref=e237] [cursor=pointer]:
+                    - /url: https://www.youtube.com/watch?v=cKIUJua6iCI
+                    - generic [ref=e238]: CA Governor Candidate Forum San Francisco April 22
+                - listitem [ref=e239]:
+                  - link "CA Insurance Commissioner Candidate Forum April 29" [ref=e240] [cursor=pointer]:
+                    - /url: https://www.youtube.com/watch?v=97nTcNHYbOM&t=251s
+                    - generic [ref=e241]: CA Insurance Commissioner Candidate Forum April 29
+            - navigation "Pagination" [ref=e242]:
+              - heading "Pagination" [level=4] [ref=e243]
+              - list [ref=e244]:
+                - listitem [ref=e245]:
+                  - link "Current page 1" [ref=e246] [cursor=pointer]:
+                    - /url: "?page=%2C0%2C0"
+                    - generic [ref=e247]: Current page
+                    - text: "1"
+                - listitem [ref=e248]:
+                  - link "Page 2" [ref=e249] [cursor=pointer]:
+                    - /url: "?page=%2C0%2C1"
+                    - generic [ref=e250]: Page
+                    - text: "2"
+                - listitem [ref=e251]:
+                  - link "Page 3" [ref=e252] [cursor=pointer]:
+                    - /url: "?page=%2C0%2C2"
+                    - generic [ref=e253]: Page
+                    - text: "3"
+                - listitem [ref=e254]:
+                  - link "Next page" [ref=e255] [cursor=pointer]:
+                    - /url: "?page=%2C0%2C1"
+                    - generic [ref=e256]: Next page
+                    - text: Next ›
+        - generic [ref=e259]:
+          - iframe [ref=e262]:
+            - generic [active] [ref=f1e1]:
+              - generic "YouTube Video Player" [ref=f1e3]
+              - generic [ref=f1e5]:
+                - generic:
+                  - generic:
+                    - button "Play video" [ref=f1e10] [cursor=pointer]
+                    - button "Hide player controls" [ref=f1e12] [cursor=pointer]
+                    - generic [ref=f1e14]:
+                      - generic [ref=f1e19]:
+                        - generic [ref=f1e20]:
+                          - link "Your Vote411 Voter Guide" [ref=f1e21] [cursor=pointer]:
+                            - /url: https://www.youtube.com/watch?v=pWrltElaHRE
+                          - link "League of Women Voters" [ref=f1e22] [cursor=pointer]:
+                            - /url: /channel/UCzd5f5VyMYYrtCZKM3dYaXQ
+                            - generic [ref=f1e23]: League of Women Voters
+                        - generic [ref=f1e24]:
+                          - button [ref=f1e25] [cursor=pointer]
+                          - generic [ref=f1e27]:
+                            - generic: League of Women Voters
+                            - generic: 3.64K subscribers
+                      - generic [ref=f1e28]:
+                        - button "Share" [ref=f1e31] [cursor=pointer]:
+                          - generic [ref=f1e35]:
+                            - img
+                        - link "Watch on YouTube" [ref=f1e42] [cursor=pointer]:
+                          - /url: https://www.youtube.com/watch?v=pWrltElaHRE
+                          - generic [ref=f1e45]:
+                            - text: Watch on
+                            - img [ref=f1e47]:
+                              - generic [ref=f1e49]:
+                                - img
+          - generic [ref=e265]:
+            - heading "Get Other Personalized Voting Information" [level=2] [ref=e266]:
+              - generic [ref=e267]: Get Other Personalized Voting Information
+            - paragraph
+            - paragraph
+            - list [ref=e268]:
+              - listitem [ref=e269]: See What's On Your Ballot
+              - listitem [ref=e270]: Find Your Polling Place
+              - listitem [ref=e271]: Discover Upcoming Debates And Forums In Your Area
+              - listitem [ref=e272]: and much more!
+            - paragraph [ref=e273]
+            - link "Get Started" [ref=e274] [cursor=pointer]:
+              - /url: /plan-your-vote
+    - contentinfo [ref=e275]:
+      - generic [ref=e278]:
+        - generic [ref=e279]:
+          - heading "Election day problems?" [level=2] [ref=e280]
+          - paragraph [ref=e281]: "Report an election problem by calling:"
+        - generic [ref=e282]:
+          - generic [ref=e283]: 1-866-OUR-VOTE (866-687-8683)
+          - generic [ref=e284]: 1-888-VE-Y-VOTA (en Español)
+        - generic [ref=e285]:
+          - generic [ref=e286]: 1-888-API-VOTE (Asian multilingual assistance)
+          - generic [ref=e287]: 1-844-YALLA-US (Arabic)
+      - generic [ref=e290]:
+        - generic [ref=e291]:
+          - heading "Donate" [level=2] [ref=e292]
+          - paragraph [ref=e293]: Help us provide accurate and unbiased voting information by donating today!
+          - link "Make a donation" [ref=e294] [cursor=pointer]:
+            - /url: https://www.lwv.org/VOTE411give
+        - generic [ref=e295]:
+          - heading "Your Voting Guide" [level=2] [ref=e296]
+          - paragraph [ref=e297]: Find what's on your ballot
+          - link "Explore Now" [ref=e298] [cursor=pointer]:
+            - /url: /plan-your-vote
+      - generic [ref=e300]:
+        - generic [ref=e301]:
+          - generic [ref=e302]:
+            - img "VOTE411 Logo" [ref=e303]
+            - paragraph [ref=e304]: VOTE411 is committed to ensuring voters have the information they need to successfully participate in every election. Whether it's local, state or federal, every election is important to ensuring our laws and policies reflect the values and beliefs of our communities.
+            - img "webby-2020-banner" [ref=e306]
+          - generic [ref=e315]:
+            - list [ref=e317]:
+              - listitem [ref=e318]:
+                - link "Contact Us" [ref=e319] [cursor=pointer]:
+                  - /url: mailto:voterinformation@lwv.org
+              - listitem [ref=e320]:
+                - link "About Us" [ref=e321] [cursor=pointer]:
+                  - /url: /about
+              - listitem [ref=e322]:
+                - link "Get Involved" [ref=e323] [cursor=pointer]:
+                  - /url: https://www.lwv.org/local-leagues/find-local-league?field_zip_code_value=
+              - listitem [ref=e324]:
+                - link "Sponsors & Partners" [ref=e325] [cursor=pointer]:
+                  - /url: /sponsors
+            - generic [ref=e326]:
+              - heading "Follow us" [level=2] [ref=e327]
+              - list [ref=e328]:
+                - listitem [ref=e329]:
+                  - link "Facebook" [ref=e330] [cursor=pointer]:
+                    - /url: https://www.facebook.com/vote411/
+                - listitem [ref=e331]:
+                  - link "Instagram" [ref=e332] [cursor=pointer]:
+                    - /url: https://www.instagram.com/vote411/
+                - listitem [ref=e333]:
+                  - link "Twitter" [ref=e334] [cursor=pointer]:
+                    - /url: https://twitter.com/vote411
+                - listitem [ref=e335]:
+                  - link "YouTube" [ref=e336] [cursor=pointer]:
+                    - /url: https://www.youtube.com/watch?v=HoR-26mgFv0&list=PL33IAmThHpVDf2z3amFL9FzGxN0Ikfluc
+                - listitem
+            - generic [ref=e337]:
+              - heading "Brought to you by" [level=2] [ref=e338]
+              - link "League of Women Voters" [ref=e339] [cursor=pointer]:
+                - /url: https://www.lwv.org/about-us
+                - img "League of Women Voters Logo" [ref=e340]
+        - generic [ref=e341]:
+          - paragraph [ref=e343]: ©2026 League of Women Voters Education Fund. All rights reserved.
+          - link "Terms of Use" [ref=e345] [cursor=pointer]:
+            - /url: legal
+          - link "Privacy Policy" [ref=e347] [cursor=pointer]:
+            - /url: legal#privacy-policy

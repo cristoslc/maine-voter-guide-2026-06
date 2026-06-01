@@ -1,0 +1,1967 @@
+- generic [active] [ref=e1]:
+  - link "Skip to main navigation" [ref=e2] [cursor=pointer]:
+    - /url: "#main-menu"
+  - generic [ref=e4]:
+    - banner [ref=e5]:
+      - generic [ref=e6]:
+        - generic [ref=e8]:
+          - link "Vote411 Logo" [ref=e9] [cursor=pointer]:
+            - /url: /
+            - img "Vote411 Logo" [ref=e10]
+          - button "Toggle Menu" [ref=e12] [cursor=pointer]:
+            - img "Open menu" [ref=e13]
+            - generic [ref=e14]: Menu
+        - generic [ref=e16]:
+          - button "English" [ref=e18] [cursor=pointer]
+          - link "Register to Vote" [ref=e19] [cursor=pointer]:
+            - /url: /register
+          - link "Donate" [ref=e20] [cursor=pointer]:
+            - /url: https://www.lwv.org/VOTE411give
+      - generic:
+        - generic:
+          - generic:
+            - generic [ref=e21] [cursor=pointer]:
+              - generic [ref=e22]: Voting in My State
+              - generic [ref=e23]:
+                - combobox "Select Your State" [ref=e24]:
+                  - option "Select your State" [selected]
+                  - option "Alabama"
+                  - option "Alaska"
+                  - option "Arizona"
+                  - option "Arkansas"
+                  - option "California"
+                  - option "Colorado"
+                  - option "Connecticut"
+                  - option "Delaware"
+                  - option "District Of Columbia"
+                  - option "Florida"
+                  - option "Georgia"
+                  - option "Hawaii"
+                  - option "Idaho"
+                  - option "Illinois"
+                  - option "Indiana"
+                  - option "Iowa"
+                  - option "Kansas"
+                  - option "Kentucky"
+                  - option "Louisiana"
+                  - option "Maine"
+                  - option "Maryland"
+                  - option "Massachusetts"
+                  - option "Michigan"
+                  - option "Minnesota"
+                  - option "Mississippi"
+                  - option "Missouri"
+                  - option "Montana"
+                  - option "Nebraska"
+                  - option "Nevada"
+                  - option "New Hampshire"
+                  - option "New Jersey"
+                  - option "New Mexico"
+                  - option "New York"
+                  - option "North Carolina"
+                  - option "North Dakota"
+                  - option "Ohio"
+                  - option "Oklahoma"
+                  - option "Oregon"
+                  - option "Pennsylvania"
+                  - option "Rhode Island"
+                  - option "South Carolina"
+                  - option "South Dakota"
+                  - option "Tennessee"
+                  - option "Texas"
+                  - option "Utah"
+                  - option "Vermont"
+                  - option "Virginia"
+                  - option "Washington"
+                  - option "West Virginia"
+                  - option "Wisconsin"
+                  - option "Wyoming"
+                - link "Compare State Issues" [ref=e26]:
+                  - /url: /search-by-topic
+                  - text: Compare State Issues
+                  - img [ref=e27]
+            - generic [ref=e36] [cursor=pointer]:
+              - generic [ref=e37]: Voter Registration
+              - list [ref=e38]:
+                - listitem [ref=e39]:
+                  - link "Registration Deadlines" [ref=e40]:
+                    - /url: /select-state
+                    - text: Registration Deadlines
+                    - img [ref=e41]
+                - listitem [ref=e46]:
+                  - link "Register to Vote" [ref=e47]:
+                    - /url: /register
+                    - text: Register to Vote
+                    - img [ref=e48]
+            - generic [ref=e53] [cursor=pointer]:
+              - generic [ref=e54]: Voter Guides
+              - list [ref=e55]:
+                - listitem [ref=e56]:
+                  - link "Candidate and Ballot Measure Information" [ref=e57]:
+                    - /url: /ballot
+                    - text: Candidate and Ballot Measure Information
+                    - img [ref=e58]
+                - listitem [ref=e63]:
+                  - link "Make Your Voting Plan" [ref=e64]:
+                    - /url: /make-your-plan
+                    - text: Make Your Voting Plan
+                    - img [ref=e65]
+                - listitem [ref=e70]:
+                  - link "Nationwide Voting Rules Quick View" [ref=e71]:
+                    - /url: /voting-rules
+                    - text: Nationwide Voting Rules Quick View
+                    - img [ref=e72]
+            - generic [ref=e77] [cursor=pointer]:
+              - generic [ref=e78]: About Vote411
+              - list [ref=e79]:
+                - listitem [ref=e80]:
+                  - link "About" [ref=e81]:
+                    - /url: /about
+                    - text: About
+                    - img [ref=e82]
+                - listitem [ref=e87]:
+                  - link "Sponsors and Partnerships" [ref=e88]:
+                    - /url: /sponsors
+                    - text: Sponsors and Partnerships
+                    - img [ref=e89]
+                - listitem [ref=e94]:
+                  - link "Support VOTE411" [ref=e95]:
+                    - /url: https://www.lwv.org/VOTE411give
+                    - text: Support VOTE411
+                    - img [ref=e96]
+    - article [ref=e105]:
+      - generic [ref=e107]:
+        - generic [ref=e111]:
+          - generic [ref=e113]: Voter Guides
+          - generic [ref=e114]:
+            - heading "Your Voters' Guide" [level=1] [ref=e115]
+            - paragraph [ref=e116]: Personalized Ballot and Candidate Information
+        - generic [ref=e125]:
+          - generic [ref=e127]:
+            - paragraph [ref=e128]: Your Voters' Guide
+            - button "View Full Screen" [ref=e129] [cursor=pointer]:
+              - img [ref=e132]
+              - paragraph [ref=e135]: View Full Screen
+          - generic [ref=e136]:
+            - button "Back to State List" [ref=e681] [cursor=pointer]
+            - generic [ref=e682]:
+              - heading "All Candidates for Illinois" [level=3] [ref=e683]
+              - paragraph [ref=e684]: Viewing all candidates that are currently published for this state or category.
+            - generic [ref=e688]:
+              - generic [ref=e690]:
+                - generic [ref=e691]: Search by Candidate Name
+                - textbox "Search by Candidate Name" [ref=e692]:
+                  - /placeholder: Enter Keyword
+              - generic [ref=e693]:
+                - paragraph [ref=e694]: A
+                - generic [ref=e695]:
+                  - img "Yes-For the Measure" [ref=e697]
+                  - generic [ref=e698]:
+                    - button "Yes-For the Measure (No Party)" [ref=e700] [cursor=pointer]
+                    - generic [ref=e701]: Candidate for Pearl City Community Unit School District Number 200 Proposition to Increase the Limited Rate
+                - generic [ref=e702]:
+                  - img "Yes - For the Measure" [ref=e704]
+                  - generic [ref=e705]:
+                    - button "Yes - For the Measure (No Party)" [ref=e707] [cursor=pointer]
+                    - generic [ref=e708]: Candidate for Hanover Township Library Proposition to Increase the Limiting Rate
+                - generic [ref=e709]:
+                  - img "Yes-For the Measure" [ref=e711]
+                  - generic [ref=e712]:
+                    - button "Yes-For the Measure (No Party)" [ref=e714] [cursor=pointer]
+                    - generic [ref=e715]: Candidate for Advisory Referendum on Opting into Federal Program
+                - generic [ref=e716]:
+                  - img "Jacob Ambrosia - Write In Candidate" [ref=e718]
+                  - generic [ref=e719]:
+                    - button "Jacob Ambrosia - Write In Candidate (Republican)" [ref=e721] [cursor=pointer]
+                    - generic [ref=e722]: Candidate for Jo Daviess County Board District 15
+                - generic [ref=e723]:
+                  - img "Daniel N. Arevalo" [ref=e725]
+                  - generic [ref=e726]:
+                    - button "Daniel N. Arevalo (Republican)" [ref=e728] [cursor=pointer]
+                    - generic [ref=e729]: Candidate for Boone County Board District 3
+                - generic [ref=e730]:
+                  - img "Paul M. Arena" [ref=e732]
+                  - generic [ref=e733]:
+                    - button "Paul M. Arena (Republican)" [ref=e735] [cursor=pointer]
+                    - generic [ref=e736]: Candidate for Winnebago District 7
+                - generic [ref=e737]:
+                  - img "Frank J Aguilar" [ref=e739]
+                  - generic [ref=e740]:
+                    - button "Frank J Aguilar (Democratic)" [ref=e742] [cursor=pointer]
+                    - generic [ref=e743]: Candidate for Cook County Board, 16th District Commissioner
+                - generic [ref=e744]:
+                  - img "Alma Anaya" [ref=e746]
+                  - generic [ref=e747]:
+                    - button "Alma Anaya (Democratic)" [ref=e749] [cursor=pointer]
+                    - generic [ref=e750]: Candidate for Cook County Board, 7th District Commissioner
+                - generic [ref=e751]:
+                  - img "Yes - For the Measure" [ref=e753]
+                  - generic [ref=e754]:
+                    - button "Yes - For the Measure (No Party)" [ref=e756] [cursor=pointer]
+                    - generic [ref=e757]: Candidate for Naperville Park District Referendum (DuPage & Will Counties)
+                - generic [ref=e758]:
+                  - img "Yes - For the Measure" [ref=e760]
+                  - generic [ref=e761]:
+                    - button "Yes - For the Measure (No Party)" [ref=e763] [cursor=pointer]
+                    - generic [ref=e764]: Candidate for PROPOSITION TO IMPOSE COUNTY SCHOOL SALES TAX
+                - generic [ref=e765]:
+                  - img "Yes - For the Measure" [ref=e767]
+                  - generic [ref=e768]:
+                    - button "Yes - For the Measure (No Party)" [ref=e770] [cursor=pointer]
+                    - generic [ref=e771]: Candidate for RESOLUTION TO SUBMIT AN ADVISORY REFERENDUM TO THE VOTERS OF WINNEBAGO COUNTY, ILLINOIS REGARDING THE FEDERAL SCHOLARSHIP TAX CREDIT
+                - generic [ref=e772]:
+                  - img "Carol Ammons" [ref=e774]
+                  - generic [ref=e775]:
+                    - button "Carol Ammons (Democratic)" [ref=e777] [cursor=pointer]
+                    - generic [ref=e778]: Candidate for IL State House District 103
+                - generic [ref=e779]:
+                  - img "Aaron Ammons" [ref=e781]
+                  - generic [ref=e782]:
+                    - button "Aaron Ammons (Democratic)" [ref=e784] [cursor=pointer]
+                    - generic [ref=e785]: Candidate for Champaign County Clerk
+              - generic [ref=e786]:
+                - paragraph [ref=e787]: B
+                - generic [ref=e788]:
+                  - img "No-Against the Measure" [ref=e790]
+                  - generic [ref=e791]:
+                    - button "No-Against the Measure (No Party)" [ref=e793] [cursor=pointer]
+                    - generic [ref=e794]: Candidate for Pearl City Community Unit School District Number 200 Proposition to Increase the Limited Rate
+                - generic [ref=e795]:
+                  - img "No - Against the Measure" [ref=e797]
+                  - generic [ref=e798]:
+                    - button "No - Against the Measure (No Party)" [ref=e800] [cursor=pointer]
+                    - generic [ref=e801]: Candidate for Hanover Township Library Proposition to Increase the Limiting Rate
+                - generic [ref=e802]:
+                  - img "No-Against the Measure" [ref=e804]
+                  - generic [ref=e805]:
+                    - button "No-Against the Measure (No Party)" [ref=e807] [cursor=pointer]
+                    - generic [ref=e808]: Candidate for Advisory Referendum on Opting into Federal Program
+                - generic [ref=e809]:
+                  - img "Joseph H. \"Joe\" Berning" [ref=e811]
+                  - generic [ref=e812]:
+                    - button "Joseph H. \"Joe\" Berning (Democratic)" [ref=e814] [cursor=pointer]
+                    - generic [ref=e815]: Candidate for Illinois Senate District 45
+                - generic [ref=e816]:
+                  - img "Chad Bryden" [ref=e818]
+                  - generic [ref=e819]:
+                    - button "Chad Bryden (Republican)" [ref=e821] [cursor=pointer]
+                    - generic [ref=e822]: Candidate for Winnebago District 8
+                - generic [ref=e823]:
+                  - img "Isidro B. Barrios" [ref=e825]
+                  - generic [ref=e826]:
+                    - button "Isidro B. Barrios (Democratic)" [ref=e828] [cursor=pointer]
+                    - generic [ref=e829]: Candidate for Winnebago District 12
+                - generic [ref=e830]:
+                  - img "Scott Bloomquist" [ref=e832]
+                  - generic [ref=e833]:
+                    - button "Scott Bloomquist (Republican)" [ref=e835] [cursor=pointer]
+                    - generic [ref=e836]: Candidate for Boone/Winnebago - Superintendent of Schools
+                - generic [ref=e837]:
+                  - img "Daniel Behr" [ref=e839]
+                  - generic [ref=e840]:
+                    - button "Daniel Behr (Republican)" [ref=e842] [cursor=pointer]
+                    - generic [ref=e843]: Candidate for Illinois House District 57
+                - generic [ref=e844]:
+                  - img "Brooks, Tiffany N" [ref=e846]
+                  - generic [ref=e847]:
+                    - button "Brooks, Tiffany N (Democratic)" [ref=e849] [cursor=pointer]
+                    - generic [ref=e850]: Candidate for COOK CIRCUIT - 1ST SUBCIRCUIT - WALKER VACANCY
+                - generic [ref=e851]:
+                  - img "Bae, Sam" [ref=e853]
+                  - generic [ref=e854]:
+                    - button "Bae, Sam (Democratic)" [ref=e856] [cursor=pointer]
+                    - generic [ref=e857]: Candidate for COOK CIRCUIT - 18TH SUBCIRCUIT - ANDREOU VACANCY
+                - generic [ref=e858]:
+                  - img "Brown, Bianca B." [ref=e860]
+                  - generic [ref=e861]:
+                    - button "Brown, Bianca B. (Democratic)" [ref=e863] [cursor=pointer]
+                    - generic [ref=e864]: Candidate for COOK CIRCUIT - 17TH SUBCIRCUIT - CARROLL VACANCY
+                - generic [ref=e865]:
+                  - img "Scott Britton" [ref=e867]
+                  - generic [ref=e868]:
+                    - button "Scott Britton (Democratic)" [ref=e870] [cursor=pointer]
+                    - generic [ref=e871]: Candidate for Cook County Board, 14th District Commissioner
+                - generic [ref=e872]:
+                  - img "Kiana Belcher" [ref=e874]
+                  - generic [ref=e875]:
+                    - button "Kiana Belcher (Democratic)" [ref=e877] [cursor=pointer]
+                    - generic [ref=e878]: Candidate for Cook County Board, 5th District Commissioner
+                - generic [ref=e879]:
+                  - img "Julie Berkowicz" [ref=e881]
+                  - generic [ref=e882]:
+                    - button "Julie Berkowicz (Republican)" [ref=e884] [cursor=pointer]
+                    - generic [ref=e885]: Candidate for Illinois Senate District 21
+                - generic [ref=e886]:
+                  - img "Harry Benton" [ref=e888]
+                  - generic [ref=e889]:
+                    - button "Harry Benton (Democratic)" [ref=e891] [cursor=pointer]
+                    - generic [ref=e892]: Candidate for Illinois House District 97
+                - generic [ref=e893]:
+                  - img "Tim Brophy" [ref=e895]
+                  - generic [ref=e896]:
+                    - button "Tim Brophy (Democratic)" [ref=e898] [cursor=pointer]
+                    - generic [ref=e899]: Candidate for Will County Treasurer
+                - generic [ref=e900]:
+                  - img "No - Against the Measure" [ref=e902]
+                  - generic [ref=e903]:
+                    - button "No - Against the Measure (No Party)" [ref=e905] [cursor=pointer]
+                    - generic [ref=e906]: Candidate for Naperville Park District Referendum (DuPage & Will Counties)
+                - generic [ref=e907]:
+                  - img "No - Against the Measure" [ref=e909]
+                  - generic [ref=e910]:
+                    - button "No - Against the Measure (No Party)" [ref=e912] [cursor=pointer]
+                    - generic [ref=e913]: Candidate for PROPOSITION TO IMPOSE COUNTY SCHOOL SALES TAX
+                - generic [ref=e914]:
+                  - img "No - Against the Measure" [ref=e916]
+                  - generic [ref=e917]:
+                    - button "No - Against the Measure (No Party)" [ref=e919] [cursor=pointer]
+                    - generic [ref=e920]: Candidate for RESOLUTION TO SUBMIT AN ADVISORY REFERENDUM TO THE VOTERS OF WINNEBAGO COUNTY, ILLINOIS REGARDING THE FEDERAL SCHOLARSHIP TAX CREDIT
+                - generic [ref=e921]:
+                  - img "Aaron Booker" [ref=e923]
+                  - generic [ref=e924]:
+                    - button "Aaron Booker (Republican)" [ref=e926] [cursor=pointer]
+                    - generic [ref=e927]: Candidate for Winnebago District One
+                - generic [ref=e928]:
+                  - img "Nikki Budzinski" [ref=e930]
+                  - generic [ref=e931]:
+                    - button "Nikki Budzinski (Democratic)" [ref=e933] [cursor=pointer]
+                    - generic [ref=e934]: Candidate for 13th U.S. Congress
+                - generic [ref=e935]:
+                  - img "Jessica Breugelmans" [ref=e937]
+                  - generic [ref=e938]:
+                    - button "Jessica Breugelmans (Republican)" [ref=e940] [cursor=pointer]
+                    - generic [ref=e941]: Candidate for Illinois Senate District 33
+              - generic [ref=e942]:
+                - paragraph [ref=e943]: C
+                - generic [ref=e944]:
+                  - img "Judith A. Chiarelli" [ref=e946]
+                  - generic [ref=e947]:
+                    - button "Judith A. Chiarelli (Democratic)" [ref=e949] [cursor=pointer]
+                    - generic [ref=e950]: Candidate for Precinct Committeeperson West Galena III
+                - generic [ref=e951]:
+                  - img "Gloria A. Chmielewski" [ref=e953]
+                  - generic [ref=e954]:
+                    - button "Gloria A. Chmielewski (Republican)" [ref=e956] [cursor=pointer]
+                    - generic [ref=e957]: Candidate for Precinct Committeeperson Rice
+                - generic [ref=e958]:
+                  - img "Mike Caryle" [ref=e960]
+                  - generic [ref=e961]:
+                    - button "Mike Caryle (Democratic)" [ref=e963] [cursor=pointer]
+                    - generic [ref=e964]: Candidate for Boone County Board District 3
+                - generic [ref=e965]:
+                  - img "Andrew S. Chesney" [ref=e967]
+                  - generic [ref=e968]:
+                    - button "Andrew S. Chesney (Republican)" [ref=e970] [cursor=pointer]
+                    - generic [ref=e971]: Candidate for Illinois Senate District 45
+                - generic [ref=e972]:
+                  - img "Paul Carpenter" [ref=e974]
+                  - generic [ref=e975]:
+                    - button "Paul Carpenter (Democratic)" [ref=e977] [cursor=pointer]
+                    - generic [ref=e978]: Candidate for Judge of the Circuit Court Seventeenth Judicial Circuit Second Subcircuit
+                - generic [ref=e979]:
+                  - img "Timothy T. Cusak" [ref=e981]
+                  - generic [ref=e982]:
+                    - button "Timothy T. Cusak (Republican)" [ref=e984] [cursor=pointer]
+                    - generic [ref=e985]: Candidate for IL Judicial Circuit Court Tenth District Peoria County Resident (Vespa Vacancy)
+                - generic [ref=e986]:
+                  - img "Justin Cochran" [ref=e988]
+                  - generic [ref=e989]:
+                    - button "Justin Cochran (Democratic)" [ref=e991] [cursor=pointer]
+                    - generic [ref=e992]: Candidate for Illinois House District 55
+                - generic [ref=e993]:
+                  - img "Cabonargi, Michael" [ref=e995]
+                  - generic [ref=e996]:
+                    - button "Cabonargi, Michael (Democratic)" [ref=e998] [cursor=pointer]
+                    - generic [ref=e999]: Candidate for COOK CIRCUIT - COGHLAN VACANCY
+                - generic [ref=e1000]:
+                  - img "Carroll, John" [ref=e1002]
+                  - generic [ref=e1003]:
+                    - button "Carroll, John (Democratic)" [ref=e1005] [cursor=pointer]
+                    - generic [ref=e1006]: Candidate for COOK CIRCUIT - 3RD SUBCIRCUIT - MURPHY VACANCY
+                - generic [ref=e1007]:
+                  - img "Crozier, Julian Sanchez" [ref=e1009]
+                  - generic [ref=e1010]:
+                    - button "Crozier, Julian Sanchez (Democratic)" [ref=e1012] [cursor=pointer]
+                    - generic [ref=e1013]: Candidate for COOK CIRCUIT - 16TH SUBCIRCUIT - BAIRD VACANCY
+                - generic [ref=e1014]:
+                  - img "George A Cardenas" [ref=e1016]
+                  - generic [ref=e1017]:
+                    - button "George A Cardenas (Democratic)" [ref=e1019] [cursor=pointer]
+                    - generic [ref=e1020]: Candidate for Cook County Board of Review Comissioner 1st district
+                - generic [ref=e1021]:
+                  - img "Deb Conroy" [ref=e1023]
+                  - generic [ref=e1024]:
+                    - button "Deb Conroy (Democratic)" [ref=e1026] [cursor=pointer]
+                    - generic [ref=e1027]: Candidate for DuPage County Board Chair
+                - generic [ref=e1028]:
+                  - img "Peter Joseph Coolidge" [ref=e1030]
+                  - generic [ref=e1031]:
+                    - button "Peter Joseph Coolidge (Democratic)" [ref=e1033] [cursor=pointer]
+                    - generic [ref=e1034]: Candidate for DuPage County Sheriff
+                - generic [ref=e1035]:
+                  - img "Elizabeth Caparelli-Ruff" [ref=e1037]
+                  - generic [ref=e1038]:
+                    - button "Elizabeth Caparelli-Ruff (Republican)" [ref=e1040] [cursor=pointer]
+                    - generic [ref=e1041]: Candidate for Will County Regional Superintendent of Schools
+                - generic [ref=e1042]:
+                  - img "Amy Christiansen" [ref=e1044]
+                  - generic [ref=e1045]:
+                    - button "Amy Christiansen (Democratic)" [ref=e1047] [cursor=pointer]
+                    - generic [ref=e1048]: Candidate for Illinois Judicial Circuit Court 12th Circuit 1st Subcircuit (Carlson Vacancy)
+                - generic [ref=e1049]:
+                  - img "Gary Caruana" [ref=e1051]
+                  - generic [ref=e1052]:
+                    - button "Gary Caruana (Republican)" [ref=e1054] [cursor=pointer]
+                    - generic [ref=e1055]: Candidate for Winnebago County Sheriff
+                - generic [ref=e1056]:
+                  - img "Sully Cadengo" [ref=e1058]
+                  - generic [ref=e1059]:
+                    - button "Sully Cadengo (Democratic)" [ref=e1061] [cursor=pointer]
+                    - generic [ref=e1062]: Candidate for Winnebago District 10
+                - generic [ref=e1063]:
+                  - img "Byron Clark" [ref=e1065]
+                  - generic [ref=e1066]:
+                    - button "Byron Clark (Democratic)" [ref=e1068] [cursor=pointer]
+                    - generic [ref=e1069]: Candidate for Champaign County Treasurer
+                - generic [ref=e1070]:
+                  - img "Lorraine Cowart" [ref=e1072]
+                  - generic [ref=e1073]:
+                    - button "Lorraine Cowart (Democratic)" [ref=e1075] [cursor=pointer]
+                    - generic [ref=e1076]: Candidate for Champaign County Board District 11
+                - generic [ref=e1077]:
+                  - img "Michele Clark" [ref=e1079]
+                  - generic [ref=e1080]:
+                    - button "Michele Clark (Democratic)" [ref=e1082] [cursor=pointer]
+                    - generic [ref=e1083]: Candidate for Illinois Senate District 33
+              - generic [ref=e1084]:
+                - paragraph [ref=e1085]: D
+                - generic [ref=e1086]:
+                  - img "Kay D. Day" [ref=e1088]
+                  - generic [ref=e1089]:
+                    - button "Kay D. Day (Democratic)" [ref=e1091] [cursor=pointer]
+                    - generic [ref=e1092]: Candidate for Precinct Committeeperson Wards Grove
+                - generic [ref=e1093]:
+                  - img "Michael Dittmar" [ref=e1095]
+                  - generic [ref=e1096]:
+                    - button "Michael Dittmar (Republican)" [ref=e1098] [cursor=pointer]
+                    - generic [ref=e1099]: Candidate for Precinct Committeeperson Elizabeth
+                - generic [ref=e1100]:
+                  - img "Dibler, Elizabeth Christina" [ref=e1102]
+                  - generic [ref=e1103]:
+                    - button "Dibler, Elizabeth Christina (Democratic)" [ref=e1105] [cursor=pointer]
+                    - generic [ref=e1106]: Candidate for COOK CIRCUIT - 8TH SUBCIRCUIT - GAMRATH VACANCY
+                - generic [ref=e1107]:
+                  - img "Cameron 'Cam' Davis" [ref=e1109]
+                  - generic [ref=e1110]:
+                    - button "Cameron 'Cam' Davis (Democratic)" [ref=e1112] [cursor=pointer]
+                    - generic [ref=e1113]: Candidate for Metropolitan Water Reclamation District, MWRD- 2yr
+                - generic [ref=e1114]:
+                  - img "John P Daley" [ref=e1116]
+                  - generic [ref=e1117]:
+                    - button "John P Daley (Democratic)" [ref=e1119] [cursor=pointer]
+                    - generic [ref=e1120]: Candidate for Cook County Board, 11th District Commissioner
+                - generic [ref=e1121]:
+                  - img "Thomas J Dart" [ref=e1123]
+                  - generic [ref=e1124]:
+                    - button "Thomas J Dart (Democratic)" [ref=e1126] [cursor=pointer]
+                    - generic [ref=e1127]: Candidate for Cook County Sheriff
+                - generic [ref=e1128]:
+                  - img "Pete Donaghue" [ref=e1130]
+                  - generic [ref=e1131]:
+                    - button "Pete Donaghue (Republican)" [ref=e1133] [cursor=pointer]
+                    - generic [ref=e1134]: Candidate for Illinois House District 18
+                - generic [ref=e1135]:
+                  - img "Dawn DeSart" [ref=e1137]
+                  - generic [ref=e1138]:
+                    - button "Dawn DeSart (Democratic)" [ref=e1140] [cursor=pointer]
+                    - generic [ref=e1141]: Candidate for DuPage County Board Member District 5 (2-Year Term)
+                - generic [ref=e1142]:
+                  - img "Rebecca (Becky) Duke" [ref=e1144]
+                  - generic [ref=e1145]:
+                    - button "Rebecca (Becky) Duke (Republican)" [ref=e1147] [cursor=pointer]
+                    - generic [ref=e1148]: Candidate for Ogle County Clerk & Recorder
+              - generic [ref=e1149]:
+                - paragraph [ref=e1150]: E
+                - generic [ref=e1151]:
+                  - img "Matthew Ellingson" [ref=e1153]
+                  - generic [ref=e1154]:
+                    - button "Matthew Ellingson (Republican)" [ref=e1156] [cursor=pointer]
+                    - generic [ref=e1157]: Candidate for Boone County Board District 1
+                - generic [ref=e1158]:
+                  - img "Steve L. Endress" [ref=e1160]
+                  - generic [ref=e1161]:
+                    - button "Steve L. Endress (Republican)" [ref=e1163] [cursor=pointer]
+                    - generic [ref=e1164]: Candidate for Jo Daviess County Board District 6
+                - generic [ref=e1165]:
+                  - img "Jeffery Shane Ekena" [ref=e1167]
+                  - generic [ref=e1168]:
+                    - button "Jeffery Shane Ekena (Republican)" [ref=e1170] [cursor=pointer]
+                    - generic [ref=e1171]: Candidate for Regional Superintendent of Schools (Mason, Tazewell, Woodford)
+                - generic [ref=e1172]:
+                  - img "Laura Ellman" [ref=e1174]
+                  - generic [ref=e1175]:
+                    - button "Laura Ellman (Democratic)" [ref=e1177] [cursor=pointer]
+                    - generic [ref=e1178]: Candidate for Illinois Senate District 21
+                - generic [ref=e1179]:
+                  - img "Aaron Esry" [ref=e1181]
+                  - generic [ref=e1182]:
+                    - button "Aaron Esry (Republican)" [ref=e1184] [cursor=pointer]
+                    - generic [ref=e1185]: Candidate for Champaign County Board District 03
+              - generic [ref=e1186]:
+                - paragraph [ref=e1187]: F
+                - generic [ref=e1188]:
+                  - img "Kirk Foecking" [ref=e1190]
+                  - generic [ref=e1191]:
+                    - button "Kirk Foecking (Republican)" [ref=e1193] [cursor=pointer]
+                    - generic [ref=e1194]: Candidate for Precinct Committeeperson West Galena II
+                - generic [ref=e1195]:
+                  - img "Finkle, Lester" [ref=e1197]
+                  - generic [ref=e1198]:
+                    - button "Finkle, Lester (Democratic)" [ref=e1200] [cursor=pointer]
+                    - generic [ref=e1201]: Candidate for COOK CIRCUIT - 8TH SUBCIRCUIT - MIKVA VACANCY
+                - generic [ref=e1202]:
+                  - img "Fischer, Garson" [ref=e1204]
+                  - generic [ref=e1205]:
+                    - button "Fischer, Garson (Democratic)" [ref=e1207] [cursor=pointer]
+                    - generic [ref=e1208]: Candidate for COOK CIRCUIT - 8TH SUBCIRCUIT - GAMRATH VACANCY
+                - generic [ref=e1209]:
+                  - img "Michael Farmer" [ref=e1211]
+                  - generic [ref=e1212]:
+                    - button "Michael Farmer (Republican)" [ref=e1214] [cursor=pointer]
+                    - generic [ref=e1215]: Candidate for DuPage County Forest Preserve Commissioner District 5
+                - generic [ref=e1216]:
+                  - img "Michael W. Fleming" [ref=e1218]
+                  - generic [ref=e1219]:
+                    - button "Michael W. Fleming (Republican)" [ref=e1221] [cursor=pointer]
+                    - generic [ref=e1222]: Candidate for Illinois Judicial Circuit Court 18th Circuit 4th Subcircuit (Wilson Vacancy)
+                - generic [ref=e1223]:
+                  - img "Chyna Figueroa-Dixon" [ref=e1225]
+                  - generic [ref=e1226]:
+                    - button "Chyna Figueroa-Dixon (Democratic)" [ref=e1228] [cursor=pointer]
+                    - generic [ref=e1229]: Candidate for Champaign County Board District 06
+                - generic [ref=e1230]:
+                  - img "Stephanie Fortado" [ref=e1232]
+                  - generic [ref=e1233]:
+                    - button "Stephanie Fortado (Democratic)" [ref=e1235] [cursor=pointer]
+                    - generic [ref=e1236]: Candidate for Champaign County Board District 08
+              - generic [ref=e1237]:
+                - paragraph [ref=e1238]: G
+                - generic [ref=e1239]:
+                  - img "Kathleen Gable" [ref=e1241]
+                  - generic [ref=e1242]:
+                    - button "Kathleen Gable (Democratic)" [ref=e1244] [cursor=pointer]
+                    - generic [ref=e1245]: Candidate for Precinct Committeeperson Hanover
+                - generic [ref=e1246]:
+                  - img "Jayden Lee Gallagly" [ref=e1248]
+                  - generic [ref=e1249]:
+                    - button "Jayden Lee Gallagly (Republican)" [ref=e1251] [cursor=pointer]
+                    - generic [ref=e1252]: Candidate for Boone County Board District 2
+                - generic [ref=e1253]:
+                  - img "Lynn L. Gallagher" [ref=e1255]
+                  - generic [ref=e1256]:
+                    - button "Lynn L. Gallagher (Democratic)" [ref=e1258] [cursor=pointer]
+                    - generic [ref=e1259]: Candidate for Jo Daviess County Board District 11
+                - generic [ref=e1260]:
+                  - img "Matthew J. Gabel" [ref=e1262]
+                  - generic [ref=e1263]:
+                    - button "Matthew J. Gabel (Republican)" [ref=e1265] [cursor=pointer]
+                    - generic [ref=e1266]: Candidate for Winnebago District 6
+                - generic [ref=e1267]:
+                  - img "Lori Gumow" [ref=e1269]
+                  - generic [ref=e1270]:
+                    - button "Lori Gumow (Republican)" [ref=e1272] [cursor=pointer]
+                    - generic [ref=e1273]: Candidate for Winnebago County Clerk
+                - generic [ref=e1274]:
+                  - img "Jim Geldermann" [ref=e1276]
+                  - generic [ref=e1277]:
+                    - button "Jim Geldermann (Republican)" [ref=e1279] [cursor=pointer]
+                    - generic [ref=e1280]: Candidate for Illinois House District 17
+                - generic [ref=e1281]:
+                  - img "Jennifer Gong Gershowitz" [ref=e1283]
+                  - generic [ref=e1284]:
+                    - button "Jennifer Gong Gershowitz (Democratic)" [ref=e1286] [cursor=pointer]
+                    - generic [ref=e1287]: Candidate for Illinois House District 17
+                - generic [ref=e1288]:
+                  - img "Greer Shambley, Ashley" [ref=e1290]
+                  - generic [ref=e1291]:
+                    - button "Greer Shambley, Ashley (Democratic)" [ref=e1293] [cursor=pointer]
+                    - generic [ref=e1294]: Candidate for COOK CIRCUIT - 1ST SUBCIRCUIT - WALKER VACANCY
+                - generic [ref=e1295]:
+                  - img "Groebner, Robert \"Bob\"" [ref=e1297]
+                  - generic [ref=e1298]:
+                    - button "Groebner, Robert \"Bob\" (Democratic)" [ref=e1300] [cursor=pointer]
+                    - generic [ref=e1301]: Candidate for COOK CIRCUIT - 13TH SUBCIRCUIT - CURRY, JR. VACANCY
+                - generic [ref=e1302]:
+                  - img "Elizabeth 'Liz' Doody Gorman" [ref=e1304]
+                  - generic [ref=e1305]:
+                    - button "Elizabeth 'Liz' Doody Gorman (Republican)" [ref=e1307] [cursor=pointer]
+                    - generic [ref=e1308]: Candidate for Cook County Board, 17th District Commissioner
+                - generic [ref=e1309]:
+                  - img "Leticia \"Letty\" Garcia" [ref=e1311]
+                  - generic [ref=e1312]:
+                    - button "Leticia \"Letty\" Garcia (Democratic)" [ref=e1314] [cursor=pointer]
+                    - generic [ref=e1315]: Candidate for Cook County Board, 16th District Commissioner
+                - generic [ref=e1316]:
+                  - img "Monica Gordon" [ref=e1318]
+                  - generic [ref=e1319]:
+                    - button "Monica Gordon (Democratic)" [ref=e1321] [cursor=pointer]
+                    - generic [ref=e1322]: Candidate for Cook County Clerk
+                - generic [ref=e1323]:
+                  - img "Robyn Gabel" [ref=e1325]
+                  - generic [ref=e1326]:
+                    - button "Robyn Gabel (Democratic)" [ref=e1328] [cursor=pointer]
+                    - generic [ref=e1329]: Candidate for Illinois House District 18
+                - generic [ref=e1330]:
+                  - img "Ajay Gupta" [ref=e1332]
+                  - generic [ref=e1333]:
+                    - button "Ajay Gupta (Republican)" [ref=e1335] [cursor=pointer]
+                    - generic [ref=e1336]: Candidate for Illinois House District 41
+                - generic [ref=e1337]:
+                  - img "Gary Grasso" [ref=e1339]
+                  - generic [ref=e1340]:
+                    - button "Gary Grasso (Republican)" [ref=e1342] [cursor=pointer]
+                    - generic [ref=e1343]: Candidate for DuPage County Board Chair
+                - generic [ref=e1344]:
+                  - img "Paula Deacon Garcia" [ref=e1346]
+                  - generic [ref=e1347]:
+                    - button "Paula Deacon Garcia (Democratic)" [ref=e1349] [cursor=pointer]
+                    - generic [ref=e1350]: Candidate for DuPage County Clerk
+                - generic [ref=e1351]:
+                  - img "Rebecca Gamboa" [ref=e1353]
+                  - generic [ref=e1354]:
+                    - button "Rebecca Gamboa (Democratic)" [ref=e1356] [cursor=pointer]
+                    - generic [ref=e1357]: Candidate for DuPage County Regional Superintendent of Schools
+                - generic [ref=e1358]:
+                  - img "Theresa Grennan" [ref=e1360]
+                  - generic [ref=e1361]:
+                    - button "Theresa Grennan (Democratic)" [ref=e1363] [cursor=pointer]
+                    - generic [ref=e1364]: Candidate for Winnebago County Treasurer
+                - generic [ref=e1365]:
+                  - img "Burt Gerl" [ref=e1367]
+                  - generic [ref=e1368]:
+                    - button "Burt Gerl (Republican)" [ref=e1370] [cursor=pointer]
+                    - generic [ref=e1371]: Candidate for District Fifteen
+              - generic [ref=e1372]:
+                - paragraph [ref=e1373]: H
+                - generic [ref=e1374]:
+                  - img "John D. Hay" [ref=e1376]
+                  - generic [ref=e1377]:
+                    - button "John D. Hay (Republican)" [ref=e1379] [cursor=pointer]
+                    - generic [ref=e1380]: Candidate for Illinois Judicial Circuit Court 15th District Jo Daviess County Resident (Ward Vacancy)
+                - generic [ref=e1381]:
+                  - img "Don A. Hill" [ref=e1383]
+                  - generic [ref=e1384]:
+                    - button "Don A. Hill (Democratic)" [ref=e1386] [cursor=pointer]
+                    - generic [ref=e1387]: Candidate for Precinct Committeeperson Nora
+                - generic [ref=e1388]:
+                  - img "Nanette Hoff" [ref=e1390]
+                  - generic [ref=e1391]:
+                    - button "Nanette Hoff (Democratic)" [ref=e1393] [cursor=pointer]
+                    - generic [ref=e1394]: Candidate for Precinct Committeeperson Elizabeth
+                - generic [ref=e1395]:
+                  - img "Tiffany Highland" [ref=e1397]
+                  - generic [ref=e1398]:
+                    - button "Tiffany Highland (Democratic)" [ref=e1400] [cursor=pointer]
+                    - generic [ref=e1401]: Candidate for Precinct Committeeperson Dunleith III
+                - generic [ref=e1402]:
+                  - img "Michael Holt" [ref=e1404]
+                  - generic [ref=e1405]:
+                    - button "Michael Holt (Republican)" [ref=e1407] [cursor=pointer]
+                    - generic [ref=e1408]: Candidate for Jo Daviess County Board District 8
+                - generic [ref=e1409]:
+                  - img "Tiffany Highland" [ref=e1411]
+                  - generic [ref=e1412]:
+                    - button "Tiffany Highland (Democratic)" [ref=e1414] [cursor=pointer]
+                    - generic [ref=e1415]: Candidate for Jo Daviess County Board District 3
+                - generic [ref=e1416]:
+                  - img "Joseph Heitkamp" [ref=e1418]
+                  - generic [ref=e1419]:
+                    - button "Joseph Heitkamp (Republican)" [ref=e1421] [cursor=pointer]
+                    - generic [ref=e1422]: Candidate for Jo Daviess County Board District 4
+                - generic [ref=e1423]:
+                  - img "Erin C. Hannigan" [ref=e1425]
+                  - generic [ref=e1426]:
+                    - button "Erin C. Hannigan (Democratic)" [ref=e1428] [cursor=pointer]
+                    - generic [ref=e1429]: Candidate for Judge of the Circuit Court Seventeenth Judicial Circuit Second Subcircuit
+                - generic [ref=e1430]:
+                  - img "Elyse Hoffenberg" [ref=e1432]
+                  - generic [ref=e1433]:
+                    - button "Elyse Hoffenberg (Democratic)" [ref=e1435] [cursor=pointer]
+                    - generic [ref=e1436]: Candidate for Cook County Board, 17th District Commissioner
+                - generic [ref=e1437]:
+                  - img "Miranda E. Hernandez" [ref=e1439]
+                  - generic [ref=e1440]:
+                    - button "Miranda E. Hernandez (Democratic)" [ref=e1442] [cursor=pointer]
+                    - generic [ref=e1443]: Candidate for Cook County Board, 16th District Commissioner
+                - generic [ref=e1444]:
+                  - img "Xiaoli 'Alice' Hu" [ref=e1446]
+                  - generic [ref=e1447]:
+                    - button "Xiaoli 'Alice' Hu (Republican)" [ref=e1449] [cursor=pointer]
+                    - generic [ref=e1450]: Candidate for Cook County Board, 12th District Commissioner
+                - generic [ref=e1451]:
+                  - img "Gabriella Hoxie" [ref=e1453]
+                  - generic [ref=e1454]:
+                    - button "Gabriella Hoxie (Republican)" [ref=e1456] [cursor=pointer]
+                    - generic [ref=e1457]: Candidate for Cook County Board, 15th District Commissioner
+                - generic [ref=e1458]:
+                  - img "Gwen Henry" [ref=e1460]
+                  - generic [ref=e1461]:
+                    - button "Gwen Henry (Republican)" [ref=e1463] [cursor=pointer]
+                    - generic [ref=e1464]: Candidate for DuPage County Treasurer
+                - generic [ref=e1465]:
+                  - img "Daniel Hebreard" [ref=e1467]
+                  - generic [ref=e1468]:
+                    - button "Daniel Hebreard (Democratic)" [ref=e1470] [cursor=pointer]
+                    - generic [ref=e1471]: Candidate for DuPage County Forest Preserve President
+                - generic [ref=e1472]:
+                  - img "Kimberly Haley" [ref=e1474]
+                  - generic [ref=e1475]:
+                    - button "Kimberly Haley (Democratic)" [ref=e1477] [cursor=pointer]
+                    - generic [ref=e1478]: Candidate for District Fifteen
+                - generic [ref=e1479]:
+                  - img "Sanford Hess" [ref=e1481]
+                  - generic [ref=e1482]:
+                    - button "Sanford Hess (Democratic)" [ref=e1484] [cursor=pointer]
+                    - generic [ref=e1485]: Candidate for Champaign County Executive
+                - generic [ref=e1486]:
+                  - img "Dustin D. Heuerman" [ref=e1488]
+                  - generic [ref=e1489]:
+                    - button "Dustin D. Heuerman (Democratic)" [ref=e1491] [cursor=pointer]
+                    - generic [ref=e1492]: Candidate for Champaign County Sheriff
+              - generic [ref=e1493]:
+                - paragraph [ref=e1494]: I
+                - generic [ref=e1495]:
+                  - img "Juanita Irizarry" [ref=e1497]
+                  - generic [ref=e1498]:
+                    - button "Juanita Irizarry (Democratic)" [ref=e1500] [cursor=pointer]
+                    - generic [ref=e1501]: Candidate for Cook County Board of Review Comissioner 1st district
+                - generic [ref=e1502]:
+                  - img "JohnPaul Ivec" [ref=e1504]
+                  - generic [ref=e1505]:
+                    - button "JohnPaul Ivec (Republican)" [ref=e1507] [cursor=pointer]
+                    - generic [ref=e1508]: Candidate for Illinois Judicial Circuit Court 12th Circuit 1st Subcircuit (Carlson Vacancy)
+              - generic [ref=e1509]:
+                - paragraph [ref=e1510]: J
+                - generic [ref=e1511]:
+                  - img "Stephen M. Johnson - Write In Candidate" [ref=e1513]
+                  - generic [ref=e1514]:
+                    - button "Stephen M. Johnson - Write In Candidate (Republican)" [ref=e1516] [cursor=pointer]
+                    - generic [ref=e1517]: Candidate for Precinct Committeeperson Guilford
+                - generic [ref=e1518]:
+                  - img "Gregg Johnson" [ref=e1520]
+                  - generic [ref=e1521]:
+                    - button "Gregg Johnson (Democratic)" [ref=e1523] [cursor=pointer]
+                    - generic [ref=e1524]: Candidate for Illinois House District 72
+                - generic [ref=e1525]:
+                  - img "Joseph Johnson" [ref=e1527]
+                  - generic [ref=e1528]:
+                    - button "Joseph Johnson (Republican)" [ref=e1530] [cursor=pointer]
+                    - generic [ref=e1531]: Candidate for Illinois House District 55
+                - generic [ref=e1532]:
+                  - img "Chris Jacks" [ref=e1534]
+                  - generic [ref=e1535]:
+                    - button "Chris Jacks (Republican)" [ref=e1537] [cursor=pointer]
+                    - generic [ref=e1538]: Candidate for DuPage County Board Member District 5 (4-Year Term)
+                - generic [ref=e1539]:
+                  - img "Michelle Jett" [ref=e1541]
+                  - generic [ref=e1542]:
+                    - button "Michelle Jett (Democratic)" [ref=e1544] [cursor=pointer]
+                    - generic [ref=e1545]: Candidate for Champaign County Executive
+              - generic [ref=e1546]:
+                - paragraph [ref=e1547]: K
+                - generic [ref=e1548]:
+                  - img "Klaus D. Kretschmer" [ref=e1550]
+                  - generic [ref=e1551]:
+                    - button "Klaus D. Kretschmer (Republican)" [ref=e1553] [cursor=pointer]
+                    - generic [ref=e1554]: Candidate for Jo Daviess County Sheriff
+                - generic [ref=e1555]:
+                  - img "Tracy Katz Muhl" [ref=e1557]
+                  - generic [ref=e1558]:
+                    - button "Tracy Katz Muhl (Democratic)" [ref=e1560] [cursor=pointer]
+                    - generic [ref=e1561]: Candidate for Illinois House District 57
+                - generic [ref=e1562]:
+                  - img "Michael Kelly" [ref=e1564]
+                  - generic [ref=e1565]:
+                    - button "Michael Kelly (Democratic)" [ref=e1567] [cursor=pointer]
+                    - generic [ref=e1568]: Candidate for Illinois House District 15
+                - generic [ref=e1569]:
+                  - img "Stephanie S. Kelly" [ref=e1571]
+                  - generic [ref=e1572]:
+                    - button "Stephanie S. Kelly (Democratic)" [ref=e1574] [cursor=pointer]
+                    - generic [ref=e1575]: Candidate for COOK CIRCUIT - 5TH SUBCIRCUIT - ROSS VACANCY
+                - generic [ref=e1576]:
+                  - img "Kelley, William F." [ref=e1578]
+                  - generic [ref=e1579]:
+                    - button "Kelley, William F. (Democratic)" [ref=e1581] [cursor=pointer]
+                    - generic [ref=e1582]: Candidate for COOK CIRCUIT - 13TH SUBCIRCUIT - THOMAS J. KELLEY VACANCY
+                - generic [ref=e1583]:
+                  - img "Knox, Jarrett" [ref=e1585]
+                  - generic [ref=e1586]:
+                    - button "Knox, Jarrett (Democratic)" [ref=e1588] [cursor=pointer]
+                    - generic [ref=e1589]: Candidate for COOK CIRCUIT - 11TH SUBCIRCUIT - MEYERSON VACANCY
+                - generic [ref=e1590]:
+                  - img "Ammie Kessem" [ref=e1592]
+                  - generic [ref=e1593]:
+                    - button "Ammie Kessem (Republican)" [ref=e1595] [cursor=pointer]
+                    - generic [ref=e1596]: Candidate for Cook County Board, 9th District Commissioner
+                - generic [ref=e1597]:
+                  - img "Jean Kaczmarek" [ref=e1599]
+                  - generic [ref=e1600]:
+                    - button "Jean Kaczmarek (Democratic)" [ref=e1602] [cursor=pointer]
+                    - generic [ref=e1603]: Candidate for DuPage County Clerk
+                - generic [ref=e1604]:
+                  - img "Patricia Kladis-Schiappa" [ref=e1606]
+                  - generic [ref=e1607]:
+                    - button "Patricia Kladis-Schiappa (Republican)" [ref=e1609] [cursor=pointer]
+                    - generic [ref=e1610]: Candidate for DuPage County Clerk
+                - generic [ref=e1611]:
+                  - img "Christina Kye" [ref=e1613]
+                  - generic [ref=e1614]:
+                    - button "Christina Kye (Democratic)" [ref=e1616] [cursor=pointer]
+                    - generic [ref=e1617]: Candidate for Illinois Judicial Circuit Court 18th Circuit 4th Subcircuit (Wilson Vacancy)
+                - generic [ref=e1618]:
+                  - img "Jon Kelly" [ref=e1620]
+                  - generic [ref=e1621]:
+                    - button "Jon Kelly (Republican)" [ref=e1623] [cursor=pointer]
+                    - generic [ref=e1624]: Candidate for Regional Superintendent of Schools
+              - generic [ref=e1625]:
+                - paragraph [ref=e1626]: L
+                - generic [ref=e1627]:
+                  - img "John B. Lang" [ref=e1629]
+                  - generic [ref=e1630]:
+                    - button "John B. Lang (Republican)" [ref=e1632] [cursor=pointer]
+                    - generic [ref=e1633]: Candidate for Jo Daviess County Board District 3
+                - generic [ref=e1634]:
+                  - img "Dana Logsdon" [ref=e1636]
+                  - generic [ref=e1637]:
+                    - button "Dana Logsdon (Republican)" [ref=e1639] [cursor=pointer]
+                    - generic [ref=e1640]: Candidate for Boone County Board District 3
+                - generic [ref=e1641]:
+                  - img "Michelle Lewis" [ref=e1643]
+                  - generic [ref=e1644]:
+                    - button "Michelle Lewis (Republican)" [ref=e1646] [cursor=pointer]
+                    - generic [ref=e1647]: Candidate for Winnebago District 7
+                - generic [ref=e1648]:
+                  - img "Darin Lahood" [ref=e1650]
+                  - generic [ref=e1651]:
+                    - button "Darin Lahood (Republican)" [ref=e1653] [cursor=pointer]
+                    - generic [ref=e1654]: Candidate for Illinois US House District 16
+                - generic [ref=e1655]:
+                  - img "Bill Lowry" [ref=e1657]
+                  - generic [ref=e1658]:
+                    - button "Bill Lowry (Democratic)" [ref=e1660] [cursor=pointer]
+                    - generic [ref=e1661]: Candidate for Cook County Board, 3rd District Commissioner
+                - generic [ref=e1662]:
+                  - img "Daniel Lee" [ref=e1664]
+                  - generic [ref=e1665]:
+                    - button "Daniel Lee (Republican)" [ref=e1667] [cursor=pointer]
+                    - generic [ref=e1668]: Candidate for Cook County Board, 15th District Commissioner
+                - generic [ref=e1669]:
+                  - img "Daniel Alejandro Lomeli" [ref=e1671]
+                  - generic [ref=e1672]:
+                    - button "Daniel Alejandro Lomeli (Republican)" [ref=e1674] [cursor=pointer]
+                    - generic [ref=e1675]: Candidate for DuPage County Board Member District 5 (2-Year Term)
+                - generic [ref=e1676]:
+                  - img "Brad Lindmark" [ref=e1678]
+                  - generic [ref=e1679]:
+                    - button "Brad Lindmark (Republican)" [ref=e1681] [cursor=pointer]
+                    - generic [ref=e1682]: Candidate for Winnebago District Four
+                - generic [ref=e1683]:
+                  - img "Jennifer \"Jenny\" Lokshin" [ref=e1685]
+                  - generic [ref=e1686]:
+                    - button "Jennifer \"Jenny\" Lokshin (Democratic)" [ref=e1688] [cursor=pointer]
+                    - generic [ref=e1689]: Candidate for Champaign County Board District 04
+              - generic [ref=e1690]:
+                - paragraph [ref=e1691]: M
+                - generic [ref=e1692]:
+                  - img "Sue E. Marron" [ref=e1694]
+                  - generic [ref=e1695]:
+                    - button "Sue E. Marron (Republican)" [ref=e1697] [cursor=pointer]
+                    - generic [ref=e1698]: Candidate for Precinct Committeeperson Thompson
+                - generic [ref=e1699]:
+                  - img "Tony M. McCombie" [ref=e1701]
+                  - generic [ref=e1702]:
+                    - button "Tony M. McCombie (Republican)" [ref=e1704] [cursor=pointer]
+                    - generic [ref=e1705]: Candidate for Illinois House District 89
+                - generic [ref=e1706]:
+                  - img "George McKenna" [ref=e1708]
+                  - generic [ref=e1709]:
+                    - button "George McKenna (Democratic)" [ref=e1711] [cursor=pointer]
+                    - generic [ref=e1712]: Candidate for Regional Superintendent of Schools (Peoria County)
+                - generic [ref=e1713]:
+                  - img "Ryan F. Meyers" [ref=e1715]
+                  - generic [ref=e1716]:
+                    - button "Ryan F. Meyers (Democratic)" [ref=e1718] [cursor=pointer]
+                    - generic [ref=e1719]: Candidate for Regional Superintendent of Schools (Lasalle, Marshall, Putnam Counties)
+                - generic [ref=e1720]:
+                  - img "Gregory Michael Minger" [ref=e1722]
+                  - generic [ref=e1723]:
+                    - button "Gregory Michael Minger (Republican)" [ref=e1725] [cursor=pointer]
+                    - generic [ref=e1726]: Candidate for IL Judicial Circuit Court Eleventh Dist Woodford County Resident (Feeney Vacancy)
+                - generic [ref=e1727]:
+                  - img "McKenzie, Steven Q." [ref=e1729]
+                  - generic [ref=e1730]:
+                    - button "McKenzie, Steven Q. (Democratic)" [ref=e1732] [cursor=pointer]
+                    - generic [ref=e1733]: Candidate for COOK CIRCUIT - BURKE VACANCY
+                - generic [ref=e1734]:
+                  - img "McGann, Sara" [ref=e1736]
+                  - generic [ref=e1737]:
+                    - button "McGann, Sara (Democratic)" [ref=e1739] [cursor=pointer]
+                    - generic [ref=e1740]: Candidate for COOK CIRCUIT - 19TH SUBCIRCUIT - FAIRMAN VACANCY
+                - generic [ref=e1741]:
+                  - img "Moore, Natalia" [ref=e1743]
+                  - generic [ref=e1744]:
+                    - button "Moore, Natalia (Democratic)" [ref=e1746] [cursor=pointer]
+                    - generic [ref=e1747]: Candidate for COOK CIRCUIT - 17TH SUBCIRCUIT - BROOKS VACANCY
+                - generic [ref=e1748]:
+                  - img "Josina Morita" [ref=e1750]
+                  - generic [ref=e1751]:
+                    - button "Josina Morita (Democratic)" [ref=e1753] [cursor=pointer]
+                    - generic [ref=e1754]: Candidate for Cook County Board, 13th District Commissioner
+                - generic [ref=e1755]:
+                  - img "Kisha McCaskill" [ref=e1757]
+                  - generic [ref=e1758]:
+                    - button "Kisha McCaskill (Democratic)" [ref=e1760] [cursor=pointer]
+                    - generic [ref=e1761]: Candidate for Cook County Board, 5th District Commissioner
+                - generic [ref=e1762]:
+                  - img "Stanley S Moore" [ref=e1764]
+                  - generic [ref=e1765]:
+                    - button "Stanley S Moore (Democratic)" [ref=e1767] [cursor=pointer]
+                    - generic [ref=e1768]: Candidate for Cook County Board, 4th District Commissioner
+                - generic [ref=e1769]:
+                  - img "Michael Murphy" [ref=e1771]
+                  - generic [ref=e1772]:
+                    - button "Michael Murphy (Libertarian)" [ref=e1774] [cursor=pointer]
+                    - generic [ref=e1775]: Candidate for Cook County Board President
+                - generic [ref=e1776]:
+                  - img "Ted Mason" [ref=e1778]
+                  - generic [ref=e1779]:
+                    - button "Ted Mason (Democratic)" [ref=e1781] [cursor=pointer]
+                    - generic [ref=e1782]: Candidate for Cook County Board, 15th District Commissioner
+                - generic [ref=e1783]:
+                  - img "Edmond (Eddie) Moore" [ref=e1785]
+                  - generic [ref=e1786]:
+                    - button "Edmond (Eddie) Moore (Republican)" [ref=e1788] [cursor=pointer]
+                    - generic [ref=e1789]: Candidate for DuPage County Sheriff
+                - generic [ref=e1790]:
+                  - img "Mary Miller" [ref=e1792]
+                  - generic [ref=e1793]:
+                    - button "Mary Miller (Republican)" [ref=e1795] [cursor=pointer]
+                    - generic [ref=e1796]: Candidate for 15th U.S. Congress
+                - generic [ref=e1797]:
+                  - img "Ryan Musgrove" [ref=e1799]
+                  - generic [ref=e1800]:
+                    - button "Ryan Musgrove (Democratic)" [ref=e1802] [cursor=pointer]
+                    - generic [ref=e1803]: Candidate for Champaign County Board District 06
+              - generic [ref=e1804]:
+                - paragraph [ref=e1805]: "N"
+                - generic [ref=e1806]:
+                  - img "Karla M. Niemann" [ref=e1808]
+                  - generic [ref=e1809]:
+                    - button "Karla M. Niemann (Republican)" [ref=e1811] [cursor=pointer]
+                    - generic [ref=e1812]: Candidate for Illinois Judicial Circuit Court 15th District Jo Daviess County Resident (Hauser Vacancy)
+                - generic [ref=e1813]:
+                  - img "No Candidate" [ref=e1815]
+                  - generic [ref=e1816]:
+                    - button "No Candidate (Democratic)" [ref=e1818] [cursor=pointer]
+                    - generic [ref=e1819]: Candidate for Illinois Judicial Circuit Court 15th District Jo Daviess County Resident (Hauser Vacancy)
+                - generic [ref=e1820]:
+                  - img "No Candidate" [ref=e1822]
+                  - generic [ref=e1823]:
+                    - button "No Candidate (Democratic)" [ref=e1825] [cursor=pointer]
+                    - generic [ref=e1826]: Candidate for Illinois Judicial Circuit Court 15th District Jo Daviess County Resident (Ward Vacancy)
+                - generic [ref=e1827]:
+                  - img "Logan Noe" [ref=e1829]
+                  - generic [ref=e1830]:
+                    - button "Logan Noe (Democratic)" [ref=e1832] [cursor=pointer]
+                    - generic [ref=e1833]: Candidate for Precinct Committeeperson Menominee
+                - generic [ref=e1834]:
+                  - img "No Candidate" [ref=e1836]
+                  - generic [ref=e1837]:
+                    - button "No Candidate (Republican)" [ref=e1839] [cursor=pointer]
+                    - generic [ref=e1840]: Candidate for Jo Daviess County Board District 15
+                - generic [ref=e1841]:
+                  - img "No Candidate" [ref=e1843]
+                  - generic [ref=e1844]:
+                    - button "No Candidate (Democratic)" [ref=e1846] [cursor=pointer]
+                    - generic [ref=e1847]: Candidate for Jo Daviess County Board District 15
+                - generic [ref=e1848]:
+                  - img "Logan Noe" [ref=e1850]
+                  - generic [ref=e1851]:
+                    - button "Logan Noe (Democratic)" [ref=e1853] [cursor=pointer]
+                    - generic [ref=e1854]: Candidate for Jo Daviess County Board District 2
+                - generic [ref=e1855]:
+                  - img "No Candidate" [ref=e1857]
+                  - generic [ref=e1858]:
+                    - button "No Candidate (Republican)" [ref=e1860] [cursor=pointer]
+                    - generic [ref=e1861]: Candidate for Jo Daviess County Board District 1
+                - generic [ref=e1862]:
+                  - img "No Candidate" [ref=e1864]
+                  - generic [ref=e1865]:
+                    - button "No Candidate (Democratic)" [ref=e1867] [cursor=pointer]
+                    - generic [ref=e1868]: Candidate for Jo Daviess County Board District 1
+                - generic [ref=e1869]:
+                  - img "Timothy Nabors, Jr." [ref=e1871]
+                  - generic [ref=e1872]:
+                    - button "Timothy Nabors, Jr. (Democratic)" [ref=e1874] [cursor=pointer]
+                    - generic [ref=e1875]: Candidate for Winnebago District 14
+                - generic [ref=e1876]:
+                  - img "No Candidate" [ref=e1878]
+                  - generic [ref=e1879]:
+                    - button "No Candidate (Democratic)" [ref=e1881] [cursor=pointer]
+                    - generic [ref=e1882]: Candidate for Boone/Winnebago - Superintendent of Schools
+                - generic [ref=e1883]:
+                  - img "No Candidate" [ref=e1885]
+                  - generic [ref=e1886]:
+                    - button "No Candidate (Republican)" [ref=e1888] [cursor=pointer]
+                    - generic [ref=e1889]: Candidate for Regional Superintendent of Schools (Peoria County)
+                - generic [ref=e1890]:
+                  - img "No Candidate" [ref=e1892]
+                  - generic [ref=e1893]:
+                    - button "No Candidate (Republican)" [ref=e1895] [cursor=pointer]
+                    - generic [ref=e1896]: Candidate for Regional Superintendent of Schools (Lasalle, Marshall, Putnam Counties)
+                - generic [ref=e1897]:
+                  - img "No Candidate" [ref=e1899]
+                  - generic [ref=e1900]:
+                    - button "No Candidate (Republican)" [ref=e1902] [cursor=pointer]
+                    - generic [ref=e1903]: Candidate for Regional Superintendent of Schools (Lasalle, Marshall, Putnam Counties)
+                - generic [ref=e1904]:
+                  - img "No Candidate" [ref=e1906]
+                  - generic [ref=e1907]:
+                    - button "No Candidate (Democratic)" [ref=e1909] [cursor=pointer]
+                    - generic [ref=e1910]: Candidate for Regional Superintendent of Schools (Mason, Tazewell, Woodford)
+                - generic [ref=e1911]:
+                  - img "No Candidate" [ref=e1913]
+                  - generic [ref=e1914]:
+                    - button "No Candidate (Democratic)" [ref=e1916] [cursor=pointer]
+                    - generic [ref=e1917]: Candidate for Regional Superintendent of Schools (Edwards, Gallatin, Hamilton)
+                - generic [ref=e1918]:
+                  - img "No Candidate" [ref=e1920]
+                  - generic [ref=e1921]:
+                    - button "No Candidate (Democratic)" [ref=e1923] [cursor=pointer]
+                    - generic [ref=e1924]: Candidate for IL Judicial Circuit Court Eleventh Dist Woodford County Resident (Feeney Vacancy)
+                - generic [ref=e1925]:
+                  - img "No Candidate" [ref=e1927]
+                  - generic [ref=e1928]:
+                    - button "No Candidate (Republican)" [ref=e1930] [cursor=pointer]
+                    - generic [ref=e1931]: Candidate for Illinois House District 72
+                - generic [ref=e1932]:
+                  - img "No Candidate" [ref=e1934]
+                  - generic [ref=e1935]:
+                    - button "No Candidate (Republican)" [ref=e1937] [cursor=pointer]
+                    - generic [ref=e1938]: Candidate for Illinois House District 92
+                - generic [ref=e1939]:
+                  - img "No Candidate" [ref=e1941]
+                  - generic [ref=e1942]:
+                    - button "No Candidate (Democratic)" [ref=e1944] [cursor=pointer]
+                    - generic [ref=e1945]: Candidate for Illinois House District 93
+                - generic [ref=e1946]:
+                  - img "Paul Nolley" [ref=e1948]
+                  - generic [ref=e1949]:
+                    - button "Paul Nolley (Democratic)" [ref=e1951] [cursor=pointer]
+                    - generic [ref=e1952]: Candidate for Illinois US House District 16
+                - generic [ref=e1953]:
+                  - img "No Candidate Running" [ref=e1955]
+                  - generic [ref=e1956]:
+                    - button "No Candidate Running (Republican)" [ref=e1958] [cursor=pointer]
+                    - generic [ref=e1959]: Candidate for Illinois House District 15
+                - generic [ref=e1960]:
+                  - img "Naranjo, Dan" [ref=e1962]
+                  - generic [ref=e1963]:
+                    - button "Naranjo, Dan (Democratic)" [ref=e1965] [cursor=pointer]
+                    - generic [ref=e1966]: Candidate for COOK CIRCUIT - 13TH SUBCIRCUIT - O'MALLEY VACANCY
+                - generic [ref=e1967]:
+                  - img "Richard Nolan" [ref=e1969]
+                  - generic [ref=e1970]:
+                    - button "Richard Nolan (Republican)" [ref=e1972] [cursor=pointer]
+                    - generic [ref=e1973]: Candidate for Cook County Board, 5th District Commissioner
+                - generic [ref=e1974]:
+                  - img "Sean T. Noonan" [ref=e1976]
+                  - generic [ref=e1977]:
+                    - button "Sean T. Noonan (Republican)" [ref=e1979] [cursor=pointer]
+                    - generic [ref=e1980]: Candidate for DuPage County Sheriff
+                - generic [ref=e1981]:
+                  - img "No Candidate" [ref=e1983]
+                  - generic [ref=e1984]:
+                    - button "No Candidate (Republican)" [ref=e1986] [cursor=pointer]
+                    - generic [ref=e1987]: Candidate for Illinois Judicial Circuit Court 12th Circuit 3rd Subcircuit (Anderson Vacancy)
+                - generic [ref=e1988]:
+                  - img "No Candidate" [ref=e1990]
+                  - generic [ref=e1991]:
+                    - button "No Candidate (Democratic)" [ref=e1993] [cursor=pointer]
+                    - generic [ref=e1994]: Candidate for Illinois Judicial Circuit Court 12th Circuit 5th Subcircuit (Petrungaro Vacancy)
+              - generic [ref=e1995]:
+                - paragraph [ref=e1996]: O
+                - generic [ref=e1997]:
+                  - img "Tori I. Offenheiser" [ref=e1999]
+                  - generic [ref=e2000]:
+                    - button "Tori I. Offenheiser (Republican)" [ref=e2002] [cursor=pointer]
+                    - generic [ref=e2003]: Candidate for Jo Daviess County Treasurer
+                - generic [ref=e2004]:
+                  - img "Victoria Onorato" [ref=e2006]
+                  - generic [ref=e2007]:
+                    - button "Victoria Onorato (Republican)" [ref=e2009] [cursor=pointer]
+                    - generic [ref=e2010]: Candidate for Illinois House District 89
+                - generic [ref=e2011]:
+                  - img "Ori, Kathleen Cunniff" [ref=e2013]
+                  - generic [ref=e2014]:
+                    - button "Ori, Kathleen Cunniff (Democratic)" [ref=e2016] [cursor=pointer]
+                    - generic [ref=e2017]: Candidate for COOK CIRCUIT - 8TH SUBCIRCUIT - GAMRATH VACANCY
+                - generic [ref=e2018]:
+                  - img "Odom, Ginger" [ref=e2020]
+                  - generic [ref=e2021]:
+                    - button "Odom, Ginger (Democratic)" [ref=e2023] [cursor=pointer]
+                    - generic [ref=e2024]: Candidate for COOK CIRCUIT - 1ST SUBCIRCUIT - WALKER VACANCY
+                - generic [ref=e2025]:
+                  - img "Barbara A. O'Meara" [ref=e2027]
+                  - generic [ref=e2028]:
+                    - button "Barbara A. O'Meara (Democratic)" [ref=e2030] [cursor=pointer]
+                    - generic [ref=e2031]: Candidate for DuPage County Forest Preserve Commissioner District 5
+                - generic [ref=e2032]:
+                  - img "Amy Ohlsen" [ref=e2034]
+                  - generic [ref=e2035]:
+                    - button "Amy Ohlsen (Republican)" [ref=e2037] [cursor=pointer]
+                    - generic [ref=e2038]: Candidate for Boone County County Clerk & Recorder
+                - generic [ref=e2039]:
+                  - img "Tiffany O'Brien" [ref=e2041]
+                  - generic [ref=e2042]:
+                    - button "Tiffany O'Brien (Republican)" [ref=e2044] [cursor=pointer]
+                    - generic [ref=e2045]: Candidate for Ogle County Treasurer
+              - generic [ref=e2046]:
+                - paragraph [ref=e2047]: P
+                - generic [ref=e2048]:
+                  - img "James S. Palmer" [ref=e2050]
+                  - generic [ref=e2051]:
+                    - button "James S. Palmer (Democratic)" [ref=e2053] [cursor=pointer]
+                    - generic [ref=e2054]: Candidate for Precinct Committeeperson Stockton I
+                - generic [ref=e2055]:
+                  - img "Jill Powers" [ref=e2057]
+                  - generic [ref=e2058]:
+                    - button "Jill Powers (Democratic)" [ref=e2060] [cursor=pointer]
+                    - generic [ref=e2061]: Candidate for Precinct Committeeperson Guilford
+                - generic [ref=e2062]:
+                  - img "Jill Powers" [ref=e2064]
+                  - generic [ref=e2065]:
+                    - button "Jill Powers (Democratic)" [ref=e2067] [cursor=pointer]
+                    - generic [ref=e2068]: Candidate for Jo Daviess County Board District 8
+                - generic [ref=e2069]:
+                  - img "John Penney" [ref=e2071]
+                  - generic [ref=e2072]:
+                    - button "John Penney (Republican)" [ref=e2074] [cursor=pointer]
+                    - generic [ref=e2075]: Candidate for Winnebago District 9
+                - generic [ref=e2076]:
+                  - img "David L. Peyton" [ref=e2078]
+                  - generic [ref=e2079]:
+                    - button "David L. Peyton (Republican)" [ref=e2081] [cursor=pointer]
+                    - generic [ref=e2082]: Candidate for Winnebago District 12
+                - generic [ref=e2083]:
+                  - img "Ponce de Leon, Juan" [ref=e2085]
+                  - generic [ref=e2086]:
+                    - button "Ponce de Leon, Juan (Democratic)" [ref=e2088] [cursor=pointer]
+                    - generic [ref=e2089]: Candidate for COOK CIRCUIT - 18TH SUBCIRCUIT - CHRONES VACANCY
+                - generic [ref=e2090]:
+                  - img "Pedersen, Brittany Michelle" [ref=e2092]
+                  - generic [ref=e2093]:
+                    - button "Pedersen, Brittany Michelle (Democratic)" [ref=e2095] [cursor=pointer]
+                    - generic [ref=e2096]: Candidate for COOK CIRCUIT - 13TH SUBCIRCUIT - MARTIN C. KELLEY VACANCY
+                - generic [ref=e2097]:
+                  - img "Przekota, Kim" [ref=e2099]
+                  - generic [ref=e2100]:
+                    - button "Przekota, Kim (Democratic)" [ref=e2102] [cursor=pointer]
+                    - generic [ref=e2103]: Candidate for COOK CIRCUIT - 11TH SUBCIRCUIT - ROBERTS VACANCY
+                - generic [ref=e2104]:
+                  - img "Maria Pappas" [ref=e2106]
+                  - generic [ref=e2107]:
+                    - button "Maria Pappas (Democratic)" [ref=e2109] [cursor=pointer]
+                    - generic [ref=e2110]: Candidate for Cook County Treasurer
+                - generic [ref=e2111]:
+                  - img "Toni Preckwinkle" [ref=e2113]
+                  - generic [ref=e2114]:
+                    - button "Toni Preckwinkle (Democratic)" [ref=e2116] [cursor=pointer]
+                    - generic [ref=e2117]: Candidate for Cook County Board President
+                - generic [ref=e2118]:
+                  - img "Annette Parker" [ref=e2120]
+                  - generic [ref=e2121]:
+                    - button "Annette Parker (Republican)" [ref=e2123] [cursor=pointer]
+                    - generic [ref=e2124]: Candidate for Will County Clerk
+                - generic [ref=e2125]:
+                  - img "Danielle Penman" [ref=e2127]
+                  - generic [ref=e2128]:
+                    - button "Danielle Penman (Republican)" [ref=e2130] [cursor=pointer]
+                    - generic [ref=e2131]: Candidate for Illinois Senate District 33
+              - generic [ref=e2132]:
+                - paragraph [ref=e2133]: Q
+                - generic [ref=e2134]:
+                  - img "Amber M. Quirk" [ref=e2136]
+                  - generic [ref=e2137]:
+                    - button "Amber M. Quirk (Republican)" [ref=e2139] [cursor=pointer]
+                    - generic [ref=e2140]: Candidate for DuPage County Regional Superintendent of Schools
+              - generic [ref=e2141]:
+                - paragraph [ref=e2142]: R
+                - generic [ref=e2143]:
+                  - img "Rodney J. Riley" [ref=e2145]
+                  - generic [ref=e2146]:
+                    - button "Rodney J. Riley (Republican)" [ref=e2148] [cursor=pointer]
+                    - generic [ref=e2149]: Candidate for Boone County Board District 3
+                - generic [ref=e2150]:
+                  - img "Scott Robinson" [ref=e2152]
+                  - generic [ref=e2153]:
+                    - button "Scott Robinson (Republican)" [ref=e2155] [cursor=pointer]
+                    - generic [ref=e2156]: Candidate for Judge of the Circuit Court Seventeenth Judicial Circuit First Subcircuit
+                - generic [ref=e2157]:
+                  - img "Rice, Ashonta C." [ref=e2159]
+                  - generic [ref=e2160]:
+                    - button "Rice, Ashonta C. (Democratic)" [ref=e2162] [cursor=pointer]
+                    - generic [ref=e2163]: Candidate for COOK CIRCUIT - COGHLAN VACANCY
+                - generic [ref=e2164]:
+                  - img "Rice, Judith C." [ref=e2166]
+                  - generic [ref=e2167]:
+                    - button "Rice, Judith C. (Democratic)" [ref=e2169] [cursor=pointer]
+                    - generic [ref=e2170]: Candidate for Illinois Appellate Court 1st District -- Hoffman Vacancy
+                - generic [ref=e2171]:
+                  - img "Brendan Reilly" [ref=e2173]
+                  - generic [ref=e2174]:
+                    - button "Brendan Reilly (Democratic)" [ref=e2176] [cursor=pointer]
+                    - generic [ref=e2177]: Candidate for Cook County Board President
+                - generic [ref=e2178]:
+                  - img "Theresa Rouse" [ref=e2180]
+                  - generic [ref=e2181]:
+                    - button "Theresa Rouse (Democratic)" [ref=e2183] [cursor=pointer]
+                    - generic [ref=e2184]: Candidate for Will County Regional Superintendent of Schools
+                - generic [ref=e2185]:
+                  - img "Mary Catherine Roberson" [ref=e2187]
+                  - generic [ref=e2188]:
+                    - button "Mary Catherine Roberson (Democratic)" [ref=e2190] [cursor=pointer]
+                    - generic [ref=e2191]: Candidate for IL State House District 104
+              - generic [ref=e2192]:
+                - paragraph [ref=e2193]: S
+                - generic [ref=e2194]:
+                  - img "Nancy E. Schuldt" [ref=e2196]
+                  - generic [ref=e2197]:
+                    - button "Nancy E. Schuldt (Democratic)" [ref=e2199] [cursor=pointer]
+                    - generic [ref=e2200]: Candidate for Precinct Committeeperson Woodbine
+                - generic [ref=e2201]:
+                  - img "Sackey, Linda" [ref=e2203]
+                  - generic [ref=e2204]:
+                    - button "Sackey, Linda (Democratic)" [ref=e2206] [cursor=pointer]
+                    - generic [ref=e2207]: Candidate for COOK CIRCUIT - COBBS VACANCY
+                - generic [ref=e2208]:
+                  - img "Stewart, Ava George" [ref=e2210]
+                  - generic [ref=e2211]:
+                    - button "Stewart, Ava George (Democratic)" [ref=e2213] [cursor=pointer]
+                    - generic [ref=e2214]: Candidate for COOK CIRCUIT - HOOKS VACANCY
+                - generic [ref=e2215]:
+                  - img "Stromsta, Jon" [ref=e2217]
+                  - generic [ref=e2218]:
+                    - button "Stromsta, Jon (Democratic)" [ref=e2220] [cursor=pointer]
+                    - generic [ref=e2221]: Candidate for COOK CIRCUIT - 20TH SUBCIRCUIT - MILLER VACANCY
+                - generic [ref=e2222]:
+                  - img "Scheller, Jessica Megan" [ref=e2224]
+                  - generic [ref=e2225]:
+                    - button "Scheller, Jessica Megan (Democratic)" [ref=e2227] [cursor=pointer]
+                    - generic [ref=e2228]: Candidate for COOK CIRCUIT - 19TH SUBCIRCUIT - KANE VACANCY
+                - generic [ref=e2229]:
+                  - img "Somerville, Monica" [ref=e2231]
+                  - generic [ref=e2232]:
+                    - button "Somerville, Monica (Democratic)" [ref=e2234] [cursor=pointer]
+                    - generic [ref=e2235]: Candidate for COOK CIRCUIT - 19TH SUBCIRCUIT - KANE VACANCY
+                - generic [ref=e2236]:
+                  - img "Brad Sandefur" [ref=e2238]
+                  - generic [ref=e2239]:
+                    - button "Brad Sandefur (Libertarian)" [ref=e2241] [cursor=pointer]
+                    - generic [ref=e2242]: Candidate for Cook County Sheriff
+                - generic [ref=e2243]:
+                  - img "Tara Stamps" [ref=e2245]
+                  - generic [ref=e2246]:
+                    - button "Tara Stamps (Democratic)" [ref=e2248] [cursor=pointer]
+                    - generic [ref=e2249]: Candidate for Cook County Board, 1st District Commissioner
+                - generic [ref=e2250]:
+                  - img "Gabby Shanahan" [ref=e2252]
+                  - generic [ref=e2253]:
+                    - button "Gabby Shanahan (Republican)" [ref=e2255] [cursor=pointer]
+                    - generic [ref=e2256]: Candidate for Illinois House District 97
+                - generic [ref=e2257]:
+                  - img "Carl Schultz" [ref=e2259]
+                  - generic [ref=e2260]:
+                    - button "Carl Schultz (Republican)" [ref=e2262] [cursor=pointer]
+                    - generic [ref=e2263]: Candidate for DuPage County Forest Preserve President
+                - generic [ref=e2264]:
+                  - img "Michelle Stiff" [ref=e2266]
+                  - generic [ref=e2267]:
+                    - button "Michelle Stiff (Democratic)" [ref=e2269] [cursor=pointer]
+                    - generic [ref=e2270]: Candidate for Will County Clerk
+                - generic [ref=e2271]:
+                  - img "Michael Suerth, Jr." [ref=e2273]
+                  - generic [ref=e2274]:
+                    - button "Michael Suerth, Jr. (Democratic)" [ref=e2276] [cursor=pointer]
+                    - generic [ref=e2277]: Candidate for Winnebago District 10
+                - generic [ref=e2278]:
+                  - img "Brandun Schweizer" [ref=e2280]
+                  - generic [ref=e2281]:
+                    - button "Brandun Schweizer (Republican)" [ref=e2283] [cursor=pointer]
+                    - generic [ref=e2284]: Candidate for IL State House District 104
+                - generic [ref=e2285]:
+                  - img "Amy Sholar" [ref=e2287]
+                  - generic [ref=e2288]:
+                    - button "Amy Sholar (Republican)" [ref=e2290] [cursor=pointer]
+                    - generic [ref=e2291]: Candidate for Judge of the Appellate Court 5th District
+                - generic [ref=e2292]:
+                  - img "Andrew Schulyer" [ref=e2294]
+                  - generic [ref=e2295]:
+                    - button "Andrew Schulyer (Republican)" [ref=e2297] [cursor=pointer]
+                    - generic [ref=e2298]: Candidate for Champaign County Board District 01
+                - generic [ref=e2299]:
+                  - img "Thomas Ed Sexton" [ref=e2301]
+                  - generic [ref=e2302]:
+                    - button "Thomas Ed Sexton (Republican)" [ref=e2304] [cursor=pointer]
+                    - generic [ref=e2305]: Candidate for Champaign County Board District 02
+                - generic [ref=e2306]:
+                  - img "William Schoell" [ref=e2308]
+                  - generic [ref=e2309]:
+                    - button "William Schoell (Democratic)" [ref=e2311] [cursor=pointer]
+                    - generic [ref=e2312]: Candidate for Champaign County Board District 07
+                - generic [ref=e2313]:
+                  - img "Monique Settles" [ref=e2315]
+                  - generic [ref=e2316]:
+                    - button "Monique Settles (Democratic)" [ref=e2318] [cursor=pointer]
+                    - generic [ref=e2319]: Candidate for Champaign County Board District 10
+              - generic [ref=e2320]:
+                - paragraph [ref=e2321]: T
+                - generic [ref=e2322]:
+                  - img "Judd Thruman" [ref=e2324]
+                  - generic [ref=e2325]:
+                    - button "Judd Thruman (Republican)" [ref=e2327] [cursor=pointer]
+                    - generic [ref=e2328]: Candidate for Illinois Judicial Circuit Court 15th District Jo Daviess County Resident (Hauser Vacancy)
+                - generic [ref=e2329]:
+                  - img "Dana Timmerman" [ref=e2331]
+                  - generic [ref=e2332]:
+                    - button "Dana Timmerman (Republican)" [ref=e2334] [cursor=pointer]
+                    - generic [ref=e2335]: Candidate for Jo Daviess County Clerk & Recorder
+                - generic [ref=e2336]:
+                  - img "David Tassoni" [ref=e2338]
+                  - generic [ref=e2339]:
+                    - button "David Tassoni (Democratic)" [ref=e2341] [cursor=pointer]
+                    - generic [ref=e2342]: Candidate for Winnebago District 5
+                - generic [ref=e2343]:
+                  - img "Freddy De La Trinindad" [ref=e2345]
+                  - generic [ref=e2346]:
+                    - button "Freddy De La Trinindad (Democratic)" [ref=e2348] [cursor=pointer]
+                    - generic [ref=e2349]: Candidate for Winnebago District 12
+                - generic [ref=e2350]:
+                  - img "Toledo, Luz Maria" [ref=e2352]
+                  - generic [ref=e2353]:
+                    - button "Toledo, Luz Maria (Democratic)" [ref=e2355] [cursor=pointer]
+                    - generic [ref=e2356]: Candidate for COOK CIRCUIT - COBBS VACANCY
+                - generic [ref=e2357]:
+                  - img "Thedford, D'Anthony \"Tony\"" [ref=e2359]
+                  - generic [ref=e2360]:
+                    - button "Thedford, D'Anthony \"Tony\" (Democratic)" [ref=e2362] [cursor=pointer]
+                    - generic [ref=e2363]: Candidate for COOK CIRCUIT - KARKULA VACANCY
+                - generic [ref=e2364]:
+                  - img "Maggie Trevor" [ref=e2366]
+                  - generic [ref=e2367]:
+                    - button "Maggie Trevor (Democratic)" [ref=e2369] [cursor=pointer]
+                    - generic [ref=e2370]: Candidate for Cook County Board, 9th District Commissioner
+                - generic [ref=e2371]:
+                  - img "Nico Tsatsoulis" [ref=e2373]
+                  - generic [ref=e2374]:
+                    - button "Nico Tsatsoulis (Libertarian)" [ref=e2376] [cursor=pointer]
+                    - generic [ref=e2377]: Candidate for Cook County Assessor
+                - generic [ref=e2378]:
+                  - img "Jennifer Todd" [ref=e2380]
+                  - generic [ref=e2381]:
+                    - button "Jennifer Todd (Democratic)" [ref=e2383] [cursor=pointer]
+                    - generic [ref=e2384]: Candidate for 15th U.S. Congress
+              - generic [ref=e2385]:
+                - paragraph [ref=e2386]: V
+                - generic [ref=e2387]:
+                  - img "Michael P. Vespa" [ref=e2389]
+                  - generic [ref=e2390]:
+                    - button "Michael P. Vespa (Democratic)" [ref=e2392] [cursor=pointer]
+                    - generic [ref=e2393]: Candidate for IL Judicial Circuit Court Tenth District Peoria County Resident (Vespa Vacancy)
+                - generic [ref=e2394]:
+                  - img "Velez, Jessica Karina" [ref=e2396]
+                  - generic [ref=e2397]:
+                    - button "Velez, Jessica Karina (Democratic)" [ref=e2399] [cursor=pointer]
+                    - generic [ref=e2400]: Candidate for COOK CIRCUIT - 16TH SUBCIRCUIT - MENDOZA VACANCY
+                - generic [ref=e2401]:
+                  - img "Brian VanVickle" [ref=e2403]
+                  - generic [ref=e2404]:
+                    - button "Brian VanVickle (Republican)" [ref=e2406] [cursor=pointer]
+                    - generic [ref=e2407]: Candidate for Ogle County Sheriff
+                - generic [ref=e2408]:
+                  - img "Bethany A. Vanichtheeranont" [ref=e2410]
+                  - generic [ref=e2411]:
+                    - button "Bethany A. Vanichtheeranont (Democratic)" [ref=e2413] [cursor=pointer]
+                    - generic [ref=e2414]: Candidate for Champaign County Board District 05
+                - generic [ref=e2415]:
+                  - img "Jason Votava" [ref=e2417]
+                  - generic [ref=e2418]:
+                    - button "Jason Votava (Democratic)" [ref=e2420] [cursor=pointer]
+                    - generic [ref=e2421]: Candidate for Champaign County Board District 09
+              - generic [ref=e2422]:
+                - paragraph [ref=e2423]: W
+                - generic [ref=e2424]:
+                  - img "Gerard Wechet" [ref=e2426]
+                  - generic [ref=e2427]:
+                    - button "Gerard Wechet (Republican)" [ref=e2429] [cursor=pointer]
+                    - generic [ref=e2430]: Candidate for Boone County Board District 1
+                - generic [ref=e2431]:
+                  - img "David R. Wiltse" [ref=e2433]
+                  - generic [ref=e2434]:
+                    - button "David R. Wiltse (Republican)" [ref=e2436] [cursor=pointer]
+                    - generic [ref=e2437]: Candidate for Boone County Board District 1
+                - generic [ref=e2438]:
+                  - img "John Tracy Wiecking" [ref=e2440]
+                  - generic [ref=e2441]:
+                    - button "John Tracy Wiecking (Democratic)" [ref=e2443] [cursor=pointer]
+                    - generic [ref=e2444]: Candidate for Precinct Committeeperson West Galena II
+                - generic [ref=e2445]:
+                  - img "Darcy Wild" [ref=e2447]
+                  - generic [ref=e2448]:
+                    - button "Darcy Wild (Republican)" [ref=e2450] [cursor=pointer]
+                    - generic [ref=e2451]: Candidate for Precinct Committeeperson Hanover
+                - generic [ref=e2452]:
+                  - img "Eric S. West" [ref=e2454]
+                  - generic [ref=e2455]:
+                    - button "Eric S. West (Democratic)" [ref=e2457] [cursor=pointer]
+                    - generic [ref=e2458]: Candidate for Winnebago District 8
+                - generic [ref=e2459]:
+                  - img "Travis Weaver" [ref=e2461]
+                  - generic [ref=e2462]:
+                    - button "Travis Weaver (Republican)" [ref=e2464] [cursor=pointer]
+                    - generic [ref=e2465]: Candidate for Illinois House District 93
+                - generic [ref=e2466]:
+                  - img "Ward, Radiance" [ref=e2468]
+                  - generic [ref=e2469]:
+                    - button "Ward, Radiance (Democratic)" [ref=e2471] [cursor=pointer]
+                    - generic [ref=e2472]: Candidate for COOK CIRCUIT - 1ST SUBCIRCUIT - BALANOFF VACANCY
+                - generic [ref=e2473]:
+                  - img "Sonni Choi Wiliams" [ref=e2475]
+                  - generic [ref=e2476]:
+                    - button "Sonni Choi Wiliams (Democratic)" [ref=e2478] [cursor=pointer]
+                    - generic [ref=e2479]: Candidate for Illinois Judicial Circuit Court 12th Circuit 3rd Subcircuit (Anderson Vacancy)
+                - generic [ref=e2480]:
+                  - img "Jeff Wilson" [ref=e2482]
+                  - generic [ref=e2483]:
+                    - button "Jeff Wilson (Republican)" [ref=e2485] [cursor=pointer]
+                    - generic [ref=e2486]: Candidate for 13th U.S. Congress
+                - generic [ref=e2487]:
+                  - img "Gregory A. Worrell" [ref=e2489]
+                  - generic [ref=e2490]:
+                    - button "Gregory A. Worrell (Republican)" [ref=e2492] [cursor=pointer]
+                    - generic [ref=e2493]: Candidate for Champaign County Sheriff
+              - generic [ref=e2494]:
+                - paragraph [ref=e2495]: "Y"
+                - generic [ref=e2496]:
+                  - img "Janet Yang Rohr" [ref=e2498]
+                  - generic [ref=e2499]:
+                    - button "Janet Yang Rohr (Democratic)" [ref=e2501] [cursor=pointer]
+                    - generic [ref=e2502]: Candidate for Illinois House District 41
+                - generic [ref=e2503]:
+                  - img "Yeena Yoo" [ref=e2505]
+                  - generic [ref=e2506]:
+                    - button "Yeena Yoo (Democratic)" [ref=e2508] [cursor=pointer]
+                    - generic [ref=e2509]: Candidate for DuPage County Treasurer
+                - generic [ref=e2510]:
+                  - img "Scott Yunk" [ref=e2512]
+                  - generic [ref=e2513]:
+                    - button "Scott Yunk (Republican)" [ref=e2515] [cursor=pointer]
+                    - generic [ref=e2516]: Candidate for Boone County Sheriff
+              - generic [ref=e2517]:
+                - paragraph [ref=e2518]: Z
+                - generic [ref=e2519]:
+                  - img "Paul T. Zelen, Jr." [ref=e2521]
+                  - generic [ref=e2522]:
+                    - button "Paul T. Zelen, Jr. (Republican)" [ref=e2524] [cursor=pointer]
+                    - generic [ref=e2525]: Candidate for Boone County Board District 2
+                - generic [ref=e2526]:
+                  - img "Zink, Michael J." [ref=e2528]
+                  - generic [ref=e2529]:
+                    - button "Zink, Michael J. (Democratic)" [ref=e2531] [cursor=pointer]
+                    - generic [ref=e2532]: Candidate for COOK CIRCUIT - 20TH SUBCIRCUIT - HARACZ VACANCY
+              - generic [ref=e2533]:
+                - paragraph [ref=e2534]: OTHER
+                - generic [ref=e2535]:
+                  - img "Shain Crank" [ref=e2537]
+                  - generic [ref=e2538]:
+                    - button "Shain Crank (Republican)" [ref=e2540] [cursor=pointer]
+                    - generic [ref=e2541]: Candidate for Regional Superintendent of Schools (Edwards, Gallatin, Hamilton)
+                - generic [ref=e2542]:
+                  - img "Sarah E. Emery" [ref=e2544]
+                  - generic [ref=e2545]:
+                    - button "Sarah E. Emery (Republican)" [ref=e2547] [cursor=pointer]
+                    - generic [ref=e2548]: Candidate for Regional Superintendent of Schools (Edwards, Gallatin, Hamilton)
+                - generic [ref=e2549]:
+                  - img "Nicole Dopler" [ref=e2551]
+                  - generic [ref=e2552]:
+                    - button "Nicole Dopler (Democratic)" [ref=e2554] [cursor=pointer]
+                    - generic [ref=e2555]: Candidate for Illinois House District 73
+                - generic [ref=e2556]:
+                  - img "Ryan Spain" [ref=e2558]
+                  - generic [ref=e2559]:
+                    - button "Ryan Spain (Republican)" [ref=e2561] [cursor=pointer]
+                    - generic [ref=e2562]: Candidate for Illinois House District 73
+                - generic [ref=e2563]:
+                  - img "Jehan Gordon Booth" [ref=e2565]
+                  - generic [ref=e2566]:
+                    - button "Jehan Gordon Booth (Democratic)" [ref=e2568] [cursor=pointer]
+                    - generic [ref=e2569]: Candidate for Illinois House District 92
+                - generic [ref=e2570]:
+                  - img "Eira Lizeth Corral Sepulveda" [ref=e2572]
+                  - generic [ref=e2573]:
+                    - button "Eira Lizeth Corral Sepulveda (Democratic)" [ref=e2575] [cursor=pointer]
+                    - generic [ref=e2576]: Candidate for Metropolitan Water Reclamation District, MWRD- 6 yr
+                - generic [ref=e2577]:
+                  - img "Precious Brady-Davis" [ref=e2579]
+                  - generic [ref=e2580]:
+                    - button "Precious Brady-Davis (Democratic)" [ref=e2582] [cursor=pointer]
+                    - generic [ref=e2583]: Candidate for Metropolitan Water Reclamation District, MWRD- 6 yr
+                - generic [ref=e2584]:
+                  - img "Beth McElroy Kirkwood" [ref=e2586]
+                  - generic [ref=e2587]:
+                    - button "Beth McElroy Kirkwood (Democratic)" [ref=e2589] [cursor=pointer]
+                    - generic [ref=e2590]: Candidate for Metropolitan Water Reclamation District, MWRD- 6 yr
+                - generic [ref=e2591]:
+                  - img "Sarah Bury" [ref=e2593]
+                  - generic [ref=e2594]:
+                    - button "Sarah Bury (Democratic)" [ref=e2596] [cursor=pointer]
+                    - generic [ref=e2597]: Candidate for Metropolitan Water Reclamation District, MWRD- 6 yr
+                - generic [ref=e2598]:
+                  - img "Jose \"Che-Che\" Turrubiartez Wilson" [ref=e2600]
+                  - generic [ref=e2601]:
+                    - button "Jose \"Che-Che\" Turrubiartez Wilson (Democratic)" [ref=e2603] [cursor=pointer]
+                    - generic [ref=e2604]: Candidate for Cook County Board, 12th District Commissioner
+                - generic [ref=e2605]:
+                  - img "Isaiah White" [ref=e2607]
+                  - generic [ref=e2608]:
+                    - button "Isaiah White (Democratic)" [ref=e2610] [cursor=pointer]
+                    - generic [ref=e2611]: Candidate for Cook County Board, 12th District Commissioner
+                - generic [ref=e2612]:
+                  - img "Elizabeth Granato" [ref=e2614]
+                  - generic [ref=e2615]:
+                    - button "Elizabeth Granato (Democratic)" [ref=e2617] [cursor=pointer]
+                    - generic [ref=e2618]: Candidate for Cook County Board, 12th District Commissioner
+                - generic [ref=e2619]:
+                  - img "Drake Warren" [ref=e2621]
+                  - generic [ref=e2622]:
+                    - button "Drake Warren (Democratic)" [ref=e2624] [cursor=pointer]
+                    - generic [ref=e2625]: Candidate for Cook County Board, 10th District Commissioner
+                - generic [ref=e2626]:
+                  - img "Bridget Gainer" [ref=e2628]
+                  - generic [ref=e2629]:
+                    - button "Bridget Gainer (Democratic)" [ref=e2631] [cursor=pointer]
+                    - generic [ref=e2632]: Candidate for Cook County Board, 10th District Commissioner
+                - generic [ref=e2633]:
+                  - img "Jessica Vasquez" [ref=e2635]
+                  - generic [ref=e2636]:
+                    - button "Jessica Vasquez (Democratic)" [ref=e2638] [cursor=pointer]
+                    - generic [ref=e2639]: Candidate for Cook County Board, 8th District Commissioner
+                - generic [ref=e2640]:
+                  - img "Nicholas Cade" [ref=e2642]
+                  - generic [ref=e2643]:
+                    - button "Nicholas Cade (Democratic)" [ref=e2645] [cursor=pointer]
+                    - generic [ref=e2646]: Candidate for Cook County Board, 8th District Commissioner
+                - generic [ref=e2647]:
+                  - img "Sylvester Fulcher" [ref=e2649]
+                  - generic [ref=e2650]:
+                    - button "Sylvester Fulcher (Democratic)" [ref=e2652] [cursor=pointer]
+                    - generic [ref=e2653]: Candidate for Cook County Board, 6th District Commissioner
+                - generic [ref=e2654]:
+                  - img "Wesam Shahed" [ref=e2656]
+                  - generic [ref=e2657]:
+                    - button "Wesam Shahed (Democratic)" [ref=e2659] [cursor=pointer]
+                    - generic [ref=e2660]: Candidate for Cook County Board, 6th District Commissioner
+                - generic [ref=e2661]:
+                  - img "Patricia Joan \"Trish\" Murphy" [ref=e2663]
+                  - generic [ref=e2664]:
+                    - button "Patricia Joan \"Trish\" Murphy (Democratic)" [ref=e2666] [cursor=pointer]
+                    - generic [ref=e2667]: Candidate for Cook County Board, 6th District Commissioner
+                - generic [ref=e2668]:
+                  - img "Antoine Bass" [ref=e2670]
+                  - generic [ref=e2671]:
+                    - button "Antoine Bass (Democratic)" [ref=e2673] [cursor=pointer]
+                    - generic [ref=e2674]: Candidate for Cook County Board, 6th District Commissioner
+                - generic [ref=e2675]:
+                  - img "Veronica J. Bolling-Franklin" [ref=e2677]
+                  - generic [ref=e2678]:
+                    - button "Veronica J. Bolling-Franklin (Democratic)" [ref=e2680] [cursor=pointer]
+                    - generic [ref=e2681]: Candidate for Cook County Board, 6th District Commissioner
+                - generic [ref=e2682]:
+                  - img "Andre Smith" [ref=e2684]
+                  - generic [ref=e2685]:
+                    - button "Andre Smith (Democratic)" [ref=e2687] [cursor=pointer]
+                    - generic [ref=e2688]: Candidate for Cook County Board, 2nd District Commissioner
+                - generic [ref=e2689]:
+                  - img "Michael Scott" [ref=e2691]
+                  - generic [ref=e2692]:
+                    - button "Michael Scott (Democratic)" [ref=e2694] [cursor=pointer]
+                    - generic [ref=e2695]: Candidate for Cook County Board, 2nd District Commissioner
+                - generic [ref=e2696]:
+                  - img "Samantha Steele" [ref=e2698]
+                  - generic [ref=e2699]:
+                    - button "Samantha Steele (Democratic)" [ref=e2701] [cursor=pointer]
+                    - generic [ref=e2702]: Candidate for Cook County Board of Review Commissioner 2nd district-2 yr
+                - generic [ref=e2703]:
+                  - img "Liz Nicholson" [ref=e2705]
+                  - generic [ref=e2706]:
+                    - button "Liz Nicholson (Democratic)" [ref=e2708] [cursor=pointer]
+                    - generic [ref=e2709]: Candidate for Cook County Board of Review Commissioner 2nd district-2 yr
+                - generic [ref=e2710]:
+                  - img "Fritz Kaegi" [ref=e2712]
+                  - generic [ref=e2713]:
+                    - button "Fritz Kaegi (Democratic)" [ref=e2715] [cursor=pointer]
+                    - generic [ref=e2716]: Candidate for Cook County Assessor
+                - generic [ref=e2717]:
+                  - img "Pat Hynes" [ref=e2719]
+                  - generic [ref=e2720]:
+                    - button "Pat Hynes (Democratic)" [ref=e2722] [cursor=pointer]
+                    - generic [ref=e2723]: Candidate for Cook County Assessor
+                - generic [ref=e2724]:
+                  - img "Bill Foster" [ref=e2726]
+                  - generic [ref=e2727]:
+                    - button "Bill Foster (Democratic)" [ref=e2729] [cursor=pointer]
+                    - generic [ref=e2730]: Candidate for Illinois US House District 11
+                - generic [ref=e2731]:
+                  - img "Jeff Walter" [ref=e2733]
+                  - generic [ref=e2734]:
+                    - button "Jeff Walter (Republican)" [ref=e2736] [cursor=pointer]
+                    - generic [ref=e2737]: Candidate for Illinois US House District 11
+                - generic [ref=e2738]:
+                  - img "Michael Pierce" [ref=e2740]
+                  - generic [ref=e2741]:
+                    - button "Michael Pierce (Republican)" [ref=e2743] [cursor=pointer]
+                    - generic [ref=e2744]: Candidate for Illinois US House District 11
+                - generic [ref=e2745]:
+                  - img "Tedora Brown" [ref=e2747]
+                  - generic [ref=e2748]:
+                    - button "Tedora Brown (Republican)" [ref=e2750] [cursor=pointer]
+                    - generic [ref=e2751]: Candidate for Illinois US House District 11
+                - generic [ref=e2752]:
+                  - img "Charlie Kim" [ref=e2754]
+                  - generic [ref=e2755]:
+                    - button "Charlie Kim (Republican)" [ref=e2757] [cursor=pointer]
+                    - generic [ref=e2758]: Candidate for Illinois US House District 11
+                - generic [ref=e2759]:
+                  - img "Sadia Covert" [ref=e2761]
+                  - generic [ref=e2762]:
+                    - button "Sadia Covert (Democratic)" [ref=e2764] [cursor=pointer]
+                    - generic [ref=e2765]: Candidate for DuPage County Board Member District 5 (4-Year Term)
+                - generic [ref=e2766]:
+                  - img "Marylee Leu" [ref=e2768]
+                  - generic [ref=e2769]:
+                    - button "Marylee Leu (Democratic)" [ref=e2771] [cursor=pointer]
+                    - generic [ref=e2772]: Candidate for DuPage County Board Member District 5 (4-Year Term)
+                - generic [ref=e2773]:
+                  - img "Ian Holzhauer" [ref=e2775]
+                  - generic [ref=e2776]:
+                    - button "Ian Holzhauer (Democratic)" [ref=e2778] [cursor=pointer]
+                    - generic [ref=e2779]: Candidate for DuPage County Board Member District 5 (4-Year Term)
+                - generic [ref=e2780]:
+                  - img "Justin Fialko" [ref=e2782]
+                  - generic [ref=e2783]:
+                    - button "Justin Fialko (Republican)" [ref=e2785] [cursor=pointer]
+                    - generic [ref=e2786]: Candidate for Will County Sheriff
+                - generic [ref=e2787]:
+                  - img "James \"Jim\" Reilly" [ref=e2789]
+                  - generic [ref=e2790]:
+                    - button "James \"Jim\" Reilly (Republican)" [ref=e2792] [cursor=pointer]
+                    - generic [ref=e2793]: Candidate for Will County Sheriff
+                - generic [ref=e2794]:
+                  - img "Patrick Jones" [ref=e2796]
+                  - generic [ref=e2797]:
+                    - button "Patrick Jones (Democratic)" [ref=e2799] [cursor=pointer]
+                    - generic [ref=e2800]: Candidate for Will County Sheriff
+                - generic [ref=e2801]:
+                  - img "Dan Jungles" [ref=e2803]
+                  - generic [ref=e2804]:
+                    - button "Dan Jungles (Democratic)" [ref=e2806] [cursor=pointer]
+                    - generic [ref=e2807]: Candidate for Will County Sheriff
+                - generic [ref=e2808]:
+                  - img "Carmen Maurella III" [ref=e2810]
+                  - generic [ref=e2811]:
+                    - button "Carmen Maurella III (Republican)" [ref=e2813] [cursor=pointer]
+                    - generic [ref=e2814]: Candidate for Will County Treasurer
+                - generic [ref=e2815]:
+                  - img "Raj \"Pi\" Pillai" [ref=e2817]
+                  - generic [ref=e2818]:
+                    - button "Raj \"Pi\" Pillai (Republican)" [ref=e2820] [cursor=pointer]
+                    - generic [ref=e2821]: Candidate for Will County Treasurer
+                - generic [ref=e2822]:
+                  - img "Steven Smith" [ref=e2824]
+                  - generic [ref=e2825]:
+                    - button "Steven Smith (Republican)" [ref=e2827] [cursor=pointer]
+                    - generic [ref=e2828]: Candidate for Will County Board Member District 11
+                - generic [ref=e2829]:
+                  - img "No Candidate" [ref=e2831]
+                  - generic [ref=e2832]:
+                    - button "No Candidate (Republican)" [ref=e2834] [cursor=pointer]
+                    - generic [ref=e2835]: Candidate for Will County Board Member District 11
+                - generic [ref=e2836]:
+                  - img "Tyler Giacalone" [ref=e2838]
+                  - generic [ref=e2839]:
+                    - button "Tyler Giacalone (Democratic)" [ref=e2841] [cursor=pointer]
+                    - generic [ref=e2842]: Candidate for Will County Board Member District 11
+                - generic [ref=e2843]:
+                  - img "Sheldon L. Watts" [ref=e2845]
+                  - generic [ref=e2846]:
+                    - button "Sheldon L. Watts (Democratic)" [ref=e2848] [cursor=pointer]
+                    - generic [ref=e2849]: Candidate for Will County Board Member District 11
+                - generic [ref=e2850]:
+                  - img "Jacqueline L Traynere" [ref=e2852]
+                  - generic [ref=e2853]:
+                    - button "Jacqueline L Traynere (Democratic)" [ref=e2855] [cursor=pointer]
+                    - generic [ref=e2856]: Candidate for Will County Board Member District 11
+                - generic [ref=e2857]:
+                  - img "Barbara Ann Parker" [ref=e2859]
+                  - generic [ref=e2860]:
+                    - button "Barbara Ann Parker (Democratic)" [ref=e2862] [cursor=pointer]
+                    - generic [ref=e2863]: Candidate for Will County Board Member District 11
+                - generic [ref=e2864]:
+                  - img "Jason A. Helland" [ref=e2866]
+                  - generic [ref=e2867]:
+                    - button "Jason A. Helland (Republican)" [ref=e2869] [cursor=pointer]
+                    - generic [ref=e2870]: Candidate for Illinois Appellate Court 3rd Judicial District (McDade Vacancy)
+                - generic [ref=e2871]:
+                  - img "Mark Senak" [ref=e2873]
+                  - generic [ref=e2874]:
+                    - button "Mark Senak (Republican)" [ref=e2876] [cursor=pointer]
+                    - generic [ref=e2877]: Candidate for Illinois Appellate Court 3rd Judicial District (McDade Vacancy)
+                - generic [ref=e2878]:
+                  - img "John Pavich" [ref=e2880]
+                  - generic [ref=e2881]:
+                    - button "John Pavich (Democratic)" [ref=e2883] [cursor=pointer]
+                    - generic [ref=e2884]: Candidate for Illinois Appellate Court 3rd Judicial District (McDade Vacancy)
+                - generic [ref=e2885]:
+                  - img "Margaret \"Peggy\" O'Connell" [ref=e2887]
+                  - generic [ref=e2888]:
+                    - button "Margaret \"Peggy\" O'Connell (Democratic)" [ref=e2890] [cursor=pointer]
+                    - generic [ref=e2891]: Candidate for Illinois Appellate Court 3rd Judicial District (McDade Vacancy)
+                - generic [ref=e2892]:
+                  - img "Art Smigielski" [ref=e2894]
+                  - generic [ref=e2895]:
+                    - button "Art Smigielski (Republican)" [ref=e2897] [cursor=pointer]
+                    - generic [ref=e2898]: Candidate for Illinois Judicial Circuit Court 12th Circuit 5th Subcircuit (Petrungaro Vacancy)
+                - generic [ref=e2899]:
+                  - img "Erin O'Brien" [ref=e2901]
+                  - generic [ref=e2902]:
+                    - button "Erin O'Brien (Republican)" [ref=e2904] [cursor=pointer]
+                    - generic [ref=e2905]: Candidate for Illinois Judicial Circuit Court 12th Circuit 5th Subcircuit (Petrungaro Vacancy)
+            - generic [ref=e2909]:
+              - heading "Want to see your races only?" [level=4] [ref=e2910]:
+                - generic [ref=e2911]: Want to see your races only?
+              - generic [ref=e2912]: If you'd rather, you can view all the races and measures on your specific ballot by entering your address or using your current location.
+              - button "Enter Address" [ref=e2915] [cursor=pointer]
+          - generic [ref=e144]:
+            - generic [ref=e145]:
+              - paragraph [ref=e146]: ©2026 League of Women Voters Education Fund. All rights reserved.
+              - paragraph [ref=e147]: The League of Women Voters does not support or oppose any candidates or parties. All responses come directly from the candidates and are unedited by the League. The League does not certify the accuracy of the candidate’s statements. The League reserves the right to remove or redact portions of candidate responses that violate state or federal law or the voter guide rules that are provided to all candidates before participating in the voter guide.
+            - generic [ref=e148]:
+              - button "All Races" [ref=e150] [cursor=pointer]
+              - button "All Candidates" [ref=e152] [cursor=pointer]
+        - generic [ref=e155]:
+          - generic [ref=e159]:
+            - heading "Voting Guides" [level=4] [ref=e160]: Voting Guides
+            - list [ref=e162]:
+              - listitem [ref=e163]:
+                - link "NJ Congressional District 2 Democratic Primary Candidate Forum" [ref=e164] [cursor=pointer]:
+                  - /url: https://vimeo.com/1193451870?share=copy&fl=sv&fe=ci
+                  - generic [ref=e165]: NJ Congressional District 2 Democratic Primary Candidate Forum
+              - listitem [ref=e166]:
+                - link "NJ Congressional District 4 Democratic Primary Candidate Forum" [ref=e167] [cursor=pointer]:
+                  - /url: https://lwvmonmouth.org/vid100.php
+                  - generic [ref=e168]: NJ Congressional District 4 Democratic Primary Candidate Forum
+              - listitem [ref=e169]:
+                - 'link "NM: LWV Santa Fe County Voter Guide" [ref=e170] [cursor=pointer]':
+                  - /url: https://vote411-prod.s3.amazonaws.com/2026-05/2026%20Primary%20Election%20Voter%20Guide.pdf
+                  - generic [ref=e171]: "NM: LWV Santa Fe County Voter Guide"
+              - listitem [ref=e172]:
+                - 'link "NY: May 19th, 2026 Tompkins County School Board Elections" [ref=e173] [cursor=pointer]':
+                  - /url: https://vote411-prod.s3.amazonaws.com/2026-05/2026%20School%20Board%20Elections%20for%20VOTE%20411%20and%20for%20LWVTC%20Website_rev.pdf
+                  - generic [ref=e174]: "NY: May 19th, 2026 Tompkins County School Board Elections"
+              - listitem [ref=e175]:
+                - link "Union County PA 2026 Primary Voter Guide" [ref=e176] [cursor=pointer]:
+                  - /url: https://vote411-prod.s3.amazonaws.com/2026-04/Union%20County%20PA%20Spring%202026%20Voters%20Guide.pdf
+                  - generic [ref=e177]: Union County PA 2026 Primary Voter Guide
+          - generic [ref=e180]:
+            - generic [ref=e181]:
+              - heading "Candidate Debate Videos" [level=4] [ref=e182]: Candidate Debate Videos
+              - list [ref=e184]:
+                - listitem [ref=e185]:
+                  - link "2026 LWV Kansas City, MO Candidate Forums" [ref=e186] [cursor=pointer]:
+                    - /url: https://www.youtube.com/playlist?list=PLOGFYk7DGuk1KUtspY3xkHI2z_NFWuns3
+                    - generic [ref=e187]: 2026 LWV Kansas City, MO Candidate Forums
+                - listitem [ref=e188]:
+                  - link "Alameda County CA Board of Supervisors District 2 Candidate Forum" [ref=e189] [cursor=pointer]:
+                    - /url: https://www.youtube.com/watch?v=KfGb6IPYhTk
+                    - generic [ref=e190]: Alameda County CA Board of Supervisors District 2 Candidate Forum
+                - listitem [ref=e191]:
+                  - link "Alameda County CA Board of Supervisors, District 2" [ref=e192] [cursor=pointer]:
+                    - /url: https://www.youtube.com/watch?v=KfGb6IPYhTk
+                    - generic [ref=e193]: Alameda County CA Board of Supervisors, District 2
+                - listitem [ref=e194]:
+                  - link "CA Assembly District 42 Candidate Forum" [ref=e195] [cursor=pointer]:
+                    - /url: https://www.youtube.com/watch?v=KUCUIPYvdWU
+                    - generic [ref=e196]: CA Assembly District 42 Candidate Forum
+                - listitem [ref=e197]:
+                  - link "CA Governor Candidate Forum Claremont" [ref=e198] [cursor=pointer]:
+                    - /url: https://www.youtube.com/live/1ikN8crwsFM
+                    - generic [ref=e199]: CA Governor Candidate Forum Claremont
+                - listitem [ref=e200]:
+                  - link "CA Governor Candidate Forum Los Angeles" [ref=e201] [cursor=pointer]:
+                    - /url: https://www.youtube.com/live/6o0pu2huVvc
+                    - generic [ref=e202]: CA Governor Candidate Forum Los Angeles
+                - listitem [ref=e203]:
+                  - link "CA Governor Candidate Forum Los Angeles Feb 26" [ref=e204] [cursor=pointer]:
+                    - /url: https://www.youtube.com/live/mH-ZKGUUlv0
+                    - generic [ref=e205]: CA Governor Candidate Forum Los Angeles Feb 26
+                - listitem [ref=e206]:
+                  - link "CA Governor Candidate Forum San Francisco" [ref=e207] [cursor=pointer]:
+                    - /url: https://www.youtube.com/watch?v=-_LHkpd7PcM
+                    - generic [ref=e208]: CA Governor Candidate Forum San Francisco
+                - listitem [ref=e209]:
+                  - link "CA Governor Candidate Forum San Francisco April 22" [ref=e210] [cursor=pointer]:
+                    - /url: https://www.youtube.com/watch?v=cKIUJua6iCI
+                    - generic [ref=e211]: CA Governor Candidate Forum San Francisco April 22
+                - listitem [ref=e212]:
+                  - link "CA Insurance Commissioner Candidate Forum April 29" [ref=e213] [cursor=pointer]:
+                    - /url: https://www.youtube.com/watch?v=97nTcNHYbOM&t=251s
+                    - generic [ref=e214]: CA Insurance Commissioner Candidate Forum April 29
+            - navigation "Pagination" [ref=e215]:
+              - heading "Pagination" [level=4] [ref=e216]
+              - list [ref=e217]:
+                - listitem [ref=e218]:
+                  - link "Current page 1" [ref=e219] [cursor=pointer]:
+                    - /url: "?page=%2C0%2C0"
+                    - generic [ref=e220]: Current page
+                    - text: "1"
+                - listitem [ref=e221]:
+                  - link "Page 2" [ref=e222] [cursor=pointer]:
+                    - /url: "?page=%2C0%2C1"
+                    - generic [ref=e223]: Page
+                    - text: "2"
+                - listitem [ref=e224]:
+                  - link "Page 3" [ref=e225] [cursor=pointer]:
+                    - /url: "?page=%2C0%2C2"
+                    - generic [ref=e226]: Page
+                    - text: "3"
+                - listitem [ref=e227]:
+                  - link "Next page" [ref=e228] [cursor=pointer]:
+                    - /url: "?page=%2C0%2C1"
+                    - generic [ref=e229]: Next page
+                    - text: Next ›
+        - generic [ref=e232]:
+          - iframe [ref=e235]:
+            - generic [active] [ref=f1e1]:
+              - generic "YouTube Video Player" [ref=f1e3]
+              - generic [ref=f1e5]:
+                - generic:
+                  - generic:
+                    - button "Play video" [ref=f1e10] [cursor=pointer]
+                    - button "Hide player controls" [ref=f1e12] [cursor=pointer]
+                    - generic [ref=f1e14]:
+                      - generic [ref=f1e19]:
+                        - generic [ref=f1e20]:
+                          - link "Your Vote411 Voter Guide" [ref=f1e21] [cursor=pointer]:
+                            - /url: https://www.youtube.com/watch?v=pWrltElaHRE
+                          - link "League of Women Voters" [ref=f1e22] [cursor=pointer]:
+                            - /url: /channel/UCzd5f5VyMYYrtCZKM3dYaXQ
+                            - generic [ref=f1e23]: League of Women Voters
+                        - generic [ref=f1e24]:
+                          - button [ref=f1e25] [cursor=pointer]
+                          - generic [ref=f1e27]:
+                            - generic: League of Women Voters
+                            - generic: 3.64K subscribers
+                      - generic [ref=f1e28]:
+                        - button "Share" [ref=f1e31] [cursor=pointer]:
+                          - generic [ref=f1e35]:
+                            - img
+                        - link "Watch on YouTube" [ref=f1e42] [cursor=pointer]:
+                          - /url: https://www.youtube.com/watch?v=pWrltElaHRE
+                          - generic [ref=f1e45]:
+                            - text: Watch on
+                            - img [ref=f1e47]:
+                              - generic [ref=f1e49]:
+                                - img
+          - generic [ref=e238]:
+            - heading "Get Other Personalized Voting Information" [level=2] [ref=e239]:
+              - generic [ref=e240]: Get Other Personalized Voting Information
+            - paragraph
+            - paragraph
+            - list [ref=e241]:
+              - listitem [ref=e242]: See What's On Your Ballot
+              - listitem [ref=e243]: Find Your Polling Place
+              - listitem [ref=e244]: Discover Upcoming Debates And Forums In Your Area
+              - listitem [ref=e245]: and much more!
+            - paragraph [ref=e246]
+            - link "Get Started" [ref=e247] [cursor=pointer]:
+              - /url: /plan-your-vote
+    - contentinfo [ref=e248]:
+      - generic [ref=e251]:
+        - generic [ref=e252]:
+          - heading "Election day problems?" [level=2] [ref=e253]
+          - paragraph [ref=e254]: "Report an election problem by calling:"
+        - generic [ref=e255]:
+          - generic [ref=e256]: 1-866-OUR-VOTE (866-687-8683)
+          - generic [ref=e257]: 1-888-VE-Y-VOTA (en Español)
+        - generic [ref=e258]:
+          - generic [ref=e259]: 1-888-API-VOTE (Asian multilingual assistance)
+          - generic [ref=e260]: 1-844-YALLA-US (Arabic)
+      - generic [ref=e263]:
+        - generic [ref=e264]:
+          - heading "Donate" [level=2] [ref=e265]
+          - paragraph [ref=e266]: Help us provide accurate and unbiased voting information by donating today!
+          - link "Make a donation" [ref=e267] [cursor=pointer]:
+            - /url: https://www.lwv.org/VOTE411give
+        - generic [ref=e268]:
+          - heading "Your Voting Guide" [level=2] [ref=e269]
+          - paragraph [ref=e270]: Find what's on your ballot
+          - link "Explore Now" [ref=e271] [cursor=pointer]:
+            - /url: /plan-your-vote
+      - generic [ref=e273]:
+        - generic [ref=e274]:
+          - generic [ref=e275]:
+            - img "VOTE411 Logo" [ref=e276]
+            - paragraph [ref=e277]: VOTE411 is committed to ensuring voters have the information they need to successfully participate in every election. Whether it's local, state or federal, every election is important to ensuring our laws and policies reflect the values and beliefs of our communities.
+            - img "webby-2020-banner" [ref=e279]
+          - generic [ref=e288]:
+            - list [ref=e290]:
+              - listitem [ref=e291]:
+                - link "Contact Us" [ref=e292] [cursor=pointer]:
+                  - /url: mailto:voterinformation@lwv.org
+              - listitem [ref=e293]:
+                - link "About Us" [ref=e294] [cursor=pointer]:
+                  - /url: /about
+              - listitem [ref=e295]:
+                - link "Get Involved" [ref=e296] [cursor=pointer]:
+                  - /url: https://www.lwv.org/local-leagues/find-local-league?field_zip_code_value=
+              - listitem [ref=e297]:
+                - link "Sponsors & Partners" [ref=e298] [cursor=pointer]:
+                  - /url: /sponsors
+            - generic [ref=e299]:
+              - heading "Follow us" [level=2] [ref=e300]
+              - list [ref=e301]:
+                - listitem [ref=e302]:
+                  - link "Facebook" [ref=e303] [cursor=pointer]:
+                    - /url: https://www.facebook.com/vote411/
+                - listitem [ref=e304]:
+                  - link "Instagram" [ref=e305] [cursor=pointer]:
+                    - /url: https://www.instagram.com/vote411/
+                - listitem [ref=e306]:
+                  - link "Twitter" [ref=e307] [cursor=pointer]:
+                    - /url: https://twitter.com/vote411
+                - listitem [ref=e308]:
+                  - link "YouTube" [ref=e309] [cursor=pointer]:
+                    - /url: https://www.youtube.com/watch?v=HoR-26mgFv0&list=PL33IAmThHpVDf2z3amFL9FzGxN0Ikfluc
+                - listitem
+            - generic [ref=e310]:
+              - heading "Brought to you by" [level=2] [ref=e311]
+              - link "League of Women Voters" [ref=e312] [cursor=pointer]:
+                - /url: https://www.lwv.org/about-us
+                - img "League of Women Voters Logo" [ref=e313]
+        - generic [ref=e314]:
+          - paragraph [ref=e316]: ©2026 League of Women Voters Education Fund. All rights reserved.
+          - link "Terms of Use" [ref=e318] [cursor=pointer]:
+            - /url: legal
+          - link "Privacy Policy" [ref=e320] [cursor=pointer]:
+            - /url: legal#privacy-policy

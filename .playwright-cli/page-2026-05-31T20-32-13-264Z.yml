@@ -1,0 +1,483 @@
+- generic [active] [ref=e1]:
+  - link "Skip to main navigation" [ref=e2] [cursor=pointer]:
+    - /url: "#main-menu"
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - generic [ref=e5]:
+        - generic [ref=e7]:
+          - link "Vote411 Logo" [ref=e8] [cursor=pointer]:
+            - /url: /
+            - img "Vote411 Logo" [ref=e9]
+          - button "Toggle Menu" [ref=e11] [cursor=pointer]:
+            - img "Open menu" [ref=e12]
+            - generic [ref=e13]: Menu
+        - generic [ref=e15]:
+          - button "English" [ref=e17] [cursor=pointer]
+          - link "Register to Vote" [ref=e18] [cursor=pointer]:
+            - /url: /register
+          - link "Donate" [ref=e19] [cursor=pointer]:
+            - /url: https://www.lwv.org/VOTE411give
+      - generic:
+        - generic:
+          - generic:
+            - generic [ref=e20] [cursor=pointer]:
+              - generic [ref=e21]: Voting in My State
+              - generic [ref=e22]:
+                - combobox "Select Your State" [ref=e23]:
+                  - option "Select your State" [selected]
+                  - option "Alabama"
+                  - option "Alaska"
+                  - option "Arizona"
+                  - option "Arkansas"
+                  - option "California"
+                  - option "Colorado"
+                  - option "Connecticut"
+                  - option "Delaware"
+                  - option "District Of Columbia"
+                  - option "Florida"
+                  - option "Georgia"
+                  - option "Hawaii"
+                  - option "Idaho"
+                  - option "Illinois"
+                  - option "Indiana"
+                  - option "Iowa"
+                  - option "Kansas"
+                  - option "Kentucky"
+                  - option "Louisiana"
+                  - option "Maine"
+                  - option "Maryland"
+                  - option "Massachusetts"
+                  - option "Michigan"
+                  - option "Minnesota"
+                  - option "Mississippi"
+                  - option "Missouri"
+                  - option "Montana"
+                  - option "Nebraska"
+                  - option "Nevada"
+                  - option "New Hampshire"
+                  - option "New Jersey"
+                  - option "New Mexico"
+                  - option "New York"
+                  - option "North Carolina"
+                  - option "North Dakota"
+                  - option "Ohio"
+                  - option "Oklahoma"
+                  - option "Oregon"
+                  - option "Pennsylvania"
+                  - option "Rhode Island"
+                  - option "South Carolina"
+                  - option "South Dakota"
+                  - option "Tennessee"
+                  - option "Texas"
+                  - option "Utah"
+                  - option "Vermont"
+                  - option "Virginia"
+                  - option "Washington"
+                  - option "West Virginia"
+                  - option "Wisconsin"
+                  - option "Wyoming"
+                - link "Compare State Issues" [ref=e25]:
+                  - /url: /search-by-topic
+                  - text: Compare State Issues
+                  - img [ref=e26]
+            - generic [ref=e35] [cursor=pointer]:
+              - generic [ref=e36]: Voter Registration
+              - list [ref=e37]:
+                - listitem [ref=e38]:
+                  - link "Registration Deadlines" [ref=e39]:
+                    - /url: /select-state
+                    - text: Registration Deadlines
+                    - img [ref=e40]
+                - listitem [ref=e45]:
+                  - link "Register to Vote" [ref=e46]:
+                    - /url: /register
+                    - text: Register to Vote
+                    - img [ref=e47]
+            - generic [ref=e52] [cursor=pointer]:
+              - generic [ref=e53]: Voter Guides
+              - list [ref=e54]:
+                - listitem [ref=e55]:
+                  - link "Candidate and Ballot Measure Information" [ref=e56]:
+                    - /url: /ballot
+                    - text: Candidate and Ballot Measure Information
+                    - img [ref=e57]
+                - listitem [ref=e62]:
+                  - link "Make Your Voting Plan" [ref=e63]:
+                    - /url: /make-your-plan
+                    - text: Make Your Voting Plan
+                    - img [ref=e64]
+                - listitem [ref=e69]:
+                  - link "Nationwide Voting Rules Quick View" [ref=e70]:
+                    - /url: /voting-rules
+                    - text: Nationwide Voting Rules Quick View
+                    - img [ref=e71]
+            - generic [ref=e76] [cursor=pointer]:
+              - generic [ref=e77]: About Vote411
+              - list [ref=e78]:
+                - listitem [ref=e79]:
+                  - link "About" [ref=e80]:
+                    - /url: /about
+                    - text: About
+                    - img [ref=e81]
+                - listitem [ref=e86]:
+                  - link "Sponsors and Partnerships" [ref=e87]:
+                    - /url: /sponsors
+                    - text: Sponsors and Partnerships
+                    - img [ref=e88]
+                - listitem [ref=e93]:
+                  - link "Support VOTE411" [ref=e94]:
+                    - /url: https://www.lwv.org/VOTE411give
+                    - text: Support VOTE411
+                    - img [ref=e95]
+    - generic [ref=e101]:
+      - generic [ref=e103]:
+        - generic [ref=e104]:
+          - generic [ref=e105]: Voting In My State
+          - link "View another state" [ref=e107] [cursor=pointer]:
+            - /url: /select-state
+            - text: View another state
+            - img [ref=e108]
+        - generic [ref=e115]:
+          - generic [ref=e116]:
+            - heading "Maine" [level=1] [ref=e117]
+            - generic [ref=e119]: U
+          - generic [ref=e122]:
+            - banner
+            - alert [ref=e123]:
+              - img "Action Icon" [ref=e124]
+              - generic [ref=e125]:
+                - text: Primary Election Process
+                - generic [ref=e126]:
+                  - generic [ref=e127]: Maine now has semi-open primaries. If you are registered with a political party, you can only vote in that party’s primary. If you are not regis...
+                  - link "Read More" [ref=e128] [cursor=pointer]:
+                    - /url: /maine#primary-election-process
+      - generic [ref=e135]:
+        - generic [ref=e136]:
+          - heading "Upcoming Election Dates & Registration Deadlines" [level=2] [ref=e137]
+          - paragraph [ref=e138]: Some elections in this list are local and do not apply for all Maine voters. Please click the “View all” button below to view all election dates in your state.
+        - generic [ref=e140]:
+          - generic [ref=e141]:
+            - generic [ref=e142]: "Next Election: Primary, Special"
+            - generic [ref=e143]: Tuesday, June 9, 2026
+            - generic [ref=e144]: Primary Election, State House District 29 Special Election
+            - link "View details" [ref=e146] [cursor=pointer]:
+              - /url: "#"
+          - generic [ref=e147]:
+            - heading "Registration Deadlines" [level=3] [ref=e148]
+            - generic [ref=e149]:
+              - generic [ref=e150]:
+                - text: Online
+                - link "Get Registered!" [ref=e151] [cursor=pointer]:
+                  - /url: /register
+              - generic [ref=e152]: Tuesday, May 19, 2026
+            - generic [ref=e153]:
+              - generic [ref=e154]: By Mail (received)
+              - generic [ref=e155]: Tuesday, May 19, 2026
+            - generic [ref=e156]:
+              - generic [ref=e157]: In Person
+              - generic [ref=e158]: Tuesday, June 9, 2026
+        - generic [ref=e159]:
+          - generic [ref=e160]:
+            - generic [ref=e162]:
+              - heading "03" [level=2] [ref=e163]
+              - text: Nov
+            - generic [ref=e164]:
+              - generic [ref=e165]:
+                - generic [ref=e166]: Tuesday, November 3, 2026
+                - generic [ref=e167]: General
+              - generic [ref=e169]: General Election
+              - link "View details" [ref=e172] [cursor=pointer]:
+                - /url: "#"
+          - link "View all election dates" [ref=e176] [cursor=pointer]:
+            - /url: /upcoming/42/events
+      - generic [ref=e179]:
+        - generic [ref=e181]:
+          - heading "Get Ready" [level=2] [ref=e182]
+          - list [ref=e184]:
+            - listitem [ref=e185]:
+              - link "Make Your Voting Plan" [ref=e186] [cursor=pointer]:
+                - /url: /make-your-plan
+                - text: Make Your Voting Plan
+                - img [ref=e187]
+            - listitem [ref=e191]:
+              - link "Preview Your Ballot Info" [ref=e192] [cursor=pointer]:
+                - /url: /ballot
+                - text: Preview Your Ballot Info
+                - img [ref=e193]
+            - listitem [ref=e197]:
+              - link "Find Your Polling Place" [ref=e198] [cursor=pointer]:
+                - /url: /plan-your-vote
+                - text: Find Your Polling Place
+                - img [ref=e199]
+        - generic [ref=e204]:
+          - heading "Get Involved" [level=2] [ref=e205]
+          - list [ref=e207]:
+            - listitem [ref=e208]:
+              - link "Volunteer at the Polls" [ref=e209] [cursor=pointer]:
+                - /url: https://www.powerthepolls.org/lwv
+                - text: Volunteer at the Polls
+                - img [ref=e210]
+            - listitem [ref=e214]:
+              - link "Donate and Support VOTE411" [ref=e215] [cursor=pointer]:
+                - /url: https://www.lwv.org/VOTE411give
+                - text: Donate and Support VOTE411
+                - img [ref=e216]
+            - listitem [ref=e220]:
+              - link "Connect With Your Local League" [ref=e221] [cursor=pointer]:
+                - /url: https://www.lwv.org/local-leagues/find-local-league
+                - text: Connect With Your Local League
+                - img [ref=e222]
+      - generic [ref=e232]:
+        - generic [ref=e233]:
+          - heading "Maine Voting Information" [level=3] [ref=e234]
+          - list [ref=e235]:
+            - listitem [ref=e236]:
+              - generic [ref=e237] [cursor=pointer]: Absentee Ballot Process
+            - listitem [ref=e238]:
+              - generic [ref=e239] [cursor=pointer]: Ballot Notice and Cure Process
+            - listitem [ref=e240]:
+              - generic [ref=e241] [cursor=pointer]: Campaign Finance Information
+            - listitem [ref=e242]:
+              - generic [ref=e243] [cursor=pointer]: Candidate and Ballot Measure Information
+            - listitem [ref=e244]:
+              - generic [ref=e245] [cursor=pointer]: Drop Boxes
+            - listitem [ref=e246]:
+              - generic [ref=e247] [cursor=pointer]: Early Voting
+            - listitem [ref=e248]:
+              - generic [ref=e249] [cursor=pointer]: Election Dates
+            - listitem [ref=e250]:
+              - generic [ref=e251] [cursor=pointer]: Election Day Voting Hours
+            - listitem [ref=e252]:
+              - generic [ref=e253] [cursor=pointer]: Eligibility Requirements
+            - listitem [ref=e254]:
+              - generic [ref=e255] [cursor=pointer]: ID Needed for Voter Registration
+            - listitem [ref=e256]:
+              - generic [ref=e257] [cursor=pointer]: Official Election Results
+            - listitem [ref=e258]:
+              - generic [ref=e259] [cursor=pointer]: Overseas and Military Voters
+            - listitem [ref=e260]:
+              - generic [ref=e261] [cursor=pointer]: Poll Worker Information
+            - listitem [ref=e262]:
+              - generic [ref=e263] [cursor=pointer]: Polling Place Locations
+            - listitem [ref=e264]:
+              - generic [ref=e265] [cursor=pointer]: Primary Election Process
+            - listitem [ref=e266]:
+              - generic [ref=e267] [cursor=pointer]: Provisional Voting
+            - listitem [ref=e268]:
+              - generic [ref=e269] [cursor=pointer]: Provisions for Voters with Disabilities
+            - listitem [ref=e270]:
+              - generic [ref=e271] [cursor=pointer]: Ranked Choice Voting
+            - listitem [ref=e272]:
+              - generic [ref=e273] [cursor=pointer]: Student Voting Process
+            - listitem [ref=e274]:
+              - generic [ref=e275] [cursor=pointer]: Time Off To Vote
+            - listitem [ref=e276]:
+              - generic [ref=e277] [cursor=pointer]: Verify Voter Registration
+            - listitem [ref=e278]:
+              - generic [ref=e279] [cursor=pointer]: Voter ID Requirements
+            - listitem [ref=e280]:
+              - generic [ref=e281] [cursor=pointer]: Voter Registration Deadlines
+            - listitem [ref=e282]:
+              - generic [ref=e283] [cursor=pointer]: Voting Machines
+        - generic [ref=e285]:
+          - generic [ref=e286]:
+            - heading "Absentee Ballot Process" [level=4] [ref=e288]
+            - generic [ref=e289]:
+              - generic [ref=e290]: Spread the word
+              - generic "Facebook" [ref=e291]:
+                - img [ref=e292]
+              - generic "Twitter" [ref=e300]:
+                - img [ref=e301]
+              - generic "Permalink" [ref=e307]:
+                - img [ref=e308]
+              - alert [ref=e317]:
+                - generic [ref=e318]: Permalink copied to clipboard
+          - generic [ref=e319]:
+            - paragraph [ref=e320]:
+              - strong [ref=e321]: Vote-by-mail (absentee voting) is available in Maine and no excuse is required.
+              - text: The last day to request an absentee ballot is the Thursday before every election at 5:00pm. You can submit your absentee ballot request form through the mail, by email, in person at your local elections office, or
+              - link "online" [ref=e322] [cursor=pointer]:
+                - /url: https://apps.web.maine.gov/cgi-bin/online/AbsenteeBallot/index.pl
+              - text: .
+            - paragraph [ref=e323]:
+              - text: Voted ballots must be received by 8:00pm on Election Day to be counted. You can track your absentee ballot on the Secretary of State's
+              - link "website" [ref=e324] [cursor=pointer]:
+                - /url: https://apps.web.maine.gov/cgi-bin/online/AbsenteeBallot/ballot_status.pl
+              - text: .
+            - heading "WHO IS ELIGIBLE TO VOTE ABSENTEE?" [level=6] [ref=e325]:
+              - strong [ref=e326]: WHO IS ELIGIBLE TO VOTE ABSENTEE?
+            - paragraph [ref=e327]: In Maine, all registered voters can apply to vote absentee.
+            - heading "WHAT ARE THE TYPES OF ABSENTEE VOTING IN MAINE?" [level=6] [ref=e328]:
+              - strong [ref=e329]: WHAT ARE THE TYPES OF ABSENTEE VOTING IN MAINE?
+            - list [ref=e330]:
+              - listitem [ref=e331]: By mail
+              - listitem [ref=e332]: Early voting in-person
+              - listitem [ref=e333]: Electronic Accessible Absentee Ballot
+              - listitem [ref=e334]: Special Circumstances Absentee Voting
+              - listitem [ref=e335]: Uniformed Service or Overseas Voters
+            - heading "HOW DO I REQUEST AN ABSENTEE BALLOT?" [level=6] [ref=e336]:
+              - strong [ref=e337]: HOW DO I REQUEST AN ABSENTEE BALLOT?
+            - paragraph [ref=e338]: "You can request an absentee ballot beginning 2 months before a Primary Election and 3 months before all other elections. There are several methods to request your absentee ballot:"
+            - list [ref=e339]:
+              - listitem [ref=e340]: Online
+              - listitem [ref=e341]: In person
+              - listitem [ref=e342]: By mail
+              - listitem [ref=e343]: By phone
+              - listitem [ref=e344]: Enroll in the Ongoing Absentee Ballot Program
+            - heading "WHAT IS THE DEADLINE TO REQUEST AN ABSENTEE BALLOT?" [level=6] [ref=e345]:
+              - strong [ref=e346]: WHAT IS THE DEADLINE TO REQUEST AN ABSENTEE BALLOT?
+            - paragraph [ref=e347]: The Thursday before election day at 5:00pm. After this deadline, you may request an absentee ballot by completing and signing a Special Circumstances Absentee Ballot Application (if you meet one of the four requirements).
+            - heading "WHAT IS SPECIAL CIRCUMSTANCES ABSENTEE VOTING?" [level=6] [ref=e348]:
+              - strong [ref=e349]: WHAT IS SPECIAL CIRCUMSTANCES ABSENTEE VOTING?
+            - paragraph [ref=e350]: "There is a deadline to request your absentee ballot, which is the Thursday before Election Day. After the normal deadline, you will need to provide an excuse. That can include one of these four reasons:"
+            - list [ref=e351]:
+              - listitem [ref=e352]: Unexpected absence from the municipality during the entire time the polls are open on Election Day; or
+              - listitem [ref=e353]: Physical disability; or
+              - listitem [ref=e354]: Incapacity or illness that has resulted in the voter being unable to leave home or a treatment facility; or
+              - listitem [ref=e355]: Inability to travel to the polls if the voter is a coastal island ward or precinct resident.
+            - heading "WHAT IS THE ELECTRONIC ACCESSIBLE ABSENTEE BALLOT?" [level=6] [ref=e356]:
+              - strong [ref=e357]: WHAT IS THE ELECTRONIC ACCESSIBLE ABSENTEE BALLOT?
+            - paragraph [ref=e358]:
+              - text: This is a method of voting for individuals with print disabilities to ensure they can vote absentee privately and independently, as required under federal law. If you are a person with a print disability that wishes to cast their absentee ballot in this method, view the
+              - link "Secretary of State’s website" [ref=e359] [cursor=pointer]:
+                - /url: https://www.maine.gov/sos/elections-voting/accessible-voting
+              - text: for more information.
+            - heading "WHAT IS THE ONGOING ABSENTEE BALLOT VOTER STATUS?" [level=6] [ref=e360]:
+              - strong [ref=e361]: WHAT IS THE ONGOING ABSENTEE BALLOT VOTER STATUS?
+            - paragraph [ref=e362]:
+              - text: A registered voter that enrolls in the program can automatically receive their absentee ballot in the mail. This program is available to all registered Maine voters. To enroll in the program, complete
+              - link "this form" [ref=e363] [cursor=pointer]:
+                - /url: https://www.maine.gov/sos/sites/maine.gov.sos/files/inline-files/3%20Ongoing%20AbsenteeStatusApp%20fillable%20pdf%20FINAL.pdf
+              - text: and return to your town clerk.
+            - heading "DO I HAVE TO REQUEST AN ABSENTEE BALLOT FOR EACH ELECTION?" [level=6] [ref=e364]:
+              - strong [ref=e365]: DO I HAVE TO REQUEST AN ABSENTEE BALLOT FOR EACH ELECTION?
+            - paragraph [ref=e366]: Yes, you must request an absentee ballot for each election. The only exception is for those enrolled in the Ongoing Absentee Ballot Status Program.
+            - heading "WHEN ARE ABSENTEE BALLOTS MAILED OUT TO VOTERS WHO HAVE REQUESTED THEM?" [level=6] [ref=e367]:
+              - strong [ref=e368]: WHEN ARE ABSENTEE BALLOTS MAILED OUT TO VOTERS WHO HAVE REQUESTED THEM?
+            - paragraph [ref=e369]: Ballots are provided to town clerks 30 days prior to Election Day. Clerks begin mailing them out soon after to those who requested an absentee ballot.
+            - heading "HOW DO I RETURN MY ABSENTEE BALLOT?" [level=6] [ref=e370]:
+              - strong [ref=e371]: HOW DO I RETURN MY ABSENTEE BALLOT?
+            - paragraph [ref=e372]:
+              - text: You can mail your ballot to your town clerk, drop it in a secure ballot drop box, or deliver it in person to your town clerk. If you are returning the ballot by mail, be sure to allow at least 7 days for delivery. Please contact your
+              - link "local elections office" [ref=e373] [cursor=pointer]:
+                - /url: https://absentee.vote411.org/vote/eoddomestic.htm
+              - text: for additional information. Due to possible USPS mailing delays, we highly encourage voters to return their absentee ballot in-person or via a drop box.
+            - heading "CAN I TRACK MY MAILED ABSENTEE BALLOT?" [level=6] [ref=e374]:
+              - strong [ref=e375]: CAN I TRACK MY MAILED ABSENTEE BALLOT?
+            - paragraph [ref=e376]:
+              - text: Yes. You can track your absentee ballot on the Secretary of State's
+              - link "website" [ref=e377] [cursor=pointer]:
+                - /url: https://apps.web.maine.gov/cgi-bin/online/AbsenteeBallot/ballot_status.pl
+              - text: .
+            - heading "WHAT IF I REQUESTED AN ABSENTEE BALLOT BUT WANT TO VOTE IN PERSON?" [level=6] [ref=e378]:
+              - strong [ref=e379]: WHAT IF I REQUESTED AN ABSENTEE BALLOT BUT WANT TO VOTE IN PERSON?
+            - paragraph [ref=e380]: If you want to vote in person, do not mail or return your voted absentee ballot. Absentee ballots are processed in batches throughout the day, and the list of those newly received absentee ballots is shared with each polling place for each batch. If you submitted your voted absentee ballot, you will not be able to vote in person. If you vote in person before your absentee ballot arrives that day, your absentee ballot will be rejected.
+            - link "Request your Ballot" [ref=e381] [cursor=pointer]:
+              - /url: http://www.maine.gov/cgi-bin/online/AbsenteeBallot/index.pl
+      - generic [ref=e384]:
+        - generic [ref=e387]:
+          - heading "Personalized voting information" [level=2] [ref=e388]:
+            - generic [ref=e389]: Personalized voting information
+          - paragraph
+          - list [ref=e390]:
+            - listitem [ref=e391]: See What's On Your Ballot
+            - listitem [ref=e392]: Check Your Voter Registration
+            - listitem [ref=e393]: Find Your Polling Place
+            - listitem [ref=e394]: Discover Upcoming Debates and Forum in Your Area
+          - paragraph
+          - link "Get Started" [ref=e395] [cursor=pointer]:
+            - /url: /plan-your-vote
+        - generic [ref=e399]:
+          - heading "Maine Department of State" [level=2] [ref=e400]
+          - paragraph [ref=e401]: Secretary of State
+          - paragraph [ref=e402]: 101 State House Station
+          - paragraph [ref=e403]: 111 Sewall St. 4th floor
+          - paragraph [ref=e404]: Augusta 4333
+          - link "207-624-7736" [ref=e406] [cursor=pointer]:
+            - /url: tel:207-624-7736
+            - text: 207-624-7736
+          - link "207-287-5874" [ref=e409] [cursor=pointer]:
+            - /url: tel:207-287-5874
+            - text: 207-287-5874
+          - link "sos.office@maine.gov" [ref=e412] [cursor=pointer]:
+            - /url: mailto:sos.office@maine.gov
+            - text: sos.office@maine.gov
+          - link "https://www.maine.gov/sos/" [ref=e415] [cursor=pointer]:
+            - /url: https://www.maine.gov/sos/
+            - text: https://www.maine.gov/sos/
+      - generic [ref=e422]:
+        - heading "Get Involved With LWV of Maine" [level=2] [ref=e423]:
+          - generic [ref=e424]: Get Involved With
+          - generic [ref=e425]: LWV of Maine
+        - paragraph [ref=e426]: LWV volunteers work year-round to register new voters, host community forums and debates, and provide voters with election information they need.
+        - link "Learn More" [ref=e427] [cursor=pointer]:
+          - /url: "    https://www.lwv.org/local-leagues/find-local-league/44?field_zip_code_value=\n  "
+    - contentinfo [ref=e428]:
+      - generic [ref=e431]:
+        - generic [ref=e432]:
+          - heading "Election day problems?" [level=2] [ref=e433]
+          - paragraph [ref=e434]: "Report an election problem by calling:"
+        - generic [ref=e435]:
+          - generic [ref=e436]: 1-866-OUR-VOTE (866-687-8683)
+          - generic [ref=e437]: 1-888-VE-Y-VOTA (en Español)
+        - generic [ref=e438]:
+          - generic [ref=e439]: 1-888-API-VOTE (Asian multilingual assistance)
+          - generic [ref=e440]: 1-844-YALLA-US (Arabic)
+      - generic [ref=e443]:
+        - generic [ref=e444]:
+          - heading "Donate" [level=2] [ref=e445]
+          - paragraph [ref=e446]: Help us provide accurate and unbiased voting information by donating today!
+          - link "Make a donation" [ref=e447] [cursor=pointer]:
+            - /url: https://www.lwv.org/VOTE411give
+        - generic [ref=e448]:
+          - heading "Your Voting Guide" [level=2] [ref=e449]
+          - paragraph [ref=e450]: Find what's on your ballot
+          - link "Explore Now" [ref=e451] [cursor=pointer]:
+            - /url: /plan-your-vote
+      - generic [ref=e453]:
+        - generic [ref=e454]:
+          - generic [ref=e455]:
+            - img "VOTE411 Logo" [ref=e456]
+            - paragraph [ref=e457]: VOTE411 is committed to ensuring voters have the information they need to successfully participate in every election. Whether it's local, state or federal, every election is important to ensuring our laws and policies reflect the values and beliefs of our communities.
+            - img "webby-2020-banner" [ref=e459]
+          - generic [ref=e468]:
+            - list [ref=e470]:
+              - listitem [ref=e471]:
+                - link "Contact Us" [ref=e472] [cursor=pointer]:
+                  - /url: mailto:voterinformation@lwv.org
+              - listitem [ref=e473]:
+                - link "About Us" [ref=e474] [cursor=pointer]:
+                  - /url: /about
+              - listitem [ref=e475]:
+                - link "Get Involved" [ref=e476] [cursor=pointer]:
+                  - /url: https://www.lwv.org/local-leagues/find-local-league?field_zip_code_value=
+              - listitem [ref=e477]:
+                - link "Sponsors & Partners" [ref=e478] [cursor=pointer]:
+                  - /url: /sponsors
+            - generic [ref=e479]:
+              - heading "Follow us" [level=2] [ref=e480]
+              - list [ref=e481]:
+                - listitem [ref=e482]:
+                  - link "Facebook" [ref=e483] [cursor=pointer]:
+                    - /url: https://www.facebook.com/vote411/
+                - listitem [ref=e484]:
+                  - link "Instagram" [ref=e485] [cursor=pointer]:
+                    - /url: https://www.instagram.com/vote411/
+                - listitem [ref=e486]:
+                  - link "Twitter" [ref=e487] [cursor=pointer]:
+                    - /url: https://twitter.com/vote411
+                - listitem [ref=e488]:
+                  - link "YouTube" [ref=e489] [cursor=pointer]:
+                    - /url: https://www.youtube.com/watch?v=HoR-26mgFv0&list=PL33IAmThHpVDf2z3amFL9FzGxN0Ikfluc
+                - listitem
+            - generic [ref=e490]:
+              - heading "Brought to you by" [level=2] [ref=e491]
+              - link "League of Women Voters" [ref=e492] [cursor=pointer]:
+                - /url: https://www.lwv.org/about-us
+                - img "League of Women Voters Logo" [ref=e493]
+        - generic [ref=e494]:
+          - paragraph [ref=e496]: ©2026 League of Women Voters Education Fund. All rights reserved.
+          - link "Terms of Use" [ref=e498] [cursor=pointer]:
+            - /url: legal
+          - link "Privacy Policy" [ref=e500] [cursor=pointer]:
+            - /url: legal#privacy-policy

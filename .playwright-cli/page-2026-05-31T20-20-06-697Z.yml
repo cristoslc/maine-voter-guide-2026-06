@@ -1,0 +1,201 @@
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - generic [ref=e4]:
+    - banner [ref=e5]:
+      - generic:
+        - generic:
+          - generic:
+            - generic [ref=e6]:
+              - generic [ref=e7]:
+                - link [ref=e8] [cursor=pointer]:
+                  - /url: http://www.facebook.com/LWVME?ref=ts
+                  - generic [ref=e9]: 
+                - link [ref=e10] [cursor=pointer]:
+                  - /url: https://www.youtube.com/channel/UCgHJ5yR1SNwI1U6hXuDILpQ
+                  - generic [ref=e11]: 
+                - link [ref=e12] [cursor=pointer]:
+                  - /url: https://www.instagram.com/lwvme/
+                  - generic [ref=e13]: 
+              - generic [ref=e15] [cursor=pointer]: 
+            - link "JOIN" [ref=e16] [cursor=pointer]:
+              - /url: /member
+            - link "DONATE" [ref=e17] [cursor=pointer]:
+              - /url: https://www.lwvme.org/donatenow
+            - link [ref=e18] [cursor=pointer]:
+              - /url: /
+              - img [ref=e19]
+            - link [ref=e20] [cursor=pointer]:
+              - /url: /
+              - img [ref=e21]
+        - navigation "LWV menu" [ref=e22]:
+          - heading "LWV menu" [level=2] [ref=e23]
+          - list:
+            - listitem [ref=e24]:
+              - link "Elections + Vote" [ref=e25] [cursor=pointer]:
+                - /url: /VoteInMaine
+            - listitem [ref=e26]:
+              - link "Resources" [ref=e27] [cursor=pointer]:
+                - /url: /Voters
+            - listitem [ref=e28]:
+              - link "Advocacy" [ref=e29] [cursor=pointer]:
+                - /url: https://www.lwvme.org/MaineAction
+            - listitem [ref=e30]:
+              - link "Get Involved" [ref=e31] [cursor=pointer]:
+                - /url: /getinvolved
+            - listitem [ref=e32]:
+              - link "About Us" [ref=e33] [cursor=pointer]:
+                - /url: /about
+            - listitem [ref=e34]:
+              - link "News" [ref=e35] [cursor=pointer]:
+                - /url: /articles
+            - listitem [ref=e36]:
+              - link "Events" [ref=e37] [cursor=pointer]:
+                - /url: /events
+    - img [ref=e38]
+    - generic [ref=e39]: MAKING DEMOCRACY WORK
+    - main [ref=e40]:
+      - generic [ref=e42]:
+        - generic:
+          - article
+        - paragraph [ref=e45]:
+          - link [ref=e46] [cursor=pointer]:
+            - /url: https://www.democracymaine.org/node/3449
+        - generic [ref=e48]:
+          - heading "Our Mission" [level=1] [ref=e52]
+          - generic [ref=e53]:
+            - heading "EMPOWERING VOTERS. DEFENDING DEMOCRACY." [level=2] [ref=e54]
+            - paragraph [ref=e55]:
+              - text: The League of Women Voters of Maine is a
+              - strong [ref=e56]: nonpartisan, grassroots
+              - text: political organization that encourages informed and active participation in government, works to increase understanding of major public policy issues, and influences public policy through
+              - strong [ref=e57]: education
+              - text: and
+              - strong [ref=e58]: advocacy
+              - text: . We never support or oppose any political party or candidate. Membership is open to anyone 16 years of age or older.
+          - generic [ref=e59]:
+            - link "ADVOCACY" [ref=e61] [cursor=pointer]:
+              - /url: /MaineAction
+            - link "EVENTS" [ref=e63] [cursor=pointer]:
+              - /url: /Events
+            - link "RESOURCES" [ref=e65] [cursor=pointer]:
+              - /url: /voters
+            - link "TAKE ACTION" [ref=e67] [cursor=pointer]:
+              - /url: /TakeAction
+        - generic [ref=e69]:
+          - heading "Get Involved" [level=1] [ref=e73]
+          - generic [ref=e74]:
+            - generic [ref=e75]:
+              - link "Become a member." [ref=e76] [cursor=pointer]:
+                - /url: /member
+                - generic [ref=e78]: 
+                - heading "Become a member." [level=3] [ref=e79]
+              - text: The League is a powerful, grassroots membership organization that works to educate voters and make government more accountable to the people.
+            - generic [ref=e80]:
+              - link "Support our efforts." [ref=e81] [cursor=pointer]:
+                - /url: /donate_cc.html
+                - generic [ref=e83]: $
+                - heading "Support our efforts." [level=3] [ref=e84]
+              - text: Your contribution goes towards our voter outreach and education projects, civic engagement, and advocacy work.
+            - generic [ref=e85]:
+              - link "Join the team." [ref=e86] [cursor=pointer]:
+                - /url: /Volunteer
+                - generic [ref=e88]: 
+                - heading "Join the team." [level=3] [ref=e89]
+              - text: Volunteers are vital to our success. There are plenty of ways to get involved with the League depending on your interest, skills, and availability.
+        - generic [ref=e91]:
+          - heading "What We Do" [level=1] [ref=e95]
+          - generic [ref=e96]:
+            - img [ref=e98]
+            - generic [ref=e99]:
+              - heading "VOTER OUTREACH" [level=2] [ref=e100]
+              - paragraph [ref=e101]: In 2025, we're going to increase voter turnout by working with marginalized communities, especially young people, immigrants and low-income workers. We will register students and new citizens to vote, canvass through our Neighbor-to-Neighbor program, and develop curricula to educate young people about government and civic engagement.
+              - link "Learn more" [ref=e102] [cursor=pointer]:
+                - /url: /Voters
+                - text: Learn more
+                - generic [ref=e103]: 
+          - generic [ref=e104]:
+            - img [ref=e106]
+            - generic [ref=e107]:
+              - heading "DEMOCRACY FORUM" [level=2] [ref=e108]
+              - paragraph [ref=e109]: The Downeast Chapter of the League of Women Voters, in cooperation with WERU FM, produces a monthly radio program on topics in participatory democracy called the Democracy Forum. Broadcasts may be heard from 4:00 PM – 5:00 PM on the third Friday of the month at WERU Community Radio, 89.9 FM.
+              - link "Learn more" [ref=e110] [cursor=pointer]:
+                - /url: /democracyforum
+                - text: Learn more
+                - generic [ref=e111]: 
+          - generic [ref=e112]:
+            - img [ref=e114]
+            - generic [ref=e115]:
+              - heading "YOUTH ENGAGEMENT" [level=2] [ref=e116]
+              - paragraph [ref=e117]: We're here to help high school and college students register to vote, educate about how local government and civic engagement works, and protect the voter rights of young people.
+              - link "Learn more" [ref=e118] [cursor=pointer]:
+                - /url: https://www.lwvme.org/YoungVoters
+                - text: Learn more
+                - generic [ref=e119]: 
+        - generic [ref=e122]:
+          - heading "News" [level=1] [ref=e127]
+          - generic [ref=e128]:
+            - 'link "May 21, 2026 Federal Judge Dismisses Justice Department Lawsuit Seeking Mainers’ Private Voter Data By: LWVME Today, a federal judge dismissed the U.S. Department of Justice’s lawsuit against Maine after the state refused to hand over its complete voter file."':
+              - /url: /node/3482?a0=articles&a1=
+              - generic [ref=e129] [cursor=pointer]:
+                - generic [ref=e130]: May 21, 2026
+                - generic [ref=e131]: Federal Judge Dismisses Justice Department Lawsuit Seeking Mainers’ Private Voter Data
+                - generic [ref=e132]: "By: LWVME"
+                - generic [ref=e133]: Today, a federal judge dismissed the U.S. Department of Justice’s lawsuit against Maine after the state refused to hand over its complete voter file.
+          - generic [ref=e134]:
+            - 'link "May 15, 2026 Pillars of democracy: Democracy costs money. Who pays? By: LWV-Downeast We’ll talk about taxes and democracy. Everyone complains about paying taxes. But what if we need taxation if we want the benefits of democracy? If democracy costs money, who should pay for it? Author Vanessa Williamson argues that some of the most important battles that shape our democracy hinge on one issue—taxes. How has that played out in our history. How is it playing out in this moment? And how is it playing out in Maine?"':
+              - /url: /node/3481?a0=articles&a1=
+              - generic [ref=e136] [cursor=pointer]:
+                - generic [ref=e137]: May 15, 2026
+                - generic [ref=e138]: "Pillars of democracy: Democracy costs money. Who pays?"
+                - generic [ref=e139]: "By: LWV-Downeast"
+                - generic [ref=e140]: We’ll talk about taxes and democracy. Everyone complains about paying taxes. But what if we need taxation if we want the benefits of democracy? If democracy costs money, who should pay for it? Author Vanessa Williamson argues that some of the most important battles that shape our democracy hinge on one issue—taxes. How has that played out in our history. How is it playing out in this moment? And how is it playing out in Maine?
+          - generic [ref=e141]:
+            - 'link "Apr 17, 2026 Constitutional Crisis: They''re Watching By: LWV-Downeast Mass surveillance constitutes a threat to free speech. Commercial and government surveillance infrastructure has grown and continues to grow, encompassing license plate readers, location tracking, and facial recognition and other biometric data. How do these invasions of privacy threaten free speech? What protections should individuals and civil society adopt to protect civil liberties?"':
+              - /url: /node/3479?a0=articles&a1=
+              - generic [ref=e143] [cursor=pointer]:
+                - generic [ref=e144]: Apr 17, 2026
+                - generic [ref=e145]: "Constitutional Crisis: They're Watching"
+                - generic [ref=e146]: "By: LWV-Downeast"
+                - generic [ref=e147]: Mass surveillance constitutes a threat to free speech. Commercial and government surveillance infrastructure has grown and continues to grow, encompassing license plate readers, location tracking, and facial recognition and other biometric data. How do these invasions of privacy threaten free speech? What protections should individuals and civil society adopt to protect civil liberties?
+        - generic [ref=e150]:
+          - heading "Who we are" [level=1] [ref=e154]
+          - generic [ref=e156] [cursor=pointer]:
+            - generic [ref=e158]: 
+            - generic [ref=e160]: 
+            - text:   
+    - contentinfo [ref=e168]:
+      - generic [ref=e171]:
+        - link "BECOME A MEMBER" [ref=e173] [cursor=pointer]:
+          - /url: /member
+        - generic [ref=e175]:
+          - strong [ref=e177]: Get in touch.
+          - generic [ref=e178]:
+            - text: PO Box 18187
+            - text: Portland ME 04112
+          - generic [ref=e179]:
+            - generic [ref=e180]: 
+            - text: (207) 622-0256
+            - generic [ref=e181]: 
+            - text: info@lwvme.org
+          - generic [ref=e182]:
+            - link [ref=e183] [cursor=pointer]:
+              - /url: http://www.facebook.com/LWVME?ref=ts
+              - generic [ref=e184]: 
+            - link [ref=e185] [cursor=pointer]:
+              - /url: https://www.instagram.com/lwvme/
+              - generic [ref=e186]: 
+            - link [ref=e187] [cursor=pointer]:
+              - /url: https://www.youtube.com/channel/UCgHJ5yR1SNwI1U6hXuDILpQ
+              - generic [ref=e188]: 
+        - generic [ref=e189]:
+          - paragraph [ref=e190]:
+            - strong [ref=e191]: "Privacy Policy:"
+            - text: We do not use cookies, nor do we collect information about users. Any form data is used only to satisfy the purpose of that form (for example, send an email in response to a question).
+          - paragraph [ref=e192]:
+            - strong [ref=e193]: "Disclaimer:"
+            - text: All links to other web sites are provided for your convience only. The League of Women Voters of Maine exercises no control of the information or opinions contained on them. Provision of these links on our site does not indicate an endorsement of their contents by the LWV of Maine.
+        - link [ref=e195] [cursor=pointer]:
+          - /url: https://www.democracymaine.org
+          - img [ref=e196]
+        - generic [ref=e197]: © 2025 League of Women Voters of Maine. All rights reserved.

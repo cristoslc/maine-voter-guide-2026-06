@@ -1,0 +1,203 @@
+- generic [active] [ref=e1]:
+  - link "Skip to main navigation" [ref=e2] [cursor=pointer]:
+    - /url: "#main-menu"
+  - generic [ref=e4]:
+    - banner [ref=e5]:
+      - generic [ref=e6]:
+        - generic [ref=e8]:
+          - link "Vote411 Logo" [ref=e9] [cursor=pointer]:
+            - /url: /
+            - img "Vote411 Logo" [ref=e10]
+          - button "Toggle Menu" [ref=e12] [cursor=pointer]:
+            - img "Open menu" [ref=e13]
+            - generic [ref=e14]: Menu
+        - generic [ref=e16]:
+          - button "English" [ref=e18] [cursor=pointer]
+          - link "Register to Vote" [ref=e19] [cursor=pointer]:
+            - /url: /register
+          - link "Donate" [ref=e20] [cursor=pointer]:
+            - /url: https://www.lwv.org/VOTE411give
+      - generic:
+        - generic:
+          - generic:
+            - generic [ref=e21] [cursor=pointer]:
+              - generic [ref=e22]: Voting in My State
+              - generic [ref=e23]:
+                - combobox "Select Your State" [ref=e24]:
+                  - option "Select your State" [selected]
+                  - option "Alabama"
+                  - option "Alaska"
+                  - option "Arizona"
+                  - option "Arkansas"
+                  - option "California"
+                  - option "Colorado"
+                  - option "Connecticut"
+                  - option "Delaware"
+                  - option "District Of Columbia"
+                  - option "Florida"
+                  - option "Georgia"
+                  - option "Hawaii"
+                  - option "Idaho"
+                  - option "Illinois"
+                  - option "Indiana"
+                  - option "Iowa"
+                  - option "Kansas"
+                  - option "Kentucky"
+                  - option "Louisiana"
+                  - option "Maine"
+                  - option "Maryland"
+                  - option "Massachusetts"
+                  - option "Michigan"
+                  - option "Minnesota"
+                  - option "Mississippi"
+                  - option "Missouri"
+                  - option "Montana"
+                  - option "Nebraska"
+                  - option "Nevada"
+                  - option "New Hampshire"
+                  - option "New Jersey"
+                  - option "New Mexico"
+                  - option "New York"
+                  - option "North Carolina"
+                  - option "North Dakota"
+                  - option "Ohio"
+                  - option "Oklahoma"
+                  - option "Oregon"
+                  - option "Pennsylvania"
+                  - option "Rhode Island"
+                  - option "South Carolina"
+                  - option "South Dakota"
+                  - option "Tennessee"
+                  - option "Texas"
+                  - option "Utah"
+                  - option "Vermont"
+                  - option "Virginia"
+                  - option "Washington"
+                  - option "West Virginia"
+                  - option "Wisconsin"
+                  - option "Wyoming"
+                - link "Compare State Issues" [ref=e26]:
+                  - /url: /search-by-topic
+                  - text: Compare State Issues
+                  - img [ref=e27]
+            - generic [ref=e36] [cursor=pointer]:
+              - generic [ref=e37]: Voter Registration
+              - list [ref=e38]:
+                - listitem [ref=e39]:
+                  - link "Registration Deadlines" [ref=e40]:
+                    - /url: /select-state
+                    - text: Registration Deadlines
+                    - img [ref=e41]
+                - listitem [ref=e46]:
+                  - link "Register to Vote" [ref=e47]:
+                    - /url: /register
+                    - text: Register to Vote
+                    - img [ref=e48]
+            - generic [ref=e53] [cursor=pointer]:
+              - generic [ref=e54]: Voter Guides
+              - list [ref=e55]:
+                - listitem [ref=e56]:
+                  - link "Candidate and Ballot Measure Information" [ref=e57]:
+                    - /url: /ballot
+                    - text: Candidate and Ballot Measure Information
+                    - img [ref=e58]
+                - listitem [ref=e63]:
+                  - link "Make Your Voting Plan" [ref=e64]:
+                    - /url: /make-your-plan
+                    - text: Make Your Voting Plan
+                    - img [ref=e65]
+                - listitem [ref=e70]:
+                  - link "Nationwide Voting Rules Quick View" [ref=e71]:
+                    - /url: /voting-rules
+                    - text: Nationwide Voting Rules Quick View
+                    - img [ref=e72]
+            - generic [ref=e77] [cursor=pointer]:
+              - generic [ref=e78]: About Vote411
+              - list [ref=e79]:
+                - listitem [ref=e80]:
+                  - link "About" [ref=e81]:
+                    - /url: /about
+                    - text: About
+                    - img [ref=e82]
+                - listitem [ref=e87]:
+                  - link "Sponsors and Partnerships" [ref=e88]:
+                    - /url: /sponsors
+                    - text: Sponsors and Partnerships
+                    - img [ref=e89]
+                - listitem [ref=e94]:
+                  - link "Support VOTE411" [ref=e95]:
+                    - /url: https://www.lwv.org/VOTE411give
+                    - text: Support VOTE411
+                    - img [ref=e96]
+    - generic [ref=e104]:
+      - generic [ref=e108]: Personalized Voting Information
+      - heading "Plan Your Vote" [level=1] [ref=e111]
+    - contentinfo [ref=e113]:
+      - generic [ref=e116]:
+        - generic [ref=e117]:
+          - heading "Election day problems?" [level=2] [ref=e118]
+          - paragraph [ref=e119]: "Report an election problem by calling:"
+        - generic [ref=e120]:
+          - generic [ref=e121]: 1-866-OUR-VOTE (866-687-8683)
+          - generic [ref=e122]: 1-888-VE-Y-VOTA (en Español)
+        - generic [ref=e123]:
+          - generic [ref=e124]: 1-888-API-VOTE (Asian multilingual assistance)
+          - generic [ref=e125]: 1-844-YALLA-US (Arabic)
+      - generic [ref=e128]:
+        - generic [ref=e129]:
+          - heading "Donate" [level=2] [ref=e130]
+          - paragraph [ref=e131]: Help us provide accurate and unbiased voting information by donating today!
+          - link "Make a donation" [ref=e132] [cursor=pointer]:
+            - /url: https://www.lwv.org/VOTE411give
+        - generic [ref=e133]:
+          - heading "Your Voting Guide" [level=2] [ref=e134]
+          - paragraph [ref=e135]: Find what's on your ballot
+          - link "Explore Now" [ref=e136] [cursor=pointer]:
+            - /url: /plan-your-vote
+      - generic [ref=e138]:
+        - generic [ref=e139]:
+          - generic [ref=e140]:
+            - img "VOTE411 Logo" [ref=e141]
+            - paragraph [ref=e142]: VOTE411 is committed to ensuring voters have the information they need to successfully participate in every election. Whether it's local, state or federal, every election is important to ensuring our laws and policies reflect the values and beliefs of our communities.
+            - img "webby-2020-banner" [ref=e144]
+          - generic [ref=e153]:
+            - list [ref=e155]:
+              - listitem [ref=e156]:
+                - link "Contact Us" [ref=e157] [cursor=pointer]:
+                  - /url: mailto:voterinformation@lwv.org
+              - listitem [ref=e158]:
+                - link "About Us" [ref=e159] [cursor=pointer]:
+                  - /url: /about
+              - listitem [ref=e160]:
+                - link "Get Involved" [ref=e161] [cursor=pointer]:
+                  - /url: https://www.lwv.org/local-leagues/find-local-league?field_zip_code_value=
+              - listitem [ref=e162]:
+                - link "Sponsors & Partners" [ref=e163] [cursor=pointer]:
+                  - /url: /sponsors
+            - generic [ref=e164]:
+              - heading "Follow us" [level=2] [ref=e165]
+              - list [ref=e166]:
+                - listitem [ref=e167]:
+                  - link "Facebook" [ref=e168] [cursor=pointer]:
+                    - /url: https://www.facebook.com/vote411/
+                - listitem [ref=e169]:
+                  - link "Instagram" [ref=e170] [cursor=pointer]:
+                    - /url: https://www.instagram.com/vote411/
+                - listitem [ref=e171]:
+                  - link "Twitter" [ref=e172] [cursor=pointer]:
+                    - /url: https://twitter.com/vote411
+                - listitem [ref=e173]:
+                  - link "YouTube" [ref=e174] [cursor=pointer]:
+                    - /url: https://www.youtube.com/watch?v=HoR-26mgFv0&list=PL33IAmThHpVDf2z3amFL9FzGxN0Ikfluc
+                - listitem
+            - generic [ref=e175]:
+              - heading "Brought to you by" [level=2] [ref=e176]
+              - link "League of Women Voters" [ref=e177] [cursor=pointer]:
+                - /url: https://www.lwv.org/about-us
+                - img "League of Women Voters Logo" [ref=e178]
+        - generic [ref=e179]:
+          - paragraph [ref=e181]: ©2026 League of Women Voters Education Fund. All rights reserved.
+          - link "Terms of Use" [ref=e183] [cursor=pointer]:
+            - /url: legal
+          - link "Privacy Policy" [ref=e185] [cursor=pointer]:
+            - /url: legal#privacy-policy

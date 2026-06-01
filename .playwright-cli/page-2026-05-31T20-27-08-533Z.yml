@@ -1,0 +1,627 @@
+- generic [ref=e1]:
+  - link "Skip to main navigation" [ref=e2] [cursor=pointer]:
+    - /url: "#main-menu"
+  - generic [ref=e4]:
+    - banner [ref=e5]:
+      - generic [ref=e6]:
+        - generic [ref=e8]:
+          - link "Vote411 Logo" [ref=e9] [cursor=pointer]:
+            - /url: /
+            - img "Vote411 Logo" [ref=e10]
+          - button "Toggle Menu" [ref=e12] [cursor=pointer]:
+            - img "Open menu" [ref=e13]
+            - generic [ref=e14]: Menu
+        - generic [ref=e16]:
+          - button "English" [ref=e18] [cursor=pointer]
+          - link "Register to Vote" [ref=e19] [cursor=pointer]:
+            - /url: /register
+          - link "Donate" [ref=e20] [cursor=pointer]:
+            - /url: https://www.lwv.org/VOTE411give
+      - generic:
+        - generic:
+          - generic:
+            - generic [ref=e21] [cursor=pointer]:
+              - generic [ref=e22]: Voting in My State
+              - generic [ref=e23]:
+                - combobox "Select Your State" [ref=e24]:
+                  - option "Select your State" [selected]
+                  - option "Alabama"
+                  - option "Alaska"
+                  - option "Arizona"
+                  - option "Arkansas"
+                  - option "California"
+                  - option "Colorado"
+                  - option "Connecticut"
+                  - option "Delaware"
+                  - option "District Of Columbia"
+                  - option "Florida"
+                  - option "Georgia"
+                  - option "Hawaii"
+                  - option "Idaho"
+                  - option "Illinois"
+                  - option "Indiana"
+                  - option "Iowa"
+                  - option "Kansas"
+                  - option "Kentucky"
+                  - option "Louisiana"
+                  - option "Maine"
+                  - option "Maryland"
+                  - option "Massachusetts"
+                  - option "Michigan"
+                  - option "Minnesota"
+                  - option "Mississippi"
+                  - option "Missouri"
+                  - option "Montana"
+                  - option "Nebraska"
+                  - option "Nevada"
+                  - option "New Hampshire"
+                  - option "New Jersey"
+                  - option "New Mexico"
+                  - option "New York"
+                  - option "North Carolina"
+                  - option "North Dakota"
+                  - option "Ohio"
+                  - option "Oklahoma"
+                  - option "Oregon"
+                  - option "Pennsylvania"
+                  - option "Rhode Island"
+                  - option "South Carolina"
+                  - option "South Dakota"
+                  - option "Tennessee"
+                  - option "Texas"
+                  - option "Utah"
+                  - option "Vermont"
+                  - option "Virginia"
+                  - option "Washington"
+                  - option "West Virginia"
+                  - option "Wisconsin"
+                  - option "Wyoming"
+                - link "Compare State Issues" [ref=e26]:
+                  - /url: /search-by-topic
+                  - text: Compare State Issues
+                  - img [ref=e27]
+            - generic [ref=e36] [cursor=pointer]:
+              - generic [ref=e37]: Voter Registration
+              - list [ref=e38]:
+                - listitem [ref=e39]:
+                  - link "Registration Deadlines" [ref=e40]:
+                    - /url: /select-state
+                    - text: Registration Deadlines
+                    - img [ref=e41]
+                - listitem [ref=e46]:
+                  - link "Register to Vote" [ref=e47]:
+                    - /url: /register
+                    - text: Register to Vote
+                    - img [ref=e48]
+            - generic [ref=e53] [cursor=pointer]:
+              - generic [ref=e54]: Voter Guides
+              - list [ref=e55]:
+                - listitem [ref=e56]:
+                  - link "Candidate and Ballot Measure Information" [ref=e57]:
+                    - /url: /ballot
+                    - text: Candidate and Ballot Measure Information
+                    - img [ref=e58]
+                - listitem [ref=e63]:
+                  - link "Make Your Voting Plan" [ref=e64]:
+                    - /url: /make-your-plan
+                    - text: Make Your Voting Plan
+                    - img [ref=e65]
+                - listitem [ref=e70]:
+                  - link "Nationwide Voting Rules Quick View" [ref=e71]:
+                    - /url: /voting-rules
+                    - text: Nationwide Voting Rules Quick View
+                    - img [ref=e72]
+            - generic [ref=e77] [cursor=pointer]:
+              - generic [ref=e78]: About Vote411
+              - list [ref=e79]:
+                - listitem [ref=e80]:
+                  - link "About" [ref=e81]:
+                    - /url: /about
+                    - text: About
+                    - img [ref=e82]
+                - listitem [ref=e87]:
+                  - link "Sponsors and Partnerships" [ref=e88]:
+                    - /url: /sponsors
+                    - text: Sponsors and Partnerships
+                    - img [ref=e89]
+                - listitem [ref=e94]:
+                  - link "Support VOTE411" [ref=e95]:
+                    - /url: https://www.lwv.org/VOTE411give
+                    - text: Support VOTE411
+                    - img [ref=e96]
+    - article [ref=e105]:
+      - generic [ref=e107]:
+        - generic [ref=e111]:
+          - generic [ref=e113]: Voter Guides
+          - generic [ref=e114]:
+            - heading "Your Voters' Guide" [level=1] [ref=e115]
+            - paragraph [ref=e116]: Personalized Ballot and Candidate Information
+        - generic [ref=e125]:
+          - generic [ref=e127]:
+            - paragraph [ref=e128]: Your Voters' Guide
+            - button "View Full Screen" [ref=e129] [cursor=pointer]:
+              - img [ref=e132]
+              - paragraph [ref=e135]: View Full Screen
+          - generic [ref=e136]:
+            - button "Back to Address Entry" [ref=e348] [cursor=pointer]
+            - generic [ref=e349]:
+              - heading "All Races And Measures" [level=3] [ref=e350]
+              - paragraph [ref=e351]: Select a state or category first to see the list of live races and measures
+            - generic [ref=e353]:
+              - generic [ref=e354]: Search by State
+              - textbox "Search by State" [ref=e355]:
+                - /placeholder: Enter State Name
+            - generic [ref=e356]:
+              - button "Alabama View Races" [ref=e357] [cursor=pointer]:
+                - paragraph [ref=e358]: Alabama
+                - generic [ref=e359]:
+                  - generic [ref=e360]: View Races
+                  - img [ref=e361]
+              - button "Alaska View Races" [ref=e363] [cursor=pointer]:
+                - paragraph [ref=e364]: Alaska
+                - generic [ref=e365]:
+                  - generic [ref=e366]: View Races
+                  - img [ref=e367]
+              - button "Arizona View Races" [ref=e369] [cursor=pointer]:
+                - paragraph [ref=e370]: Arizona
+                - generic [ref=e371]:
+                  - generic [ref=e372]: View Races
+                  - img [ref=e373]
+              - button "Arkansas View Races" [ref=e375] [cursor=pointer]:
+                - paragraph [ref=e376]: Arkansas
+                - generic [ref=e377]:
+                  - generic [ref=e378]: View Races
+                  - img [ref=e379]
+              - button "California View Races" [ref=e381] [cursor=pointer]:
+                - paragraph [ref=e382]: California
+                - generic [ref=e383]:
+                  - generic [ref=e384]: View Races
+                  - img [ref=e385]
+              - button "Colorado View Races" [ref=e387] [cursor=pointer]:
+                - paragraph [ref=e388]: Colorado
+                - generic [ref=e389]:
+                  - generic [ref=e390]: View Races
+                  - img [ref=e391]
+              - button "Connecticut View Races" [ref=e393] [cursor=pointer]:
+                - paragraph [ref=e394]: Connecticut
+                - generic [ref=e395]:
+                  - generic [ref=e396]: View Races
+                  - img [ref=e397]
+              - button "Delaware View Races" [ref=e399] [cursor=pointer]:
+                - paragraph [ref=e400]: Delaware
+                - generic [ref=e401]:
+                  - generic [ref=e402]: View Races
+                  - img [ref=e403]
+              - button "District of Columbia View Races" [ref=e405] [cursor=pointer]:
+                - paragraph [ref=e406]: District of Columbia
+                - generic [ref=e407]:
+                  - generic [ref=e408]: View Races
+                  - img [ref=e409]
+              - button "Florida View Races" [ref=e411] [cursor=pointer]:
+                - paragraph [ref=e412]: Florida
+                - generic [ref=e413]:
+                  - generic [ref=e414]: View Races
+                  - img [ref=e415]
+              - button "Georgia View Races" [ref=e417] [cursor=pointer]:
+                - paragraph [ref=e418]: Georgia
+                - generic [ref=e419]:
+                  - generic [ref=e420]: View Races
+                  - img [ref=e421]
+              - button "Hawaii View Races" [ref=e423] [cursor=pointer]:
+                - paragraph [ref=e424]: Hawaii
+                - generic [ref=e425]:
+                  - generic [ref=e426]: View Races
+                  - img [ref=e427]
+              - button "Idaho View Races" [ref=e429] [cursor=pointer]:
+                - paragraph [ref=e430]: Idaho
+                - generic [ref=e431]:
+                  - generic [ref=e432]: View Races
+                  - img [ref=e433]
+              - button "Illinois View Races" [ref=e435] [cursor=pointer]:
+                - paragraph [ref=e436]: Illinois
+                - generic [ref=e437]:
+                  - generic [ref=e438]: View Races
+                  - img [ref=e439]
+              - button "Indiana View Races" [ref=e441] [cursor=pointer]:
+                - paragraph [ref=e442]: Indiana
+                - generic [ref=e443]:
+                  - generic [ref=e444]: View Races
+                  - img [ref=e445]
+              - button "Iowa View Races" [ref=e447] [cursor=pointer]:
+                - paragraph [ref=e448]: Iowa
+                - generic [ref=e449]:
+                  - generic [ref=e450]: View Races
+                  - img [ref=e451]
+              - button "Kansas View Races" [ref=e453] [cursor=pointer]:
+                - paragraph [ref=e454]: Kansas
+                - generic [ref=e455]:
+                  - generic [ref=e456]: View Races
+                  - img [ref=e457]
+              - button "Kentucky View Races" [ref=e459] [cursor=pointer]:
+                - paragraph [ref=e460]: Kentucky
+                - generic [ref=e461]:
+                  - generic [ref=e462]: View Races
+                  - img [ref=e463]
+              - button "Louisiana View Races" [ref=e465] [cursor=pointer]:
+                - paragraph [ref=e466]: Louisiana
+                - generic [ref=e467]:
+                  - generic [ref=e468]: View Races
+                  - img [ref=e469]
+              - button "Maine View Races" [ref=e471] [cursor=pointer]:
+                - paragraph [ref=e472]: Maine
+                - generic [ref=e473]:
+                  - generic [ref=e474]: View Races
+                  - img [ref=e475]
+              - button "Maryland View Races" [ref=e477] [cursor=pointer]:
+                - paragraph [ref=e478]: Maryland
+                - generic [ref=e479]:
+                  - generic [ref=e480]: View Races
+                  - img [ref=e481]
+              - button "Massachusetts View Races" [ref=e483] [cursor=pointer]:
+                - paragraph [ref=e484]: Massachusetts
+                - generic [ref=e485]:
+                  - generic [ref=e486]: View Races
+                  - img [ref=e487]
+              - button "Michigan View Races" [ref=e489] [cursor=pointer]:
+                - paragraph [ref=e490]: Michigan
+                - generic [ref=e491]:
+                  - generic [ref=e492]: View Races
+                  - img [ref=e493]
+              - button "Minnesota View Races" [ref=e495] [cursor=pointer]:
+                - paragraph [ref=e496]: Minnesota
+                - generic [ref=e497]:
+                  - generic [ref=e498]: View Races
+                  - img [ref=e499]
+              - button "Mississippi View Races" [ref=e501] [cursor=pointer]:
+                - paragraph [ref=e502]: Mississippi
+                - generic [ref=e503]:
+                  - generic [ref=e504]: View Races
+                  - img [ref=e505]
+              - button "Missouri View Races" [ref=e507] [cursor=pointer]:
+                - paragraph [ref=e508]: Missouri
+                - generic [ref=e509]:
+                  - generic [ref=e510]: View Races
+                  - img [ref=e511]
+              - button "Montana View Races" [ref=e513] [cursor=pointer]:
+                - paragraph [ref=e514]: Montana
+                - generic [ref=e515]:
+                  - generic [ref=e516]: View Races
+                  - img [ref=e517]
+              - button "Nebraska View Races" [ref=e519] [cursor=pointer]:
+                - paragraph [ref=e520]: Nebraska
+                - generic [ref=e521]:
+                  - generic [ref=e522]: View Races
+                  - img [ref=e523]
+              - button "Nevada View Races" [ref=e525] [cursor=pointer]:
+                - paragraph [ref=e526]: Nevada
+                - generic [ref=e527]:
+                  - generic [ref=e528]: View Races
+                  - img [ref=e529]
+              - button "New Hampshire View Races" [ref=e531] [cursor=pointer]:
+                - paragraph [ref=e532]: New Hampshire
+                - generic [ref=e533]:
+                  - generic [ref=e534]: View Races
+                  - img [ref=e535]
+              - button "New Jersey View Races" [ref=e537] [cursor=pointer]:
+                - paragraph [ref=e538]: New Jersey
+                - generic [ref=e539]:
+                  - generic [ref=e540]: View Races
+                  - img [ref=e541]
+              - button "New Mexico View Races" [ref=e543] [cursor=pointer]:
+                - paragraph [ref=e544]: New Mexico
+                - generic [ref=e545]:
+                  - generic [ref=e546]: View Races
+                  - img [ref=e547]
+              - button "New York View Races" [ref=e549] [cursor=pointer]:
+                - paragraph [ref=e550]: New York
+                - generic [ref=e551]:
+                  - generic [ref=e552]: View Races
+                  - img [ref=e553]
+              - button "North Carolina View Races" [ref=e555] [cursor=pointer]:
+                - paragraph [ref=e556]: North Carolina
+                - generic [ref=e557]:
+                  - generic [ref=e558]: View Races
+                  - img [ref=e559]
+              - button "North Dakota View Races" [ref=e561] [cursor=pointer]:
+                - paragraph [ref=e562]: North Dakota
+                - generic [ref=e563]:
+                  - generic [ref=e564]: View Races
+                  - img [ref=e565]
+              - button "Ohio View Races" [ref=e567] [cursor=pointer]:
+                - paragraph [ref=e568]: Ohio
+                - generic [ref=e569]:
+                  - generic [ref=e570]: View Races
+                  - img [ref=e571]
+              - button "Oklahoma View Races" [ref=e573] [cursor=pointer]:
+                - paragraph [ref=e574]: Oklahoma
+                - generic [ref=e575]:
+                  - generic [ref=e576]: View Races
+                  - img [ref=e577]
+              - button "Oregon View Races" [ref=e579] [cursor=pointer]:
+                - paragraph [ref=e580]: Oregon
+                - generic [ref=e581]:
+                  - generic [ref=e582]: View Races
+                  - img [ref=e583]
+              - button "Pennsylvania View Races" [ref=e585] [cursor=pointer]:
+                - paragraph [ref=e586]: Pennsylvania
+                - generic [ref=e587]:
+                  - generic [ref=e588]: View Races
+                  - img [ref=e589]
+              - button "Rhode Island View Races" [ref=e591] [cursor=pointer]:
+                - paragraph [ref=e592]: Rhode Island
+                - generic [ref=e593]:
+                  - generic [ref=e594]: View Races
+                  - img [ref=e595]
+              - button "South Carolina View Races" [ref=e597] [cursor=pointer]:
+                - paragraph [ref=e598]: South Carolina
+                - generic [ref=e599]:
+                  - generic [ref=e600]: View Races
+                  - img [ref=e601]
+              - button "South Dakota View Races" [ref=e603] [cursor=pointer]:
+                - paragraph [ref=e604]: South Dakota
+                - generic [ref=e605]:
+                  - generic [ref=e606]: View Races
+                  - img [ref=e607]
+              - button "Tennessee View Races" [ref=e609] [cursor=pointer]:
+                - paragraph [ref=e610]: Tennessee
+                - generic [ref=e611]:
+                  - generic [ref=e612]: View Races
+                  - img [ref=e613]
+              - button "Texas View Races" [ref=e615] [cursor=pointer]:
+                - paragraph [ref=e616]: Texas
+                - generic [ref=e617]:
+                  - generic [ref=e618]: View Races
+                  - img [ref=e619]
+              - button "Utah View Races" [ref=e621] [cursor=pointer]:
+                - paragraph [ref=e622]: Utah
+                - generic [ref=e623]:
+                  - generic [ref=e624]: View Races
+                  - img [ref=e625]
+              - button "Vermont View Races" [ref=e627] [cursor=pointer]:
+                - paragraph [ref=e628]: Vermont
+                - generic [ref=e629]:
+                  - generic [ref=e630]: View Races
+                  - img [ref=e631]
+              - button "Virginia View Races" [ref=e633] [cursor=pointer]:
+                - paragraph [ref=e634]: Virginia
+                - generic [ref=e635]:
+                  - generic [ref=e636]: View Races
+                  - img [ref=e637]
+              - button "Washington View Races" [ref=e639] [cursor=pointer]:
+                - paragraph [ref=e640]: Washington
+                - generic [ref=e641]:
+                  - generic [ref=e642]: View Races
+                  - img [ref=e643]
+              - button "West Virginia View Races" [ref=e645] [cursor=pointer]:
+                - paragraph [ref=e646]: West Virginia
+                - generic [ref=e647]:
+                  - generic [ref=e648]: View Races
+                  - img [ref=e649]
+              - button "Wisconsin View Races" [ref=e651] [cursor=pointer]:
+                - paragraph [ref=e652]: Wisconsin
+                - generic [ref=e653]:
+                  - generic [ref=e654]: View Races
+                  - img [ref=e655]
+              - button "Wyoming View Races" [ref=e657] [cursor=pointer]:
+                - paragraph [ref=e658]: Wyoming
+                - generic [ref=e659]:
+                  - generic [ref=e660]: View Races
+                  - img [ref=e661]
+            - generic [ref=e666]:
+              - heading "Want to see your races only?" [level=4] [ref=e667]:
+                - generic [ref=e668]: Want to see your races only?
+              - generic [ref=e669]: If you'd rather, you can view all the races and measures on your specific ballot by entering your address or using your current location.
+              - button "Enter Address" [ref=e672] [cursor=pointer]
+          - generic [ref=e169]:
+            - generic [ref=e170]:
+              - paragraph [ref=e171]: ©2026 League of Women Voters Education Fund. All rights reserved.
+              - paragraph [ref=e172]: The League of Women Voters does not support or oppose any candidates or parties. All responses come directly from the candidates and are unedited by the League. The League does not certify the accuracy of the candidate’s statements. The League reserves the right to remove or redact portions of candidate responses that violate state or federal law or the voter guide rules that are provided to all candidates before participating in the voter guide.
+            - generic [ref=e173]:
+              - button "All Races" [active] [ref=e175] [cursor=pointer]
+              - button "All Candidates" [ref=e177] [cursor=pointer]
+        - generic [ref=e180]:
+          - generic [ref=e184]:
+            - heading "Voting Guides" [level=4] [ref=e185]: Voting Guides
+            - list [ref=e187]:
+              - listitem [ref=e188]:
+                - link "NJ Congressional District 2 Democratic Primary Candidate Forum" [ref=e189] [cursor=pointer]:
+                  - /url: https://vimeo.com/1193451870?share=copy&fl=sv&fe=ci
+                  - generic [ref=e190]: NJ Congressional District 2 Democratic Primary Candidate Forum
+              - listitem [ref=e191]:
+                - link "NJ Congressional District 4 Democratic Primary Candidate Forum" [ref=e192] [cursor=pointer]:
+                  - /url: https://lwvmonmouth.org/vid100.php
+                  - generic [ref=e193]: NJ Congressional District 4 Democratic Primary Candidate Forum
+              - listitem [ref=e194]:
+                - 'link "NM: LWV Santa Fe County Voter Guide" [ref=e195] [cursor=pointer]':
+                  - /url: https://vote411-prod.s3.amazonaws.com/2026-05/2026%20Primary%20Election%20Voter%20Guide.pdf
+                  - generic [ref=e196]: "NM: LWV Santa Fe County Voter Guide"
+              - listitem [ref=e197]:
+                - 'link "NY: May 19th, 2026 Tompkins County School Board Elections" [ref=e198] [cursor=pointer]':
+                  - /url: https://vote411-prod.s3.amazonaws.com/2026-05/2026%20School%20Board%20Elections%20for%20VOTE%20411%20and%20for%20LWVTC%20Website_rev.pdf
+                  - generic [ref=e199]: "NY: May 19th, 2026 Tompkins County School Board Elections"
+              - listitem [ref=e200]:
+                - link "Union County PA 2026 Primary Voter Guide" [ref=e201] [cursor=pointer]:
+                  - /url: https://vote411-prod.s3.amazonaws.com/2026-04/Union%20County%20PA%20Spring%202026%20Voters%20Guide.pdf
+                  - generic [ref=e202]: Union County PA 2026 Primary Voter Guide
+          - generic [ref=e205]:
+            - generic [ref=e206]:
+              - heading "Candidate Debate Videos" [level=4] [ref=e207]: Candidate Debate Videos
+              - list [ref=e209]:
+                - listitem [ref=e210]:
+                  - link "2026 LWV Kansas City, MO Candidate Forums" [ref=e211] [cursor=pointer]:
+                    - /url: https://www.youtube.com/playlist?list=PLOGFYk7DGuk1KUtspY3xkHI2z_NFWuns3
+                    - generic [ref=e212]: 2026 LWV Kansas City, MO Candidate Forums
+                - listitem [ref=e213]:
+                  - link "Alameda County CA Board of Supervisors District 2 Candidate Forum" [ref=e214] [cursor=pointer]:
+                    - /url: https://www.youtube.com/watch?v=KfGb6IPYhTk
+                    - generic [ref=e215]: Alameda County CA Board of Supervisors District 2 Candidate Forum
+                - listitem [ref=e216]:
+                  - link "Alameda County CA Board of Supervisors, District 2" [ref=e217] [cursor=pointer]:
+                    - /url: https://www.youtube.com/watch?v=KfGb6IPYhTk
+                    - generic [ref=e218]: Alameda County CA Board of Supervisors, District 2
+                - listitem [ref=e219]:
+                  - link "CA Assembly District 42 Candidate Forum" [ref=e220] [cursor=pointer]:
+                    - /url: https://www.youtube.com/watch?v=KUCUIPYvdWU
+                    - generic [ref=e221]: CA Assembly District 42 Candidate Forum
+                - listitem [ref=e222]:
+                  - link "CA Governor Candidate Forum Claremont" [ref=e223] [cursor=pointer]:
+                    - /url: https://www.youtube.com/live/1ikN8crwsFM
+                    - generic [ref=e224]: CA Governor Candidate Forum Claremont
+                - listitem [ref=e225]:
+                  - link "CA Governor Candidate Forum Los Angeles" [ref=e226] [cursor=pointer]:
+                    - /url: https://www.youtube.com/live/6o0pu2huVvc
+                    - generic [ref=e227]: CA Governor Candidate Forum Los Angeles
+                - listitem [ref=e228]:
+                  - link "CA Governor Candidate Forum Los Angeles Feb 26" [ref=e229] [cursor=pointer]:
+                    - /url: https://www.youtube.com/live/mH-ZKGUUlv0
+                    - generic [ref=e230]: CA Governor Candidate Forum Los Angeles Feb 26
+                - listitem [ref=e231]:
+                  - link "CA Governor Candidate Forum San Francisco" [ref=e232] [cursor=pointer]:
+                    - /url: https://www.youtube.com/watch?v=-_LHkpd7PcM
+                    - generic [ref=e233]: CA Governor Candidate Forum San Francisco
+                - listitem [ref=e234]:
+                  - link "CA Governor Candidate Forum San Francisco April 22" [ref=e235] [cursor=pointer]:
+                    - /url: https://www.youtube.com/watch?v=cKIUJua6iCI
+                    - generic [ref=e236]: CA Governor Candidate Forum San Francisco April 22
+                - listitem [ref=e237]:
+                  - link "CA Insurance Commissioner Candidate Forum April 29" [ref=e238] [cursor=pointer]:
+                    - /url: https://www.youtube.com/watch?v=97nTcNHYbOM&t=251s
+                    - generic [ref=e239]: CA Insurance Commissioner Candidate Forum April 29
+            - navigation "Pagination" [ref=e240]:
+              - heading "Pagination" [level=4] [ref=e241]
+              - list [ref=e242]:
+                - listitem [ref=e243]:
+                  - link "Current page 1" [ref=e244] [cursor=pointer]:
+                    - /url: "?page=%2C0%2C0"
+                    - generic [ref=e245]: Current page
+                    - text: "1"
+                - listitem [ref=e246]:
+                  - link "Page 2" [ref=e247] [cursor=pointer]:
+                    - /url: "?page=%2C0%2C1"
+                    - generic [ref=e248]: Page
+                    - text: "2"
+                - listitem [ref=e249]:
+                  - link "Page 3" [ref=e250] [cursor=pointer]:
+                    - /url: "?page=%2C0%2C2"
+                    - generic [ref=e251]: Page
+                    - text: "3"
+                - listitem [ref=e252]:
+                  - link "Next page" [ref=e253] [cursor=pointer]:
+                    - /url: "?page=%2C0%2C1"
+                    - generic [ref=e254]: Next page
+                    - text: Next ›
+        - generic [ref=e257]:
+          - iframe [ref=e260]:
+            - generic [active] [ref=f1e1]:
+              - generic "YouTube Video Player" [ref=f1e3]
+              - generic [ref=f1e5]:
+                - generic:
+                  - generic:
+                    - button "Play video" [ref=f1e10] [cursor=pointer]
+                    - button "Hide player controls" [ref=f1e12] [cursor=pointer]
+                    - generic [ref=f1e14]:
+                      - generic [ref=f1e19]:
+                        - generic [ref=f1e20]:
+                          - link "Your Vote411 Voter Guide" [ref=f1e21] [cursor=pointer]:
+                            - /url: https://www.youtube.com/watch?v=pWrltElaHRE
+                          - link "League of Women Voters" [ref=f1e22] [cursor=pointer]:
+                            - /url: /channel/UCzd5f5VyMYYrtCZKM3dYaXQ
+                            - generic [ref=f1e23]: League of Women Voters
+                        - generic [ref=f1e24]:
+                          - button [ref=f1e25] [cursor=pointer]
+                          - generic [ref=f1e27]:
+                            - generic: League of Women Voters
+                            - generic: 3.64K subscribers
+                      - generic [ref=f1e28]:
+                        - button "Share" [ref=f1e31] [cursor=pointer]:
+                          - generic [ref=f1e35]:
+                            - img
+                        - link "Watch on YouTube" [ref=f1e42] [cursor=pointer]:
+                          - /url: https://www.youtube.com/watch?v=pWrltElaHRE
+                          - generic [ref=f1e45]:
+                            - text: Watch on
+                            - img [ref=f1e47]:
+                              - generic [ref=f1e49]:
+                                - img
+          - generic [ref=e263]:
+            - heading "Get Other Personalized Voting Information" [level=2] [ref=e264]:
+              - generic [ref=e265]: Get Other Personalized Voting Information
+            - paragraph
+            - paragraph
+            - list [ref=e266]:
+              - listitem [ref=e267]: See What's On Your Ballot
+              - listitem [ref=e268]: Find Your Polling Place
+              - listitem [ref=e269]: Discover Upcoming Debates And Forums In Your Area
+              - listitem [ref=e270]: and much more!
+            - paragraph [ref=e271]
+            - link "Get Started" [ref=e272] [cursor=pointer]:
+              - /url: /plan-your-vote
+    - contentinfo [ref=e273]:
+      - generic [ref=e276]:
+        - generic [ref=e277]:
+          - heading "Election day problems?" [level=2] [ref=e278]
+          - paragraph [ref=e279]: "Report an election problem by calling:"
+        - generic [ref=e280]:
+          - generic [ref=e281]: 1-866-OUR-VOTE (866-687-8683)
+          - generic [ref=e282]: 1-888-VE-Y-VOTA (en Español)
+        - generic [ref=e283]:
+          - generic [ref=e284]: 1-888-API-VOTE (Asian multilingual assistance)
+          - generic [ref=e285]: 1-844-YALLA-US (Arabic)
+      - generic [ref=e288]:
+        - generic [ref=e289]:
+          - heading "Donate" [level=2] [ref=e290]
+          - paragraph [ref=e291]: Help us provide accurate and unbiased voting information by donating today!
+          - link "Make a donation" [ref=e292] [cursor=pointer]:
+            - /url: https://www.lwv.org/VOTE411give
+        - generic [ref=e293]:
+          - heading "Your Voting Guide" [level=2] [ref=e294]
+          - paragraph [ref=e295]: Find what's on your ballot
+          - link "Explore Now" [ref=e296] [cursor=pointer]:
+            - /url: /plan-your-vote
+      - generic [ref=e298]:
+        - generic [ref=e299]:
+          - generic [ref=e300]:
+            - img "VOTE411 Logo" [ref=e301]
+            - paragraph [ref=e302]: VOTE411 is committed to ensuring voters have the information they need to successfully participate in every election. Whether it's local, state or federal, every election is important to ensuring our laws and policies reflect the values and beliefs of our communities.
+            - img "webby-2020-banner" [ref=e304]
+          - generic [ref=e313]:
+            - list [ref=e315]:
+              - listitem [ref=e316]:
+                - link "Contact Us" [ref=e317] [cursor=pointer]:
+                  - /url: mailto:voterinformation@lwv.org
+              - listitem [ref=e318]:
+                - link "About Us" [ref=e319] [cursor=pointer]:
+                  - /url: /about
+              - listitem [ref=e320]:
+                - link "Get Involved" [ref=e321] [cursor=pointer]:
+                  - /url: https://www.lwv.org/local-leagues/find-local-league?field_zip_code_value=
+              - listitem [ref=e322]:
+                - link "Sponsors & Partners" [ref=e323] [cursor=pointer]:
+                  - /url: /sponsors
+            - generic [ref=e324]:
+              - heading "Follow us" [level=2] [ref=e325]
+              - list [ref=e326]:
+                - listitem [ref=e327]:
+                  - link "Facebook" [ref=e328] [cursor=pointer]:
+                    - /url: https://www.facebook.com/vote411/
+                - listitem [ref=e329]:
+                  - link "Instagram" [ref=e330] [cursor=pointer]:
+                    - /url: https://www.instagram.com/vote411/
+                - listitem [ref=e331]:
+                  - link "Twitter" [ref=e332] [cursor=pointer]:
+                    - /url: https://twitter.com/vote411
+                - listitem [ref=e333]:
+                  - link "YouTube" [ref=e334] [cursor=pointer]:
+                    - /url: https://www.youtube.com/watch?v=HoR-26mgFv0&list=PL33IAmThHpVDf2z3amFL9FzGxN0Ikfluc
+                - listitem
+            - generic [ref=e335]:
+              - heading "Brought to you by" [level=2] [ref=e336]
+              - link "League of Women Voters" [ref=e337] [cursor=pointer]:
+                - /url: https://www.lwv.org/about-us
+                - img "League of Women Voters Logo" [ref=e338]
+        - generic [ref=e339]:
+          - paragraph [ref=e341]: ©2026 League of Women Voters Education Fund. All rights reserved.
+          - link "Terms of Use" [ref=e343] [cursor=pointer]:
+            - /url: legal
+          - link "Privacy Policy" [ref=e345] [cursor=pointer]:
+            - /url: legal#privacy-policy
