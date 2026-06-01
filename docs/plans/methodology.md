@@ -40,6 +40,9 @@ Describe the actual tools and workflow:
 - **Peer review**: All pages reviewed for factual accuracy before commit
 
 ### 4. Update Cadence
+
+*Cadence is aspirational, not committed. This is an independent research experiment in AI-driven data utilization.*
+
 - **Breaking news** (endorsements, poll releases, debate moments): same-day or next-day update
 - **Polling data**: updated within 48 hours of new survey release
 - **Full race review**: weekly during active campaign season
@@ -47,6 +50,9 @@ Describe the actual tools and workflow:
 - **Archival**: snapshot of each version preserved in git history
 
 ### 5. Correction Policy
+
+*Correction policy is aspirational, not committed. This is an independent research experiment in AI-driven data utilization.*
+
 - Errors corrected within 24 hours of report
 - Correction notation on affected page with date
 - Git history preserves original + corrected version
@@ -66,19 +72,7 @@ Describe the actual tools and workflow:
 
 ## Prior Art to Reference
 
-### School Budget Research Pipeline
-From `~/projects/south-portland-school-budget-FY27/`:
-- PDF extraction from city documents using `pikepdf` + `tabula`
-- Budget line-item normalization into structured JSON
-- Historical comparison across FY24-FY27
-- Can adapt to municipal budget analysis for any jurisdiction
-
-### ALPR Awareness Research (`~/projects/sopo-alpr-awareness/`)
-- Public records request workflow (template letters, tracking spreadsheet)
-- FOIA-style sourcing for government accountability topics
-- Evidence pool approach: accumulate documents over time, synthesize later
-
-### Research-Keeper (`~/code/research-keeper/`)
+### Research-Keeper (`https://github.com/cristoslc/research-keeper/`)
 - Source ingestion: `rk add <url>` → downloads, tags, extracts text
 - Query interface: `rk search "Platner immigration"` → ranked results
 - Citation export: generates source lists in markdown
