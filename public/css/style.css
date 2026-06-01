@@ -304,19 +304,6 @@ a:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; border-ra
 
 .candidate-meta { font-size: 0.875rem; color: var(--gray-500); margin: 0.5rem 0 0.75rem; }
 
-.positions { margin-top: 0.75rem; }
-.position { padding: 0.6rem 0; border-bottom: 1px solid var(--gray-100); }
-.position:last-child { border-bottom: none; }
-.position .issue-label {
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--gray-500);
-  margin-bottom: 0.15rem;
-}
-.position .issue-text { font-size: 0.9375rem; }
-
 .source-ref { font-size: 0.75rem; color: var(--gray-500); margin-top: 0.25rem; }
 .source-ref a { color: var(--gray-500); }
 
@@ -432,14 +419,27 @@ main ul, main ol { margin: 0.5rem 0 1rem 1.5rem; padding: 0; }
 main li { margin-bottom: 0.35rem; }
 main li::marker { color: var(--gray-500); }
 
-/* Per-Candidate Primary/Sidebar Layout */
+/* Per-Candidate/Ballot Card Layout */
+.candidate-card {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow);
+}
+.candidate-card h3 { margin-top: 0; }
+
 .candidate-group {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1rem;
-  margin-bottom: 2.5rem;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid var(--gray-200);
+  gap: 1.5rem;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow);
 }
 .candidate-group:last-child { border-bottom: none; }
 
@@ -455,14 +455,14 @@ main li::marker { color: var(--gray-500); }
   background: var(--gray-50);
   border: 1px solid var(--gray-200);
   border-radius: var(--radius);
-  padding: 1rem;
+  padding: 1.25rem;
   font-size: 0.875rem;
   line-height: 1.55;
   align-self: start;
 }
 
-.context-section { margin-bottom: 1rem; }
-.context-section:last-child { margin-bottom: 0; }
+.context-section { margin-bottom: 1.25rem; padding-bottom: 1.25rem; border-bottom: 1px solid var(--gray-200); }
+.context-section:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
 .context-section h4 {
   font-size: 0.6875rem;
   font-weight: 700;
@@ -474,6 +474,33 @@ main li::marker { color: var(--gray-500); }
   padding: 0;
 }
 .context-section p { margin-bottom: 0.5rem; }
+
+/* Ballot question card layout */
+.ballot-group {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow);
+}
+@media (min-width: 768px) {
+  .ballot-group { grid-template-columns: 5fr 3fr; gap: 2rem; }
+}
+
+.ballot-primary { min-width: 0; }
+.ballot-secondary {
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  font-size: 0.875rem;
+  line-height: 1.55;
+  align-self: start;
+}
 
 /* Race-wide info boxes (between candidate groups) */
 .race-wide-box {
@@ -499,27 +526,6 @@ main li::marker { color: var(--gray-500); }
 @media (max-width: 767px) {
   .candidate-secondary { margin-top: 0.75rem; }
 }
-
-/* Visual distinction enhancements */
-.position {
-  padding: 0.8rem 0.75rem;
-  margin-bottom: 0.5rem;
-  border-left: 3px solid var(--blue-light);
-  border-radius: 0 var(--radius) var(--radius) 0;
-  background: var(--white);
-  transition: background 0.15s, box-shadow 0.15s;
-}
-.position:hover { background: #fafafa; box-shadow: var(--shadow); }
-.position:last-child { margin-bottom: 0; }
-.position .issue-label {
-  font-size: 0.6875rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--blue);
-  margin-bottom: 0.25rem;
-}
-.position .issue-text { font-size: 0.9375rem; line-height: 1.6; }
 
 /* Section tints for candidate-secondary and race-wide-box */
 .candidate-secondary.bg-blue, .race-wide-box.bg-blue { background: var(--tint-blue-bg); border-left: 3px solid var(--tint-blue-border); }

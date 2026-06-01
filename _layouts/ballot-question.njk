@@ -1,0 +1,24 @@
+---
+layout: base
+templateEngineOverride: njk,md
+---
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <a href="{{ '/' | url }}">Home</a> &raquo; {{ title }}
+</nav>
+
+<div class="race-header">
+  <h1>{{ title }}</h1>
+</div>
+
+<div class="ballot-group">
+  <div class="ballot-primary">
+    {{ content }}
+  </div>
+
+  {% if sidebar %}
+  <aside class="ballot-secondary">
+    {{ sidebar | safe }}
+  </aside>
+  {% endif %}
+</div>

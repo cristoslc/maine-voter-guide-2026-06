@@ -2,9 +2,21 @@
 layout: ballot-question
 title: "School Budget Validation Referendum"
 permalink: /ballot-questions/school-budget-referendum/
+sidebar: |
+  <div class="context-section">
+    <h4>Quick Facts</h4>
+    <table class="poll-mini">
+      <tr><td>Total Budget</td><td>$76.2 million</td></tr>
+      <tr><td>Council Approval</td><td>Unanimous (May 6, 2026)</td></tr>
+      <tr><td>Previous Year (FY26)</td><td>$73 million — approved by 61%</td></tr>
+      <tr><td>Year-over-Year Change</td><td>~$3.2M increase (~4.4%)</td></tr>
+    </table>
+  </div>
+  <div class="context-section">
+    <h4>Historical Context</h4>
+    <p>Maine school budgets have been under pressure statewide in FY27 due to rising health insurance premiums and teacher salary costs. Budgets are up 5-10% year-over-year in many districts.</p>
+  </div>
 ---
-
-# South Portland School Budget Validation Referendum — June 9, 2026
 
 ## What Is This?
 
@@ -13,13 +25,6 @@ All South Portland voters — regardless of party — will vote whether to appro
 This is a **validation referendum**, required under Maine law since 2007. The City Council voted unanimously on May 6, 2026 to send the budget to voters.
 
 ## What You're Voting On
-
-| | |
-|---|---|
-| **Total Budget** | **$76.2 million** |
-| **Council Approval** | Unanimous (May 6, 2026) |
-| **Previous Year (FY26)** | **$73 million** — approved June 2025 by 61% of voters. 6%+ tax hike |
-| **Year-over-Year Change** | ~$3.2 million increase (~4.4%)
 
 A **"yes"** vote approves the budget at $76.2 million. A **"no"** vote rejects it, which would send it back to the School Board and City Council for revision. If rejected, state law provides for a re-vote process with revised figures.
 
@@ -44,10 +49,6 @@ Based on Press Herald coverage (February 11, 2026) and the district budget proce
 **Arguments against** (attributed):
 
 - (No organized opposition identified at publication date. Check news coverage for any late-forming taxpayer campaigns.)
-
-## Historical Context
-
-Maine school budgets have been under pressure statewide in FY27 due to rising health insurance premiums and teacher salary costs, the Maine School Management Association reports. Budgets are up 5-10% year-over-year in many districts.
 
 ## How to Vote
 
