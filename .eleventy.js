@@ -1,7 +1,7 @@
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "public/css": "css" });
-eleventyConfig.addPassthroughCopy({ "public/*.png": "./" });
-eleventyConfig.addPassthroughCopy({ "public/*.ico": "./" });
+  eleventyConfig.addPassthroughCopy({ "public/*.png": "./" });
+  eleventyConfig.addPassthroughCopy({ "public/*.ico": "./" });
 
   return {
     dir: {
@@ -11,6 +11,6 @@ eleventyConfig.addPassthroughCopy({ "public/*.ico": "./" });
       includes: "../_includes",
       layouts: "../_layouts",
     },
-    pathPrefix: "/",
+    pathPrefix: process.env.PATH_PREFIX || "/",
   };
 };
