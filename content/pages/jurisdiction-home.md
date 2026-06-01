@@ -27,8 +27,15 @@ pagination:
 <div class="race-grid">
 {% for r in races %}
 {% if r.jurisdiction == jurisdiction.slug and "democratic" in r.slug %}
+  {% set contested = false %}
+  {% for p in r.parties %}
+    {% if p.candidates and (p.candidates | length) > 1 %}
+      {% set contested = true %}
+    {% endif %}
+  {% endfor %}
   <a href="/{{ jurisdiction.slug }}/races/{{ r.slug }}/" class="race-card">
     <span class="card-tag partisan">{{ r.office }}</span>
+    <span class="card-tag {% if contested %}contested{% else %}uncontested{% endif %}">{% if contested %}Contested{% else %}Uncontested{% endif %}</span>
     <h2>{{ r.title }}</h2>
     <p class="card-sub">{{ r.voting }}</p>
   </a>
@@ -41,8 +48,15 @@ pagination:
 <div class="race-grid">
 {% for r in races %}
 {% if r.jurisdiction == jurisdiction.slug and "republican" in r.slug %}
+  {% set contested = false %}
+  {% for p in r.parties %}
+    {% if p.candidates and (p.candidates | length) > 1 %}
+      {% set contested = true %}
+    {% endif %}
+  {% endfor %}
   <a href="/{{ jurisdiction.slug }}/races/{{ r.slug }}/" class="race-card">
     <span class="card-tag partisan">{{ r.office }}</span>
+    <span class="card-tag {% if contested %}contested{% else %}uncontested{% endif %}">{% if contested %}Contested{% else %}Uncontested{% endif %}</span>
     <h2>{{ r.title }}</h2>
     <p class="card-sub">{{ r.voting }}</p>
   </a>

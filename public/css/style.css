@@ -260,6 +260,8 @@ a:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; border-ra
   margin-bottom: 0.5rem;
 }
 .card-tag.partisan { background: var(--blue-light); color: var(--blue); }
+.card-tag.contested { background: var(--red-light); color: var(--red); }
+.card-tag.uncontested { background: var(--gray-100); color: var(--gray-500); }
 .card-tag.nonpartisan { background: var(--gold-light); color: var(--gold); }
 .card-tag.referendum { background: var(--green-light); color: var(--green); }
 .race-card h2 { font-size: 1.0625rem; margin: 0 0 0.25rem; border: none; padding: 0; }
