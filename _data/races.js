@@ -2686,7 +2686,7 @@ module.exports = [
           {
             "name": "Patricia Smith",
             "tag": "d",
-            "meta": "Incumbent · Commission Chair since 2022 · South Portland · Voted 4/21/26 to remove ICE from county jail contract · <a href=\"https://www.cumberlandcounty.org/\">Cumberland County</a>",
+            "meta": "Incumbent · Commission Chair since 2022 · South Portland · Voted 4/21/26 to remove ICE from county jail contract · <a href=\"https://www.cumberlandcountyme.gov/boards___committees/county_commissioners/district_4.php\">Cumberland County</a>",
             "primaryContent": [
               {
                 "issue": "ICE Detainers",
@@ -2704,18 +2704,20 @@ module.exports = [
             "secondaryContent": [
               {
                 "heading": "Background",
-                "text": "Commission Chair since 2022. South Portland resident. Multiple-term incumbent. Endorsed by progressive organizations."
+                "text": "Commission Chair since 2022. South Portland resident. Former South Portland city councilor (9 years). Founding member, South Portland Community Garden Collective. Board member, Bicycle Coalition of Maine. Endorsed by progressive organizations."
               }
             ]
           },
           {
             "name": "Sigrid Olson",
             "tag": "d",
-            "meta": "First-time candidate · Cape Elizabeth · USM MPPM · Swarthmore econ · Tepper MBA · <a href=\"https://sigridforcumberland.wordpress.com/\">Campaign website</a>",
+            "meta": "First-time candidate · Cape Elizabeth · Swarthmore econ · Tepper (Carnegie Mellon) MBA · USM MPPM · Peace Corps Volunteer · <a href=\"https://sigridforcumberland.wordpress.com/\">Campaign website</a>",
             "primaryContent": [
               {
                 "issue": "Government Effectiveness",
-                "text": "\"Effective, accountable, transparent\" county government. Reform county procurement and oversight."
+                "text": "\"Effective, accountable, transparent\" county government. Reform county procurement and oversight. Wrote in the Press Herald that Maine counties are \"a backwater of poor visibility, low citizen engagement, uncertain transparency and sub-standard representation.\" Wants timely audits and better public notice of meetings.",
+                "sourceUrl": "https://www.pressherald.com/2025/12/23/how-to-help-clean-up-maines-municipal-mismanagment-opinion/",
+                "sourceLabel": "Press Herald opinion"
               },
               {
                 "issue": "Affordable Housing",
@@ -2729,7 +2731,7 @@ module.exports = [
             "secondaryContent": [
               {
                 "heading": "Background",
-                "text": "First-time candidate. Cape Elizabeth resident. USM Masters in Public Policy & Management. Swarthmore econ degree. Tepper (Carnegie Mellon) MBA."
+                "text": "First-time candidate. Cape Elizabeth resident. BA Economics from Swarthmore College. MBA from Carnegie Mellon's Tepper School. Masters in Policy, Planning & Management from USM. Peace Corps Volunteer. Former consultant at Price Waterhouse on USAID projects. Former controller of a restaurant chain. Research at the Maine Educational Policy Research Institute."
               }
             ]
           }
@@ -2744,6 +2746,14 @@ module.exports = [
       {
         "url": "https://www.pressherald.com/2026/04/22/cumberland-county-officials-vote-to-remove-ice-from-jail-contract-with-feds/",
         "label": "Press Herald — ICE vote"
+      },
+      {
+        "url": "https://www.pressherald.com/2026/05/29/patti-smith-for-cumberland-county-commissioner-letter/",
+        "label": "Press Herald — Smith endorsement letter"
+      },
+      {
+        "url": "https://www.pressherald.com/2025/12/23/how-to-help-clean-up-maines-municipal-mismanagment-opinion/",
+        "label": "Press Herald — Olson opinion"
       }
     ]
   },
@@ -7250,7 +7260,7 @@ module.exports = [
           {
             "name": "Patricia Smith",
             "tag": "d",
-            "meta": "Incumbent · Commission Chair since 2022 · South Portland · Voted 4/21/26 to remove ICE from county jail contract · <a href=\"https://www.cumberlandcounty.org/\">Cumberland County</a>",
+            "meta": "Incumbent · Commission Chair since 2022 · South Portland · Voted 4/21/26 to remove ICE from county jail contract · <a href=\"https://www.cumberlandcountyme.gov/boards___committees/county_commissioners/district_4.php\">Cumberland County</a>",
             "primaryContent": [
               {
                 "issue": "ICE Detainers",
@@ -7268,18 +7278,20 @@ module.exports = [
             "secondaryContent": [
               {
                 "heading": "Background",
-                "text": "Commission Chair since 2022. South Portland resident. Multiple-term incumbent. Endorsed by progressive organizations."
+                "text": "Commission Chair since 2022. South Portland resident. Former South Portland city councilor (9 years). Founding member, South Portland Community Garden Collective. Board member, Bicycle Coalition of Maine. Endorsed by progressive organizations."
               }
             ]
           },
           {
             "name": "Sigrid Olson",
             "tag": "d",
-            "meta": "First-time candidate · Cape Elizabeth · USM MPPM · Swarthmore econ · Tepper MBA · <a href=\"https://sigridforcumberland.wordpress.com/\">Campaign website</a>",
+            "meta": "First-time candidate · Cape Elizabeth · Swarthmore econ · Tepper (Carnegie Mellon) MBA · USM MPPM · Peace Corps Volunteer · <a href=\"https://sigridforcumberland.wordpress.com/\">Campaign website</a>",
             "primaryContent": [
               {
                 "issue": "Government Effectiveness",
-                "text": "\"Effective, accountable, transparent\" county government. Reform county procurement and oversight."
+                "text": "\"Effective, accountable, transparent\" county government. Reform county procurement and oversight. Wrote in the Press Herald that Maine counties are \"a backwater of poor visibility, low citizen engagement, uncertain transparency and sub-standard representation.\" Wants timely audits and better public notice of meetings.",
+                "sourceUrl": "https://www.pressherald.com/2025/12/23/how-to-help-clean-up-maines-municipal-mismanagment-opinion/",
+                "sourceLabel": "Press Herald opinion"
               },
               {
                 "issue": "Affordable Housing",
@@ -7293,7 +7305,7 @@ module.exports = [
             "secondaryContent": [
               {
                 "heading": "Background",
-                "text": "First-time candidate. Cape Elizabeth resident. USM Masters in Public Policy & Management. Swarthmore econ degree. Tepper (Carnegie Mellon) MBA."
+                "text": "First-time candidate. Cape Elizabeth resident. BA Economics from Swarthmore College. MBA from Carnegie Mellon's Tepper School. Masters in Policy, Planning & Management from USM. Peace Corps Volunteer. Former consultant at Price Waterhouse on USAID projects. Former controller of a restaurant chain. Research at the Maine Educational Policy Research Institute."
               }
             ]
           }
@@ -7308,6 +7320,14 @@ module.exports = [
       {
         "url": "https://www.pressherald.com/2026/04/22/cumberland-county-officials-vote-to-remove-ice-from-jail-contract-with-feds/",
         "label": "Press Herald — ICE vote"
+      },
+      {
+        "url": "https://www.pressherald.com/2026/05/29/patti-smith-for-cumberland-county-commissioner-letter/",
+        "label": "Press Herald — Smith endorsement letter"
+      },
+      {
+        "url": "https://www.pressherald.com/2025/12/23/how-to-help-clean-up-maines-municipal-mismanagment-opinion/",
+        "label": "Press Herald — Olson opinion"
       }
     ]
   },
@@ -7326,7 +7346,7 @@ module.exports = [
           {
             "name": "Patricia Smith",
             "tag": "d",
-            "meta": "Incumbent · Commission Chair since 2022 · South Portland · Voted 4/21/26 to remove ICE from county jail contract · <a href=\"https://www.cumberlandcounty.org/\">Cumberland County</a>",
+            "meta": "Incumbent · Commission Chair since 2022 · South Portland · Voted 4/21/26 to remove ICE from county jail contract · <a href=\"https://www.cumberlandcountyme.gov/boards___committees/county_commissioners/district_4.php\">Cumberland County</a>",
             "primaryContent": [
               {
                 "issue": "ICE Detainers",
@@ -7344,18 +7364,20 @@ module.exports = [
             "secondaryContent": [
               {
                 "heading": "Background",
-                "text": "Commission Chair since 2022. South Portland resident. Multiple-term incumbent. Endorsed by progressive organizations."
+                "text": "Commission Chair since 2022. South Portland resident. Former South Portland city councilor (9 years). Founding member, South Portland Community Garden Collective. Board member, Bicycle Coalition of Maine. Endorsed by progressive organizations."
               }
             ]
           },
           {
             "name": "Sigrid Olson",
             "tag": "d",
-            "meta": "First-time candidate · Cape Elizabeth · USM MPPM · Swarthmore econ · Tepper MBA · <a href=\"https://sigridforcumberland.wordpress.com/\">Campaign website</a>",
+            "meta": "First-time candidate · Cape Elizabeth · Swarthmore econ · Tepper (Carnegie Mellon) MBA · USM MPPM · Peace Corps Volunteer · <a href=\"https://sigridforcumberland.wordpress.com/\">Campaign website</a>",
             "primaryContent": [
               {
                 "issue": "Government Effectiveness",
-                "text": "\"Effective, accountable, transparent\" county government. Reform county procurement and oversight."
+                "text": "\"Effective, accountable, transparent\" county government. Reform county procurement and oversight. Wrote in the Press Herald that Maine counties are \"a backwater of poor visibility, low citizen engagement, uncertain transparency and sub-standard representation.\" Wants timely audits and better public notice of meetings.",
+                "sourceUrl": "https://www.pressherald.com/2025/12/23/how-to-help-clean-up-maines-municipal-mismanagment-opinion/",
+                "sourceLabel": "Press Herald opinion"
               },
               {
                 "issue": "Affordable Housing",
@@ -7369,7 +7391,7 @@ module.exports = [
             "secondaryContent": [
               {
                 "heading": "Background",
-                "text": "First-time candidate. Cape Elizabeth resident. USM Masters in Public Policy & Management. Swarthmore econ degree. Tepper (Carnegie Mellon) MBA."
+                "text": "First-time candidate. Cape Elizabeth resident. BA Economics from Swarthmore College. MBA from Carnegie Mellon's Tepper School. Masters in Policy, Planning & Management from USM. Peace Corps Volunteer. Former consultant at Price Waterhouse on USAID projects. Former controller of a restaurant chain. Research at the Maine Educational Policy Research Institute."
               }
             ]
           }
@@ -7384,6 +7406,14 @@ module.exports = [
       {
         "url": "https://www.pressherald.com/2026/04/22/cumberland-county-officials-vote-to-remove-ice-from-jail-contract-with-feds/",
         "label": "Press Herald — ICE vote"
+      },
+      {
+        "url": "https://www.pressherald.com/2026/05/29/patti-smith-for-cumberland-county-commissioner-letter/",
+        "label": "Press Herald — Smith endorsement letter"
+      },
+      {
+        "url": "https://www.pressherald.com/2025/12/23/how-to-help-clean-up-maines-municipal-mismanagment-opinion/",
+        "label": "Press Herald — Olson opinion"
       }
     ]
   },
