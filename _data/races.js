@@ -2288,34 +2288,34 @@ module.exports = [
     "title": "State House District 123 — Democratic Primary",
     "office": "State House District 123",
     "officeDesc": "One of 151 representatives in Augusta. Cape-Elizabeth-only district (Cape Elizabeth is split with HD 121). Two-year term.",
-    "context": "Boyer is the only Democrat on the primary ballot. He is unopposed in November (no Republican filed - wait, Christy is R).",
+    "context": "Boyer is the incumbent running for re-election. Christy (R) is also on the ballot — a rematch of their 2024 contest.",
     "voting": "You must choose a Democratic primary ballot to vote in this race.",
     "parties": [
       {
         "party": "Democrat",
         "candidates": [
           {
-            "name": "Christopher T. Boyer",
+            "name": "Michelle Boyer",
             "tag": "d",
-            "meta": "Incumbent · First term (2025-2026) · Committees: Health Coverage, Insurance &amp; Financial Services · President, Artic Lynx Maternity · Co-founder, Restore the Floor · <a href=\"https://legislature.maine.gov/District123\">Maine Legislature</a>",
+            "meta": "Incumbent · First term (assumed office Dec 2024) · Committees: Health Coverage, Insurance &amp; Financial Services · President, Arctic Lynx Maternity · Co-chair, Restore the Floor · <a href=\"https://legislature.maine.gov/house/house/memberprofiles/Details/3138\">Maine Legislature</a>",
             "primaryContent": [
               {
                 "issue": "Healthcare Access",
-                "text": "Sponsors primary care access legislation. Insurance reform."
+                "text": "Sponsors primary care access legislation. Insurance reform. Serves on Health Coverage, Insurance &amp; Financial Services committee."
               },
               {
-                "issue": "Reproductive Rights",
-                "text": "Co-sponsor of Maine Reproductive Health Act. Volunteer with the Firearm Safety Caucus."
+                "issue": "Property Tax Relief",
+                "text": "Sponsor of LD 1665, property tax relief for Maine families."
               },
               {
-                "issue": "Property Tax",
-                "text": "Voted against 2025 $86.5M school bond. Property tax relief for year-round residents."
+                "issue": "Firearm Safety",
+                "text": "Volunteer with the Firearm Safety Caucus of the Maine legislature."
               }
             ],
             "secondaryContent": [
               {
                 "heading": "Background",
-                "text": "First-term incumbent (2025-2026). President, Artic Lynx Maternity. Co-founder, Restore the Floor. Lives in Cape Elizabeth with family."
+                "text": "First-term incumbent (assumed office Dec 2024). President, Arctic Lynx Maternity. Co-chair, Restore the Floor. Lives in Cape Elizabeth with family."
               }
             ]
           }
@@ -2324,8 +2324,12 @@ module.exports = [
     ],
     "sourcesMain": [
       {
-        "url": "https://legislature.maine.gov/District123",
-        "label": "Maine Legislature"
+        "url": "https://legislature.maine.gov/house/house/memberprofiles/Details/3138",
+        "label": "Maine Legislature — Michelle Boyer"
+      },
+      {
+        "url": "https://ballotpedia.org/Michelle_Boyer",
+        "label": "Ballotpedia — Michelle Boyer"
       }
     ]
   },
@@ -2335,16 +2339,16 @@ module.exports = [
     "title": "State House District 123 — Republican Primary",
     "office": "State House District 123",
     "officeDesc": "One of 151 representatives in Augusta. Cape-Elizabeth-only district. Two-year term.",
-    "context": "Christy is the only Republican on the primary ballot. Has lost by ~70-30 margins in two prior attempts.",
+    "context": "Christy is the only Republican on the primary ballot. Lost to Millett in 2022 and to Boyer in 2024, both by ~70-30 margins.",
     "voting": "You must choose a Republican primary ballot to vote in this race.",
     "parties": [
       {
         "party": "Republican",
         "candidates": [
           {
-            "name": "Michael Christy",
+            "name": "Annie Christy",
             "tag": "r",
-            "meta": "Three-time perennial candidate · Lost 2024 HD 123 and 2022 HD 28 by ~70-30 margins · <a href=\"https://ballotpedia.org/Michael_Christy\">Ballotpedia</a>",
+            "meta": "Two-time candidate · Lost 2024 HD 123 (Boyer 74-26) and 2022 HD 123 (Millett 74-26) · <a href=\"https://ballotpedia.org/Annie_Christy\">Ballotpedia</a>",
             "primaryContent": [
               {
                 "issue": "Limited public platform",
@@ -2354,7 +2358,7 @@ module.exports = [
             "secondaryContent": [
               {
                 "heading": "Background",
-                "text": "Three-time perennial candidate. Lost 2024 HD 123 and 2022 HD 28 by ~70-30 margins. No prior public record."
+                "text": "Two-time candidate. Lost 2024 HD 123 to Boyer 74-26 and 2022 HD 123 to Millett 74-26. Perennial candidate with no prior elected office."
               }
             ]
           }
@@ -2363,7 +2367,7 @@ module.exports = [
     ],
     "sourcesMain": [
       {
-        "url": "https://ballotpedia.org/Michael_Christy",
+        "url": "https://ballotpedia.org/Annie_Christy",
         "label": "Ballotpedia"
       }
     ]
@@ -2374,7 +2378,7 @@ module.exports = [
     "title": "State Senate District 26 — Democratic Primary",
     "office": "State Senate District 26",
     "officeDesc": "One of 35 senators in Augusta. Westbrook's eastern Senate district (covers Westbrook, Windham, part of Gorham). Two-year term.",
-    "context": "Nangle has no Democratic primary challenger. He is unopposed in November (no Republican filed - wait, Cianchette/Violette contested R primary).",
+    "context": "Nangle has no Democratic primary challenger. He will face the winner of the Cianchette vs. Violette Republican primary in November.",
     "voting": "You must choose a Democratic primary ballot to vote in this race.",
     "parties": [
       {
@@ -2497,7 +2501,7 @@ module.exports = [
     "title": "State House District 126 — Democratic Primary",
     "office": "State House District 126",
     "officeDesc": "One of 151 representatives in Augusta. Westbrook district. Two-year term.",
-    "context": "Gattine is the only Democrat on the primary ballot. He is unopposed in November (no Republican filed - wait, Mongue is R).",
+    "context": "Gattine has no Democratic primary challenger. He will face Mongue (R) in November.",
     "voting": "You must choose a Democratic primary ballot to vote in this race.",
     "parties": [
       {

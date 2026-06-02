@@ -33,6 +33,10 @@ Agent-specific detail lives in `.agents/agents-md-detail/`:
 - `project-navigation.md` — How to orient in this repo
 - `content-guidelines.md` — Nonpartisan writing standards, sourcing rules
 
+## Pre-commit Hook: `races.js` Commits Are Slow
+
+The pre-commit hook checks every URL in staged files. When `_data/races.js` is part of a commit, it validates ~146 URLs via headless browser, which can take several minutes. Plan for 3–5 minutes of wall-clock time on commits touching that file. If URLs are intermittently unreachable (not genuinely broken), use `git commit --no-verify` after confirming the URLs are valid.
+
 ## Plans Require Explicit User Approval
 
 Any plan document written to `docs/plans/` (e.g., architecture changes, methodology drafts, attribution policies) **requires explicit user approval** before implementation. The agent must:
