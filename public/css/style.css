@@ -94,6 +94,14 @@
 [data-theme="dark"] .candidate-primary p { color: #e5e7eb; }
 [data-theme="dark"] .candidate-secondary h4 { color: #93c5fd; }
 [data-theme="dark"] .candidate-secondary p { color: #d1d5db; }
+[data-theme="dark"] .candidate-group { background: #1a1a2e; border-color: #374151; }
+[data-theme="dark"] .ballot-group { background: #1a1a2e; border-color: #374151; }
+[data-theme="dark"] .ballot-secondary { background: #0f172a; border-color: #374151; color: #e5e7eb; }
+[data-theme="dark"] .position { background: #1a1a2e; border-left-color: #3b82f6; }
+[data-theme="dark"] .position .issue-label { color: #93c5fd; }
+[data-theme="dark"] .position .issue-text { color: #e5e7eb; }
+[data-theme="dark"] .context-section h4 { color: #93c5fd; }
+[data-theme="dark"] .context-section p { color: #d1d5db; }
 
 /* Auto mode: follows OS preference via prefers-color-scheme */
 @media (prefers-color-scheme: dark) {
@@ -153,6 +161,14 @@
   [data-theme="auto"] .candidate-primary p { color: #e5e7eb; }
   [data-theme="auto"] .candidate-secondary h4 { color: #93c5fd; }
   [data-theme="auto"] .candidate-secondary p { color: #d1d5db; }
+  [data-theme="auto"] .candidate-group { background: #1a1a2e; border-color: #374151; }
+  [data-theme="auto"] .ballot-group { background: #1a1a2e; border-color: #374151; }
+  [data-theme="auto"] .ballot-secondary { background: #0f172a; border-color: #374151; color: #e5e7eb; }
+  [data-theme="auto"] .position { background: #1a1a2e; border-left-color: #3b82f6; }
+  [data-theme="auto"] .position .issue-label { color: #93c5fd; }
+  [data-theme="auto"] .position .issue-text { color: #e5e7eb; }
+  [data-theme="auto"] .context-section h4 { color: #93c5fd; }
+  [data-theme="auto"] .context-section p { color: #d1d5db; }
 }
 
 
