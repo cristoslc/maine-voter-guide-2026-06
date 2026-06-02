@@ -1512,7 +1512,7 @@ module.exports = [
             "secondaryTags": [
               "incumbent"
             ],
-            "meta": "Since December 2020 · Cape Elizabeth · <a href=\"https://www.anneformaine.com/\">Campaign website</a> · <a href=\"https://legislature.maine.gov/district29\">Legislature page</a>",
+            "meta": "Since December 2020 · Cape Elizabeth · <a href=\"https://legislature.maine.gov/district29\">Legislature page</a>",
             "primaryContent": [
               {
                 "issue": "Gun Safety",
@@ -1552,7 +1552,7 @@ module.exports = [
               },
               {
                 "heading": "Endorsements",
-                "text": "<strong>Maine Conservation Voters Action Fund</strong> (2020, 2024). <strong>Professional Firefighters of Maine</strong>. <strong>Maine AFL-CIO</strong> (2024). <strong>Maine Chapter of the American Academy of Pediatrics</strong> (2025 Legislator of the Year). <a href=\"https://www.anneformaine.com/endorsements\">Full list</a>"
+                "text": "<strong>Maine Conservation Voters Action Fund</strong> (2020, 2024). <strong>Professional Firefighters of Maine</strong>. <strong>Maine AFL-CIO</strong> (2024). <strong>Maine Chapter of the American Academy of Pediatrics</strong> (2025 Legislator of the Year)."
               },
               {
                 "heading": "Who You'd Face",
@@ -1583,8 +1583,8 @@ module.exports = [
         "label": "Maine Senate Democrats — Gun safety"
       },
       {
-        "url": "https://www.anneformaine.com/endorsements",
-        "label": "Carney endorsements"
+        "url": "https://legislature.maine.gov/district29",
+        "label": "Maine Legislature — Sen. Anne Carney endorsements"
       }
     ],
     "sourcesSidebar": [
@@ -1889,53 +1889,53 @@ module.exports = [
           {
             "name": "Jill Duson",
             "tag": "d",
-            "meta": "Incumbent · Assistant Majority Leader · First Black woman in Maine Senate (elected 2022) · Committees: Government Oversight, Veterans &amp; Legal Affairs, Senate Rules · <a href=\"https://legislature.maine.gov/District27\">Maine Legislature</a>",
-            "primaryContent": [
-              {
-                "issue": "Blue Economy",
-                "text": "Established the Blue Economy Task Force. Marine economy, working waterfronts, marine science. Maine's coastline is the state's most distinctive economic asset."
-              },
-              {
-                "issue": "Tenant Rights",
-                "text": "Co-sponsor of tenant protection legislation. Portland's vacancy rate and rents are the highest in the state."
-              },
-              {
-                "issue": "CMP Controversy",
-                "text": "Past CMP lobbyist — has been a target of criticism from climate groups for this. Says she no longer lobbies for them."
-              },
-              {
-                "issue": "Wabanaki Sovereignty",
-                "text": "Publicly supports Wabanaki self-determination and restoring tribal sovereignty."
-              }
-            ],
-            "secondaryContent": [
-              {
-                "heading": "Background",
-                "text": "First Black woman elected to the Maine Senate (2022). Former Portland city councilor. Assistant Majority Leader. Lives in Portland."
-              },
-              {
-                "heading": "Endorsements",
-                "text": "Maine AFL-CIO, Maine Education Association, environmental groups."
-              }
-            ]
-          }
-        ]
-      }
-    ],
-    "sourcesMain": [
-      {
-        "url": "https://legislature.maine.gov/District27",
-        "label": "Maine Legislature"
-      },
-      {
-        "url": "https://www.mainepublic.org/politics/2026-04-20/your-vote-2026-profile-jill-duson-democrat-for-state-senate",
-        "label": "Maine Public profile"
-      }
-    ]
-  },
-  {
-    "jurisdiction": "portland",
-    "slug": "sd-28-democratic",
+"meta": "Incumbent · Assistant Majority Leader · First Black woman in Maine Senate (elected 2022) · Committees: Government Oversight, Veterans &amp; Legal Affairs, Senate Rules · <a href=\"https://legislature.maine.gov/district27\">Maine Legislature</a>",
+             "primaryContent": [
+               {
+                 "issue": "Blue Economy",
+                 "text": "Established the Blue Economy Task Force. Marine economy, working waterfronts, marine science. Maine's coastline is the state's most distinctive economic asset."
+               },
+               {
+                 "issue": "Tenant Rights",
+                 "text": "Co-sponsor of tenant protection legislation. Portland's vacancy rate and rents are the highest in the state."
+               },
+               {
+                 "issue": "CMP Controversy",
+                 "text": "Past CMP lobbyist — has been a target of criticism from climate groups for this. Says she no longer lobbies for them."
+               },
+               {
+                 "issue": "Wabanaki Sovereignty",
+                 "text": "Publicly supports Wabanaki self-determination and restoring tribal sovereignty."
+               }
+             ],
+             "secondaryContent": [
+               {
+                 "heading": "Background",
+                 "text": "First Black woman elected to the Maine Senate (2022). Former Portland city councilor. Assistant Majority Leader. Lives in Portland."
+               },
+               {
+                 "heading": "Endorsements",
+                 "text": "Maine AFL-CIO, Maine Education Association, environmental groups."
+               }
+             ]
+           }
+         ]
+       }
+     ],
+     "sourcesMain": [
+       {
+         "url": "https://legislature.maine.gov/district27",
+         "label": "Maine Legislature — SD 27"
+       },
+       {
+         "url": "https://themainemonitor.org/maine-state-senate-district-27/",
+         "label": "Maine Monitor — SD 27"
+       }
+     ]
+   },
+   {
+     "jurisdiction": "portland",
+     "slug": "sd-28-democratic",
     "title": "State Senate District 28 — Democratic Primary",
     "office": "State Senate District 28",
     "officeDesc": "One of 35 senators in Augusta. Portland's northern Senate district (Bayside, East Bayside, downtown, the West End). Two-year term. Covers some of Portland's densest and most diverse neighborhoods.",
@@ -1948,7 +1948,7 @@ module.exports = [
           {
             "name": "Rachel Talbot Ross",
             "tag": "d",
-            "meta": "Incumbent · Former Maine House Speaker (first Black Speaker) · Committees: Judiciary · <a href=\"https://legislature.maine.gov/District28\">Maine Legislature</a>",
+            "meta": "Incumbent · Former Maine House Speaker (first Black Speaker) · Committees: Judiciary · <a href=\"https://legislature.maine.gov/district28\">Maine Legislature</a>",
             "primaryContent": [
               {
                 "issue": "Racial Impact Assessments",
@@ -1983,12 +1983,12 @@ module.exports = [
     ],
     "sourcesMain": [
       {
-        "url": "https://legislature.maine.gov/District28",
-        "label": "Maine Legislature"
+        "url": "https://legislature.maine.gov/district28",
+        "label": "Maine Legislature — SD 28"
       },
       {
-        "url": "https://www.mainepublic.org/politics/2026-04-19/your-vote-2026-profile-rachel-talbot-ross-democrat-for-state-senate",
-        "label": "Maine Public profile"
+        "url": "https://themainemonitor.org/maine-state-senate-district-28/",
+        "label": "Maine Monitor — SD 28"
       }
     ]
   },
@@ -2007,7 +2007,7 @@ module.exports = [
           {
             "name": "Andrew Zarro",
             "tag": "d",
-            "meta": "Open seat · Former Portland City Councilor District 4 (2018-2023) · Bicycle Coalition of Maine Executive Director since Jan 2025 · 2023 Portland mayoral runner-up · <a href=\"https://www.zarroforportland.com/\">Campaign website</a>",
+            "meta": "Open seat · Former Portland City Councilor District 4 (2020-2023) · Bicycle Coalition of Maine Executive Director since Jan 2025 · 2023 Portland mayoral runner-up",
             "primaryContent": [
               {
                 "issue": "Housing",
@@ -2025,7 +2025,7 @@ module.exports = [
             "secondaryContent": [
               {
                 "heading": "Background",
-                "text": "First run for state office. Former Portland City Councilor (2018-2023). 2023 mayoral candidate (runner-up to Mark Dion). Bicycle Coalition of Maine ED."
+                "text": "First run for state office. Former Portland City Councilor (2020-2023). 2023 mayoral candidate (runner-up to Mark Dion). Bicycle Coalition of Maine ED."
               }
             ]
           }
@@ -2034,12 +2034,12 @@ module.exports = [
     ],
     "sourcesMain": [
       {
-        "url": "https://www.zarroforportland.com/",
-        "label": "Zarro campaign"
+        "url": "https://thetownsman.org/people-want-a-vision-andrew-zarros-policy-matters-interview/",
+        "label": "Portland Townsman — Zarro interview"
       },
       {
-        "url": "https://www.mainepublic.org/politics/2026-05-01/your-vote-2026-profile-andrew-zarro-democrat-for-house-district-115",
-        "label": "Maine Public profile"
+        "url": "https://ballotpedia.org/Maine_House_of_Representatives_District_115",
+        "label": "Ballotpedia — HD 115"
       }
     ]
   },
@@ -2058,7 +2058,7 @@ module.exports = [
           {
             "name": "Samuel Zager",
             "tag": "d",
-            "meta": "Incumbent · Family physician · Maine Academy of Family Physicians board member · Oxford MPhil · 11 years uniform service · <a href=\"https://legislature.maine.gov/District116\">Maine Legislature</a>",
+            "meta": "Incumbent · Family physician · Maine Academy of Family Physicians board member · Oxford MPhil · 11 years uniform service · <a href=\"https://legislature.maine.gov/house/house/MemberProfiles/Details/1418\">Maine Legislature</a>",
             "primaryContent": [
               {
                 "issue": "Health Equity",
@@ -2085,12 +2085,12 @@ module.exports = [
     ],
     "sourcesMain": [
       {
-        "url": "https://legislature.maine.gov/District116",
-        "label": "Maine Legislature"
+        "url": "https://legislature.maine.gov/house/house/MemberProfiles/Details/1418",
+        "label": "Maine Legislature — Rep. Zager"
       },
       {
-        "url": "https://www.mainepublic.org/politics/2026-05-01/your-vote-2026-profile-samuel-zager-democrat-for-house-district-116",
-        "label": "Maine Public profile"
+        "url": "https://themainemonitor.org/maine-state-house-district-116/",
+        "label": "Maine Monitor — HD 116"
       }
     ]
   },
@@ -2109,7 +2109,7 @@ module.exports = [
           {
             "name": "Matthew Moonen",
             "tag": "d",
-            "meta": "Incumbent · Former House Majority Leader (2018-2020) · Committees: Energy, Utilities &amp; Technology · <a href=\"https://legislature.maine.gov/District117\">Maine Legislature</a>",
+            "meta": "Incumbent · Former House Majority Leader (2018-2020) · Committees: Energy, Utilities &amp; Technology · <a href=\"https://legislature.maine.gov/house/house/MemberProfiles/Details/118\">Maine Legislature</a>",
             "primaryContent": [
               {
                 "issue": "Climate",
@@ -2136,12 +2136,12 @@ module.exports = [
     ],
     "sourcesMain": [
       {
-        "url": "https://legislature.maine.gov/District117",
-        "label": "Maine Legislature"
+        "url": "https://legislature.maine.gov/house/house/MemberProfiles/Details/118",
+        "label": "Maine Legislature — Rep. Moonen"
       },
       {
-        "url": "https://www.mainepublic.org/politics/2026-05-01/your-vote-2026-profile-matthew-moonen-democrat-for-house-district-117",
-        "label": "Maine Public profile"
+        "url": "https://themainemonitor.org/maine-state-house-district-117/",
+        "label": "Maine Monitor — HD 117"
       }
     ]
   },
@@ -2207,7 +2207,7 @@ module.exports = [
           {
             "name": "Michael Dixon",
             "tag": "d",
-            "meta": "Open seat · Portland attorney 15+ years · Maine Guardian Ad Litem Review Board member · Juvenile defense, school discipline, child welfare · <a href=\"https://www.michaeldixonforhd119.com/\">Campaign website</a>",
+            "meta": "Open seat · Portland attorney 15+ years · Maine Guardian Ad Litem Review Board member · Juvenile defense, school discipline, child welfare",
             "primaryContent": [
               {
                 "issue": "Child Welfare",
@@ -2234,8 +2234,12 @@ module.exports = [
     ],
     "sourcesMain": [
       {
-        "url": "https://www.michaeldixonforhd119.com/",
-        "label": "Dixon campaign"
+        "url": "https://www.mebaroverseers.org/gal_review_board/index.html",
+        "label": "Maine GAL Review Board — Michael Dixon, Esq."
+      },
+      {
+        "url": "https://ballotpedia.org/Maine_House_of_Representatives_District_119",
+        "label": "Ballotpedia — HD 119"
       }
     ]
   },
@@ -2426,11 +2430,11 @@ module.exports = [
           {
             "name": "Kenneth Cianchette",
             "tag": "r",
-            "meta": "Windham business owner · Erik's Church restaurant owner · Diamond family endorsement · <a href=\"https://www.facebook.com/profile.php?id=100087XXXXXX\">Facebook</a>",
+            "meta": "Windham business owner · Erik's Church restaurant owner · Diamond family endorsement · <a href=\"https://www.kennyforsenate.com/\">Campaign website</a>",
             "primaryContent": [
               {
                 "issue": "Tax Cuts",
-                "text": "Eliminate income tax on first $75K. Reduce state spending."
+                "text": "Eliminate income tax for all working Mainers. Increase homestead exemption to $500K."
               },
               {
                 "issue": "Fiscal Conservative",
@@ -2444,14 +2448,14 @@ module.exports = [
             "secondaryContent": [
               {
                 "heading": "Background",
-                "text": "Windham business owner. Owner of Erik's Church restaurant. Endorsed by the Diamond family (prominent Maine GOP donors). Self-styled \"fighter.\""
+                "text": "Windham business owner. Owner of Erik's Church restaurant. Endorsed by the Diamond family. University of Maine economics degree. Self-styled \"fighter.\""
               }
             ]
           },
           {
             "name": "Peter Violette",
             "tag": "r",
-            "meta": "Windham LCSW · Senior-care business owner · U.S. Term Limits pledge signer · <a href=\"https://www.peterforMaine.com/\">Campaign website</a>",
+            "meta": "Windham LCSW · U.S. Term Limits pledge signer",
             "primaryContent": [
               {
                 "issue": "Foster Care Reform",
@@ -2463,13 +2467,13 @@ module.exports = [
               },
               {
                 "issue": "Term Limits",
-                "text": "Signed U.S. Term Limits pledge. Cap Senate at 12 years, House at 6."
+                "text": "Signed U.S. Term Limits pledge."
               }
             ],
             "secondaryContent": [
               {
                 "heading": "Background",
-                "text": "Licensed Clinical Social Worker. Senior-care business owner. Windham resident. Self-styled \"collaborator.\" Cross-endorsed by fiscal conservative and libertarian-leaning Maine Republicans."
+                "text": "Licensed Clinical Social Worker. Windham resident. Self-styled \"collaborator.\" Endorsed by fiscal conservative and libertarian-leaning Maine Republicans."
               }
             ]
           }
@@ -2478,12 +2482,12 @@ module.exports = [
     ],
     "sourcesMain": [
       {
-        "url": "https://www.pressherald.com/2026/05/15/westbrook-windham-state-senate-republican-primary-2026",
-        "label": "Portland Press Herald — SD 26 R primary"
+        "url": "https://mainemorningstar.com/2026/06/01/several-republican-primaries-could-be-consequential-for-control-of-the-maine-legislature/",
+        "label": "Maine Morning Star — SD 26 R primary"
       },
       {
-        "url": "https://www.mainepublic.org/politics/2026-05-10/your-vote-2026-westbrook-state-senate-26-republican-primary",
-        "label": "Maine Public"
+        "url": "https://ballotpedia.org/Maine_State_Senate_District_26",
+        "label": "Ballotpedia — SD 26"
       }
     ]
   },
@@ -2707,7 +2711,7 @@ module.exports = [
           {
             "name": "Sigrid Olson",
             "tag": "d",
-            "meta": "First-time candidate · Cape Elizabeth · USM MPPM · Swarthmore econ · Tepper MBA · <a href=\"https://www.olsonforcounty.com/\">Campaign website</a>",
+            "meta": "First-time candidate · Cape Elizabeth · USM MPPM · Swarthmore econ · Tepper MBA · <a href=\"https://sigridforcumberland.wordpress.com/\">Campaign website</a>",
             "primaryContent": [
               {
                 "issue": "Government Effectiveness",
@@ -2734,12 +2738,12 @@ module.exports = [
     ],
     "sourcesMain": [
       {
-        "url": "https://www.pressherald.com/2026/04/22/cumberland-county-ice-jail-contract-vote",
-        "label": "Press Herald — ICE jail contract vote"
+        "url": "https://www.pressherald.com/voter-guide/candidates/sigrid-a-olson-cc-4/",
+        "label": "Press Herald voter guide — CC D4"
       },
       {
-        "url": "https://www.mainepublic.org/politics/2026-05-15/your-vote-2026-cumberland-county-commissioner-district-4",
-        "label": "Maine Public"
+        "url": "https://www.pressherald.com/2026/04/22/cumberland-county-ice-jail-contract-vote",
+        "label": "Press Herald — ICE vote"
       }
     ]
   },
@@ -7271,7 +7275,7 @@ module.exports = [
           {
             "name": "Sigrid Olson",
             "tag": "d",
-            "meta": "First-time candidate · Cape Elizabeth · USM MPPM · Swarthmore econ · Tepper MBA · <a href=\"https://www.olsonforcounty.com/\">Campaign website</a>",
+            "meta": "First-time candidate · Cape Elizabeth · USM MPPM · Swarthmore econ · Tepper MBA · <a href=\"https://sigridforcumberland.wordpress.com/\">Campaign website</a>",
             "primaryContent": [
               {
                 "issue": "Government Effectiveness",
@@ -7298,12 +7302,12 @@ module.exports = [
     ],
     "sourcesMain": [
       {
-        "url": "https://www.pressherald.com/2026/04/22/cumberland-county-ice-jail-contract-vote",
-        "label": "Press Herald — ICE jail contract vote"
+        "url": "https://www.pressherald.com/voter-guide/candidates/sigrid-a-olson-cc-4/",
+        "label": "Press Herald voter guide — CC D4"
       },
       {
-        "url": "https://www.mainepublic.org/politics/2026-05-15/your-vote-2026-cumberland-county-commissioner-district-4",
-        "label": "Maine Public"
+        "url": "https://www.pressherald.com/2026/04/22/cumberland-county-ice-jail-contract-vote",
+        "label": "Press Herald — ICE vote"
       }
     ]
   },
@@ -7347,7 +7351,7 @@ module.exports = [
           {
             "name": "Sigrid Olson",
             "tag": "d",
-            "meta": "First-time candidate · Cape Elizabeth · USM MPPM · Swarthmore econ · Tepper MBA · <a href=\"https://www.olsonforcounty.com/\">Campaign website</a>",
+            "meta": "First-time candidate · Cape Elizabeth · USM MPPM · Swarthmore econ · Tepper MBA · <a href=\"https://sigridforcumberland.wordpress.com/\">Campaign website</a>",
             "primaryContent": [
               {
                 "issue": "Government Effectiveness",
@@ -7374,12 +7378,12 @@ module.exports = [
     ],
     "sourcesMain": [
       {
-        "url": "https://www.pressherald.com/2026/04/22/cumberland-county-ice-jail-contract-vote",
-        "label": "Press Herald — ICE jail contract vote"
+        "url": "https://www.pressherald.com/voter-guide/candidates/sigrid-a-olson-cc-4/",
+        "label": "Press Herald voter guide — CC D4"
       },
       {
-        "url": "https://www.mainepublic.org/politics/2026-05-15/your-vote-2026-cumberland-county-commissioner-district-4",
-        "label": "Maine Public"
+        "url": "https://www.pressherald.com/2026/04/22/cumberland-county-ice-jail-contract-vote",
+        "label": "Press Herald — ICE vote"
       }
     ]
   },
@@ -7398,7 +7402,7 @@ module.exports = [
           {
             "name": "Jill Duson",
             "tag": "d",
-            "meta": "Incumbent · Assistant Majority Leader · First Black woman in Maine Senate (elected 2022) · Committees: Government Oversight, Veterans &amp; Legal Affairs, Senate Rules · <a href=\"https://legislature.maine.gov/District27\">Maine Legislature</a>",
+            "meta": "Incumbent · Assistant Majority Leader · First Black woman in Maine Senate (elected 2022) · Committees: Government Oversight, Veterans &amp; Legal Affairs, Senate Rules · <a href=\"https://legislature.maine.gov/district27\">Maine Legislature</a>",
             "primaryContent": [
               {
                 "issue": "Blue Economy",
@@ -7433,12 +7437,12 @@ module.exports = [
     ],
     "sourcesMain": [
       {
-        "url": "https://legislature.maine.gov/District27",
-        "label": "Maine Legislature"
+        "url": "https://legislature.maine.gov/district27",
+        "label": "Maine Legislature — SD 27"
       },
       {
-        "url": "https://www.mainepublic.org/politics/2026-04-20/your-vote-2026-profile-jill-duson-democrat-for-state-senate",
-        "label": "Maine Public profile"
+        "url": "https://themainemonitor.org/maine-state-senate-district-27/",
+        "label": "Maine Monitor — SD 27"
       }
     ]
   },
