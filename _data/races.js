@@ -2742,7 +2742,7 @@ module.exports = [
         "label": "Press Herald voter guide — CC D4"
       },
       {
-        "url": "https://www.pressherald.com/2026/04/22/cumberland-county-ice-jail-contract-vote",
+        "url": "https://www.pressherald.com/2026/04/22/cumberland-county-officials-vote-to-remove-ice-from-jail-contract-with-feds/",
         "label": "Press Herald — ICE vote"
       }
     ]
@@ -7306,7 +7306,7 @@ module.exports = [
         "label": "Press Herald voter guide — CC D4"
       },
       {
-        "url": "https://www.pressherald.com/2026/04/22/cumberland-county-ice-jail-contract-vote",
+        "url": "https://www.pressherald.com/2026/04/22/cumberland-county-officials-vote-to-remove-ice-from-jail-contract-with-feds/",
         "label": "Press Herald — ICE vote"
       }
     ]
@@ -7382,7 +7382,7 @@ module.exports = [
         "label": "Press Herald voter guide — CC D4"
       },
       {
-        "url": "https://www.pressherald.com/2026/04/22/cumberland-county-ice-jail-contract-vote",
+        "url": "https://www.pressherald.com/2026/04/22/cumberland-county-officials-vote-to-remove-ice-from-jail-contract-with-feds/",
         "label": "Press Herald — ICE vote"
       }
     ]
