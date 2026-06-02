@@ -8,8 +8,27 @@ log()  { printf "  %s\n" "$*"; }
 err()  { printf "  ❌ %s\n" "$*"; }
 info() { printf "  → %s\n" "$*"; }
 
-# --- Find staged files to check ---
+# --- Find staged files to check (respecting .urlignore) ---
 staged=$(git diff --cached --name-only --diff-filter=ACMR | grep -E '\.(md|njk|html|js|yml)$' || true)
+
+ignore_file=".urlignore"
+if [ -f "$ignore_file" ] && [ -n "$staged" ]; then
+  patterns=$(grep -v '^\s*#' "$ignore_file" | grep -v '^\s*$' || true)
+  if [ -n "$patterns" ]; then
+    filtered=""
+    while IFS= read -r f; do
+      skip=0
+      while IFS= read -r pat; do
+        if [[ "$f" == "$pat" ]]; then
+          skip=1
+          break
+        fi
+      done <<< "$patterns"
+      [ "$skip" -eq 0 ] && filtered="$filtered$f"$'\n'
+    done <<< "$staged"
+    staged=$(echo -n "$filtered" | grep -E '\.(md|njk|html|js|yml)$' || true)
+  fi
+fi
 
 if [ -z "$staged" ]; then
   info "No staged files with URLs to check."
