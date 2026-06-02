@@ -8,6 +8,10 @@ pagination:
   alias: jurisdiction
 ---
 
+{% set effJurIds = jurisdiction.id | effectiveJurisdictionIds(geography, jurisdictions) %}
+{% set effRaces = races | filterByJurisdictions(effJurIds) %}
+{% set effBallots = ballotQuestions | filterBallotQuestionsByJurisdictions(effJurIds) %}
+
 <nav class="breadcrumb" aria-label="Breadcrumb">
   <a href="{{ '/' | url }}">Home</a> &rsaquo; {{ jurisdiction.name }}
 </nav>
@@ -29,15 +33,15 @@ pagination:
 ## Democratic Primary Ballot
 
 <div class="race-grid">
-{% for r in races %}
-{% if r.jurisdiction == jurisdiction.slug and "democratic" in r.slug %}
+{% for r in effRaces %}
+{% if "democratic" in r.slug %}
   {% set contested = false %}
   {% for p in r.parties %}
     {% if p.candidates and (p.candidates | length) > 1 %}
       {% set contested = true %}
     {% endif %}
   {% endfor %}
-  <a href="/{{ jurisdiction.slug }}/races/{{ r.slug }}/" class="race-card">
+  <a href="/{{ r.jurisdiction }}/races/{{ r.slug }}/" class="race-card">
     <span class="card-tag partisan">{{ r.office }}</span>
     <span class="card-tag {% if contested %}contested{% else %}uncontested{% endif %}">{% if contested %}Contested{% else %}Uncontested{% endif %}</span>
     <h2>{{ r.title }}</h2>
@@ -50,15 +54,15 @@ pagination:
 ## Republican Primary Ballot
 
 <div class="race-grid">
-{% for r in races %}
-{% if r.jurisdiction == jurisdiction.slug and "republican" in r.slug %}
+{% for r in effRaces %}
+{% if "republican" in r.slug %}
   {% set contested = false %}
   {% for p in r.parties %}
     {% if p.candidates and (p.candidates | length) > 1 %}
       {% set contested = true %}
     {% endif %}
   {% endfor %}
-  <a href="/{{ jurisdiction.slug }}/races/{{ r.slug }}/" class="race-card">
+  <a href="/{{ r.jurisdiction }}/races/{{ r.slug }}/" class="race-card">
     <span class="card-tag partisan">{{ r.office }}</span>
     <span class="card-tag {% if contested %}contested{% else %}uncontested{% endif %}">{% if contested %}Contested{% else %}Uncontested{% endif %}</span>
     <h2>{{ r.title }}</h2>
@@ -71,22 +75,20 @@ pagination:
 ## All Voters
 
 <div class="race-grid">
-{% for r in races %}
-{% if r.jurisdiction == jurisdiction.slug and "democratic" not in r.slug and "republican" not in r.slug %}
-  <a href="/{{ jurisdiction.slug }}/races/{{ r.slug }}/" class="race-card">
+{% for r in effRaces %}
+{% if "democratic" not in r.slug and "republican" not in r.slug %}
+  <a href="/{{ r.jurisdiction }}/races/{{ r.slug }}/" class="race-card">
     <span class="card-tag referendum">{{ r.office }}</span>
     <h2>{{ r.title }}</h2>
     <p class="card-sub">{{ r.voting }}</p>
   </a>
 {% endif %}
 {% endfor %}
-{% for b in ballotQuestions %}
-{% if b.jurisdiction == jurisdiction.slug %}
+{% for b in effBallots %}
   <a href="{{ b.url }}" class="race-card">
     <span class="card-tag referendum">{{ b.office }}</span>
     <h2>{{ b.title }}</h2>
     <p class="card-sub">{{ b.voting }}</p>
   </a>
-{% endif %}
 {% endfor %}
 </div>

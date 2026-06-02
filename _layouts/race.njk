@@ -5,6 +5,10 @@ eleventyComputed:
   title: "{{ race.title }}"
 ---
 
+{% set raceOffice = race.office | officeSlugFromTitle | resolveOffice(offices) %}
+{% set raceSources = race | collectSources(sources) %}
+{% set crossPartyRace = race | findCrossPartyRace(races) %}
+
 <nav class="breadcrumb" aria-label="Breadcrumb">
   <a href="{{ '/' | url }}">Home</a> &rsaquo; <a href="/{{ race.jurisdiction }}/">{{ (jurisdictions | find(race.jurisdiction)).name or race.jurisdiction }}</a> &rsaquo; {{ race.title }}
 </nav>
@@ -14,10 +18,11 @@ eleventyComputed:
 </div>
 
 <p>{{ race.voting }}</p>
-{% if race.officeDesc %}<p><strong>What a {{ race.office }} does</strong>: {{ race.officeDesc | safe }}</p>{% endif %}
+{% if raceOffice %}<p><strong>What a {{ raceOffice.officerTitle }} does</strong>: {{ raceOffice.officeDesc | safe }}</p>{% elif race.officeDesc %}<p><strong>What a {{ race.office }} does</strong>: {{ race.officeDesc | safe }}</p>{% endif %}
 {% if race.context %}<p><strong>Context</strong>: {{ race.context | safe }}</p>{% endif %}
 
 {% for party in race.parties %}
+  {% set resolvedParty = party.party | resolveParty(parties) %}
   {% for sec in party.raceWideSecondary %}
     <div class="race-wide-box">
       <h3>{{ sec.heading }}</h3>
@@ -45,7 +50,7 @@ eleventyComputed:
             <span class="party-tag {{ t }}">{{ t | capitalize }}</span>
           {% endfor %}
           <span class="party-tag {{ candidate.tag }}">
-            {% if candidate.tag == "d" %}Democrat{% elif candidate.tag == "r" %}Republican{% else %}{{ candidate.tag }}{% endif %}
+            {% if resolvedParty %}{{ resolvedParty.shortName }}{% elif candidate.tag == "d" %}Democrat{% elif candidate.tag == "r" %}Republican{% else %}{{ candidate.tag }}{% endif %}
           </span>
         </div>
 
@@ -54,8 +59,9 @@ eleventyComputed:
         {% if candidate.primaryContent and candidate.primaryContent | length %}
           <h3>Platform</h3>
           {% for pos in candidate.primaryContent %}
+            {% set resolvedIssue = pos.issue | resolveIssue(issues) %}
             <div class="position">
-              {% if pos.issue %}<div class="issue-label">{{ pos.issue }}</div>{% endif %}
+              {% if resolvedIssue %}<div class="issue-label">{{ resolvedIssue.label }}</div>{% elif pos.issue %}<div class="issue-label">{{ pos.issue }}</div>{% endif %}
               <div class="issue-text">{{ pos.text | safe }}</div>
               {% if pos.sourceUrl %}
                 <div class="source-ref"><a href="{{ pos.sourceUrl }}">{{ pos.sourceLabel if pos.sourceLabel else pos.sourceUrl }}</a></div>
@@ -102,7 +108,34 @@ eleventyComputed:
     </table>
   {% endif %}
 
-  {% if party.crossPartyPreview and party.crossPartyPreview | length %}
+  {% if crossPartyRace and crossPartyRace.parties %}
+    {% set cppParty = crossPartyRace.parties[0] %}
+    <hr>
+    <h2>Who You'd Face in November</h2>
+    <div class="callout">
+      <p><strong>Note:</strong> You vote in only one primary. The {% if resolvedParty %}{% set oppParty = (crossPartyRace.parties[0].party | resolveParty(parties)) %}{% if oppParty %}{{ oppParty.shortName }}{% else %}opposing{% endif %}{% else %}opposing{% endif %} field is shown below so you can evaluate how this primary's candidates match up in the general election.</p>
+    </div>
+    {% for opp in cppParty.candidates %}
+      <div class="candidate-card">
+        <div class="candidate-head">
+          <h3 style="margin:0">{{ opp.name }}</h3>
+          {% set oppPartyObj = cppParty.party | resolveParty(parties) %}
+          <span class="party-tag {{ opp.tag }}">{% if oppPartyObj %}{{ oppPartyObj.shortName }}{% else %}{{ opp.party }}{% endif %}</span>
+        </div>
+        {% if opp.meta %}<div class="candidate-meta">{{ opp.meta | safe }}</div>{% endif %}
+        {% for pos in opp.primaryContent %}
+          {% set resolvedIssue = pos.issue | resolveIssue(issues) %}
+          <div class="position">
+            {% if resolvedIssue %}<div class="issue-label">{{ resolvedIssue.label }}</div>{% elif pos.issue %}<div class="issue-label">{{ pos.issue }}</div>{% endif %}
+            <div class="issue-text">{{ pos.text | safe }}</div>
+            {% if pos.sourceUrl %}
+              <div class="source-ref"><a href="{{ pos.sourceUrl }}">{{ pos.sourceLabel if pos.sourceLabel else pos.sourceUrl }}</a></div>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    {% endfor %}
+  {% elif party.crossPartyPreview and party.crossPartyPreview | length %}
     <hr>
     <h2>Who You'd Face in November</h2>
     <div class="callout">
@@ -116,8 +149,9 @@ eleventyComputed:
         </div>
         {% if opp.meta %}<div class="candidate-meta">{{ opp.meta | safe }}</div>{% endif %}
         {% for pos in opp.primaryContent %}
+          {% set resolvedIssue = pos.issue | resolveIssue(issues) %}
           <div class="position">
-            {% if pos.issue %}<div class="issue-label">{{ pos.issue }}</div>{% endif %}
+            {% if resolvedIssue %}<div class="issue-label">{{ resolvedIssue.label }}</div>{% elif pos.issue %}<div class="issue-label">{{ pos.issue }}</div>{% endif %}
             <div class="issue-text">{{ pos.text | safe }}</div>
             {% if pos.sourceUrl %}
               <div class="source-ref"><a href="{{ pos.sourceUrl }}">{{ pos.sourceLabel if pos.sourceLabel else pos.sourceUrl }}</a></div>
@@ -129,7 +163,15 @@ eleventyComputed:
   {% endif %}
 {% endfor %}
 
-{% if race.sourcesMain and race.sourcesMain | length %}
+{% if raceSources | length %}
+  <hr>
+  <h3>Sources</h3>
+  <p>
+    {% for s in raceSources %}
+      <a href="{{ s.url }}">{{ s.label }}</a>{% if not loop.last %} · {% endif %}
+    {% endfor %}
+  </p>
+{% elif race.sourcesMain and race.sourcesMain | length %}
   <hr>
   <h3>Sources</h3>
   <p>
