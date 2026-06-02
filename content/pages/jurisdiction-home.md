@@ -8,6 +8,10 @@ pagination:
   alias: jurisdiction
 ---
 
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <a href="{{ '/' | url }}">Home</a> &rsaquo; {{ jurisdiction.name }}
+</nav>
+
 <div class="hero">
   <div class="date-badge">June 9, 2026</div>
   <h1>{{ jurisdiction.name }} Voter Guide</h1>

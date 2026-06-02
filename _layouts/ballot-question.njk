@@ -4,7 +4,7 @@ templateEngineOverride: njk,md
 ---
 
 <nav class="breadcrumb" aria-label="Breadcrumb">
-  <a href="{{ '/' | url }}">Home</a> &raquo; {{ title }}
+  <a href="{{ '/' | url }}">Home</a> &rsaquo; <a href="/{{ (ballotQuestions | findBallotQuestion(page.fileSlug)).jurisdiction }}/">{{ (jurisdictions | find((ballotQuestions | findBallotQuestion(page.fileSlug)).jurisdiction)).name or (ballotQuestions | findBallotQuestion(page.fileSlug)).jurisdiction }}</a> &rsaquo; {{ title }}
 </nav>
 
 <div class="race-header">

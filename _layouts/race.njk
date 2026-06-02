@@ -6,7 +6,7 @@ eleventyComputed:
 ---
 
 <nav class="breadcrumb" aria-label="Breadcrumb">
-  <a href="{{ '/' | url }}">Home</a> &raquo; {{ race.title }}
+  <a href="{{ '/' | url }}">Home</a> &rsaquo; <a href="/{{ race.jurisdiction }}/">{{ (jurisdictions | find(race.jurisdiction)).name or race.jurisdiction }}</a> &rsaquo; {{ race.title }}
 </nav>
 
 <div class="race-header">
