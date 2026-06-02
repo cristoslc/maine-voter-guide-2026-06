@@ -38,7 +38,8 @@ Agent-specific detail lives in `.agents/agents-md-detail/`:
 Any plan document written to `docs/plans/` (e.g., architecture changes, methodology drafts, attribution policies) **requires explicit user approval** before implementation. The agent must:
 
 1. Write the plan and save it to `docs/plans/`
-2. **Wait for the user to review and approve**
-3. Only then execute the planned changes
+2. **Use the `question` tool to request explicit approval** from the user, presenting the plan and a clear approval question
+3. **Wait for the user's response** — only proceed if the user explicitly grants approval
+4. Only then execute the planned changes
 
 Approval must come from the user, not from any automated or plugin-based system. Do not self-approve or skip the review step.
