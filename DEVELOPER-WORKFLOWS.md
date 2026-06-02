@@ -83,12 +83,23 @@ Output goes to `_site/` (or equivalent based on SSG choice).
 # Lint content and templates
 npm run lint
 
-# Check links
+# Check links (built site)
 npm run test:links
+
+# Check URLs in staged files (pre-commit hook)
+npm run test:urls
 
 # Full test suite
 npm test
 ```
+
+### URL Verification (Pre-commit Hook)
+
+A pre-commit hook at `.githooks/pre-commit` automatically checks all URLs in staged files (`md`, `njk`, `html`, `js`, `yml`) using `playwright-cli`. On failure it prints the broken URL, file location, and a warning that cited information may be inaccurate.
+
+The hook activates on `npm install` via `postinstall`. Requires `playwright-cli` and `jq` on `PATH`. Bypass with `git commit --no-verify` for known-temporary failures.
+
+Manual run: `npm run test:urls` or `bash .githooks/pre-commit`.
 
 ## Deploy
 
@@ -113,3 +124,4 @@ npm run deploy
 - `docs/developer-workflows/setup.md` — Environment setup, prerequisites
 - `docs/developer-workflows/content-pipeline.md` — How content flows from data to published page
 - `docs/developer-workflows/ci-cd.md` — Pipeline configuration
+- `docs/developer-workflows/url-verification.md` — URL check hook design and manual audit report
