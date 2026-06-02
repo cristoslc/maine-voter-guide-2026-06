@@ -208,8 +208,12 @@ module.exports = [
 
 Extract distinct `{ sourceUrl, sourceLabel }` pairs from every `primaryContent[].sourceUrl` + `primaryContent[].sourceLabel` across all races. Assign each deduplicated URL a unique `id`, find all races and candidates that reference it.
 
+**`summary` field:** Required (1-3 sentences). Cannot be auto-extracted from position data — must be hand-written by the agent during content authoring. The extraction script should emit a placeholder `"TODO: write summary"` for each new source to be filled before the page goes live.
+
+**`sourceUrl` inline rendering preserved:** During Phase 4, the inline `sourceUrl` + `sourceLabel` per position is replaced with `sourceId[]` references. The template resolves these the same way — each position still shows its source label + link inline. The bibliography at the bottom of the page uses the full Source object (including `summary`).
+
 ```js
-const sources = new Map();  // url → { id, url, label, races: Set, candidates: Set }
+const sources = new Map();  // url → { id, url, label, summary, races: Set, candidates: Set }
 races.forEach(race => {
   race.parties.forEach(party => {
     party.candidates.forEach(candidate => {
@@ -237,3 +241,59 @@ races.forEach(race => {
 ### `_data/ballotQuestions.js` → update
 
 Replace inline `sourceUrl` + `sourceLabel` on ballot questions with `sourceIds[]` referencing `sources.js`.
+
+### `_layouts/race.njk` → update (bibliography)
+
+Replace the current inline `sourcesMain` / `sourcesSidebar` blocks at the bottom of `race.njk` with a **bibliography** that:
+
+1. Collects every unique `sourceId` referenced across all `positionGroups[].primaryContent[].sourceIds` and `positionGroups[].secondaryContent[].sourceIds`
+2. Resolves each `sourceId` to its full Source object
+3. Renders a numbered bibliography: `[label](url)` followed by `summary` on its own line
+4. Inline position citations are preserved (label + link per position using resolved Source object)
+
+```njk
+{# Collect unique sources referenced on this page #}
+{% set sourceIds = [] %}
+{% for party in race.parties %}
+  {% for candidate in party.candidates %}
+    {% for pos in candidate.primaryContent %}
+      {% for sId in pos.sourceIds %}
+        {% if sId not in sourceIds %}
+          {% set sourceIds = (sourceIds.push(sId), sourceIds) %}
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+  {% endfor %}
+{% endfor %}
+
+{% if sourceIds | length %}
+  <hr>
+  <h3>Bibliography</h3>
+  <ol class="bibliography">
+    {% for sId in sourceIds %}
+      {% set source = sources | find(sId) %}
+      {% if source %}
+        <li>
+          <strong><a href="{{ source.url }}">{{ source.label }}</a></strong><br>
+          {{ source.summary }}
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ol>
+{% endif %}
+```
+
+Inline citations remain in each position block, updated to resolve `sourceId[]` → source objects:
+
+```njk
+{% if pos.sourceIds and pos.sourceIds | length %}
+  <div class="source-ref">
+    {% for sId in pos.sourceIds %}
+      {% set source = sources | find(sId) %}
+      {% if source %}
+        <a href="{{ source.url }}">{{ source.label }}</a>{% if not loop.last %}, {% endif %}
+      {% endif %}
+    {% endfor %}
+  </div>
+{% endif %}
+```

@@ -44,7 +44,7 @@ for f in $staged; do
     while (/\[([^\]]*)\]\(([^\)\s]+)\)/g) {
       my $u = $2; $u =~ s|/$||; print "$u\n" if $u =~ m{^https?://};
     }
-    while (m{(?<!\[["<])\bhttps?://[^\s\]"<>)]+}g) {
+    while (m{(?<!\[["<])\bhttps?://[^\s\]"<>)`)]+}g) {
       my $u = $&; $u =~ s|[\.\),;:]*$||; $u =~ s|/$||; print "$u\n" if $u =~ m{^https?://};
     }
     while (/(?:href|sourceUrl)[\s"'"'"']*[:=]\s*["'"'"'](https?:\/\/[^"'"'"']+)/g) {

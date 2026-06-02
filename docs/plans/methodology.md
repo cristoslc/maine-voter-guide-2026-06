@@ -22,7 +22,7 @@ A public-facing methodology statement explaining how this voter guide is researc
 Describe the actual tools and workflow:
 
 - **candidate-website-crawler**: Python script (`tools/crawl-candidates.py`) that fetches campaign platform pages, extracts text, and diffs for changes. Saves snapshots to `research/snapshots/`.
-- **research-keeper (rk)**: CLI tool at `https://github.com/cristoslc/research-keeper/` for ingesting, tagging, and querying sources.
+- **research-keeper (rk)**: CLI tool at <https://github.com/cristoslc/research-keeper/> for ingesting, tagging, and querying sources.
 - **media-summary skill**: Automated download/transcription/summarization of YouTube debates, podcasts, news articles. Output goes to `research/media-summaries/`.
 - **Upstream project pooling**: 
   - `~/projects/south-portland-school-board-review/`
@@ -30,6 +30,7 @@ Describe the actual tools and workflow:
   - `~/projects/sopo-alpr-awareness/`
 - **Web search**: Brave Search API for real-time news; `rk search`/`rk investigate` for querying existing library
 - **Manual verification**: All claims checked against at least two independent sources before publication
+- **Source summaries**: Every source in `_data/sources.js` includes a 1-3 sentence summary describing what it covers and why it's relevant. Written by the agent during content authoring.
 
 ### 3. Drafting Process
 - Each race starts with a **research spike** — focused session collecting sources
@@ -72,7 +73,7 @@ Describe the actual tools and workflow:
 
 ## Prior Art to Reference
 
-### Research-Keeper (`https://github.com/cristoslc/research-keeper/`)
+### Research-Keeper (<https://github.com/cristoslc/research-keeper/>)
 - Source ingestion: `rk add <url>` → downloads, tags, extracts text
 - Query interface: `rk search "Platner immigration"` → ranked results
 - Citation export: generates source lists in markdown

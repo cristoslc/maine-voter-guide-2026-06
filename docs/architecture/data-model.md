@@ -222,5 +222,6 @@ Every claim in voter guide content references back to its research source.
 | `source-id` | string | yes | ID in rk library |
 | `url` | URL | | Original source URL |
 | `title` | string | | Source title |
+| `summary` | string | yes | 1-3 sentence description of what the source covers and its relevance |
 | `accessed` | date | yes | When ingested |
 | `type` | enum | | `website`, `video`, `pdf`, `news-article`, `debate-transcript`, `campaign-material` |

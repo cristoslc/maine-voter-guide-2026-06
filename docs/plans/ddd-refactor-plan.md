@@ -107,6 +107,7 @@ module.exports = [
     id: "maine-morning-star-gop-debate-may-5",
     url: "https://mainemorningstar.com/2026/05/05/...",
     label: "Maine Morning Star — GOP debate, May 5",
+    summary: "Covers the Republican gubernatorial debate on May 5, detailing candidates' positions on energy policy, housing, and opposition to Bobby Charles.",
     races: ["governor-republican", "cd1-republican"],  // all races this source covers
     candidates: ["bobby-charles", "garrett-mason"],     // optional: specific candidates mentioned
     rkId: "rk:abc123",                                  // optional: link to research-keeper library
@@ -134,7 +135,11 @@ Templates resolve `sourceId` → source object to render the link. This gives us
 - Easier to generate a "Sources" section per page
 - Ability to display "sources covering this race" on race pages
 
+**Bibliography rendering:** Each race page collects every unique `sourceId` referenced across all positions, resolves each to its full Source object, and renders a formatted bibliography at the bottom. Inline citations (link + label per position) are preserved for immediate attribution. The bibliography adds: `[label](url)` followed by the `summary` on its own line. Only sources actually cited on that page appear. See `_layouts/race.njk` for the implementation.
+
 **Relationship to research-keeper (rk):** The `rk` CLI at `~/code/research-keeper/` manages the research process (ingesting, tagging, synthesizing). The `_data/sources.js` registry is the *output* of that process — the subset of rk sources that are cited in the voter guide. They don't need to be synced automatically; the content author promotes sources from rk to `_data/sources.js` when writing content.
+
+**Source summaries:** Every source must include a `summary` field (1-3 sentences) describing what the source covers and why it's relevant. Summaries are written by the agent during content authoring. They serve the bibliography rendered at the bottom of each page — see Phase 4 for the extraction workflow and `race.njk` for the bibliography template.
 
 ### Aggregate: Election
 

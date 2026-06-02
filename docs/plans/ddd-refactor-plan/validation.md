@@ -102,6 +102,9 @@ races.forEach(r => {
 
 // No orphan sources (every source referenced by at least 1 race)
 sources.every(s => s.races.length > 0)
+
+// Every source has a non-empty summary
+sources.every(s => s.summary && s.summary.trim().length > 0)
 // No orphan candidates (every candidate referenced by at least 1 race)
 candidates.every(c => c.races.length > 0)
 ```

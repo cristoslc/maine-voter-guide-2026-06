@@ -14,6 +14,7 @@
 - **Secondary sources acceptable**: Portland Press Herald, Bangor Daily News — but attribute to the publication, not as fact.
 - **No Wikipedia as sole source** for candidate positions.
 - **Dates**: Always cite the authority (e.g., "According to the Secretary of State, the deadline is…").
+- **Source summaries**: Every source cited on a page must have a non-empty `summary` field in `_data/sources.js` (1-3 sentences describing what the source covers and why it's relevant). This is the agent's responsibility — populate during content authoring.
 
 ## Style
 

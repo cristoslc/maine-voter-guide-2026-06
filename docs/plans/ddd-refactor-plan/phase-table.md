@@ -9,7 +9,7 @@ Every phase transforms `_data/` files from current structure to new structure.
 | 1 | Foundation | `races.js`, `jurisdictions.js`, `election-2026-06.yml` | `jurisdictions.js` (rewrite) | `geography.js`, `offices.js`, `parties.js`, `issues.js`, `pollingLocations.js`, `precincts.js`, `election.js` |
 | 2 | Race normalization | `races.js` (current) | `races.js` (rewrite) | — |
 | 3 | Candidate registry | `election-2026-06.yml` (candidate data), `races.js` (candidate names) | — | `candidates.js` |
-| 4 | Sources registry | `races.js`, `ballotQuestions.js` (inline sourceUrl/sourceLabel) | `races.js` (position sourceIds), `ballotQuestions.js` (sourceIds) | `sources.js` |
+| 4 | Sources registry | `races.js`, `ballotQuestions.js` (inline sourceUrl/sourceLabel) | `races.js` (position sourceIds), `ballotQuestions.js` (sourceIds) | `sources.js` (with required `summary` field) |
 | 5 | Scaffolding | All hub files, spoke dirs | Hub files (rewrite), spoke files (create missing) | 6 new spoke files |
 | 6 | Polish + testing | Built site | — | — |
 
