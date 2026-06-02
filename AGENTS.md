@@ -35,7 +35,9 @@ Agent-specific detail lives in `.agents/agents-md-detail/`:
 
 ## Pre-commit Hook: `races.js` Commits Are Slow
 
-The pre-commit hook checks every URL in staged files. When `_data/races.js` is part of a commit, it validates ~146 URLs via headless browser, which can take several minutes. Plan for 3–5 minutes of wall-clock time on commits touching that file. If URLs are intermittently unreachable (not genuinely broken), use `git commit --no-verify` after confirming the URLs are valid.
+The pre-commit hook checks every URL in staged files. When `_data/races.js` is part of a commit, it validates ~146 URLs via headless browser, which can take several minutes. Plan for 3–5 minutes of wall-clock time on commits touching that file.
+
+Many sites (Press Herald, Ballotpedia, CNN, Maine Monitor, Wikipedia, Spectrum News) block headless browsers (returning 403/timeouts) even though the URLs are valid for real users. If the pre-commit hook fails due to bot-blocking rather than genuinely broken URLs, **do not use `--no-verify`**. Instead, manually re-check the failing URLs with `curl -s -o /dev/null -w "%{http_code}" -L -A "Mozilla/5.0" --max-time 8 <url>` to confirm they return 200, then fix any that are genuinely broken (404). Only commit once all URLs are either valid or removed.
 
 ## Plans Require Explicit User Approval
 

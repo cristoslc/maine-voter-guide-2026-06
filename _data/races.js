@@ -660,7 +660,7 @@ module.exports = [
           },
           {
             "heading": "Campaign Finance",
-            "text": "<strong>King:</strong> $795K raised ($700K self-funded); $229K cash.<strong>Shah:</strong> $234K raised; $288K cash. <strong>Pingree:</strong> $420K cash on hand (leads Dems). <strong>Bellows:</strong> $367K cash. <strong>Jackson:</strong> People's Pledge (no outside money). <strong>Outside:</strong> 314 Action $650K for Shah. DGA $9M committed for general. <a href=\"https://www.bangordailynews.com/2026/05/30/politics/elections/self-funding-surges-in-the-final-stretch-of-maines-governors-primaries/\">BDN, May 30</a>"
+            "text": "<strong>King:</strong> $795K raised ($700K self-funded); $229K cash.<strong>Shah:</strong> $234K raised; $288K cash. <strong>Pingree:</strong> $420K cash on hand (leads Dems). <strong>Bellows:</strong> $367K cash. <strong>Jackson:</strong> People's Pledge (no outside money). <strong>Outside:</strong> 314 Action $650K for Shah. DGA $9M committed for general. <a href=\"https://www.bangordailynews.com/2026/05/30/politics/elections/self-funding-surges-in-the-final-stretch-of-maines-governor-primaries/\">BDN, May 30</a>"
           },
           {
             "heading": "Key Debates",
@@ -795,7 +795,7 @@ module.exports = [
         "label": "UNH Survey Center"
       },
       {
-        "url": "https://www.bangordailynews.com/2026/05/30/politics/elections/self-funding-surges-in-the-final-stretch-of-maines-governors-primaries/",
+        "url": "https://www.bangordailynews.com/2026/05/30/politics/elections/self-funding-surges-in-the-final-stretch-of-maines-governor-primaries/",
         "label": "BDN — Campaign finance, May 30"
       }
     ],
@@ -1529,7 +1529,7 @@ module.exports = [
               {
                 "issue": "Civil Legal Aid",
                 "text": "Sponsored LD 1022 to <strong>protect and increase access to civil legal services</strong> for low-income Mainers — $6.4M in FY25-26, $9.5M in FY26-27.",
-                "sourceUrl": "https://mainesenate.org/.../protect-and-increase-access-to-justice/",
+                "sourceUrl": "https://www.mainesenate.org/sen-carney-bill-to-improve-access-to-justice-signed-into-law/",
                 "sourceLabel": "Maine Senate Democrats"
               },
               {
@@ -2160,7 +2160,7 @@ module.exports = [
           {
             "name": "Yusuf Yusuf",
             "tag": "d",
-            "meta": "Incumbent · Mental health case manager · Won 2024 Democratic primary 56% to 31% over Herb Adams · Committees: Housing &amp; Economic Development · <a href=\"https://legislature.maine.gov/District118\">Maine Legislature</a>",
+            "meta": "Incumbent · Mental health case manager · Won 2024 Democratic primary 56% to 31% over Herb Adams · Committees: Housing &amp; Economic Development · <a href=\"https://legislature.maine.gov/house/house/memberprofiles/Details/3137\">Maine Legislature</a>",
             "primaryContent": [
               {
                 "issue": "Mental Health",
@@ -2187,7 +2187,7 @@ module.exports = [
     ],
     "sourcesMain": [
       {
-        "url": "https://legislature.maine.gov/District118",
+        "url": "https://legislature.maine.gov/house/house/memberprofiles/Details/3137",
         "label": "Maine Legislature"
       }
     ]
@@ -2510,7 +2510,7 @@ module.exports = [
           {
             "name": "Andrew Gattine",
             "tag": "d",
-            "meta": "Incumbent · Westbrook · Committees: Appropriations · <a href=\"https://legislature.maine.gov/District126\">Maine Legislature</a>",
+            "meta": "Incumbent · Westbrook · Committees: Appropriations · <a href=\"https://legislature.maine.gov/house/house/MemberProfiles/Details/68\">Maine Legislature</a>",
             "primaryContent": [
               {
                 "issue": "Appropriations",
@@ -2533,7 +2533,7 @@ module.exports = [
     ],
     "sourcesMain": [
       {
-        "url": "https://legislature.maine.gov/District126",
+        "url": "https://legislature.maine.gov/house/house/MemberProfiles/Details/68",
         "label": "Maine Legislature"
       }
     ]
@@ -2596,7 +2596,7 @@ module.exports = [
           {
             "name": "Morgan Rielly",
             "tag": "d",
-            "meta": "Incumbent · Westbrook · <a href=\"https://legislature.maine.gov/District127\">Maine Legislature</a>",
+            "meta": "Incumbent · Westbrook · <a href=\"https://legislature.maine.gov/house/house/MemberProfiles/Details/1414\">Maine Legislature</a>",
             "primaryContent": [
               {
                 "issue": "Aquaculture",
@@ -2623,7 +2623,7 @@ module.exports = [
     ],
     "sourcesMain": [
       {
-        "url": "https://legislature.maine.gov/District127",
+        "url": "https://legislature.maine.gov/house/house/MemberProfiles/Details/1414",
         "label": "Maine Legislature"
       }
     ]
@@ -2643,7 +2643,7 @@ module.exports = [
           {
             "name": "Suzanne Salisbury",
             "tag": "d",
-            "meta": "Incumbent · Westbrook · Committees: Education · <a href=\"https://legislature.maine.gov/District128\">Maine Legislature</a>",
+            "meta": "Incumbent · Westbrook · Committees: Education · <a href=\"https://legislature.maine.gov/house/house/MemberProfiles/Details/1415\">Maine Legislature</a>",
             "primaryContent": [
               {
                 "issue": "Education",
@@ -2670,7 +2670,7 @@ module.exports = [
     ],
     "sourcesMain": [
       {
-        "url": "https://legislature.maine.gov/District128",
+        "url": "https://legislature.maine.gov/house/house/MemberProfiles/Details/1415",
         "label": "Maine Legislature"
       }
     ]
@@ -4072,7 +4072,7 @@ module.exports = [
           },
           {
             "heading": "Campaign Finance",
-            "text": "<strong>King:</strong> $795K raised ($700K self-funded); $229K cash.<strong>Shah:</strong> $234K raised; $288K cash. <strong>Pingree:</strong> $420K cash on hand (leads Dems). <strong>Bellows:</strong> $367K cash. <strong>Jackson:</strong> People's Pledge (no outside money). <strong>Outside:</strong> 314 Action $650K for Shah. DGA $9M committed for general. <a href=\"https://www.bangordailynews.com/2026/05/30/politics/elections/self-funding-surges-in-the-final-stretch-of-maines-governors-primaries/\">BDN, May 30</a>"
+            "text": "<strong>King:</strong> $795K raised ($700K self-funded); $229K cash.<strong>Shah:</strong> $234K raised; $288K cash. <strong>Pingree:</strong> $420K cash on hand (leads Dems). <strong>Bellows:</strong> $367K cash. <strong>Jackson:</strong> People's Pledge (no outside money). <strong>Outside:</strong> 314 Action $650K for Shah. DGA $9M committed for general. <a href=\"https://www.bangordailynews.com/2026/05/30/politics/elections/self-funding-surges-in-the-final-stretch-of-maines-governor-primaries/\">BDN, May 30</a>"
           },
           {
             "heading": "Key Debates",
@@ -4207,7 +4207,7 @@ module.exports = [
         "label": "UNH Survey Center"
       },
       {
-        "url": "https://www.bangordailynews.com/2026/05/30/politics/elections/self-funding-surges-in-the-final-stretch-of-maines-governors-primaries/",
+        "url": "https://www.bangordailynews.com/2026/05/30/politics/elections/self-funding-surges-in-the-final-stretch-of-maines-governor-primaries/",
         "label": "BDN — Campaign finance, May 30"
       }
     ],
@@ -4558,7 +4558,7 @@ module.exports = [
           },
           {
             "heading": "Campaign Finance",
-            "text": "<strong>King:</strong> $795K raised ($700K self-funded); $229K cash.<strong>Shah:</strong> $234K raised; $288K cash. <strong>Pingree:</strong> $420K cash on hand (leads Dems). <strong>Bellows:</strong> $367K cash. <strong>Jackson:</strong> People's Pledge (no outside money). <strong>Outside:</strong> 314 Action $650K for Shah. DGA $9M committed for general. <a href=\"https://www.bangordailynews.com/2026/05/30/politics/elections/self-funding-surges-in-the-final-stretch-of-maines-governors-primaries/\">BDN, May 30</a>"
+            "text": "<strong>King:</strong> $795K raised ($700K self-funded); $229K cash.<strong>Shah:</strong> $234K raised; $288K cash. <strong>Pingree:</strong> $420K cash on hand (leads Dems). <strong>Bellows:</strong> $367K cash. <strong>Jackson:</strong> People's Pledge (no outside money). <strong>Outside:</strong> 314 Action $650K for Shah. DGA $9M committed for general. <a href=\"https://www.bangordailynews.com/2026/05/30/politics/elections/self-funding-surges-in-the-final-stretch-of-maines-governor-primaries/\">BDN, May 30</a>"
           },
           {
             "heading": "Key Debates",
@@ -4693,7 +4693,7 @@ module.exports = [
         "label": "UNH Survey Center"
       },
       {
-        "url": "https://www.bangordailynews.com/2026/05/30/politics/elections/self-funding-surges-in-the-final-stretch-of-maines-governors-primaries/",
+        "url": "https://www.bangordailynews.com/2026/05/30/politics/elections/self-funding-surges-in-the-final-stretch-of-maines-governor-primaries/",
         "label": "BDN — Campaign finance, May 30"
       }
     ],
@@ -5044,7 +5044,7 @@ module.exports = [
           },
           {
             "heading": "Campaign Finance",
-            "text": "<strong>King:</strong> $795K raised ($700K self-funded); $229K cash.<strong>Shah:</strong> $234K raised; $288K cash. <strong>Pingree:</strong> $420K cash on hand (leads Dems). <strong>Bellows:</strong> $367K cash. <strong>Jackson:</strong> People's Pledge (no outside money). <strong>Outside:</strong> 314 Action $650K for Shah. DGA $9M committed for general. <a href=\"https://www.bangordailynews.com/2026/05/30/politics/elections/self-funding-surges-in-the-final-stretch-of-maines-governors-primaries/\">BDN, May 30</a>"
+            "text": "<strong>King:</strong> $795K raised ($700K self-funded); $229K cash.<strong>Shah:</strong> $234K raised; $288K cash. <strong>Pingree:</strong> $420K cash on hand (leads Dems). <strong>Bellows:</strong> $367K cash. <strong>Jackson:</strong> People's Pledge (no outside money). <strong>Outside:</strong> 314 Action $650K for Shah. DGA $9M committed for general. <a href=\"https://www.bangordailynews.com/2026/05/30/politics/elections/self-funding-surges-in-the-final-stretch-of-maines-governor-primaries/\">BDN, May 30</a>"
           },
           {
             "heading": "Key Debates",
@@ -5179,7 +5179,7 @@ module.exports = [
         "label": "UNH Survey Center"
       },
       {
-        "url": "https://www.bangordailynews.com/2026/05/30/politics/elections/self-funding-surges-in-the-final-stretch-of-maines-governors-primaries/",
+        "url": "https://www.bangordailynews.com/2026/05/30/politics/elections/self-funding-surges-in-the-final-stretch-of-maines-governor-primaries/",
         "label": "BDN — Campaign finance, May 30"
       }
     ],

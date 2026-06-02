@@ -41,24 +41,39 @@ urls_file=$(mktemp /tmp/check-urls.XXXXXX)
 for f in $staged; do
   [ -f "$f" ] || continue
   perl -ne '
-    while (/\[([^\]]*)\]\(([^\)\s]+)\)/g) {
-      my $u = $2; $u =~ s|/$||; print "$u\n" if $u =~ m{^https?://};
+    # Extract URLs from href="..." and sourceUrl: "..." (handles escaped quotes)
+    while (/(?:href|sourceUrl)[\s]*[:=]\s*(?:\\"|["'"'"'])(https?:\/\/[^\\"'"'"']+)(?:\\"|["'"'"'])/g) {
+      my $u = $1; $u =~ s|\\+$||; $u =~ s|/$||; print "$u\n" if $u =~ m{^https?://};
     }
-    while (m{(?<!\[["<])\bhttps?://[^\s\]"<>)`)]+}g) {
-      my $u = $&; $u =~ s|[\.\),;:]*$||; $u =~ s|/$||; print "$u\n" if $u =~ m{^https?://};
-    }
-    while (/(?:href|sourceUrl)[\s"'"'"']*[:=]\s*["'"'"'](https?:\/\/[^"'"'"']+)/g) {
-      my $u = $1; $u =~ s|/$||; print "$u\n" if $u =~ m{^https?://};
+    # Extract bare URLs (stops at whitespace, quotes, angle brackets, parens, backticks, commas, semicolons)
+    while (m{\bhttps?://[^\s\\"'"'"'<>)`;,\]]+}g) {
+      my $u = $&; $u =~ s|\\+$||; $u =~ s|[\.\),;:]*$||; $u =~ s|/$||; print "$u\n" if $u =~ m{^https?://};
     }
   ' "$f" >> "$urls_file"
 done
 
-total=$(sort -u "$urls_file" | wc -l | tr -d ' ')
+sort -u -o "$urls_file" "$urls_file"
+
+# Remove truncated URLs: drop any URL that is a prefix of a longer URL in the set.
+# This handles bare-regex truncation at ) for URLs containing parentheses like
+# Ballotpedia_(Maine) — the full URL is always extracted by the href pattern.
+awk '
+NR == FNR { urls[NR] = $0; next }
+{
+  for (i in urls) {
+    if (index(urls[i], $0) == 1 && urls[i] != $0 && length(urls[i]) > length($0)) {
+      next  # skip truncated version
+    }
+  }
+  print
+}
+' "$urls_file" "$urls_file" > "$urls_file.dedup" && mv "$urls_file.dedup" "$urls_file"
+
+total=$(wc -l < "$urls_file" | tr -d ' ')
 if [ "$total" -eq 0 ]; then
   info "No URLs found in staged files."
   exit 0
 fi
-sort -u -o "$urls_file" "$urls_file"
 
 echo ""
 info "Checking $total URLs across $(echo "$staged" | wc -l | tr -d ' ') staged files..."
@@ -107,7 +122,7 @@ while IFS= read -r url; do
   if [[ "$code" == ERR:* ]]; then
     broken=$((broken + 1))
     broken_urls+=("$url|UNREACHABLE|${code#ERR:}")
-  elif [ "$code" = "403" ] || [ "$code" = "429" ]; then
+  elif [ "$code" = "403" ] || [ "$code" = "429" ] || [ "$code" = "999" ]; then
     ok=$((ok + 1))
   elif [ -n "$code" ] && [ "$code" -ge 200 ] 2>/dev/null && [ "$code" -lt 400 ] 2>/dev/null; then
     ok=$((ok + 1))
