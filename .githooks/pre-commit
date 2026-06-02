@@ -1,0 +1,134 @@
+#!/bin/bash
+# Pre-commit hook: verify URLs in staged files via playwright-cli
+set -euo pipefail
+
+TIMEOUT_MS=15000
+
+log()  { printf "  %s\n" "$*"; }
+err()  { printf "  ❌ %s\n" "$*"; }
+info() { printf "  → %s\n" "$*"; }
+
+# --- Find staged files to check ---
+staged=$(git diff --cached --name-only --diff-filter=ACMR | grep -E '\.(md|njk|html|js|yml)$' || true)
+
+if [ -z "$staged" ]; then
+  info "No staged files with URLs to check."
+  exit 0
+fi
+
+# --- Extract all URLs from staged files ---
+urls_file=$(mktemp /tmp/check-urls.XXXXXX)
+
+for f in $staged; do
+  [ -f "$f" ] || continue
+  perl -ne '
+    while (/\[([^\]]*)\]\(([^\)\s]+)\)/g) {
+      my $u = $2; $u =~ s|/$||; print "$u\n" if $u =~ m{^https?://};
+    }
+    while (m{(?<!\[["<])\bhttps?://[^\s\]"<>)]+}g) {
+      my $u = $&; $u =~ s|[\.\),;:]*$||; $u =~ s|/$||; print "$u\n" if $u =~ m{^https?://};
+    }
+    while (/(?:href|sourceUrl)[\s"'"'"']*[:=]\s*["'"'"'](https?:\/\/[^"'"'"']+)/g) {
+      my $u = $1; $u =~ s|/$||; print "$u\n" if $u =~ m{^https?://};
+    }
+  ' "$f" >> "$urls_file"
+done
+
+total=$(sort -u "$urls_file" | wc -l | tr -d ' ')
+if [ "$total" -eq 0 ]; then
+  info "No URLs found in staged files."
+  exit 0
+fi
+sort -u -o "$urls_file" "$urls_file"
+
+echo ""
+info "Checking $total URLs across $(echo "$staged" | wc -l | tr -d ' ') staged files..."
+echo ""
+
+# --- Launch playwright browser ---
+playwright-cli close >/dev/null 2>&1 || true
+browser_out=$(playwright-cli open --json 2>&1) || {
+  err "Failed to launch browser: $(echo "$browser_out" | head -1)"
+  exit 1
+}
+
+cleanup() {
+  rm -f "$urls_file" "$results_file"
+  playwright-cli close-all 2>/dev/null || true
+}
+trap cleanup EXIT
+
+# --- Check each URL ---
+results_file=$(mktemp /tmp/check-urls-results.XXXXXX)
+current=0
+
+while IFS= read -r url; do
+  current=$((current + 1))
+  printf "\r  [%d/%d] %s" "$current" "$total" "${url:0:60}"
+
+  # playwright-cli run-code returns JSON with result field containing the returned value as a JSON string
+  raw=$(playwright-cli run-code "async page => { try { const r = await page.goto('$url', {waitUntil: 'domcontentloaded', timeout: $TIMEOUT_MS}); if (!r) return ''; return String(r.status()); } catch(e) { return 'ERR:' + e.message.substring(0,200).replace(/\n/g,' ').replace(/\\u001b\[\d+m/g,''); } }" --json 2>/dev/null || echo '{"result": "\"ERR:playwright-cli-failed\""}')
+  code=$(echo "$raw" | jq -r '.result | fromjson // ""' 2>/dev/null || echo "ERR:parse-failed")
+  echo "$code" >> "$results_file"
+done < "$urls_file"
+printf "\r  [%d/%d] Done.        \n" "$total" "$total"
+
+# --- Close browser ---
+playwright-cli close 2>/dev/null || true
+
+# --- Process results ---
+broken=0
+ok=0
+broken_urls=()
+
+i=0
+while IFS= read -r url; do
+  i=$((i + 1))
+  code=$(sed -n "${i}p" "$results_file")
+  if [[ "$code" == ERR:* ]]; then
+    broken=$((broken + 1))
+    broken_urls+=("$url|UNREACHABLE|${code#ERR:}")
+  elif [ "$code" = "403" ] || [ "$code" = "429" ]; then
+    ok=$((ok + 1))
+  elif [ -n "$code" ] && [ "$code" -ge 200 ] 2>/dev/null && [ "$code" -lt 400 ] 2>/dev/null; then
+    ok=$((ok + 1))
+  else
+    broken=$((broken + 1))
+    broken_urls+=("$url|${code:-0}|")
+  fi
+done < "$urls_file"
+
+echo ""
+[ "$ok" -gt 0 ] && info "$ok URLs OK"
+
+if [ "$broken" -eq 0 ]; then
+  echo ""
+  info "All URLs are valid."
+  exit 0
+fi
+
+# --- Report broken URLs ---
+echo ""
+err "$broken broken URL(s) found:"
+echo ""
+
+for entry in "${broken_urls[@]}"; do
+  IFS='|' read -r url status error <<< "$entry"
+  [ -z "$error" ] && error=""
+  echo "  URL: $url"
+  echo "  Status: $status${error:+ ($error)}"
+  for f in $staged; do
+    [ -f "$f" ] || continue
+    ln=$(grep -nF "$url" "$f" 2>/dev/null | head -1 | cut -d: -f1 || true)
+    [ -n "$ln" ] && echo "  File: $f:$ln" && break
+  done
+  echo "  ⚠  Information cited from this URL may be inaccurate."
+  echo ""
+done
+
+echo "  ────────────────────────────────────────"
+err "Commit blocked."
+info "Options:"
+info "  1. Update broken URLs in staged files and re-stage"
+info "  2. If URLs are temporarily down, use git commit --no-verify to bypass"
+exit 1
