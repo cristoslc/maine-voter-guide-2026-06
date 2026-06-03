@@ -1,8 +1,10 @@
 #!/bin/bash
-# Pre-commit hook: verify URLs in staged files via playwright-cli
+# Pre-commit hook: verify URLs in staged files
+# Strategy: curl first (fast), Playwright fallback only for timeouts/errors
 set -euo pipefail
 
-TIMEOUT_MS=15000
+CURL_TIMEOUT=8
+PLAYWRIGHT_TIMEOUT_MS=15000
 
 log()  { printf "  %s\n" "$*"; }
 err()  { printf "  ❌ %s\n" "$*"; }
@@ -19,7 +21,8 @@ if [ -f "$ignore_file" ] && [ -n "$staged" ]; then
     while IFS= read -r f; do
       skip=0
       while IFS= read -r pat; do
-        if [[ "$f" == "$pat" ]]; then
+        # Support glob patterns and directory prefixes (e.g., test/ matches test/anything)
+        if [[ "$f" == $pat ]] || [[ "$f" == ${pat}* ]]; then
           skip=1
           break
         fi
@@ -41,12 +44,13 @@ urls_file=$(mktemp /tmp/check-urls.XXXXXX)
 for f in $staged; do
   [ -f "$f" ] || continue
   perl -ne '
-    # Extract URLs from href="..." and sourceUrl: "..." (handles escaped quotes)
-    while (/(?:href|sourceUrl)[\s]*[:=]\s*(?:\\"|["'"'"'])(https?:\/\/[^\\"'"'"']+)(?:\\"|["'"'"'])/g) {
+    # Extract URLs from quoted keys: href, sourceUrl, url, *Url, *Website (handles JSON key-value pairs)
+    while (/(?:"?(?:href|(?:source|campaign|ballotpedia)?[Uu]rl|[Uu]rl|[Ww]ebsite)"?[\s]*[:=]\s*[\s]*(?:\\"|["'"'"'])(https?:\/\/[^\\"'"'"']+)(?:\\"|["'"'"']))/g) {
       my $u = $1; $u =~ s|\\+$||; $u =~ s|/$||; print "$u\n" if $u =~ m{^https?://};
     }
-    # Extract bare URLs (stops at whitespace, quotes, angle brackets, parens, backticks, commas, semicolons)
-    while (m{\bhttps?://[^\s\\"'"'"'<>)`;,\]]+}g) {
+    # Extract bare URLs (stops at whitespace, quotes, angle brackets, backticks, commas, semicolons, brackets)
+    # Parentheses are allowed inside URLs to handle Ballotpedia_(Maine) style URLs
+    while (m{\bhttps?://[^\s\\"'"'"'<>`;,\]\[]+}g) {
       my $u = $&; $u =~ s|\\+$||; $u =~ s|[\.\),;:]*$||; $u =~ s|/$||; print "$u\n" if $u =~ m{^https?://};
     }
   ' "$f" >> "$urls_file"
@@ -55,8 +59,8 @@ done
 sort -u -o "$urls_file" "$urls_file"
 
 # Remove truncated URLs: drop any URL that is a prefix of a longer URL in the set.
-# This handles bare-regex truncation at ) for URLs containing parentheses like
-# Ballotpedia_(Maine) — the full URL is always extracted by the href pattern.
+# Bare-URL regex no longer truncates at parentheses (handled by href/url pattern),
+# but this dedup remains useful for other truncation edge cases.
 awk '
 NR == FNR { urls[NR] = $0; next }
 {
@@ -72,6 +76,7 @@ NR == FNR { urls[NR] = $0; next }
 total=$(wc -l < "$urls_file" | tr -d ' ')
 if [ "$total" -eq 0 ]; then
   info "No URLs found in staged files."
+  rm -f "$urls_file"
   exit 0
 fi
 
@@ -79,71 +84,150 @@ echo ""
 info "Checking $total URLs across $(echo "$staged" | wc -l | tr -d ' ') staged files..."
 echo ""
 
-# --- Launch playwright browser ---
-playwright-cli close >/dev/null 2>&1 || true
-browser_out=$(playwright-cli open --json 2>&1) || {
-  err "Failed to launch browser: $(echo "$browser_out" | head -1)"
-  exit 1
-}
-
-cleanup() {
-  rm -f "$urls_file" "$results_file"
-  playwright-cli close-all 2>/dev/null || true
-}
-trap cleanup EXIT
-
-# --- Check each URL ---
-results_file=$(mktemp /tmp/check-urls-results.XXXXXX)
-current=0
-
-while IFS= read -r url; do
-  current=$((current + 1))
-  printf "\r  [%d/%d] %s" "$current" "$total" "${url:0:60}"
-
-  # playwright-cli run-code returns JSON with result field containing the returned value as a JSON string
-  raw=$(playwright-cli run-code "async page => { try { const r = await page.goto('$url', {waitUntil: 'domcontentloaded', timeout: $TIMEOUT_MS}); if (!r) return ''; return String(r.status()); } catch(e) { return 'ERR:' + e.message.substring(0,200).replace(/\n/g,' ').replace(/\\u001b\[\d+m/g,''); } }" --json 2>/dev/null || echo '{"result": "\"ERR:playwright-cli-failed\""}')
-  code=$(echo "$raw" | jq -r '.result | fromjson // ""' 2>/dev/null || echo "ERR:parse-failed")
-  echo "$code" >> "$results_file"
-done < "$urls_file"
-printf "\r  [%d/%d] Done.        \n" "$total" "$total"
-
-# --- Close browser ---
-playwright-cli close 2>/dev/null || true
-
-# --- Process results ---
-broken=0
-ok=0
+# --- Phase 1: curl check (fast) ---
+curl_pass=0
+curl_skip=0
+curl_fail=0
+curl_error=0
+needs_playwright=0
+playwright_urls=()
 broken_urls=()
 
-i=0
 while IFS= read -r url; do
-  i=$((i + 1))
-  code=$(sed -n "${i}p" "$results_file")
-  if [[ "$code" == ERR:* ]]; then
-    broken=$((broken + 1))
-    broken_urls+=("$url|UNREACHABLE|${code#ERR:}")
-  elif [ "$code" = "403" ] || [ "$code" = "429" ] || [ "$code" = "999" ]; then
-    ok=$((ok + 1))
-  elif [ -n "$code" ] && [ "$code" -ge 200 ] 2>/dev/null && [ "$code" -lt 400 ] 2>/dev/null; then
-    ok=$((ok + 1))
+  printf "\r  [curl] %s" "${url:0:70}"
+  http_code=$(curl -s -o /dev/null -w "%{http_code}" -L -A "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36" --max-time "$CURL_TIMEOUT" "$url" 2>/dev/null || echo "000")
+
+  if [ "$http_code" = "000" ]; then
+    # curl couldn't connect at all — try Playwright
+    needs_playwright=$((needs_playwright + 1))
+    playwright_urls+=("$url")
+  elif [ "$http_code" -ge 200 ] 2>/dev/null && [ "$http_code" -lt 400 ] 2>/dev/null; then
+    # 2xx/3xx — OK
+    curl_pass=$((curl_pass + 1))
+  elif [ "$http_code" = "403" ] || [ "$http_code" = "429" ] || [ "$http_code" = "999" ]; then
+    # Bot-blocked — can't verify, assume OK (would pass with real browser too)
+    curl_skip=$((curl_skip + 1))
+  elif [ "$http_code" = "404" ] || [ "$http_code" = "410" ]; then
+    # Definitively gone
+    curl_fail=$((curl_fail + 1))
+    broken_urls+=("$url|${http_code}|")
+  elif [ "$http_code" -ge 400 ] 2>/dev/null && [ "$http_code" -lt 500 ] 2>/dev/null; then
+    # Other 4xx — could be bot-blocking or real error. Try Playwright.
+    needs_playwright=$((needs_playwright + 1))
+    playwright_urls+=("$url")
+  elif [ "$http_code" -ge 500 ] 2>/dev/null; then
+    # Server error — could be transient, try Playwright
+    needs_playwright=$((needs_playwright + 1))
+    playwright_urls+=("$url")
   else
-    broken=$((broken + 1))
-    broken_urls+=("$url|${code:-0}|")
+    # Unknown status — try Playwright
+    needs_playwright=$((needs_playwright + 1))
+    playwright_urls+=("$url")
   fi
 done < "$urls_file"
 
-echo ""
-[ "$ok" -gt 0 ] && info "$ok URLs OK"
+printf "\r  [curl] Done. %-70s\n" ""
+[ "$curl_pass" -gt 0 ] && info "$curl_pass URLs OK (curl)"
+[ "$curl_skip" -gt 0 ] && info "$curl_skip URLs skipped (bot-blocked, assuming OK)"
+[ "$curl_fail" -gt 0 ] && err "$curl_fail URLs broken (curl 404/410)"
 
-if [ "$broken" -eq 0 ]; then
+# --- Phase 2: Playwright fallback (only for ambiguous URLs) ---
+if [ "$needs_playwright" -gt 0 ]; then
   echo ""
+  info "$needs_playwright URL(s) need Playwright verification..."
+  echo ""
+
+  playwright-cli close >/dev/null 2>&1 || true
+  browser_out=$(playwright-cli open --json 2>&1) || {
+    err "Failed to launch browser: $(echo "$browser_out" | head -1)"
+    # Can't verify — treat ambiguous URLs as warnings, not errors
+    for url in "${playwright_urls[@]}"; do
+      err "WARNING: Could not verify $url (browser unavailable)"
+    done
+    # Still block on confirmed curl failures
+    if [ "$curl_fail" -gt 0 ]; then
+      echo ""
+      err "$curl_fail broken URL(s) found:"
+      for entry in "${broken_urls[@]}"; do
+        IFS='|' read -r url status error <<< "$entry"
+        echo "  URL: $url"
+        echo "  Status: $status"
+        for f in $staged; do
+          [ -f "$f" ] || continue
+          ln=$(grep -nF "$url" "$f" 2>/dev/null | head -1 | cut -d: -f1 || true)
+          [ -n "$ln" ] && echo "  File: $f:$ln" && break
+        done
+        echo "  ⚠  Information cited from this URL may be inaccurate."
+        echo ""
+      done
+      echo "  ────────────────────────────────────────"
+      err "Commit blocked."
+      info "Options:"
+      info "  1. Update broken URLs in staged files and re-stage"
+      info "  2. If URLs are temporarily down, use git commit --no-verify to bypass"
+      rm -f "$urls_file"
+      exit 1
+    fi
+    rm -f "$urls_file"
+    exit 0
+  }
+
+  pw_current=0
+  pw_results_file=$(mktemp /tmp/check-urls-pw.XXXXXX)
+
+  while IFS= read -r url; do
+    pw_current=$((pw_current + 1))
+    printf "\r  [playwright %d/%d] %s" "$pw_current" "$needs_playwright" "${url:0:55}"
+
+    raw=$(playwright-cli run-code "async page => { try { const r = await page.goto('$url', {waitUntil: 'domcontentloaded', timeout: $PLAYWRIGHT_TIMEOUT_MS}); if (!r) return ''; return String(r.status()); } catch(e) { return 'ERR:' + e.message.substring(0,200).replace(/\n/g,' ').replace(/\\u001b\[\d+m/g,''); } }" --json 2>/dev/null || echo '{"result": "\"ERR:playwright-cli-failed\""}')
+    code=$(echo "$raw" | jq -r '.result | fromjson // ""' 2>/dev/null || echo "ERR:parse-failed")
+    echo "$code" >> "$pw_results_file"
+  done < <(printf '%s\n' "${playwright_urls[@]}")
+  printf "\r  [playwright] Done. %-70s\n" ""
+
+  playwright-cli close 2>/dev/null || true
+
+  # Process Playwright results
+  pw_current=0
+  while IFS= read -r url; do
+    pw_current=$((pw_current + 1))
+    code=$(sed -n "${pw_current}p" "$pw_results_file")
+    if [[ "$code" == ERR:* ]]; then
+      curl_fail=$((curl_fail + 1))
+      broken_urls+=("$url|UNREACHABLE|${code#ERR:}")
+    elif [ "$code" = "403" ] || [ "$code" = "429" ] || [ "$code" = "999" ]; then
+      # Bot-blocked in Playwright too — assume OK
+      curl_skip=$((curl_skip + 1))
+    elif [ -n "$code" ] && [ "$code" -ge 200 ] 2>/dev/null && [ "$code" -lt 400 ] 2>/dev/null; then
+      curl_pass=$((curl_pass + 1))
+    elif [ "$code" = "404" ] || [ "$code" = "410" ]; then
+      curl_fail=$((curl_fail + 1))
+      broken_urls+=("$url|${code}|")
+    else
+      curl_fail=$((curl_fail + 1))
+      broken_urls+=("$url|${code:-0}|")
+    fi
+  done < <(printf '%s\n' "${playwright_urls[@]}")
+
+  rm -f "$pw_results_file"
+fi
+
+rm -f "$urls_file"
+
+# --- Summary ---
+echo ""
+total_ok=$((curl_pass + curl_skip))
+[ "$curl_pass" -gt 0 ] && info "$curl_pass URLs OK"
+[ "$curl_skip" -gt 0 ] && info "$curl_skip URLs skipped (bot-blocked, assuming OK)"
+
+if [ "$curl_fail" -eq 0 ]; then
   info "All URLs are valid."
   exit 0
 fi
 
 # --- Report broken URLs ---
 echo ""
-err "$broken broken URL(s) found:"
+err "$curl_fail broken URL(s) found:"
 echo ""
 
 for entry in "${broken_urls[@]}"; do

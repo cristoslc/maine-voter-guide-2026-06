@@ -1065,7 +1065,7 @@ module.exports = [
   },
   {
     "id": "source-106-ballotpedia",
-    "url": "https://ballotpedia.org/Meagan_J._Smith_(Maine)",
+    "url": "https://ballotpedia.org/Meagan_Smith_(Maine)",
     "label": "Ballotpedia",
     "summary": "Ballotpedia candidate profile with biographical information, campaign history, and election results for Meagan Smith.",
     "type": "reference",
