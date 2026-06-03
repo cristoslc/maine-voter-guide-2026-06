@@ -27,3 +27,4 @@ module.exports = [
     url: "/ballot-questions/cape-elizabeth-school-budget-referendum/"
   }
 ];
+

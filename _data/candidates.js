@@ -21,8 +21,8 @@ module.exports = [
     ],
     "incumbent": false,
     "residence": "Brunswick",
-    "campaignWebsite": null,
-    "ballotpediaUrl": null,
+    "campaignWebsite": "https://www.costelloforsenate.com/",
+    "ballotpediaUrl": "https://ballotpedia.org/David_Costello",
     "occupation": null
   },
   {
@@ -32,10 +32,10 @@ module.exports = [
     "races": [
       "us-senate-republican"
     ],
-    "incumbent": false,
+    "incumbent": true,
     "residence": null,
     "campaignWebsite": null,
-    "ballotpediaUrl": null,
+    "ballotpediaUrl": "https://ballotpedia.org/Susan_Collins_(Maine)",
     "occupation": null
   },
   {
@@ -47,7 +47,7 @@ module.exports = [
     ],
     "incumbent": false,
     "residence": "Allagash",
-    "campaignWebsite": null,
+    "campaignWebsite": "https://jacksonformaine.com/",
     "ballotpediaUrl": null,
     "occupation": null
   },
@@ -60,7 +60,7 @@ module.exports = [
     ],
     "incumbent": false,
     "residence": "Brunswick",
-    "campaignWebsite": null,
+    "campaignWebsite": "https://shahformaine.com/",
     "ballotpediaUrl": null,
     "occupation": null
   },
@@ -73,7 +73,7 @@ module.exports = [
     ],
     "incumbent": false,
     "residence": "Manchester",
-    "campaignWebsite": null,
+    "campaignWebsite": "https://bellowsformaine.com/",
     "ballotpediaUrl": null,
     "occupation": null
   },
@@ -86,7 +86,7 @@ module.exports = [
     ],
     "incumbent": false,
     "residence": "North Haven",
-    "campaignWebsite": null,
+    "campaignWebsite": "https://hannahforgovernor.com/",
     "ballotpediaUrl": null,
     "occupation": null
   },
@@ -99,7 +99,7 @@ module.exports = [
     ],
     "incumbent": false,
     "residence": "Portland",
-    "campaignWebsite": null,
+    "campaignWebsite": "https://angusforgovernor.com/",
     "ballotpediaUrl": null,
     "occupation": null
   },
@@ -113,7 +113,7 @@ module.exports = [
     "incumbent": false,
     "residence": "Leeds",
     "campaignWebsite": null,
-    "ballotpediaUrl": null,
+    "ballotpediaUrl": "https://ballotpedia.org/Bobby_Charles_(Maine)",
     "occupation": null
   },
   {
@@ -126,7 +126,7 @@ module.exports = [
     "incumbent": false,
     "residence": "Cape Elizabeth",
     "campaignWebsite": null,
-    "ballotpediaUrl": null,
+    "ballotpediaUrl": "https://ballotpedia.org/Jonathan_Bush_(Maine)",
     "occupation": null
   },
   {
@@ -139,7 +139,7 @@ module.exports = [
     "incumbent": false,
     "residence": "Lisbon",
     "campaignWebsite": null,
-    "ballotpediaUrl": null,
+    "ballotpediaUrl": "https://ballotpedia.org/Garrett_Mason",
     "occupation": null
   },
   {
@@ -152,7 +152,7 @@ module.exports = [
     "incumbent": false,
     "residence": "Kennebunkport",
     "campaignWebsite": null,
-    "ballotpediaUrl": null,
+    "ballotpediaUrl": "https://ballotpedia.org/Ben_Midgley",
     "occupation": null
   },
   {
@@ -165,7 +165,7 @@ module.exports = [
     "incumbent": false,
     "residence": "Gorham",
     "campaignWebsite": null,
-    "ballotpediaUrl": null,
+    "ballotpediaUrl": "https://ballotpedia.org/Owen_McCarthy_(Maine)",
     "occupation": null
   },
   {
@@ -178,7 +178,7 @@ module.exports = [
     "incumbent": false,
     "residence": "Falmouth",
     "campaignWebsite": null,
-    "ballotpediaUrl": null,
+    "ballotpediaUrl": "https://ballotpedia.org/David_Jones_(Maine_governor)",
     "occupation": null
   },
   {
@@ -190,8 +190,8 @@ module.exports = [
     ],
     "incumbent": false,
     "residence": "Paris",
-    "campaignWebsite": null,
-    "ballotpediaUrl": null,
+    "campaignWebsite": "https://www.voterobertwessels.com/",
+    "ballotpediaUrl": "https://ballotpedia.org/Robert_J._Wessels",
     "occupation": null
   },
   {
@@ -204,7 +204,7 @@ module.exports = [
     "incumbent": false,
     "residence": "Kennebunkport",
     "campaignWebsite": null,
-    "ballotpediaUrl": null,
+    "ballotpediaUrl": "https://ballotpedia.org/Ron_Russell_(Maine)",
     "occupation": null
   },
   {
@@ -217,7 +217,7 @@ module.exports = [
     "incumbent": false,
     "residence": "New Gloucester",
     "campaignWebsite": null,
-    "ballotpediaUrl": null,
+    "ballotpediaUrl": "https://ballotpedia.org/Joshua_Pietrowicz",
     "occupation": null
   },
   {
@@ -243,7 +243,7 @@ module.exports = [
     "incumbent": false,
     "residence": "South Portland",
     "campaignWebsite": null,
-    "ballotpediaUrl": null,
+    "ballotpediaUrl": "https://ballotpedia.org/Vincent_Maietta",
     "occupation": null
   },
   {
@@ -251,7 +251,7 @@ module.exports = [
     "name": "Jason Shedlock",
     "party": "democrat",
     "races": [
-      "state-rep-democratic"
+      "hd-120-democratic"
     ],
     "incumbent": false,
     "residence": "South Portland",
@@ -264,13 +264,12 @@ module.exports = [
     "name": "Robert Cameron",
     "party": "democrat",
     "races": [
-      "state-rep-democratic",
       "hd-121-democratic"
     ],
     "incumbent": false,
     "residence": "South Portland",
     "campaignWebsite": null,
-    "ballotpediaUrl": null,
+    "ballotpediaUrl": "https://ballotpedia.org/Robert_Cameron_(Maine)",
     "occupation": null
   },
   {
@@ -278,11 +277,11 @@ module.exports = [
     "name": "Matthew Beck",
     "party": "democrat",
     "races": [
-      "state-rep-democratic"
+      "hd-122-democratic"
     ],
-    "incumbent": false,
+    "incumbent": true,
     "residence": "South Portland",
-    "campaignWebsite": null,
+    "campaignWebsite": "https://www.mattbeckformaine.org/",
     "ballotpediaUrl": null,
     "occupation": null
   },
@@ -291,12 +290,12 @@ module.exports = [
     "name": "Michael J. Dougherty",
     "party": "republican",
     "races": [
-      "state-rep-republican"
+      "hd-120-republican"
     ],
     "incumbent": false,
     "residence": "South Portland",
     "campaignWebsite": null,
-    "ballotpediaUrl": null,
+    "ballotpediaUrl": "https://ballotpedia.org/Michael_Dougherty_(Maine)",
     "occupation": null
   },
   {
@@ -304,13 +303,12 @@ module.exports = [
     "name": "Meagan J. Smith",
     "party": "republican",
     "races": [
-      "state-rep-republican",
       "hd-121-republican"
     ],
     "incumbent": false,
     "residence": "South Portland",
     "campaignWebsite": null,
-    "ballotpediaUrl": null,
+    "ballotpediaUrl": "https://ballotpedia.org/Meagan_J._Smith_(Maine)",
     "occupation": null
   },
   {
@@ -320,10 +318,10 @@ module.exports = [
     "races": [
       "sd-27-democratic"
     ],
-    "incumbent": false,
+    "incumbent": true,
     "residence": null,
     "campaignWebsite": null,
-    "ballotpediaUrl": null,
+    "ballotpediaUrl": "https://ballotpedia.org/Jill_Duson",
     "occupation": null
   },
   {
@@ -333,10 +331,10 @@ module.exports = [
     "races": [
       "sd-28-democratic"
     ],
-    "incumbent": false,
+    "incumbent": true,
     "residence": null,
     "campaignWebsite": null,
-    "ballotpediaUrl": null,
+    "ballotpediaUrl": "https://ballotpedia.org/Rachel_Talbot_Ross",
     "occupation": null
   },
   {
@@ -359,10 +357,10 @@ module.exports = [
     "races": [
       "hd-116-democratic"
     ],
-    "incumbent": false,
+    "incumbent": true,
     "residence": null,
-    "campaignWebsite": null,
-    "ballotpediaUrl": null,
+    "campaignWebsite": "https://samzager.org/",
+    "ballotpediaUrl": "https://ballotpedia.org/Samuel_Zager",
     "occupation": null
   },
   {
@@ -372,10 +370,10 @@ module.exports = [
     "races": [
       "hd-117-democratic"
     ],
-    "incumbent": false,
+    "incumbent": true,
     "residence": null,
     "campaignWebsite": null,
-    "ballotpediaUrl": null,
+    "ballotpediaUrl": "https://ballotpedia.org/Matthew_Moonen",
     "occupation": null
   },
   {
@@ -385,10 +383,10 @@ module.exports = [
     "races": [
       "hd-118-democratic"
     ],
-    "incumbent": false,
+    "incumbent": true,
     "residence": null,
     "campaignWebsite": null,
-    "ballotpediaUrl": null,
+    "ballotpediaUrl": "https://ballotpedia.org/Yusuf_Yusuf",
     "occupation": null
   },
   {
@@ -414,7 +412,7 @@ module.exports = [
     "incumbent": false,
     "residence": null,
     "campaignWebsite": null,
-    "ballotpediaUrl": null,
+    "ballotpediaUrl": "https://ballotpedia.org/Jacob_Wakem",
     "occupation": null
   },
   {
@@ -424,10 +422,10 @@ module.exports = [
     "races": [
       "hd-123-democratic"
     ],
-    "incumbent": false,
+    "incumbent": true,
     "residence": null,
     "campaignWebsite": null,
-    "ballotpediaUrl": null,
+    "ballotpediaUrl": "https://ballotpedia.org/Michelle_Boyer",
     "occupation": null
   },
   {
@@ -440,7 +438,7 @@ module.exports = [
     "incumbent": false,
     "residence": null,
     "campaignWebsite": null,
-    "ballotpediaUrl": null,
+    "ballotpediaUrl": "https://ballotpedia.org/Annie_Christy",
     "occupation": null
   },
   {
@@ -450,10 +448,10 @@ module.exports = [
     "races": [
       "sd-26-democratic"
     ],
-    "incumbent": false,
+    "incumbent": true,
     "residence": null,
     "campaignWebsite": null,
-    "ballotpediaUrl": null,
+    "ballotpediaUrl": "https://ballotpedia.org/Timothy_Nangle",
     "occupation": null
   },
   {
@@ -465,7 +463,7 @@ module.exports = [
     ],
     "incumbent": false,
     "residence": null,
-    "campaignWebsite": null,
+    "campaignWebsite": "https://www.kennyforsenate.com/",
     "ballotpediaUrl": null,
     "occupation": null
   },
@@ -479,7 +477,7 @@ module.exports = [
     "incumbent": false,
     "residence": null,
     "campaignWebsite": null,
-    "ballotpediaUrl": null,
+    "ballotpediaUrl": "https://ballotpedia.org/Peter_Violette",
     "occupation": null
   },
   {
@@ -489,10 +487,10 @@ module.exports = [
     "races": [
       "hd-126-democratic"
     ],
-    "incumbent": false,
+    "incumbent": true,
     "residence": null,
     "campaignWebsite": null,
-    "ballotpediaUrl": null,
+    "ballotpediaUrl": "https://ballotpedia.org/Andrew_Gattine",
     "occupation": null
   },
   {
@@ -505,7 +503,7 @@ module.exports = [
     "incumbent": false,
     "residence": null,
     "campaignWebsite": null,
-    "ballotpediaUrl": null,
+    "ballotpediaUrl": "https://ballotpedia.org/Ethan_Mongue",
     "occupation": null
   },
   {
@@ -515,10 +513,10 @@ module.exports = [
     "races": [
       "hd-127-democratic"
     ],
-    "incumbent": false,
+    "incumbent": true,
     "residence": null,
     "campaignWebsite": null,
-    "ballotpediaUrl": null,
+    "ballotpediaUrl": "https://ballotpedia.org/Morgan_Rielly",
     "occupation": null
   },
   {
@@ -528,10 +526,10 @@ module.exports = [
     "races": [
       "hd-128-democratic"
     ],
-    "incumbent": false,
+    "incumbent": true,
     "residence": null,
     "campaignWebsite": null,
-    "ballotpediaUrl": null,
+    "ballotpediaUrl": "https://ballotpedia.org/Suzanne_Salisbury",
     "occupation": null
   },
   {
@@ -541,10 +539,10 @@ module.exports = [
     "races": [
       "county-commissioner-4-democratic"
     ],
-    "incumbent": false,
+    "incumbent": true,
     "residence": "South Portland",
     "campaignWebsite": null,
-    "ballotpediaUrl": null,
+    "ballotpediaUrl": "https://ballotpedia.org/Patricia_A._Smith_(Cumberland_County_Commissioner_Board_District_4,_Maine,_candidate_2026)",
     "occupation": null
   },
   {
@@ -556,8 +554,8 @@ module.exports = [
     ],
     "incumbent": false,
     "residence": null,
-    "campaignWebsite": null,
+    "campaignWebsite": "https://sigridforcumberland.wordpress.com/",
     "ballotpediaUrl": null,
     "occupation": null
   }
-];
+]

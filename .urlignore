@@ -1,3 +1,4 @@
 # Files in this list are excluded from URL verification.
 # Useful for plans, inventories, or drafts with known-broken URLs.
 docs/plans/url-verification.md
+test/eleventy-filters.test.js

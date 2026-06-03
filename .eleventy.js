@@ -120,9 +120,9 @@ module.exports = function (eleventyConfig) {
     return sources.find(sr => sr.id === sourceId) || null;
   });
 
-  eleventyConfig.addFilter("resolveCandidate", function(candidateId, candidates) {
-    if (!candidateId || !candidates) return null;
-    return candidates.find(c => c.id === candidateId) || null;
+  eleventyConfig.addFilter("resolveCandidate", function(candidateRef, candidates) {
+    if (!candidateRef || !candidates) return null;
+    return candidates.find(c => c.id === candidateRef) || candidates.find(c => candidateRef.startsWith(c.name)) || null;
   });
 
   eleventyConfig.addFilter("partyTag", function(tag, parties) {
@@ -144,36 +144,32 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("collectSources", function(race, sources) {
     if (!race || !sources) return [];
     const sourceIds = new Set();
-    if (race.parties) {
-      race.parties.forEach(p => {
-        if (p.candidates) {
-          p.candidates.forEach(c => {
-            if (c.primaryContent) c.primaryContent.forEach(pos => {
-              if (pos.sourceUrl) {
-                const src = sources.find(s => s.url === pos.sourceUrl);
-                if (src) sourceIds.add(src.id);
-              }
-            });
-            if (c.secondaryContent) c.secondaryContent.forEach(sec => {
-              if (sec.sourceUrl) {
-                const src = sources.find(s => s.url === sec.sourceUrl);
-                if (src) sourceIds.add(src.id);
-              }
-            });
-          });
-        }
+    if (race.party && race.party.candidates) {
+      race.party.candidates.forEach(c => {
+        if (c.primaryContent) c.primaryContent.forEach(pos => {
+          if (pos.sourceId) {
+            sourceIds.add(pos.sourceId);
+          }
+        });
+        if (c.secondaryContent) c.secondaryContent.forEach(sec => {
+          if (sec.sourceId) {
+            sourceIds.add(sec.sourceId);
+          }
+        });
       });
     }
     if (race.sourcesMain) {
       race.sourcesMain.forEach(s => {
-        const src = sources.find(sr => sr.url === s.url);
-        if (src) sourceIds.add(src.id);
+        if (typeof s === "string") {
+          sourceIds.add(s);
+        }
       });
     }
     if (race.sourcesSidebar) {
       race.sourcesSidebar.forEach(s => {
-        const src = sources.find(sr => sr.url === s.url);
-        if (src) sourceIds.add(src.id);
+        if (typeof s === "string") {
+          sourceIds.add(s);
+        }
       });
     }
     return [...sourceIds]
@@ -182,6 +178,9 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addFilter("findCrossPartyRace", function(currentRace, races) {
+    // Each race has a single party block (race.party). The cross-party race
+    // for a Democratic primary is the Republican primary for the same office,
+    // and vice versa.
     if (!currentRace || !races) return null;
     const baseOffice = currentRace.slug
       .replace(/-democratic$/, '')

@@ -192,6 +192,24 @@ module.exports = [
     districtNote: "Westbrook district."
   },
   {
+    id: "state-house-120",
+    extends: "state-representative",
+    title: "State House District 120",
+    aliases: ["State House District 120"],
+    jurisdiction: "south-portland",
+    seatsAvailable: 1,
+    districtNote: "South Portland District 120 (westside). Open seat — incumbent Rep. Deqa Dhalac is not seeking re-election."
+  },
+  {
+    id: "state-house-122",
+    extends: "state-representative",
+    title: "State House District 122",
+    aliases: ["State House District 122"],
+    jurisdiction: "south-portland",
+    seatsAvailable: 1,
+    districtNote: "South Portland District 122 (eastside)."
+  },
+  {
     id: "county-commissioner",
     title: "County Commissioner",
     officerTitle: "County Commissioner",

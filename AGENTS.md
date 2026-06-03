@@ -33,6 +33,12 @@ Agent-specific detail lives in `.agents/agents-md-detail/`:
 - `project-navigation.md` — How to orient in this repo
 - `content-guidelines.md` — Nonpartisan writing standards, sourcing rules
 
+## Data File Editing Conventions
+
+- Data files (`_data/*.js`) use manual formatting with blank-line separation between entries. Use the Edit tool for changes; never do full-file `JSON.stringify(fs.writeFileSync())` rewrites — they destroy formatting conventions.
+- Run `npm run lint:data` after any data file change to syntax-check all registries.
+- When adding a data model pattern to `ARCHITECTURE.md`, also add the term to `UBIQUITOUS-LANGUAGE.md` under the Election Data Context table.
+
 ## Pre-commit Hook: `races.js` Commits Are Slow
 
 The pre-commit hook checks every URL in staged files. When `_data/races.js` is part of a commit, it validates ~146 URLs via headless browser, which can take several minutes. Plan for 3–5 minutes of wall-clock time on commits touching that file.
@@ -49,3 +55,7 @@ Any plan document written to `docs/plans/` (e.g., architecture changes, methodol
 4. Only then execute the planned changes
 
 Approval must come from the user, not from any automated or plugin-based system. Do not self-approve or skip the review step.
+
+## Subagent Output Review
+
+After a subagent returns modified file content, run `git diff -- <file>` before accepting. For AI-generated content (summaries, copy), note in the commit message that content needs human review.
