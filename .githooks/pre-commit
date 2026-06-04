@@ -289,12 +289,13 @@ if [ "$needs_get" -gt 0 ]; then
   if [ "$needs_brave" -gt 0 ]; then
     echo ""
     if [ -z "${BRAVE_API_KEY:-}" ]; then
-      warn "BRAVE_API_KEY not set — cannot verify $needs_brave bot-blocked URL(s) via search."
-      warn "Treating bot-blocked URLs as warnings (not failures)."
+      err "BRAVE_API_KEY not set — cannot verify $needs_brave bot-blocked URL(s) via Brave Search."
+      err "Set BRAVE_API_KEY in your environment or pass it via: BRAVE_API_KEY=... git commit"
+      err "Unverified bot-blocked URLs:"
       for url in "${brave_urls[@]}"; do
-        warn "Could not verify: $url"
+        err "  $url"
       done
-      skip=$((skip + needs_brave))
+      exit 1
     else
       info "$needs_brave bot-blocked URL(s) need Brave Search verification..."
       echo ""
