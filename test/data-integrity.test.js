@@ -478,6 +478,25 @@ describe("docs mirror check", () => {
   });
 });
 
+describe("build output integrity", () => {
+  it("no race page HTML contains leaked frontmatter (---\\nlayout: base)", () => {
+    const { execSync } = require("child_process");
+    execSync("npx @11ty/eleventy", { stdio: "pipe" });
+
+    const raceHtmlFiles = fs.readdirSync("_site", { recursive: true })
+      .filter((f) => typeof f === "string" && f.endsWith("index.html") && f.includes("/races/"))
+      .map((f) => `_site/${f}`);
+
+    for (const file of raceHtmlFiles) {
+      const content = fs.readFileSync(file, "utf8");
+      expect(
+        /---\nlayout: base\n/.test(content),
+        `${file}: leaked frontmatter (---\\nlayout: base) found in HTML output`,
+      ).toBe(false);
+    }
+  });
+});
+
 describe("lint: trailing newlines", () => {
   const files = [
     "_data/sources.js",
@@ -500,6 +519,35 @@ describe("lint: trailing newlines", () => {
       content.endsWith("\n"),
       `${file} is missing trailing newline (POSIX violation)`,
     ).toBe(true);
+  });
+});
+
+describe("lint: frontmatter at file start", () => {
+  const templateFiles = [
+    ...fs.readdirSync("_layouts").map((f) => `_layouts/${f}`),
+    ...fs.readdirSync("content").filter((f) => f.endsWith(".njk") || f.endsWith(".md")).map((f) => `content/${f}`),
+  ].filter((f) => fs.existsSync(f) && /\.(njk|md)$/.test(f));
+
+  it.each(templateFiles)("%s has frontmatter at the very first line if present", (file) => {
+    const content = readFile(file);
+    const frontmatterMatch = content.match(/^---\n/);
+    if (!frontmatterMatch) {
+      const hasYamlKeys = /^(layout|permalink|pagination|title|date|tags|eleventyComputed):/m.test(content);
+      if (hasYamlKeys) {
+        expect(
+          false,
+          `${file}: contains YAML-like keys but frontmatter does not start at line 1 — Eleventy requires frontmatter at the very beginning of the file`,
+        ).toBe(true);
+      }
+      return;
+    }
+    const closingIndex = content.indexOf("\n---", 4);
+    if (closingIndex === -1) return;
+    const beforeFrontmatter = content.substring(0, content.indexOf("---"));
+    expect(
+      beforeFrontmatter.trim().length,
+      `${file}: has content before the opening --- frontmatter delimiter — Eleventy requires frontmatter at the very beginning of the file`,
+    ).toBe(0);
   });
 });
 

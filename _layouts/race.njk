@@ -1,3 +1,8 @@
+---
+layout: base
+eleventyComputed:
+  title: "{{ race.title }}"
+---
 {#
   Trust boundary: data rendered via | safe (candidate.meta, pos.text,
   sec.text, race.context, posSource.url, compareTable values) comes from
@@ -7,12 +12,6 @@
   data strings do not contain <script>, <iframe>, <object>, <embed>, or
   <form> tags. Do not use | safe on user-supplied runtime input.
 #}
----
-layout: base
-templateEngineOverride: njk,md
-eleventyComputed:
-  title: "{{ race.title }}"
----
 
 {% set raceOffice = race.office | officeSlugFromTitle | resolveOffice(offices) %}
 {% set raceSources = race | collectSources(sources) %}
