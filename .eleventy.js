@@ -1,6 +1,9 @@
 const fs = require('fs');
 const path = require('path');
 
+const geographyData = require('./_data/geography.js');
+const geographyParentMap = new Map(geographyData.map(g => [g.id, g.parent || null]));
+
 /**
  * Resolve jurisdiction IDs for a given jurisdiction, following geography
  * parent references to include all ancestor jurisdictions.
@@ -11,10 +14,10 @@ function getEffectiveJurisdictionIds(jurisdictionId, geography, jurisdictions) {
   const jurisdiction = jurisdictions.find(j => j.id === jurisdictionId);
   if (!jurisdiction || !jurisdiction.geoRef) return [jurisdictionId];
   const geoIds = [jurisdiction.geoRef];
-  let current = geography.find(g => g.id === jurisdiction.geoRef);
-  while (current && current.parent) {
-    geoIds.push(current.parent);
-    current = geography.find(g => g.id === current.parent);
+  let parentId = geographyParentMap.get(jurisdiction.geoRef);
+  while (parentId) {
+    geoIds.push(parentId);
+    parentId = geographyParentMap.get(parentId);
   }
   return jurisdictions
     .filter(j => geoIds.includes(j.geoRef))
@@ -133,7 +136,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter("resolveParty", function(partyId, parties) {
     if (!partyId || !parties) return null;
-    return parties.find(p => p.id === partyId) || parties.find(p => p.tag === partyId) || null;
+    return parties.find(p => p.id === partyId) || parties.find(p => p.tag === partyId) || parties.find(p => p.shortName === partyId) || null;
   });
 
   /**
@@ -222,17 +225,23 @@ module.exports = function (eleventyConfig) {
       .filter(Boolean);
   });
 
+  /**
+   * Find the cross-party race for a given primary. Handles D/R/G/L suffixes.
+   * Returns the first opposing primary found (preferring Republican for Democratic
+   * and vice versa), or null if no cross-party race exists.
+   */
   eleventyConfig.addFilter("findCrossPartyRace", function(currentRace, races) {
-    // Each race has a single party block (race.party). The cross-party race
-    // for a Democratic primary is the Republican primary for the same office,
-    // and vice versa.
     if (!currentRace || !races) return null;
-    const baseOffice = currentRace.slug
-      .replace(/-democratic$/, '')
-      .replace(/-republican$/, '');
-    const opposingSuffix = currentRace.slug.endsWith('-democratic') ? '-republican' : '-democratic';
-    const opposingSlug = baseOffice + opposingSuffix;
-    return races.find(r => r.slug === opposingSlug && r.jurisdiction === currentRace.jurisdiction) || null;
+    const partySuffixes = ['-democratic', '-republican', '-green', '-libertarian'];
+    const baseOffice = partySuffixes.reduce((slug, suffix) => slug.replace(new RegExp(suffix + '$'), ''), currentRace.slug);
+    const currentSuffix = partySuffixes.find(s => currentRace.slug.endsWith(s));
+    if (!currentSuffix) return null;
+    const opposingSuffixes = partySuffixes.filter(s => s !== currentSuffix);
+    for (const suffix of opposingSuffixes) {
+      const candidate = races.find(r => r.slug === baseOffice + suffix && r.jurisdiction === currentRace.jurisdiction);
+      if (candidate) return candidate;
+    }
+    return null;
   });
 
   const prefix = process.env.PATH_PREFIX || "/";

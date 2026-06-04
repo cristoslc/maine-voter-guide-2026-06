@@ -18,7 +18,7 @@ module.exports = [
       "source-007-unh-survey-center"
     ],
     "party": {
-      "party": "Democrat",
+      "party": "Democratic",
       "candidates": [
         {
           "name": "Graham Platner",
@@ -267,7 +267,7 @@ module.exports = [
       "crossPartyPreview": [
         {
           "name": "Graham Platner &amp; David Costello",
-          "party": "Democrat",
+          "party": "Democratic",
           "tag": "d",
           "primaryContent": [
             {
@@ -306,7 +306,7 @@ module.exports = [
       "source-040-pan-atlantic-research-polling"
     ],
     "party": {
-      "party": "Democrat",
+      "party": "Democratic",
       "candidates": [
         {
           "name": "Troy Jackson",
@@ -1264,7 +1264,7 @@ module.exports = [
       "crossPartyPreview": [
         {
           "name": "Chellie Pingree",
-          "party": "Democrat",
+          "party": "Democratic",
           "tag": "d",
           "meta": "Since 2009 · North Haven · Unopposed in Democratic primary · <a href=\"https://ballotpedia.org/Chellie_Pingree\">Ballotpedia</a>",
           "primaryContent": [
@@ -1343,7 +1343,7 @@ module.exports = [
       "source-064-press-herald-da-drops-maietta-case"
     ],
     "party": {
-      "party": "Democrat",
+      "party": "Democratic",
       "candidates": [
         {
           "name": "Anne Carney",
@@ -1457,7 +1457,7 @@ module.exports = [
       "source-077-maine-monitor-sd-27"
     ],
     "party": {
-      "party": "Democrat",
+      "party": "Democratic",
       "candidates": [
         {
           "name": "Jill Duson",
@@ -1508,7 +1508,7 @@ module.exports = [
       "source-079-maine-monitor-sd-28"
     ],
     "party": {
-      "party": "Democrat",
+      "party": "Democratic",
       "candidates": [
         {
           "name": "Rachel Talbot Ross",
@@ -1559,7 +1559,7 @@ module.exports = [
       "source-081-ballotpedia-hd-115"
     ],
     "party": {
-      "party": "Democrat",
+      "party": "Democratic",
       "candidates": [
         {
           "name": "Andrew Zarro",
@@ -1602,7 +1602,7 @@ module.exports = [
       "source-083-maine-monitor-hd-116"
     ],
     "party": {
-      "party": "Democrat",
+      "party": "Democratic",
       "candidates": [
         {
           "name": "Samuel Zager",
@@ -1645,7 +1645,7 @@ module.exports = [
       "source-085-maine-monitor-hd-117"
     ],
     "party": {
-      "party": "Democrat",
+      "party": "Democratic",
       "candidates": [
         {
           "name": "Matthew Moonen",
@@ -1687,7 +1687,7 @@ module.exports = [
       "source-086-maine-legislature"
     ],
     "party": {
-      "party": "Democrat",
+      "party": "Democratic",
       "candidates": [
         {
           "name": "Yusuf Yusuf",
@@ -1730,7 +1730,7 @@ module.exports = [
       "source-088-ballotpedia-hd-119"
     ],
     "party": {
-      "party": "Democrat",
+      "party": "Democratic",
       "candidates": [
         {
           "name": "Michael Dixon",
@@ -1807,7 +1807,7 @@ module.exports = [
       "source-091-ballotpedia-michelle-boyer"
     ],
     "party": {
-      "party": "Democrat",
+      "party": "Democratic",
       "candidates": [
         {
           "name": "Michelle Boyer",
@@ -1883,7 +1883,7 @@ module.exports = [
       "source-093-maine-legislature"
     ],
     "party": {
-      "party": "Democrat",
+      "party": "Democratic",
       "candidates": [
         {
           "name": "Tim Nangle",
@@ -1993,7 +1993,7 @@ module.exports = [
       "source-096-maine-legislature"
     ],
     "party": {
-      "party": "Democrat",
+      "party": "Democratic",
       "candidates": [
         {
           "name": "Andrew Gattine",
@@ -2069,7 +2069,7 @@ module.exports = [
       "source-098-maine-legislature"
     ],
     "party": {
-      "party": "Democrat",
+      "party": "Democratic",
       "candidates": [
         {
           "name": "Morgan Rielly",
@@ -2111,7 +2111,7 @@ module.exports = [
       "source-099-maine-legislature"
     ],
     "party": {
-      "party": "Democrat",
+      "party": "Democratic",
       "candidates": [
         {
           "name": "Suzanne Salisbury",
@@ -2156,7 +2156,7 @@ module.exports = [
       "source-100-press-herald-opinion"
     ],
     "party": {
-      "party": "Democrat",
+      "party": "Democratic",
       "candidates": [
         {
           "name": "Patricia Smith",
@@ -2224,7 +2224,7 @@ module.exports = [
       "source-105-ballotpedia"
     ],
     "party": {
-      "party": "Democrat",
+      "party": "Democratic",
       "candidates": [
         {
           "name": "Robert Cameron",
@@ -2289,7 +2289,7 @@ module.exports = [
     "context": "Shedlock is the only Democrat on the primary ballot. He will face Michael J. Dougherty (R) in November.",
     "voting": "You must choose a Democratic primary ballot to vote in this race.",
     "party": {
-      "party": "Democrat",
+      "party": "Democratic",
       "candidates": [
         {
           "name": "Jason Shedlock",
@@ -2340,7 +2340,7 @@ module.exports = [
     "context": "Beck is unopposed in the Democratic primary. No Republican filed in District 122. He will be unopposed in November.",
     "voting": "You must choose a Democratic primary ballot to vote in this race.",
     "party": {
-      "party": "Democrat",
+      "party": "Democratic",
       "candidates": [
         {
           "name": "Matthew Beck",

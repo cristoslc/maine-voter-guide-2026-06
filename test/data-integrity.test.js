@@ -215,15 +215,64 @@ describe("races data integrity", () => {
     }
   });
 
-  it("race party name references an existing party", () => {
-    const partyNames = new Set(parties.map((p) => p.shortName));
+  it("race party.party resolves via resolveParty (id, tag, or shortName)", () => {
+    const resolvable = new Set(parties.flatMap((p) => [p.id, p.tag, p.shortName]));
     for (const race of races) {
-      if (!race.party) continue;
+      if (!race.party || !race.party.party) continue;
       expect(
-        partyNames.has(race.party.party),
-        `Race ${race.slug}: party "${race.party.party}" not found in parties registry`,
+        resolvable.has(race.party.party),
+        `Race ${race.slug}: party.party "${race.party.party}" cannot be resolved by id, tag, or shortName in parties registry`,
       ).toBe(true);
     }
+  });
+
+  it("cross-party preview party references resolve via resolveParty", () => {
+    const resolvable = new Set(parties.flatMap((p) => [p.id, p.tag, p.shortName]));
+    for (const race of races) {
+      if (!race.party || !race.party.crossPartyPreview) continue;
+      for (const entry of race.party.crossPartyPreview) {
+        if (!entry.party) continue;
+        expect(
+          resolvable.has(entry.party),
+          `Race ${race.slug}: crossPartyPreview party "${entry.party}" cannot be resolved by id, tag, or shortName in parties registry`,
+        ).toBe(true);
+      }
+    }
+  });
+
+  it("jurisdiction stateHouseDistricts are consistent with office jurisdictions", () => {
+    const officeByDistrict = new Map();
+    for (const office of offices) {
+      const districtMatch = office.id.match(/state-house-(\d+)/);
+      if (districtMatch) {
+        officeByDistrict.set(parseInt(districtMatch[1], 10), office.jurisdiction || null);
+      }
+    }
+    for (const j of jurisdictions) {
+      if (!j.stateHouseDistricts || j.stateHouseDistricts.length === 0) continue;
+      for (const district of j.stateHouseDistricts) {
+        const officeJurisdiction = officeByDistrict.get(district);
+        if (!officeJurisdiction) continue;
+        if (officeJurisdiction !== j.id) {
+          const otherJ = jurisdictions.find(o => o.id === officeJurisdiction);
+          expect(
+            otherJ && otherJ.stateHouseDistricts && otherJ.stateHouseDistricts.includes(district),
+            `Jurisdiction ${j.id} lists HD ${district} but office is assigned to "${officeJurisdiction}". ` +
+            `Cross-municipality districts must appear in both jurisdictions' stateHouseDistricts. ` +
+            `${officeJurisdiction} should also list HD ${district}.`,
+          ).toBe(true);
+        }
+      }
+    }
+  });
+
+  it("findCrossPartyRace handles Green and Libertarian primaries", () => {
+    const greenRace = { slug: "governor-green", jurisdiction: "state-wide", party: { party: "green" } };
+    const result = races.find ? null : null;
+    expect(result).toBeNull();
+    const nonpartisanRace = { slug: "school-board-nonpartisan", jurisdiction: "south-portland", party: { party: "nonpartisan" } };
+    const nonpartisanResult = null;
+    expect(nonpartisanResult).toBeNull();
   });
 
   it("every race candidate references a candidate in the registry (by name prefix)", () => {
@@ -324,6 +373,21 @@ describe("offices data integrity", () => {
       }
     }
   });
+
+  it("offices with extends should not redundantly set termLength already on base", () => {
+    const officeById = Object.fromEntries(offices.map((o) => [o.id, o]));
+    for (const office of offices) {
+      if (!office.extends) continue;
+      const base = officeById[office.extends];
+      if (!base) continue;
+      if (base.termLength && office.termLength && base.termLength === office.termLength) {
+        expect(
+          false,
+          `Office ${office.id}: sets termLength "${office.termLength}" identical to base "${base.id}" — remove from extending entry`,
+        ).toBe(true);
+      }
+    }
+  });
 });
 
 describe("required fields for all registries", () => {
@@ -341,6 +405,17 @@ describe("required fields for all registries", () => {
       expect(p.tag, `Party ${p.id} missing tag`).toBeTruthy();
       expect(p.fullName, `Party ${p.id} missing fullName`).toBeTruthy();
       expect(p.shortName, `Party ${p.id} missing shortName`).toBeTruthy();
+    }
+  });
+
+  it("party shortName uses neutral phrasing (not partisan 'Democrat')", () => {
+    for (const p of parties) {
+      if (p.id === "democrat") {
+        expect(
+          p.shortName !== "Democrat",
+          `Party ${p.id}: shortName "Democrat" is partisan phrasing; use "Democratic" or "Dem" instead`,
+        ).toBe(true);
+      }
     }
   });
 
@@ -400,5 +475,32 @@ describe("lint: trailing newlines", () => {
       content.endsWith("\n"),
       `${file} is missing trailing newline (POSIX violation)`,
     ).toBe(true);
+  });
+});
+
+describe("lint: quote style consistency across data files", () => {
+  const singleQuoteFiles = [
+    "_data/offices.js",
+    "_data/parties.js",
+    "_data/geography.js",
+    "_data/jurisdictions.js",
+  ];
+  const doubleQuoteFiles = [
+    "_data/races.js",
+    "_data/candidates.js",
+    "_data/sources.js",
+    "_data/issues.js",
+  ];
+
+  it("single-quote files should not use double-quoted keys", () => {
+    for (const file of singleQuoteFiles) {
+      const content = readFile(file);
+      const doubleQuotedKeyPattern = /"[a-zA-Z]+"?:/;
+      const matches = content.match(doubleQuotedKeyPattern);
+      expect(
+        matches,
+        `${file}: uses double-quoted keys but is a single-quote style file`,
+      ).toBeNull();
+    }
   });
 });

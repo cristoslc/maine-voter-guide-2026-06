@@ -48,7 +48,7 @@ eleventyComputed:
       <div class="candidate-head">
         <h2>{{ candidate.name }}{% if candidateEntry and candidateEntry.incumbent %} <span class="incumbent-badge">(Incumbent)</span>{% endif %}</h2>
         <span class="party-tag {{ candidate.tag }}">
-          {% if resolvedParty %}{{ resolvedParty.shortName }}{% elif candidate.tag == "d" %}Democrat{% elif candidate.tag == "r" %}Republican{% else %}{{ candidate.tag }}{% endif %}
+          {% if resolvedParty %}{{ resolvedParty.shortName }}{% elif candidate.tag == "d" %}Democratic{% elif candidate.tag == "r" %}Republican{% else %}{{ candidate.tag }}{% endif %}
         </span>
       </div>
 

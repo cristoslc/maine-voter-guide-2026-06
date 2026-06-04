@@ -4,7 +4,7 @@ module.exports = [
     id: "democrat",
     tag: "d",
     fullName: "Democratic Party",
-    shortName: "Democrat",
+    shortName: "Democratic",
     color: "#0015BC"
   },
   {

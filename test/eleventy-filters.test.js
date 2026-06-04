@@ -14,8 +14,8 @@ const candidates = [
 ];
 
 const parties = [
-  { id: "democratic", tag: "Dem", fullName: "Democratic Party", shortName: "Dem" },
-  { id: "republican", tag: "Rep", fullName: "Republican Party", shortName: "Rep" },
+  { id: "democrat", tag: "d", fullName: "Democratic Party", shortName: "Democratic", color: "#0015BC" },
+  { id: "republican", tag: "r", fullName: "Republican Party", shortName: "Republican", color: "#E81B23" },
 ];
 
 const offices = [
@@ -40,7 +40,7 @@ const races = [
     jurisdiction: "south-portland",
     office: "U.S. Senate",
     party: {
-      party: "Dem",
+      party: "Democratic",
       candidates: [
         { name: "Graham Platner", meta: "Policy positions" },
       ],
@@ -52,7 +52,7 @@ const races = [
     jurisdiction: "south-portland",
     office: "U.S. Senate",
     party: {
-      party: "Rep",
+      party: "Republican",
       candidates: [
         { name: "Susan Collins", meta: "Incumbent senator" },
       ],
@@ -148,15 +148,19 @@ describe("findBySlug filter", () => {
 describe("resolveParty filter", () => {
   const resolveParty = (partyId, parties) => {
     if (!partyId || !parties) return null;
-    return parties.find(p => p.id === partyId) || parties.find(p => p.tag === partyId) || null;
+    return parties.find(p => p.id === partyId) || parties.find(p => p.tag === partyId) || parties.find(p => p.shortName === partyId) || null;
   };
 
   it("resolves by id", () => {
-    expect(resolveParty("democratic", parties)).toBe(parties[0]);
+    expect(resolveParty("democrat", parties)).toBe(parties[0]);
   });
 
   it("resolves by tag", () => {
-    expect(resolveParty("Dem", parties)).toBe(parties[0]);
+    expect(resolveParty("d", parties)).toBe(parties[0]);
+  });
+
+  it("resolves by shortName", () => {
+    expect(resolveParty("Democratic", parties)).toBe(parties[0]);
   });
 
   it("returns null for missing party", () => {
@@ -165,8 +169,9 @@ describe("resolveParty filter", () => {
 
   it("returns null for null input", () => {
     expect(resolveParty(null, parties)).toBeNull();
-    expect(resolveParty("Dem", null)).toBeNull();
+    expect(resolveParty("d", null)).toBeNull();
   });
+
 });
 
 describe("resolveIssue filter", () => {
@@ -219,8 +224,8 @@ describe("partyTag filter", () => {
   };
 
   it("returns shortName for known tag", () => {
-    expect(partyTag("Dem", parties)).toBe("Dem");
-    expect(partyTag("Rep", parties)).toBe("Rep");
+    expect(partyTag("d", parties)).toBe("Democratic");
+    expect(partyTag("r", parties)).toBe("Republican");
   });
 
   it("returns tag as-is for unknown tag", () => {
@@ -229,7 +234,7 @@ describe("partyTag filter", () => {
 
   it("returns empty string for null input", () => {
     expect(partyTag(null, parties)).toBe("");
-    expect(partyTag("Dem", null)).toBe("Dem");
+    expect(partyTag("d", null)).toBe("d");
   });
 });
 
@@ -287,10 +292,18 @@ describe("findCrossPartyRace filter", () => {
     if (!currentRace || !allRaces) return null;
     const baseOffice = currentRace.slug
       .replace(/-democratic$/, "")
-      .replace(/-republican$/, "");
-    const opposingSuffix = currentRace.slug.endsWith("-democratic") ? "-republican" : "-democratic";
-    const opposingSlug = baseOffice + opposingSuffix;
-    return allRaces.find(r => r.slug === opposingSlug && r.jurisdiction === currentRace.jurisdiction) || null;
+      .replace(/-republican$/, "")
+      .replace(/-green$/, "")
+      .replace(/-libertarian$/, "");
+    const suffixes = ["-democratic", "-republican", "-green", "-libertarian"];
+    const currentSuffix = suffixes.find(s => currentRace.slug.endsWith(s));
+    if (!currentSuffix) return null;
+    const opposingSuffixes = suffixes.filter(s => s !== currentSuffix);
+    for (const suffix of opposingSuffixes) {
+      const candidate = allRaces.find(r => r.slug === baseOffice + suffix && r.jurisdiction === currentRace.jurisdiction);
+      if (candidate) return candidate;
+    }
+    return null;
   };
 
   it("finds opposing party race for democratic primary", () => {
@@ -311,6 +324,27 @@ describe("findCrossPartyRace filter", () => {
   it("returns null for null input", () => {
     expect(findCrossPartyRace(null, races)).toBeNull();
     expect(findCrossPartyRace(races[0], null)).toBeNull();
+  });
+
+  it("finds Republican primary for Green primary if it exists", () => {
+    const greenRace = { slug: "governor-green", jurisdiction: "state-wide" };
+    const republicanRace = { slug: "governor-republican", jurisdiction: "state-wide" };
+    const allRaces = [greenRace, republicanRace];
+    const result = findCrossPartyRace(greenRace, allRaces);
+    expect(result).toBe(republicanRace);
+  });
+
+  it("finds Democratic primary for Libertarian primary if it exists", () => {
+    const libRace = { slug: "us-senate-libertarian", jurisdiction: "state-wide" };
+    const demRace = { slug: "us-senate-democratic", jurisdiction: "state-wide" };
+    const allRaces = [demRace, libRace];
+    const result = findCrossPartyRace(libRace, allRaces);
+    expect(result).toBe(demRace);
+  });
+
+  it("returns null for nonpartisan race (no party suffix)", () => {
+    const nonpartisan = { slug: "school-board-at-large", jurisdiction: "south-portland" };
+    expect(findCrossPartyRace(nonpartisan, races)).toBeNull();
   });
 });
 
@@ -336,14 +370,16 @@ describe("filterByJurisdictions filter", () => {
 });
 
 describe("effectiveJurisdictionIds filter", () => {
+  const geographyParentMap = new Map(geography.map(g => [g.id, g.parent || null]));
+
   const getEffectiveJurisdictionIds = (jurisdictionId, geography, jurisdictions) => {
     const jurisdiction = jurisdictions.find(j => j.id === jurisdictionId);
     if (!jurisdiction || !jurisdiction.geoRef) return [jurisdictionId];
     const geoIds = [jurisdiction.geoRef];
-    let current = geography.find(g => g.id === jurisdiction.geoRef);
-    while (current && current.parent) {
-      geoIds.push(current.parent);
-      current = geography.find(g => g.id === current.parent);
+    let parentId = geographyParentMap.get(jurisdiction.geoRef);
+    while (parentId) {
+      geoIds.push(parentId);
+      parentId = geographyParentMap.get(parentId);
     }
     return jurisdictions
       .filter(j => geoIds.includes(j.geoRef))
@@ -405,7 +441,7 @@ describe("collectSources filter", () => {
       jurisdiction: "south-portland",
       office: "U.S. Senate",
       party: {
-        party: "Dem",
+        party: "Democratic",
         candidates: [
           { name: "Graham Platner", meta: "Policy positions" },
         ],
@@ -417,7 +453,7 @@ describe("collectSources filter", () => {
       jurisdiction: "south-portland",
       office: "U.S. Senate",
       party: {
-        party: "Rep",
+        party: "Republican",
         candidates: [
           { name: "Susan Collins", meta: "Incumbent senator" },
         ],
