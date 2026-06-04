@@ -202,31 +202,34 @@ module.exports = [
 The pipeline sits between external data sources (SOS websites, Ballotpedia, clerk sites, news feeds) and its human consumers (voters via the static site, editors via the review queue).
 
 ```mermaid
-C4Context
-title System Context diagram for Automated Election Data Pipeline
+flowchart TD
+    voter(["Voter<br/>South Portland resident looking up election information"])
+    editor(["Editor<br/>Human reviewer approving pipeline output"])
 
-Person(voter, "Voter", "South Portland resident looking up election information")
-Person(editor, "Editor", "Human reviewer approving pipeline output")
+    pipeline["Election Data Pipeline<br/>Automated system that discovers, extracts, and maintains election data for the voter guide"]
 
-System(pipeline, "Election Data Pipeline", "Automated system that discovers, extracts, and maintains election data for the voter guide")
+    sosWebsite["Maine SOS Website<br/>Official election calendar and certified candidate lists"]:::ext
+    ballotpedia["Ballotpedia<br/>API providing candidate, race, and position data"]:::ext
+    clerkWeb["City Clerk Websites<br/>Municipal election info and local race filings"]:::ext
+    newsSource["Press Herald / Maine Public / Maine Monitor<br/>News articles, debates, and endorsements"]:::ext
+    campaignSite["Campaign Websites<br/>Candidate issue positions and platform pages"]:::ext
+    staticHost["Static Site Host (Netlify/GitHub Pages)<br/>Serves compiled voter guide to the public"]:::ext
+    opVault["1Password / Vault<br/>Secret management for API keys and credentials"]:::ext
 
-System_Ext(sosWebsite, "Maine SOS Website", "Official election calendar and certified candidate lists")
-System_Ext(ballotpedia, "Ballotpedia", "API providing candidate, race, and position data")
-System_Ext(clerkWeb, "City Clerk Websites", "Municipal election info and local race filings")
-System_Ext(newsSource, "Press Herald / Maine Public / Maine Monitor", "News articles, debates, and endorsements")
-System_Ext(campaignSite, "Campaign Websites", "Candidate issue positions and platform pages")
-System_Ext(staticHost, "Static Site Host (Netlify/GitHub Pages)", "Serves compiled voter guide to the public")
-System_Ext(opVault, "1Password / Vault", "Secret management for API keys and credentials")
+    voter -->|"Visits, HTTPS"| staticHost
+    editor -->|"Reviews and approves, changeLog.js diff"| pipeline
+    pipeline -->|"Generates and deploys, Eleventy build → deploy"| staticHost
+    pipeline -->|"Scrapes election calendar and candidate lists, HTTPS + Puppeteer"| sosWebsite
+    pipeline -->|"Queries candidate and race data, HTTP API"| ballotpedia
+    pipeline -->|"Scrapes municipal election info, HTTPS + Puppeteer"| clerkWeb
+    pipeline -->|"Monitors RSS/Atom feeds"| newsSource
+    pipeline -->|"Scrapes issue positions, HTTPS + Puppeteer"| campaignSite
+    pipeline -->|"Reads API keys and secrets, op CLI"| opVault
 
-Rel(voter, staticHost, "Visits", "HTTPS")
-Rel(editor, pipeline, "Reviews and approves pipeline output", "changeLog.js diff")
-Rel(pipeline, staticHost, "Generates and deploys", "Eleventy build → deploy")
-Rel(pipeline, sosWebsite, "Scrapes election calendar and candidate lists", "HTTPS + Puppeteer")
-Rel(pipeline, ballotpedia, "Queries candidate and race data", "HTTP API")
-Rel(pipeline, clerkWeb, "Scrapes municipal election info", "HTTPS + Puppeteer")
-Rel(pipeline, newsSource, "Monitors RSS/Atom feeds", "RSS/Atom")
-Rel(pipeline, campaignSite, "Scrapes issue positions", "HTTPS + Puppeteer")
-Rel(pipeline, opVault, "Reads API keys and secrets", "op CLI")
+    classDef ext fill:#999,stroke:#666,stroke-dasharray:6 3,color:#fff
+    style voter fill:#08427b,color:#fff,stroke:#052e56
+    style editor fill:#08427b,color:#fff,stroke:#052e56
+    style pipeline fill:#1168bd,color:#fff,stroke:#0d4f8f
 ```
 
 ### Container Diagram (C4 L2)
@@ -234,44 +237,45 @@ Rel(pipeline, opVault, "Reads API keys and secrets", "op CLI")
 The pipeline decomposes into six internal containers. The Scrape Engine is the sole external interface; the LLM Pipeline Engine is the processing core; the Data Registry and Change Log are persistent stores; the Review Queue is the human interface; the Static Site Generator is the output mechanism.
 
 ```mermaid
-C4Container
-title Container diagram for Election Data Pipeline
+flowchart TD
+    voter(["Voter<br/>South Portland resident"])
+    editor(["Editor<br/>Human reviewer"])
 
-Person(voter, "Voter", "South Portland resident")
-Person(editor, "Editor", "Human reviewer")
+    subgraph pipeline["Election Data Pipeline"]
+        scraper["Scrape Engine<br/>Node.js + Puppeteer<br/>Fetches and parses election data from external sources"]
+        llmEngine["LLM Pipeline Engine<br/>Node.js + LLM API<br/>Extracts positions, classifies articles, rewrites content, detects drift"]
+        registry["Data Registry<br/>JS modules in _data/<br/>Structured election data entities with FK integrity"]
+        changelog["Change Log<br/>JS module<br/>Audit trail of pipeline changes with confidence scores"]
+        reviewQueue["Review Queue<br/>JS module + UI<br/>Human review queue for low-confidence changes"]
+        siteGen["Static Site Generator<br/>Eleventy<br/>Compiles registries into HTML voter guide"]
+    end
 
-System_Boundary(pipeline, "Election Data Pipeline") {
-    Container(scraper, "Scrape Engine", "Node.js + Puppeteer", "Fetches and parses election data from external sources")
-    Container(llmEngine, "LLM Pipeline Engine", "Node.js + LLM API", "Extracts positions, classifies articles, rewrites content, detects drift")
-    Container(registry, "Data Registry", "JS modules in _data/", "Structured election data entities with FK integrity")
-    Container(changelog, "Change Log", "JS module", "Audit trail of pipeline changes with confidence scores")
-    Container(reviewQueue, "Review Queue", "JS module + UI", "Human review queue for low-confidence changes")
-    Container(siteGen, "Static Site Generator", "Eleventy", "Compiles registries into HTML voter guide")
-}
+    sos["Maine SOS<br/>Official calendars + candidate lists"]:::ext
+    ballotpedia["Ballotpedia API<br/>Candidate/race data"]:::ext
+    newsFeeds["News RSS Feeds<br/>Press Herald, Maine Public, Maine Monitor"]:::ext
+    campaignSites["Campaign Websites<br/>Issue positions"]:::ext
+    clerkSites["City Clerk Websites<br/>Municipal election info"]:::ext
+    llmApi["LLM API<br/>Sonnet, Opus, Haiku"]:::ext
+    host["Static Host<br/>Netlify / GitHub Pages"]:::ext
 
-System_Ext(sos, "Maine SOS", "Official calendars + candidate lists")
-System_Ext(ballotpedia, "Ballotpedia API", "Candidate/race data")
-System_Ext(newsFeeds, "News RSS Feeds", "Press Herald, Maine Public, Maine Monitor")
-System_Ext(campaignSites, "Campaign Websites", "Issue positions")
-System_Ext(clerkSites, "City Clerk Websites", "Municipal election info")
-System_Ext(llmApi, "LLM API", "Sonnet, Opus, Haiku")
-System_Ext(host, "Static Host", "Netlify / GitHub Pages")
+    voter -->|"Visits, HTTPS"| host
+    editor -->|"Reviews changes, Git diff"| reviewQueue
+    scraper -->|"Scrapes, HTTPS"| sos
+    scraper -->|"Queries, API"| ballotpedia
+    scraper -->|"Scrapes, HTTPS"| clerkSites
+    scraper -->|"Polls, RSS/Atom"| newsFeeds
+    scraper -->|"Scrapes, HTTPS"| campaignSites
+    scraper -->|"Provides scraped input, JSON"| llmEngine
+    llmEngine -->|"Calls LLM, HTTP API"| llmApi
+    llmEngine -->|"Writes entities, JS module update"| registry
+    llmEngine -->|"Writes audit trail, JS module update"| changelog
+    changelog -->|"Feeds low-confidence, changeLog.js"| reviewQueue
+    registry -->|"Reads for build, require()"| siteGen
+    siteGen -->|"Deploys, git push / CI"| host
 
-Rel(voter, host, "Visits", "HTTPS")
-Rel(editor, reviewQueue, "Reviews changes", "Git diff")
-Rel(scraper, sos, "Scrapes", "HTTPS")
-Rel(scraper, ballotpedia, "Queries", "API")
-Rel(scraper, clerkSites, "Scrapes", "HTTPS")
-Rel(scraper, newsFeeds, "Polls", "RSS/Atom")
-Rel(scraper, campaignSites, "Scrapes", "HTTPS")
-Rel(scraper, llmEngine, "Provides scraped input", "JSON")
-Rel(llmEngine, llmApi, "Calls LLM", "HTTP API")
-Rel(llmEngine, registry, "Writes entities", "JS module update")
-Rel(llmEngine, changelog, "Writes audit trail", "JS module update")
-Rel(changelog, reviewQueue, "Feeds low-confidence", "changeLog.js")
-Rel(registry, siteGen, "Reads for build", "require()")
-Rel(siteGen, host, "Deploys", "git push / CI")
-```
+    classDef ext fill:#999,stroke:#666,stroke-dasharray:6 3,color:#fff
+    style voter fill:#08427b,color:#fff,stroke:#052e56
+    style editor fill:#08427b,color:#fff,stroke:#052e56
 
 ### Architecture Constraints — Ford & Richards Domain Language Conformity
 
