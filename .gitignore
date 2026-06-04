@@ -55,3 +55,4 @@ _site/
 .output/.playwright-cli/
 _site/
 .playwright-cli/
+.url-verified

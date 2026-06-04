@@ -1,3 +1,4 @@
+/** Issue/position topic registry for standardizing labels across races. Required: id, label. */
 module.exports = [
   { id: "2020-reelection", label: "2020 Reelection" },
   { id: "affordable-housing", label: "Affordable Housing" },

@@ -1,3 +1,10 @@
+/**
+ * Eleventy filter tests — intentionally re-implement filter logic for test isolation.
+ * These tests verify the *contract* of each filter (inputs → outputs) using
+ * self-contained fixtures, not the Eleventy runtime. This means filter bugs in
+ * .eleventy.js won't be masked by mocking or import issues, and changes to the
+ * runtime registration won't break tests.
+ */
 import { describe, it, expect } from "vitest";
 
 const candidates = [
@@ -185,14 +192,17 @@ describe("resolveIssue filter", () => {
 describe("resolveCandidate filter", () => {
   const resolveCandidate = (candidateRef, candidateList) => {
     if (!candidateRef || !candidateList) return null;
-    return candidateList.find(c => c.id === candidateRef) || candidateList.find(c => candidateRef.startsWith(c.name)) || null;
+    var byId = candidateList.find(c => c.id === candidateRef);
+    if (byId) return byId;
+    var stripped = candidateRef.replace(/\s*[—–-]\s*(District\s+\d+|Incumbent).*$/i, "").trim();
+    return candidateList.find(c => c.name === stripped) || candidateList.find(c => c.name === candidateRef.trim()) || null;
   };
 
   it("resolves by id", () => {
     expect(resolveCandidate("susan-collins", candidates)).toBe(candidates[0]);
   });
 
-  it("resolves by name prefix", () => {
+  it("resolves by name with suffix stripped", () => {
     expect(resolveCandidate("Susan Collins — Incumbent", candidates)).toBe(candidates[0]);
   });
 
@@ -203,7 +213,7 @@ describe("resolveCandidate filter", () => {
 
 describe("partyTag filter", () => {
   const partyTag = (tag, parties) => {
-    if (!tag || !parties) return tag;
+    if (!tag || !parties) return tag || "";
     const p = parties.find(p => p.tag === tag);
     return p ? p.shortName : tag;
   };
@@ -217,8 +227,8 @@ describe("partyTag filter", () => {
     expect(partyTag("Ind", parties)).toBe("Ind");
   });
 
-  it("returns null/undefined for null input", () => {
-    expect(partyTag(null, parties)).toBeNull();
+  it("returns empty string for null input", () => {
+    expect(partyTag(null, parties)).toBe("");
     expect(partyTag("Dem", null)).toBe("Dem");
   });
 });

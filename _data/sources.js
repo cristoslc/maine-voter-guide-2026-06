@@ -1,3 +1,7 @@
+/** Source registry for attribution and fact-checking. Required: id, url, label, summary, type. Optional: races, candidates, accessed.
+ * ID convention: "source-NNN-descriptor" format. Earlier entries use sequential numbers;
+ * later entries may use higher numbers added during expansion. Descriptors should be
+ * concise and unique enough to distinguish sources with similar labels (e.g. "Maine Public — Costello profile"). */
 module.exports = [
   {
     "id": "source-001-campaign-platform",
@@ -16,7 +20,7 @@ module.exports = [
   {
     "id": "source-002-maine-public",
     "url": "https://www.mainepublic.org/politics/2026-04-19/your-vote-2026-profile-david-costello-democrat-for-senate",
-    "label": "Maine Public",
+    "label": "Maine Public — Costello profile",
     "summary": "Maine Public candidate profile covering David Costello's background, qualifications, and policy positions in the Democratic U.S. Senate primary.",
     "type": "news-article",
     "races": [
@@ -151,7 +155,7 @@ module.exports = [
   {
     "id": "source-015-maine-public",
     "url": "https://www.mainepublic.org/politics/2026-04-17/your-vote-2026-profile-troy-jackson-democrat-for-governor",
-    "label": "Maine Public",
+    "label": "Maine Public — Jackson profile",
     "summary": "Maine Public candidate profile covering Troy Jackson's background, legislative record as Senate President, and campaign platform for governor.",
     "type": "news-article",
     "races": [
@@ -253,7 +257,7 @@ module.exports = [
   {
     "id": "source-022-maine-public",
     "url": "https://www.mainepublic.org/politics/2026-04-17/your-vote-2026-profile-hannah-pingree-democrat-for-governor",
-    "label": "Maine Public",
+    "label": "Maine Public — Pingree profile",
     "summary": "Maine Public candidate profile covering Hannah Pingree's background, policy priorities, and qualifications in the gubernatorial race.",
     "type": "news-article",
     "races": [
@@ -323,7 +327,7 @@ module.exports = [
   {
     "id": "source-027-maine-public",
     "url": "https://www.mainepublic.org/politics/2026-03-20/maine-gubernatorial-candidates-mostly-back-tribal-sovereignty-in-wabanaki-hosted-forum",
-    "label": "Maine Public",
+    "label": "Maine Public — Wabanaki forum",
     "summary": "Maine Public article covering Democratic gubernatorial candidates' positions on tribal sovereignty at a Wabanaki-hosted candidate forum.",
     "type": "news-article",
     "races": [
@@ -1076,3 +1080,4 @@ module.exports = [
     "accessed": null
   }
 ]
+

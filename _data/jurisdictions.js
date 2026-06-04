@@ -1,3 +1,4 @@
+/** Jurisdiction registry for geographic governing areas. Required: id, name, geoRef. Optional: url, type. */
 module.exports = [
   {
     id: "state-wide",

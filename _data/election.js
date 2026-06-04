@@ -1,7 +1,8 @@
+/** Election metadata for the single election event definition. Required: date, type, name, jurisdiction. */
 module.exports = {
   id: "2026-06-primary",
   title: "June 2026 State Primary Election & School Budget Referendum",
-  date: new Date("2026-06-09"),
+  date: new Date("2026-06-09T00:00:00-04:00"), // EDT — use explicit timezone to avoid UTC date offset
   type: "primary",
   keyDates: [
     { date: "2026-05-11", description: "Absentee ballots available; in-person absentee voting begins at City Hall", source: "South Portland City Clerk", type: "absentee-voting" },

@@ -67,7 +67,7 @@ describe("candidates data integrity", () => {
       expect(c.id, `Candidate missing id`).toBeTruthy();
       expect(c.name, `Candidate missing name`).toBeTruthy();
       expect(c.party, `Candidate ${c.id} missing party`).toBeTruthy();
-      expect(typeof c.incumbent, `Candidate ${c.id} incumbent must be boolean`).toBe("boolean");
+      if (c.incumbent !== undefined) expect(typeof c.incumbent, `Candidate ${c.id} incumbent must be boolean`).toBe("boolean");
     }
   });
 });

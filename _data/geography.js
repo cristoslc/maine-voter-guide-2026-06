@@ -1,3 +1,4 @@
+/** Geography hierarchy registry for nested location references. Required: id. Optional: parent. */
 module.exports = [
   { id: "maine", name: "Maine", type: "state", parent: null, aliases: ["State of Maine"] },
   { id: "cumberland-county", name: "Cumberland County", type: "county", parent: "maine", aliases: ["Cumberland County", "Cumberland Cty"] },

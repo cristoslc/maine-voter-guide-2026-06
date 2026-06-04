@@ -1,6 +1,12 @@
 const fs = require('fs');
 const path = require('path');
 
+/**
+ * Resolve jurisdiction IDs for a given jurisdiction, following geography
+ * parent references to include all ancestor jurisdictions.
+ * Note: Returns [jurisdictionId] silently if jurisdiction is missing or has
+ * no geoRef — this masks data errors (missing jurisdiction or geography linkage).
+ */
 function getEffectiveJurisdictionIds(jurisdictionId, geography, jurisdictions) {
   const jurisdiction = jurisdictions.find(j => j.id === jurisdictionId);
   if (!jurisdiction || !jurisdiction.geoRef) return [jurisdictionId];
@@ -15,6 +21,10 @@ function getEffectiveJurisdictionIds(jurisdictionId, geography, jurisdictions) {
     .map(j => j.id);
 }
 
+/**
+ * Convert a string to a URL-safe slug: lowercase, replace non-alphanumeric
+ * runs with hyphens, strip leading/trailing hyphens.
+ */
 function slugify(str) {
   return (str || '')
     .toLowerCase()
@@ -31,6 +41,10 @@ module.exports = function (eleventyConfig) {
     fs.writeFileSync('./_site/.nojekyll', '');
   });
 
+  /**
+   * Find an item by slug (preferred) or id (fallback). Uses slug-first
+   * resolution because most data files key on id but templates reference slugs.
+   */
   eleventyConfig.addFilter("find", function(arr, key) {
     if (!arr || !key) return null;
     return arr.find(item => (item.slug || item.id) === key) || null;
@@ -70,6 +84,14 @@ module.exports = function (eleventyConfig) {
     return slugify(officeTitle);
   });
 
+  /**
+   * Resolve an office reference through 5 fallback strategies:
+   * 1. Alias match (slugified alias === slugified officeRef)
+   * 2. Exact id match (officeRef === office.id)
+   * 3. Slug id match (slugified officeRef === office.id)
+   * 4. Title match (slugified title === slugified officeRef)
+   * 5. District-stripped match (remove "district" from slug and retry id)
+   */
   function resolveOfficeRaw(officeRef, offices) {
     if (!officeRef || !offices) return null;
     const slug = slugify(officeRef);
@@ -81,7 +103,7 @@ module.exports = function (eleventyConfig) {
     if (match) return match;
     match = offices.find(o => slugify(o.title) === slug);
     if (match) return match;
-    match = offices.find(o => o.id === slug.replace(/\bdistrict\b-?/, ''));
+    match = offices.find(o => o.id === slug.replace(/\bdistrict\b-?/, '')); // strip "district" for state-level office IDs like "state-representative" vs "state-representative-district-120"
     return match || null;
   }
 
@@ -89,6 +111,11 @@ module.exports = function (eleventyConfig) {
     return offices.find(o => o.id === extendsId) || null;
   }
 
+  /**
+   * Resolve an office, merging with its base if it extends another office.
+   * Merge rules: base properties are spread first, then raw overrides.
+   * districtNote is appended to the base officeDesc if both exist.
+   */
   eleventyConfig.addFilter("resolveOffice", function(officeRef, offices) {
     const raw = resolveOfficeRaw(officeRef, offices);
     if (!raw) return null;
@@ -109,6 +136,9 @@ module.exports = function (eleventyConfig) {
     return parties.find(p => p.id === partyId) || parties.find(p => p.tag === partyId) || null;
   });
 
+  /**
+   * Resolve an issue by id (slugified match, preferred) or label (exact match, fallback).
+   */
   eleventyConfig.addFilter("resolveIssue", function(issueIdOrLabel, issues) {
     if (!issueIdOrLabel || !issues) return null;
     const s = slugify(issueIdOrLabel);
@@ -120,20 +150,27 @@ module.exports = function (eleventyConfig) {
     return sources.find(sr => sr.id === sourceId) || null;
   });
 
+  /**
+   * Resolve a candidate reference through 3 strategies:
+   * 1. Exact id match (candidateRef === candidate.id)
+   * 2. Name match after stripping suffixes like " — District 120" or " — Incumbent"
+   * 3. Exact name match on the raw reference
+   */
   eleventyConfig.addFilter("resolveCandidate", function(candidateRef, candidates) {
     if (!candidateRef || !candidates) return null;
-    return candidates.find(c => c.id === candidateRef) || candidates.find(c => candidateRef.startsWith(c.name)) || null;
+    var byId = candidates.find(c => c.id === candidateRef);
+    if (byId) return byId;
+    var stripped = candidateRef.replace(/\s*[—–-]\s*(District\s+\d+|Incumbent).*$/i, "").trim();
+    return candidates.find(c => c.name === stripped) || candidates.find(c => c.name === candidateRef.trim()) || null;
   });
 
+  /**
+   * Resolve a party tag to its shortName. Returns empty string if tag is null/undefined.
+   */
   eleventyConfig.addFilter("partyTag", function(tag, parties) {
-    if (!tag || !parties) return tag;
+    if (!tag || !parties) return tag || "";
     const p = parties.find(p => p.tag === tag);
     return p ? p.shortName : tag;
-  });
-
-  eleventyConfig.addFilter("officeSlugFromTitle", function(officeTitle) {
-    if (!officeTitle) return null;
-    return slugify(officeTitle);
   });
 
   eleventyConfig.addFilter("issueSlugFromLabel", function(issueLabel) {
@@ -141,6 +178,14 @@ module.exports = function (eleventyConfig) {
     return slugify(issueLabel);
   });
 
+  /**
+   * Collect all unique sources for a race by traversing 4 paths:
+   * 1. candidate primaryContent sourceIds
+   * 2. candidate secondaryContent sourceIds
+   * 3. race.sourcesMain (string sourceIds)
+   * 4. race.sourcesSidebar (string sourceIds)
+   * Returns resolved source objects (deduplicated).
+   */
   eleventyConfig.addFilter("collectSources", function(race, sources) {
     if (!race || !sources) return [];
     const sourceIds = new Set();

@@ -1,3 +1,4 @@
+/** Race registry for primary election races. Required: jurisdiction, slug, title, party. Optional: sources, offices, candidates (linked by reference). */
 module.exports = [
   {
     "jurisdiction": "state-wide",
@@ -2326,9 +2327,8 @@ module.exports = [
     },
     "sourcesMain": [
       "source-068-campaign-website",
-      "source-070-campaign-website",
-      "source-073-maine-afl-cio-early-endorsements",
-      "source-069-wmtw"
+      "source-069-wmtw",
+      "source-073-maine-afl-cio-early-endorsements"
     ]
   },
   {
@@ -2396,10 +2396,8 @@ module.exports = [
       ]
     },
     "sourcesMain": [
-      "source-068-campaign-website",
       "source-070-campaign-website",
-      "source-073-maine-afl-cio-early-endorsements",
-      "source-069-wmtw"
+      "source-073-maine-afl-cio-early-endorsements"
     ]
   },
   {

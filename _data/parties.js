@@ -1,3 +1,4 @@
+/** Party registry with display names and standard US party color conventions. Required: id, tag, fullName, shortName. Optional: color. Colors sourced from Wikipedia "Political colour" conventions. */
 module.exports = [
   {
     id: "democrat",

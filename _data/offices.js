@@ -1,3 +1,4 @@
+/** Office registry for elected positions. Required: id, title, type. Optional: aliases, extends, districtNote, officeDesc. */
 module.exports = [
   {
     id: "us-senate",
