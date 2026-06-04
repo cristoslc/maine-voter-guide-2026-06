@@ -140,6 +140,27 @@ describe("races data integrity", () => {
     }
   });
 
+  it("race contest status is correctly derived from party.candidates count", () => {
+    for (const race of races) {
+      if (!race.party || !race.party.candidates) continue;
+      const candidateCount = race.party.candidates.length;
+      const isUncontested = candidateCount <= 1;
+      const isContested = candidateCount > 1;
+      if (isContested) {
+        expect(
+          candidateCount,
+          `Race ${race.slug}: has ${candidateCount} candidates but is marked uncontested`,
+        ).toBeGreaterThan(1);
+      }
+      if (isUncontested) {
+        expect(
+          candidateCount,
+          `Race ${race.slug}: marked as uncontested but has ${candidateCount} candidates`,
+        ).toBeLessThanOrEqual(1);
+      }
+    }
+  });
+
   it("no catch-all slugs (state-rep-democratic, state-rep-republican) exist", () => {
     const disallowedSlugs = ["state-rep-democratic", "state-rep-republican"];
     for (const race of races) {
@@ -495,6 +516,35 @@ describe("build output integrity", () => {
       ).toBe(false);
     }
   });
+
+  it("contested races show Contested tag on jurisdiction home pages", () => {
+    const { execSync } = require("child_process");
+    execSync("npx @11ty/eleventy", { stdio: "pipe" });
+
+    const contestedSlugs = races.filter((r) =>
+      r.party && r.party.candidates && r.party.candidates.length > 1
+    ).map((r) => r.slug);
+
+    const jurDirs = fs.readdirSync("_site").filter((d) => {
+      const p = `_site/${d}`;
+      return fs.statSync(p).isDirectory() && !d.startsWith(".");
+    });
+
+    for (const jurDir of jurDirs) {
+      const indexPath = `_site/${jurDir}/index.html`;
+      if (!fs.existsSync(indexPath)) continue;
+      const content = fs.readFileSync(indexPath, "utf8");
+      for (const slug of contestedSlugs) {
+        const raceLinkRegex = new RegExp(`<a[^>]*href="[^"]*${slug}[^"]*"[^>]*>\\s*<span[^>]*class="card-tag partisan"[^>]*>[^<]*</span>\\s*<span[^>]*class="card-tag ([^"]*)"[^>]*>\\s*(Contested|Uncontested)`, "s");
+        const match = content.match(raceLinkRegex);
+        if (!match) continue;
+        expect(
+          match[2],
+          `${jurDir}/index.html: contested race "${slug}" shows "${match[2]}" tag (expected "Contested")`,
+        ).toBe("Contested");
+      }
+    }
+  });
 });
 
 describe("lint: trailing newlines", () => {
@@ -548,6 +598,17 @@ describe("lint: frontmatter at file start", () => {
       beforeFrontmatter.trim().length,
       `${file}: has content before the opening --- frontmatter delimiter — Eleventy requires frontmatter at the very beginning of the file`,
     ).toBe(0);
+  });
+});
+
+describe("lint: template data model references", () => {
+  it("jurisdiction-home.md does not reference .parties (plural) on races", () => {
+    const content = readFile("content/pages/jurisdiction-home.md");
+    const partiesRef = content.match(/\br\.parties\b/);
+    expect(
+      partiesRef,
+      "jurisdiction-home.md references r.parties (plural) — race data model uses r.party (singular)",
+    ).toBeNull();
   });
 });
 

@@ -35,12 +35,7 @@ pagination:
 <div class="race-grid">
 {% for r in effRaces %}
 {% if "democratic" in r.slug %}
-  {% set contested = false %}
-  {% for p in r.parties %}
-    {% if p.candidates and (p.candidates | length) > 1 %}
-      {% set contested = true %}
-    {% endif %}
-  {% endfor %}
+  {% set contested = r.party and r.party.candidates and (r.party.candidates | length) > 1 %}
   <a href="/{{ r.jurisdiction }}/races/{{ r.slug }}/" class="race-card">
     <span class="card-tag partisan">{{ r.office }}</span>
     <span class="card-tag {% if contested %}contested{% else %}uncontested{% endif %}">{% if contested %}Contested{% else %}Uncontested{% endif %}</span>
@@ -56,12 +51,7 @@ pagination:
 <div class="race-grid">
 {% for r in effRaces %}
 {% if "republican" in r.slug %}
-  {% set contested = false %}
-  {% for p in r.parties %}
-    {% if p.candidates and (p.candidates | length) > 1 %}
-      {% set contested = true %}
-    {% endif %}
-  {% endfor %}
+  {% set contested = r.party and r.party.candidates and (r.party.candidates | length) > 1 %}
   <a href="/{{ r.jurisdiction }}/races/{{ r.slug }}/" class="race-card">
     <span class="card-tag partisan">{{ r.office }}</span>
     <span class="card-tag {% if contested %}contested{% else %}uncontested{% endif %}">{% if contested %}Contested{% else %}Uncontested{% endif %}</span>

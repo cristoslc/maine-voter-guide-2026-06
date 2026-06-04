@@ -117,11 +117,16 @@ Hours: Mon/Wed/Thu 7:30 AM–5 PM, Tue 9 AM–5 PM (City Clerk open until 6 PM T
 
 If you encounter issues voting, call the **Election Protection Hotline** at 1-866-OUR-VOTE (866-687-8683).
 
+## Additional Resources
+
+- [Vote 411](https://www.vote411.org/) — League of Women Voters voter guide
+- [Portland Press Herald Voter Guide](https://www.pressherald.com/voter-guide/) — Portland Press Herald coverage of Maine elections
+
 ## Sources
 
 - South Portland City Clerk — [June 9 Primary & Budget Referendum](https://www.southportland.gov/m/newsflash/Home/Detail/493)
 - South Portland City Clerk — [Primary Election Details](https://www.southportland.gov/m/newsflash/Home/Detail/542)
-- Maine Secretary of State — [State of Maine Voter Guide](https://www.maine.gov/sos/cec/elec/voter-info/voterguide.html)
+- Maine Secretary of State — [State of Maine Voter Guide](https://www.maine.gov/sos/elections-voting/state-of-maine-voter-guide)
 - Maine Secretary of State — [Upcoming Elections](https://www.maine.gov/sos/elections-voting/upcoming-elections)
 
 _Last updated: May 31, 2026._

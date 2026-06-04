@@ -12,7 +12,7 @@
 | Primary Candidate Withdrawals | sos.maine.gov/.../2026%20PrePrimary%20Withdrawal%20List%205%2022%202026.pdf | PDF | Final as of 5/22/26 | Withdrawals/replacements |
 | 2026 Primary Voting Place Report | sos.maine.gov/.../6.9.2026%20Voting%20Place%20Report%20Posting%20Version.pdf | PDF + Excel | As of 5/19/26 | All polling places statewide |
 | Municipal Office Hours & Drop Box Locations | sos.maine.gov/.../6.9.2026%20Municipal%20Office%20Hours%20%26%20Absentee%20Drop%20Box%20Locations%20Posting.pdf | PDF + Excel | As of 5/19/26 | Absentee drop box info |
-| State of Maine Voter Guide | maine.gov/sos/cec/elec/voter-info/voterguide.html | HTML | Static | Registration, ID, absentee info |
+| State of Maine Voter Guide | maine.gov/sos/elections-voting/state-of-maine-voter-guide | HTML | Static | Registration, ID, absentee info |
 | Online Voter Registration | registertovote.sos.maine.gov | Web app | Real-time | Registration portal |
 | Absentee Ballot Request | absenteeballotrequest.sos.maine.gov | Web app | Real-time | Absentee request portal |
 | Voter Information Lookup | maine.gov/portal/government/edemocracy/voter_lookup.php | Web app | Real-time | Find polling place, districts |
