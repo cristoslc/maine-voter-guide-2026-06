@@ -18,6 +18,7 @@ eleventyComputed:
 {% set crossPartyRace = race | findCrossPartyRace(races) %}
 {% set partyBlock = race.party %}
 {% set resolvedParty = partyBlock.party | resolveParty(parties) %}
+{% set isContested = partyBlock.candidates and (partyBlock.candidates | length) > 1 %}
 
 <nav class="breadcrumb" aria-label="Breadcrumb">
   <a href="{{ '/' | url }}">Home</a> &rsaquo; <a href="/{{ race.jurisdiction }}/">{{ (jurisdictions | find(race.jurisdiction)).name or race.jurisdiction }}</a> &rsaquo; {{ race.title }}
@@ -28,6 +29,7 @@ eleventyComputed:
 </div>
 
 <p>{{ race.voting }}</p>
+<p><span class="card-tag {% if isContested %}contested{% else %}uncontested{% endif %}">{% if isContested %}Contested{% else %}Uncontested{% endif %}</span></p>
 {% if raceOffice %}<p><strong>What a {{ raceOffice.officerTitle }} does</strong>: {{ raceOffice.officeDesc | safe }}</p>{% elif race.officeDesc %}<p><strong>What a {{ race.office }} does</strong>: {{ race.officeDesc | safe }}</p>{% endif %}
 {% if race.context %}<p><strong>Context</strong>: {{ race.context | safe }}</p>{% endif %}
 

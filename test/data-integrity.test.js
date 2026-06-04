@@ -545,6 +545,46 @@ describe("build output integrity", () => {
       }
     }
   });
+
+  it("contested races show Contested tag on race detail pages", () => {
+    const { execSync } = require("child_process");
+    execSync("npx @11ty/eleventy", { stdio: "pipe" });
+
+    const contestedSlugs = new Set(
+      races.filter((r) =>
+        r.party && r.party.candidates && r.party.candidates.length > 1
+      ).map((r) => r.slug)
+    );
+
+    const raceHtmlFiles = fs.readdirSync("_site", { recursive: true })
+      .filter((f) => typeof f === "string" && f.endsWith("index.html") && f.includes("/races/"))
+      .map((f) => `_site/${f}`);
+
+    for (const file of raceHtmlFiles) {
+      const slug = file.match(/races\/([^/]+)\//)?.[1];
+      if (!slug) continue;
+      const content = fs.readFileSync(file, "utf8");
+      if (contestedSlugs.has(slug)) {
+        expect(
+          content.includes("Contested"),
+          `${file}: contested race "${slug}" must show "Contested" tag on race page`,
+        ).toBe(true);
+        expect(
+          content.includes("Uncontested"),
+          `${file}: contested race "${slug}" must not show "Uncontested" tag on race page`,
+        ).toBe(false);
+      } else {
+        expect(
+          content.includes("Uncontested"),
+          `${file}: uncontested race "${slug}" must show "Uncontested" tag on race page`,
+        ).toBe(true);
+        expect(
+          content.includes("Contested"),
+          `${file}: uncontested race "${slug}" must not show "Contested" tag on race page`,
+        ).toBe(false);
+      }
+    }
+  });
 });
 
 describe("lint: trailing newlines", () => {
