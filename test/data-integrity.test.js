@@ -12,6 +12,7 @@ const parties = require("../_data/parties.js");
 const issues = require("../_data/issues.js");
 const geography = require("../_data/geography.js");
 const jurisdictions = require("../_data/jurisdictions.js");
+const ballotQuestions = require("../_data/ballotQuestions.js");
 
 function readFile(path) {
   return fs.readFileSync(path, "utf8");
@@ -94,6 +95,30 @@ describe("races data integrity", () => {
           /<a\s+href/i.test(cand.meta),
           `Race ${race.slug}, candidate "${cand.name}": <a href> in meta — campaign URLs belong in candidates.js campaignWebsite field`,
         ).toBe(false);
+      }
+    }
+  });
+
+  it("no data strings in any registry contain disallowed HTML tags", () => {
+    const disallowedPattern = /<(script|iframe|object|embed|form)\b/i;
+    const registries = { candidates, sources, races, offices, parties, issues, geography, jurisdictions, ballotQuestions };
+    const checkValue = (val, path) => {
+      if (typeof val === "string") {
+        expect(
+          disallowedPattern.test(val),
+          `${path}: contains disallowed HTML tag — only <a>, <strong>, <em>, <br>, <ul>, <ol>, <li> are permitted in data strings`,
+        ).toBe(false);
+      } else if (Array.isArray(val)) {
+        val.forEach((item, i) => checkValue(item, `${path}[${i}]`));
+      } else if (val && typeof val === "object") {
+        for (const key of Object.keys(val)) {
+          checkValue(val[key], `${path}.${key}`);
+        }
+      }
+    };
+    for (const [name, registry] of Object.entries(registries)) {
+      for (const entry of registry) {
+        checkValue(entry, `${name}[${entry.id || entry.slug || "?"}]`);
       }
     }
   });

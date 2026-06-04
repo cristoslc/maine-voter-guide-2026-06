@@ -1,3 +1,14 @@
+/**
+ * Eleventy configuration for Maine Voter Guide 2026-06.
+ *
+ * Trust boundary: templates use Nunjucks `| safe` filter to render HTML
+ * from hand-curated data files (candidate.meta, position text, race context,
+ * source labels). This is acceptable because all data is committed to the
+ * repository by trusted editors. A build-time lint
+ * (test/data-integrity.test.js → "no disallowed HTML tags") validates that
+ * data strings do not contain <script>, <iframe>, <object>, <embed>, or
+ * <form>. Do NOT use `| safe` on user-supplied runtime input.
+ */
 const fs = require('fs');
 const path = require('path');
 

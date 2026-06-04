@@ -1,3 +1,12 @@
+{#
+  Trust boundary: data rendered via | safe (candidate.meta, pos.text,
+  sec.text, race.context, posSource.url, compareTable values) comes from
+  hand-curated data files committed to this repository. Only trusted
+  editors with commit access can modify this content. A build-time lint
+  (test/data-integrity.test.js → "no disallowed HTML tags") validates that
+  data strings do not contain <script>, <iframe>, <object>, <embed>, or
+  <form> tags. Do not use | safe on user-supplied runtime input.
+#}
 ---
 layout: base
 templateEngineOverride: njk,md
