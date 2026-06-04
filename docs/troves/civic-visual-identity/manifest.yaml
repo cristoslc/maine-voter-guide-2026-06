@@ -1,0 +1,73 @@
+id: civic-visual-identity
+created: 2026-06-04
+refreshed: 2026-06-04
+tags:
+  - civic-tech
+  - visual-identity
+  - voter-guide
+  - design-system
+  - accessibility
+  - color-palette
+  - typography
+  - nonpartisan
+  - election-design
+  - WCAG
+source-count: 5
+freshness-ttl:
+  web-page: 1y
+  documentation-site: 1y
+  article: 1y
+
+sources:
+  - id: ccd-voter-guide-design
+    title: "Designing a voter guide to an election"
+    url: https://civicdesign.org/tools/designing-a-voter-guide-to-an-election/
+    author: Center for Civic Design (Oxide Design Co.)
+    fetched: 2026-06-04
+    type: web-page
+    hash: b5ae0b8138259167f4875fb97e275e40db19a2682d941285ce5852d7c6e07e95
+    notes: Primary source for election design guidelines. Includes downloadable color palette PDF, templates, and training materials. CC BY-NC 4.0 licensed.
+
+  - id: ccd-voter-education-toolkit
+    title: "Voter education design toolkit"
+    url: https://civicdesign.org/tools/voter-education-design-toolkit/
+    author: Center for Civic Design / U.S. Election Assistance Commission
+    fetched: 2026-06-04
+    type: web-page
+    hash: d090f8d918f7f0278b15abb49d14b98f0268d82d9154dd61b147468522e00ec9
+    notes: Bite-snack-meal framework for scalable voter education across formats. Hosted on EAC website.
+
+  - id: uswds-color-utilities
+    title: "Color utilities | U.S. Web Design System (USWDS)"
+    url: https://designsystem.digital.gov/utilities/color/
+    author: U.S. General Services Administration (GSA)
+    fetched: 2026-06-04
+    type: documentation-site
+    hash: 71f596a0ecb2274ce840b1067d51f8310bb8210b15c9f2afa0d325e07c7d0fbe
+    notes: Federal design system demonstrating token-based color architecture, semantic naming, and contrast compliance through a "magic number" system.
+
+  - id: maxiom-civic-design-systems
+    title: "Civic Design Systems: Ultimate Guide to Smart UX"
+    url: https://www.maxiomtech.com/accessible-ux-civic-design-systems/
+    author: Maxiom Technology
+    fetched: 2026-06-04
+    type: web-page
+    hash: cfc4f4a2872ce69e42dc4956d069e2862b2d9cef1d5ec74dcbc3430b96ae479c
+    notes: Synthesis of civic design system principles with quantified benefits (50% faster rollouts, 124% improved success rates, 30% faster deployment).
+
+  - id: accessible-fonts-guide
+    title: "Accessible Fonts: ADA & WCAG Font Guide"
+    url: https://accessibe.com/blog/knowledgebase/ada-compliant-fonts
+    author: accessiBe
+    fetched: 2026-06-04
+    type: web-page
+    hash: 346fbcc4840d55846d4d59f431642d521a88be22f75d6a598fca08dc1bb9fe4e
+    notes: Typography accessibility guidelines covering font choice, size, spacing, contrast, and WCAG compliance.
+
+history:
+  - event: created
+    date: 2026-06-04
+    commit: "--"
+    sources: 5
+
+referenced-by: []
