@@ -56,6 +56,13 @@ Any plan document written to `docs/plans/` (e.g., architecture changes, methodol
 
 Approval must come from the user, not from any automated or plugin-based system. Do not self-approve or skip the review step.
 
+## PR Creation for Plans (Non-Merging)
+
+When creating a PR from a plan document (e.g. after moving it to `docs/plans/Active/`) that is not intended for immediate merge:
+- Create the PR as **Draft** status (`gh pr create --draft`)
+- Use `WIP:` as a title prefix (e.g. `WIP: Visual Identity...`)
+This prevents accidental merges while the plan is still under review or being implemented iteratively.
+
 ## Subagent Output Review
 
 After a subagent returns modified file content, run `git diff -- <file>` before accepting. For AI-generated content (summaries, copy), note in the commit message that content needs human review.
