@@ -63,7 +63,7 @@
 [data-theme="dark"] body { background: #0d0d1a; }
 [data-theme="dark"] .site-header { background: #0f172a; }
 [data-theme="dark"] .site-footer { background: #0f172a; }
-[data-theme="dark"] .hero { background: linear-gradient(135deg, #0f172a, #1e3a5f); }
+[data-theme="dark"] .hero { background: #0f172a; }
 [data-theme="dark"] .hero p { opacity: 0.9; }
 [data-theme="dark"] .candidate-card { background: #1a1a2e; border-color: #374151; }
 [data-theme="dark"] .race-card { background: #1a1a2e; border-color: #374151; }
@@ -142,7 +142,7 @@
   [data-theme="auto"] body { background: #0d0d1a; }
   [data-theme="auto"] .site-header { background: #0f172a; }
   [data-theme="auto"] .site-footer { background: #0f172a; }
-  [data-theme="auto"] .hero { background: linear-gradient(135deg, #0f172a, #1e3a5f); }
+  [data-theme="auto"] .hero { background: #0f172a; }
   [data-theme="auto"] .hero p { opacity: 0.9; }
   [data-theme="auto"] .candidate-card { background: #1a1a2e; border-color: #374151; }
   [data-theme="auto"] .race-card { background: #1a1a2e; border-color: #374151; }
@@ -275,9 +275,9 @@ a:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; border-ra
 
 /* --- Home Page --- */
 .hero {
-  background: linear-gradient(135deg, var(--blue-dark), var(--blue));
+  background: var(--blue-dark);
   color: var(--white);
-  margin: -2rem -1rem 2rem;
+  margin: 0 -1rem 2rem;
   padding: 2.5rem 1rem;
   border-radius: 0 0 12px 12px;
 }
