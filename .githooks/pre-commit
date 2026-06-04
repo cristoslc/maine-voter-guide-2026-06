@@ -288,7 +288,7 @@ if [ "$needs_get" -gt 0 ]; then
   # --- Phase 4: Brave Search ---
   if [ "$needs_brave" -gt 0 ]; then
     echo ""
-    if [ -z "$BRAVE_API_KEY" ]; then
+    if [ -z "${BRAVE_API_KEY:-}" ]; then
       warn "BRAVE_API_KEY not set — cannot verify $needs_brave bot-blocked URL(s) via search."
       warn "Treating bot-blocked URLs as warnings (not failures)."
       for url in "${brave_urls[@]}"; do
