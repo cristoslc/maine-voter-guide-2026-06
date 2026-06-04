@@ -273,62 +273,60 @@ Rel(registry, siteGen, "Reads for build", "require()")
 Rel(siteGen, host, "Deploys", "git push / CI")
 ```
 
-### Architecture Constraints (Ford & Richards Style)
+### Architecture Constraints — Ford & Richards Domain Language Conformity
 
-Instead of showing data flow, this diagram shows which architectural constraints each component *conforms to*. Every component is governed by at least one policy — no component operates without architectural boundaries.
+In Ford & Richards' style, arrows don't show data flow — they show **domain language conformity**. An arrow points *from* the component that uses another component's domain language *toward* the component that defines it. This is the reverse of typical data-flow arrows.
+
+So the Scrape Engine uses the Election Manifest's concept of "election dates" and "election types" even though the Scrape Engine *produces* manifest data — the language of the manifest comes first, and the scrape engine conforms to it. Similarly, the LLM Pipeline Engine uses the Data Registry's schema language (`candidates.js` FK structure, `issues.js` taxonomy), not the other way around.
 
 ```mermaid
-flowchart LR
+flowchart BT
+    subgraph Domain["Domain Components"]
+        EM["Election Manifest<br/><i>Defines: election dates, types,<br/>jurisdiction hierarchy</i>"]
+        DR["Data Registry<br/><i>Defines: registry schemas, FKs,<br/>entity relationships</i>"]
+        TA["Taxonomy<br/><i>Defines: issues.js labels,<br/>event types, party IDs</i>"]
+        CG["Confidence Gate<br/><i>Defines: scoring formula,<br/>escalation thresholds</i>"]
+        NC["Nonpartisan Charter<br/><i>Defines: content policy, attribution rules,<br/>UBIQUITOUS-LANGUAGE terms</i>"]
+        HR["Human Review Policy<br/><i>Defines: mandatory review gates,<br/>approval workflow</i>"]
+        PS["Pipeline Schedule<br/><i>Defines: phase cadences,<br/>source polling intervals</i>"]
+    end
+
     subgraph Components["Pipeline Components"]
-        Scraper["Scrape Engine"]
-        PosExt["LLM: Position Extraction"]
-        ArticleCls["LLM: Article Classification"]
-        Rewrite["LLM: Nonpartisan Rewrite"]
-        Impact["LLM: Impact Assessment"]
-        Drift["LLM: Diff & Drift"]
-        PreGates["Pre-Gates"]
-        PostGates["Post-Gates"]
-        AutoMerge["Auto-merge"]
-        ReviewQ["Review Queue"]
-        Orchestrator["Schedule Orchestrator"]
+        SE["Scrape Engine"]
+        PE["LLM: Position Extraction"]
+        AC["LLM: Article Classification"]
+        NR["LLM: Nonpartisan Rewrite"]
+        IA["LLM: Impact Assessment"]
+        DD["LLM: Diff & Drift"]
+        PG["Pre-Gates / Post-Gates"]
+        AM["Auto-merge"]
+        RQ["Review Queue"]
+        SO["Schedule Orchestrator"]
     end
 
-    subgraph Constraints["Architectural Constraints (conformed to)"]
-        NP["Nonpartisan Content Policy<br/><i>No endorsement, attributed opinions, balanced coverage</i>"]
-        CG["Confidence Gate Protocol<br/><i>Pre/Post gate sandwich, scoring formula, escalation</i>"]
-        DSC["Data Schema Contracts<br/><i>Registry schemas, FK integrity, required fields</i>"]
-        SA["Source Attribution Rule<br/><i>Every fact → sourceId, no unattributed claims</i>"]
-        HR["Human Review Policy<br/><i>Mandatory below 0.7, mandatory for Opus output</i>"]
-        PS["Pipeline Schedule<br/><i>Phase cadences, source-specific polling intervals</i>"]
-        TX["Issue Taxonomy (issues.js)<br/><i>Closed vocabulary, extension via human review</i>"]
-        ET["Event Taxonomy & UBIQUITOUS-LANGUAGE<br/><i>Closed event types, canonical terms</i>"]
-    end
+    SE --> EM
+    SE --> DR
+    SE --> PS
+    PE --> EM
+    PE --> DR
+    PE --> TA
+    AC --> EM
+    AC --> DR
+    AC --> TA
+    NR --> NC
+    NR --> TA
+    NR --> HR
+    IA --> NC
+    IA --> HR
+    DD --> DR
+    PG --> CG
+    AM --> CG
+    RQ --> HR
+    SO --> PS
 
-    Scraper -.->|"conforms to"| DSC
-    Scraper -.->|"conforms to"| SA
-    Scraper -.->|"conforms to"| PS
-    PosExt -.->|"conforms to"| DSC
-    PosExt -.->|"conforms to"| TX
-    PosExt -.->|"conforms to"| SA
-    ArticleCls -.->|"conforms to"| ET
-    ArticleCls -.->|"conforms to"| DSC
-    Rewrite -.->|"conforms to"| NP
-    Rewrite -.->|"conforms to"| TX
-    Rewrite -.->|"conforms to"| HR
-    Impact -.->|"conforms to"| NP
-    Impact -.->|"conforms to"| HR
-    Drift -.->|"conforms to"| DSC
-    PreGates -.->|"conforms to"| CG
-    PostGates -.->|"conforms to"| CG
-    AutoMerge -.->|"conforms to"| CG
-    ReviewQ -.->|"conforms to"| HR
-    Orchestrator -.->|"conforms to"| PS
-
+    style Domain fill:#e8eaf6
     style Components fill:#e8f5e9
-    style Constraints fill:#fff3e0
 ```
-
-### Phase 1: Discovery — From Location to Election Calendar
 
 ```mermaid
 flowchart TD
