@@ -1,3 +1,4 @@
+/** Ballot question (referendum) registry. Required: slug, title, jurisdiction, question, position. Optional: subtitle, summary, context, sourcesMain, sourcesSidebar, voting. */
 module.exports = [
   {
     slug: "school-budget-referendum",
@@ -27,3 +28,4 @@ module.exports = [
     url: "/ballot-questions/cape-elizabeth-school-budget-referendum/"
   }
 ];
+

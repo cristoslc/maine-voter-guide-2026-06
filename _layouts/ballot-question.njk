@@ -3,8 +3,12 @@ layout: base
 templateEngineOverride: njk,md
 ---
 
+{% set bqMatch = ballotQuestions | findBallotQuestion(page.fileSlug) %}
+{% set bqJurisdiction = bqMatch.jurisdiction %}
+{% set jurisdictionObj = jurisdictions | findById(bqJurisdiction) %}
+
 <nav class="breadcrumb" aria-label="Breadcrumb">
-  <a href="{{ '/' | url }}">Home</a> &rsaquo; <a href="/{{ (ballotQuestions | findBallotQuestion(page.fileSlug)).jurisdiction }}/">{{ (jurisdictions | find((ballotQuestions | findBallotQuestion(page.fileSlug)).jurisdiction)).name or (ballotQuestions | findBallotQuestion(page.fileSlug)).jurisdiction }}</a> &rsaquo; {{ title }}
+  <a href="{{ '/' | url }}">Home</a> &rsaquo; <a href="/{{ bqJurisdiction }}/">{{ jurisdictionObj.name or bqJurisdiction }}</a> &rsaquo; {{ title }}
 </nav>
 
 <div class="race-header">

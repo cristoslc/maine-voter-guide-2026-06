@@ -8,11 +8,15 @@
     "preview": "npx @11ty/eleventy --serve --pathprefix=preview",
     "lint": "node -c _data/races.js && npx @11ty/eleventy --dryrun",
     "lint:js": "node -c _data/races.js",
+    "lint:data": "node -c _data/candidates.js && node -c _data/sources.js && node -c _data/offices.js && node -c _data/parties.js && node -c _data/issues.js && node -c _data/geography.js && node -c _data/jurisdictions.js && node -c _data/races.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "test:links": "npx broken-link-checker _site --ordered --recursive",
     "test:urls": "bash .githooks/pre-commit"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^3.0.0"
+    "@11ty/eleventy": "^3.0.0",
+    "vitest": "^4.1.8"
   },
   "dependencies": {
     "playwright": "^1.60.0"
