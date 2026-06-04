@@ -197,6 +197,137 @@ module.exports = [
 
 ## Pipeline Architecture
 
+### System Context (C4 L1)
+
+The pipeline sits between external data sources (SOS websites, Ballotpedia, clerk sites, news feeds) and its human consumers (voters via the static site, editors via the review queue).
+
+```mermaid
+C4Context
+title System Context diagram for Automated Election Data Pipeline
+
+Person(voter, "Voter", "South Portland resident looking up election information")
+Person(editor, "Editor", "Human reviewer approving pipeline output")
+
+System(pipeline, "Election Data Pipeline", "Automated system that discovers, extracts, and maintains election data for the voter guide")
+
+System_Ext(sosWebsite, "Maine SOS Website", "Official election calendar and certified candidate lists")
+System_Ext(ballotpedia, "Ballotpedia", "API providing candidate, race, and position data")
+System_Ext(clerkWeb, "City Clerk Websites", "Municipal election info and local race filings")
+System_Ext(newsSource, "Press Herald / Maine Public / Maine Monitor", "News articles, debates, and endorsements")
+System_Ext(campaignSite, "Campaign Websites", "Candidate issue positions and platform pages")
+System_Ext(staticHost, "Static Site Host (Netlify/GitHub Pages)", "Serves compiled voter guide to the public")
+System_Ext(opVault, "1Password / Vault", "Secret management for API keys and credentials")
+
+Rel(voter, staticHost, "Visits", "HTTPS")
+Rel(editor, pipeline, "Reviews and approves pipeline output", "changeLog.js diff")
+Rel(pipeline, staticHost, "Generates and deploys", "Eleventy build → deploy")
+Rel(pipeline, sosWebsite, "Scrapes election calendar and candidate lists", "HTTPS + Puppeteer")
+Rel(pipeline, ballotpedia, "Queries candidate and race data", "HTTP API")
+Rel(pipeline, clerkWeb, "Scrapes municipal election info", "HTTPS + Puppeteer")
+Rel(pipeline, newsSource, "Monitors RSS/Atom feeds", "RSS/Atom")
+Rel(pipeline, campaignSite, "Scrapes issue positions", "HTTPS + Puppeteer")
+Rel(pipeline, opVault, "Reads API keys and secrets", "op CLI")
+```
+
+### Container Diagram (C4 L2)
+
+The pipeline decomposes into six internal containers. The Scrape Engine is the sole external interface; the LLM Pipeline Engine is the processing core; the Data Registry and Change Log are persistent stores; the Review Queue is the human interface; the Static Site Generator is the output mechanism.
+
+```mermaid
+C4Container
+title Container diagram for Election Data Pipeline
+
+Person(voter, "Voter", "South Portland resident")
+Person(editor, "Editor", "Human reviewer")
+
+System_Boundary(pipeline, "Election Data Pipeline") {
+    Container(scraper, "Scrape Engine", "Node.js + Puppeteer", "Fetches and parses election data from external sources")
+    Container(llmEngine, "LLM Pipeline Engine", "Node.js + LLM API", "Extracts positions, classifies articles, rewrites content, detects drift")
+    Container(registry, "Data Registry", "JS modules in _data/", "Structured election data entities with FK integrity")
+    Container(changelog, "Change Log", "JS module", "Audit trail of pipeline changes with confidence scores")
+    Container(reviewQueue, "Review Queue", "JS module + UI", "Human review queue for low-confidence changes")
+    Container(siteGen, "Static Site Generator", "Eleventy", "Compiles registries into HTML voter guide")
+}
+
+System_Ext(sos, "Maine SOS", "Official calendars + candidate lists")
+System_Ext(ballotpedia, "Ballotpedia API", "Candidate/race data")
+System_Ext(newsFeeds, "News RSS Feeds", "Press Herald, Maine Public, Maine Monitor")
+System_Ext(campaignSites, "Campaign Websites", "Issue positions")
+System_Ext(clerkSites, "City Clerk Websites", "Municipal election info")
+System_Ext(llmApi, "LLM API", "Sonnet, Opus, Haiku")
+System_Ext(host, "Static Host", "Netlify / GitHub Pages")
+
+Rel(voter, host, "Visits", "HTTPS")
+Rel(editor, reviewQueue, "Reviews changes", "Git diff")
+Rel(scraper, sos, "Scrapes", "HTTPS")
+Rel(scraper, ballotpedia, "Queries", "API")
+Rel(scraper, clerkSites, "Scrapes", "HTTPS")
+Rel(scraper, newsFeeds, "Polls", "RSS/Atom")
+Rel(scraper, campaignSites, "Scrapes", "HTTPS")
+Rel(scraper, llmEngine, "Provides scraped input", "JSON")
+Rel(llmEngine, llmApi, "Calls LLM", "HTTP API")
+Rel(llmEngine, registry, "Writes entities", "JS module update")
+Rel(llmEngine, changelog, "Writes audit trail", "JS module update")
+Rel(changelog, reviewQueue, "Feeds low-confidence", "changeLog.js")
+Rel(registry, siteGen, "Reads for build", "require()")
+Rel(siteGen, host, "Deploys", "git push / CI")
+```
+
+### Architecture Constraints (Ford & Richards Style)
+
+Instead of showing data flow, this diagram shows which architectural constraints each component *conforms to*. Every component is governed by at least one policy — no component operates without architectural boundaries.
+
+```mermaid
+flowchart LR
+    subgraph Components["Pipeline Components"]
+        Scraper["Scrape Engine"]
+        PosExt["LLM: Position Extraction"]
+        ArticleCls["LLM: Article Classification"]
+        Rewrite["LLM: Nonpartisan Rewrite"]
+        Impact["LLM: Impact Assessment"]
+        Drift["LLM: Diff & Drift"]
+        PreGates["Pre-Gates"]
+        PostGates["Post-Gates"]
+        AutoMerge["Auto-merge"]
+        ReviewQ["Review Queue"]
+        Orchestrator["Schedule Orchestrator"]
+    end
+
+    subgraph Constraints["Architectural Constraints (conformed to)"]
+        NP["Nonpartisan Content Policy<br/><i>No endorsement, attributed opinions, balanced coverage</i>"]
+        CG["Confidence Gate Protocol<br/><i>Pre/Post gate sandwich, scoring formula, escalation</i>"]
+        DSC["Data Schema Contracts<br/><i>Registry schemas, FK integrity, required fields</i>"]
+        SA["Source Attribution Rule<br/><i>Every fact → sourceId, no unattributed claims</i>"]
+        HR["Human Review Policy<br/><i>Mandatory below 0.7, mandatory for Opus output</i>"]
+        PS["Pipeline Schedule<br/><i>Phase cadences, source-specific polling intervals</i>"]
+        TX["Issue Taxonomy (issues.js)<br/><i>Closed vocabulary, extension via human review</i>"]
+        ET["Event Taxonomy & UBIQUITOUS-LANGUAGE<br/><i>Closed event types, canonical terms</i>"]
+    end
+
+    Scraper -.->|"conforms to"| DSC
+    Scraper -.->|"conforms to"| SA
+    Scraper -.->|"conforms to"| PS
+    PosExt -.->|"conforms to"| DSC
+    PosExt -.->|"conforms to"| TX
+    PosExt -.->|"conforms to"| SA
+    ArticleCls -.->|"conforms to"| ET
+    ArticleCls -.->|"conforms to"| DSC
+    Rewrite -.->|"conforms to"| NP
+    Rewrite -.->|"conforms to"| TX
+    Rewrite -.->|"conforms to"| HR
+    Impact -.->|"conforms to"| NP
+    Impact -.->|"conforms to"| HR
+    Drift -.->|"conforms to"| DSC
+    PreGates -.->|"conforms to"| CG
+    PostGates -.->|"conforms to"| CG
+    AutoMerge -.->|"conforms to"| CG
+    ReviewQ -.->|"conforms to"| HR
+    Orchestrator -.->|"conforms to"| PS
+
+    style Components fill:#e8f5e9
+    style Constraints fill:#fff3e0
+```
+
 ### Phase 1: Discovery — From Location to Election Calendar
 
 ```mermaid
@@ -564,30 +695,239 @@ flowchart TD
 
 The monitoring loop runs on a schedule. High-confidence updates (routine news mentions, unchanged source validation) can auto-merge. Low-confidence updates (new candidate claims, controversial events) queue for human review via `changeLog.js`.
 
-### Phase 5: Full Pipeline Orchestration
+### Phase 5: Full Pipeline Orchestration — Master Process Flow
+
+The end-to-end pipeline spans five phases with different cadences. Discovery runs monthly, Resolution weekly, Harvesting daily, Monitoring every 6 hours, and Review/Deploy on-demand. The feedback loop from Review back to Monitoring means the system self-corrects as editors approve or reject pipeline output.
 
 ```mermaid
 flowchart TB
-    subgraph Discovery
-        discConfig["Location Config"] --> discScrape["Clerk / SOS Scrape"] --> discBallotpedia["Ballotpedia Cross-Ref"] --> discManifest["Election Manifest"]
+    subgraph P1["Phase 1: Discovery"]
+        A1["Location Config"] --> A2["Scrape Clerk/SOS/Ballotpedia"]
+        A2 --> A3["Election Manifest"]
     end
-    subgraph Resolution
-        resManifest["Election Manifest"] --> resCandidate["Candidate Discovery"] --> resOffice["Office Inheritance"] --> resRace["Race Generation"]
+    subgraph P2["Phase 2: Resolution"]
+        B1["Election Manifest"] --> B2["Scrape Candidate Lists (SOS + Ballotpedia + Clerk)"]
+        B2 --> B3["Merge & Deduplicate"]
+        B3 --> B4["Resolve Office Inheritance"]
+        B4 --> B5["Generate races.js / candidates.js"]
+        B5 --> B6["Validate FK Integrity"]
     end
-    subgraph Harvesting
-        harvCampaign["Campaign Sites"] --> harvNews["News Feeds"] --> harvDebate["Debate Transcripts"] --> harvPosition["Position Extraction"]
+    subgraph P3["Phase 3: Harvesting"]
+        C1["Candidate Registry"] --> C2["Scrape Campaign Sites"]
+        C1 --> C3["Monitor RSS Feeds"]
+        C1 --> C4["Watch Ballotpedia"]
+        C2 --> C5["LLM: Position Extraction"]
+        C3 --> C6["LLM: Article Classification & Routing"]
+        C4 --> C7["LLM: Diff & Drift"]
+        C5 --> C8["LLM: Nonpartisan Rewrite"]
+        C6 --> C9["LLM: Impact Assessment"]
     end
-    subgraph Monitoring
-        monSchedule["Scheduled Poll"] --> monRSS["RSS Monitor"] --> monDiff["Diff & Classify"] --> monConfidence["Confidence Gate"]
+    subgraph P4["Phase 4: Monitoring Loop"]
+        D1["Schedule (every 6h)"] --> D2{"New content?"}
+        D2 -- Yes --> D3["Classify & Route"]
+        D3 --> D4["Update Registries"]
+        D4 --> D5["Generate Diff"]
+        D5 --> D6{"Confidence Gate"}
+        D6 -- "≥ 0.9" --> D7["Auto-merge"]
+        D6 -- "0.7–0.9" --> D8["Auto-merge (reviewed: false)"]
+        D6 -- "< 0.7" --> D9["Queue for Review"]
+        D2 -- No --> D10["Update validation timestamps"]
     end
-    subgraph Review
-        revLog["Change Log"] --> revQueue["Human Review Queue"] --> revApprove["Approve / Reject"]
+    subgraph P5["Phase 5: Review & Deploy"]
+        E1["changeLog.js"] --> E2["Human Review Queue"]
+        E2 --> E3{"Approve?"}
+        E3 -- Yes --> E4["Merge to main"]
+        E4 --> E5["Eleventy Build"]
+        E5 --> E6["Deploy to Host"]
+        E3 -- No --> E7["Reject / Revert"]
+        E7 --> E2
     end
-    discManifest --> resManifest
-    resRace --> harvCampaign
-    harvPosition --> monSchedule
-    monConfidence --> revLog
-    revApprove --> monSchedule
+    A3 --> B1
+    B5 --> C1
+    C5 --> C8
+    C8 --> D2
+    C6 --> C9
+    C9 --> D2
+    C7 --> D2
+    D7 --> E1
+    D8 --> E1
+    D9 --> E1
+    E6 -.->|"Triggers next cycle"| D1
+```
+
+### Sequence Diagram: Election Discovery Cycle
+
+A monthly cycle. The Scrape Engine makes concurrent requests to three sources (city clerk, Maine SOS, Ballotpedia), merges results, resolves the jurisdiction hierarchy, and writes to the Data Registry. FK validation ensures write integrity.
+
+```mermaid
+sequenceDiagram
+    participant Sched as Schedule (Monthly)
+    participant Scraper as Scrape Engine
+    participant Clerk as City Clerk Site
+    participant SOS as Maine SOS
+    participant BP as Ballotpedia API
+    participant Reg as Data Registry
+
+    Sched->>Scraper: Trigger: discovery cycle
+    par Scrape city clerk election calendar
+        Scraper->>Clerk: GET /departments/city-clerk/elections
+        Clerk-->>Scraper: HTML election calendar
+        Scraper->>Scraper: Parse dates, types, ballot URLs
+    and Scrape Maine SOS calendar
+        Scraper->>SOS: GET /cec/elec/calendar
+        SOS-->>Scraper: HTML election calendar
+        Scraper->>Scraper: Parse statewide/muni dates
+    and Query Ballotpedia
+        Scraper->>BP: GET /api/election?geo=south-portland
+        BP-->>Scraper: JSON election list
+    end
+    Scraper->>Scraper: Merge & deduplicate by date+type
+    Scraper->>Scraper: Resolve jurisdiction hierarchy
+    Scraper->>Reg: Write electionManifest.js
+    Scraper->>Reg: Update election.js + geography.js
+    Reg-->>Scraper: FK validated
+```
+
+### Sequence Diagram: LLM Stage Execution
+
+Every LLM call is sandwiched between pre-gates and post-gates. Pre-gates filter out irrelevant input cheaply; post-gates verify output integrity, nonpartisan compliance, and attribution completeness. The confidence score determines disposition: auto-merge, merge-with-flag, or queue-for-review.
+
+```mermaid
+sequenceDiagram
+    participant Scraper as Scrape Engine
+    participant PreGate as Pre-Gates
+    participant LLM as LLM Stage
+    participant PostGate as Post-Gates
+    participant Reg as Data Registry
+    participant Queue as Review Queue
+
+    Scraper->>PreGate: Scraped input (raw HTML)
+    PreGate->>PreGate: Input schema validation
+    PreGate->>PreGate: Source liveness check (HEAD)
+    PreGate->>PreGate: Scope gate (Haiku): "Relevant content?"
+    PreGate->>PreGate: Entity resolution check
+    PreGate->>PreGate: Reprocessing hash check
+    alt Gate fails
+        PreGate->>Scraper: Skip / error
+    else All gates pass
+        PreGate->>LLM: Clean input
+        LLM->>LLM: Execute stage (Sonnet/Opus)
+        LLM->>PostGate: Structured output
+        PostGate->>PostGate: Output schema validation
+        PostGate->>PostGate: Reference integrity check
+        PostGate->>PostGate: Nonpartisan compliance (Haiku)
+        PostGate->>PostGate: Attribution completeness (Haiku)
+        alt Hallucination spot-check (10% sample)
+            PostGate->>PostGate: Verify claims vs source (Sonnet)
+        end
+        PostGate->>PostGate: Compute confidence score
+        alt Confidence ≥ 0.9
+            PostGate->>Reg: Auto-merge
+            Reg-->>PostGate: OK
+        else 0.7–0.9
+            PostGate->>Reg: Auto-merge (reviewed: false)
+            Reg-->>PostGate: OK
+        else < 0.7
+            PostGate->>Queue: Queue for human review
+            Queue-->>PostGate: Queued
+        end
+    end
+```
+
+### Sequence Diagram: Monitoring Cycle
+
+Every 6 hours during campaign season, the pipeline polls news RSS feeds, classifies new articles via the LLM, and routes them to the appropriate registry. High-confidence updates auto-merge; low-confidence items are flagged for human review.
+
+```mermaid
+sequenceDiagram
+    participant Sched as Schedule (6h)
+    participant RSS as RSS Monitor
+    participant Feeds as News Feeds
+    participant PreGate as Scope Gate
+    participant LLM as Article Classifier
+    participant Reg as Data Registry
+    participant Diff as Diff Engine
+
+    loop Every 6 hours
+        Sched->>RSS: Poll for new articles
+        RSS->>Feeds: GET RSS/Atom feeds
+        Feeds-->>RSS: New articles (updates)
+        RSS->>PreGate: Check each article
+        alt No new content
+            PreGate-->>Sched: Log: no change
+        else New articles detected
+            PreGate->>LLM: Classify & route
+            LLM->>LLM: Identify candidates/races
+            LLM->>LLM: Label: endorsement / poll / controversy / etc.
+            LLM->>LLM: Extract structured data
+            alt Label == endorsement
+                LLM->>Reg: Write endorsements.js
+            else Label == poll
+                LLM->>Reg: Write polls.js
+            else Label == controversy
+                LLM->>Reg: Write candidateEvents.js
+            end
+            Reg->>Diff: Generate diff
+            Diff->>Diff: Confidence score
+            alt Confidence ≥ 0.7
+                Diff->>Reg: Auto-merge
+            else Confidence < 0.7
+                Diff->>Diff: Flag for human review
+            end
+            Diff->>Sched: Done
+        end
+    end
+```
+
+### Value Stream Map
+
+The value stream shows the time dimension: each phase has active processing time (minutes) followed by wait states (days). The critical insight is that most wall-clock time is spent waiting — not processing. The bottleneck is human review, which takes 15–60 minutes of editor time per cycle. Auto-merge reduces the pressure but cannot eliminate it for low-confidence items.
+
+```mermaid
+flowchart LR
+    subgraph Input
+        I1["Location Config<br/><i>Source: editor</i>"] --> I2["Clerk URLs<br/>SOS URLs"]
+    end
+
+    subgraph Phase1["Phase 1: Discovery<br/>Cycle: Monthly"]
+        P1["Scrape & Deduplicate<br/><b>⏱ 5 min</b>"] --> P1w["⌛ WAIT<br/><b>⏱ ~30 days</b>"]
+    end
+
+    subgraph Phase2["Phase 2: Resolution<br/>Cycle: Weekly"]
+        P2["Candidate List Scrape<br/><b>⏱ 10 min</b>"] --> P2w["⌛ WAIT<br/><b>⏱ ~7 days</b>"]
+    end
+
+    subgraph Phase3["Phase 3: Harvesting<br/>Cycle: Daily"]
+        P3a["Campaign Scrape<br/><b>⏱ 30 min</b>"] --> P3b["LLM Extraction<br/><b>⏱ 15 min</b>"]
+        P3b --> P3w["⌛ WAIT<br/><b>⏱ ~1–3 days</b>"]
+    end
+
+    subgraph Phase4["Phase 4: Monitoring<br/>Cycle: 6 hours"]
+        P4a["RSS Poll<br/><b>⏱ 2 min</b>"] --> P4b["LLM Classify<br/><b>⏱ 5 min</b>"]
+        P4b --> P4c["Confidence Gate<br/><b>⏱ 1 min</b>"]
+        P4c -- "high conf" --> P4d["Auto-merge<br/><b>⏱ 1 min</b>"]
+        P4c -- "low conf" --> P4e["Queue for Review<br/><b>⏱ 2 min</b>"]
+    end
+
+    subgraph Phase5["Phase 5: Review & Deploy<br/>Cycle: On-request"]
+        P5a["Human Review<br/><b>⏱ 15–60 min</b>"] --> P5b["Approve / Reject<br/><b>⏱ 5 min</b>"]
+        P5b --> P5c["Eleventy Build<br/><b>⏱ 3 min</b>"]
+        P5c --> P5d["Deploy<br/><b>⏱ 2 min</b>"]
+    end
+
+    I2 --> P1
+    P1w --> P2
+    P2w --> P3a
+    P3w -.->|"Campaign season trigger"| P4a
+    P4d --> P5a
+    P4e --> P5a
+
+    style Input fill:#e1f5fe
+    style Phase1 fill:#fff3e0
+    style Phase2 fill:#fff3e0
+    style Phase3 fill:#fff3e0
+    style Phase4 fill:#e8f5e9
+    style Phase5 fill:#fce4ec
 ```
 
 ## Autonomous Operation Considerations
