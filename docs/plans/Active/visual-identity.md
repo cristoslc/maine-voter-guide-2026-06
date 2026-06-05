@@ -165,37 +165,87 @@ The current `docs/user-experience/design-system.md` needs to be updated to:
 
 ---
 
-## 6. Implementation Checklist
+## 6. Warrants
 
-### Phase 1 — CSS Token Migration
+Each warrant is a small, reviewable, deployable PR branching from `feat/visual-identity`. Dependencies use GitHub's PR body marker `Depends on #N`.
 
-- [ ] Add semantic surface/content/accent tokens to `:root {}`
-- [ ] Add semantic tokens to `[data-theme="dark"]`
-- [ ] Add semantic tokens to the auto-dark `@media (prefers-color-scheme: dark)` block
-- [ ] Add party-specific tokens for all 4 parties in `_data/parties.js` (`democrat`, `republican`, `green`, `libertarian`) plus `inc`
-- [ ] Add neutral label tokens
-- [ ] Replace hue-token references in ALL selectors (search: `--blue`, `--gold`, `--red`, `--green`, `--gray-`)
-- [ ] Audit: confirm no `--party-*` token appears in a selector targeting a non-party-identified element
-- [ ] Add typography scale CSS comments
-- [ ] Remove old hue-based token aliases and `--tint-*` variables
-- [ ] Remove unused `--blue-lighter` (only used in `.date-table .highlight td` and dark mode — replace with a semantic equivalent)
+### W1 — Token Definitions
+**Branch:** `feat/visual-identity/token-defs` | **Files:** `public/css/style.css` (~30 lines added)
 
-Files affected: `public/css/style.css` (~400 selectors to audit for token replacement)
+- Add `--surface-*`, `--text-*`, `--accent-*`, `--party-*` (4 parties + inc), `--label-*` tokens to `:root`
+- Add same to `[data-theme="dark"]`
+- Add same to `@media (prefers-color-scheme: dark)`
+- Add typography scale CSS comments
 
-### Phase 2 — Section Header Accent (Jurisdiction Pages)
+Zero-risk: purely additive, no selector changes.
 
-- [ ] Add CSS for `.section-democratic` (left border `--party-democrat-text`)
-- [ ] Add CSS for `.section-republican` (left border `--party-republican-text`)
-- [ ] Add CSS for `.section-all-voters` (left border `--accent-primary`)
-- [ ] Update `jurisdiction-home.md` to add class to each `<h2>`
+### W2 — Navigation / Header Selector Migration
+**Branch:** `feat/visual-identity/nav-header` | **Files:** `public/css/style.css` (~30 selectors) | **Depends on:** W1
 
-Files affected: `public/css/style.css`, `content/pages/jurisdiction-home.md`
+Replace `var(--blue-dark)` / `var(--blue)` in `.site-header`, `.nav`, `.nav-link`, `.mobile-menu`, `.header-anchor`, `.breadcrumb` selectors with `var(--surface-raised)` / `var(--text-inverse)`.
 
-### Phase 3 — Documentation
+### W3 — Hero + Page Chrome Selector Migration
+**Branch:** `feat/visual-identity/hero-chrome` | **Files:** `public/css/style.css` (~20 selectors) | **Depends on:** W1
 
-- [ ] Update `docs/user-experience/design-system.md` with the full visual identity
-- [ ] Update `docs/user-experience/accessibility.md` contrast table with CCD standards
-- [ ] Add a reference note in `UBIQUITOUS-LANGUAGE.md` linking to visual identity terms
+Replace hue tokens in `.hero`, `.hero-title`, `.hero-subtitle`, `.content-container`, `.main-content` selectors.
+
+### W4 — Race Card Selector Migration
+**Branch:** `feat/visual-identity/race-cards` | **Files:** `public/css/style.css` (~40 selectors) | **Depends on:** W1
+
+Replace hue tokens in `.race-card`, `.card-tag.*`, `.party-tag.*` selectors. Apply `--label-*` tokens on card-level labels, `--party-*` tokens only on `.party-tag.[d|r|g|l]`.
+
+### W5 — Candidate Detail Selector Migration
+**Branch:** `feat/visual-identity/candidate-detail` | **Files:** `public/css/style.css` (~30 selectors) | **Depends on:** W1
+
+Replace hue tokens in `.candidate-detail`, `.candidate-name`, `.candidate-party`, `.candidate-bio`, related selectors.
+
+### W6 — Footer + Utility Selector Migration
+**Branch:** `feat/visual-identity/footer-utilities` | **Files:** `public/css/style.css` (~20 selectors) | **Depends on:** W1
+
+Replace hue tokens in `.site-footer`, `.footer-*`, `.utility-*` selectors.
+
+### W7 — Tables, Tags, Labels Selector Migration
+**Branch:** `feat/visual-identity/tables-tags` | **Files:** `public/css/style.css` (~40 selectors) | **Depends on:** W1
+
+Replace hue tokens in `.date-table`, `.highlight`, `.tag-*`, `.label-*` selectors. Replace `--blue-lighter` with semantic equivalent in `.date-table .highlight td`.
+
+### W8 — Section Border Accents
+**Branch:** `feat/visual-identity/section-borders` | **Files:** `public/css/style.css`, `content/pages/jurisdiction-home.md` (~15 selectors + 3 template lines) | **Depends on:** W1
+
+Add `.section-democratic` (left border `--party-democrat-text`), `.section-republican` (left border `--party-republican-text`), `.section-all-voters` (left border `--accent-primary`). Update `jurisdiction-home.md` H2 elements with matching classes.
+
+### W9 — Party Token Audit
+**Branch:** `feat/visual-identity/party-audit` | **Depends on:** W4, W5, W8
+
+Audit all `--party-*` token usage: confirm none appear on elements without party-identified data sources. Fix any violations.
+
+### W10 — Cleanup
+**Branch:** `feat/visual-identity/cleanup` | **Files:** `public/css/style.css` (~10 lines removed) | **Depends on:** W2, W3, W4, W5, W6, W7
+
+Remove old hue-based token aliases, `--tint-*` variables, and unused `--blue-lighter`. Only safe after all migration warrants are merged.
+
+### W11 — Documentation
+**Branch:** `feat/visual-identity/docs` | **Files:** `docs/user-experience/design-system.md`, `docs/user-experience/accessibility.md`, `UBIQUITOUS-LANGUAGE.md` | **Depends on:** W1
+
+Update design-system.md with full visual identity and token tables. Update accessibility.md contrast standards. Add visual identity terms to UBIQUITOUS-LANGUAGE.md.
+
+### Dependency Graph
+
+```
+W1 ──┬── W2 (nav/header)
+     ├── W3 (hero/chrome)
+     ├── W4 (race cards) ──┐
+     ├── W5 (candidate) ───┤
+     ├── W6 (footer/util)  │
+     ├── W7 (tables/tags) ─┘
+     ├── W8 (section borders) ──┐
+     └── W10 (cleanup) ← W2+W3+W4+W5+W6+W7
+     └── W11 (docs)
+
+W9 (party audit) ← W4+W5+W8  (can run after those merge)
+```
+
+W2–W7 and W11 can all start in parallel once W1 merges. W9 blocks on W4+W5+W8. W10 must be last in the migration chain.
 
 ---
 

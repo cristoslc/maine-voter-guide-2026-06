@@ -32,6 +32,7 @@ Agent-specific detail lives in `.agents/agents-md-detail/`:
 
 - `project-navigation.md` — How to orient in this repo
 - `content-guidelines.md` — Nonpartisan writing standards, sourcing rules
+- `commission-warrant.md` — Commission/warrant two-tier PR workflow
 
 ## Data File Editing Conventions
 
