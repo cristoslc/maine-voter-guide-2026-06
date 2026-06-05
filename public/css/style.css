@@ -410,13 +410,13 @@ a:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; border-ra
 .site-footer {
   margin-top: 3rem;
   padding: 2rem 0;
-  background: var(--gray-900);
-  color: var(--gray-500);
+  background: var(--surface-footer);
+  color: var(--text-subtle);
   font-size: 0.8125rem;
   line-height: 1.7;
 }
 .site-footer a { color: var(--gray-300); }
-.site-footer a:hover { color: var(--white); }
+.site-footer a:hover { color: var(--text-inverse); }
 
 /* --- Home Page --- */
 .hero {
@@ -554,23 +554,23 @@ a:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; border-ra
 @media (min-width: 600px) { .pro-con-grid { grid-template-columns: 1fr 1fr; } }
 
 .pro-box, .con-box {
-  background: var(--white);
+  background: var(--surface-card);
   border-radius: var(--radius);
   padding: 1.25rem;
   box-shadow: var(--shadow);
 }
-.pro-box { border-top: 3px solid var(--green); }
-.con-box { border-top: 3px solid var(--red); }
+.pro-box { border-top: 3px solid var(--accent-success); }
+.con-box { border-top: 3px solid var(--accent-danger); }
 .pro-box h3, .con-box h3 { border: none; margin-top: 0; padding: 0; }
-.pro-box h3 { color: var(--green); }
-.con-box h3 { color: var(--red); }
+.pro-box h3 { color: var(--accent-success); }
+.con-box h3 { color: var(--accent-danger); }
 
 .argument { padding: 0.6rem 0; border-bottom: 1px solid var(--gray-100); }
 .argument:last-child { border-bottom: none; }
-.argument .attribution { font-size: 0.75rem; color: var(--gray-500); font-weight: 600; }
+.argument .attribution { font-size: 0.75rem; color: var(--text-subtle); font-weight: 600; }
 
 .budget-facts {
-  background: var(--white);
+  background: var(--surface-card);
   border: 1px solid var(--gray-200);
   border-radius: var(--radius);
   padding: 1.25rem;
@@ -580,11 +580,11 @@ a:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; border-ra
 .budget-facts table { width: 100%; border-collapse: collapse; }
 .budget-facts td { padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--gray-100); }
 .budget-facts tr:last-child td { border-bottom: none; }
-.budget-facts td:first-child { font-weight: 600; color: var(--gray-700); white-space: nowrap; }
+.budget-facts td:first-child { font-weight: 600; color: var(--text-body); white-space: nowrap; }
 
 .billboard {
-  background: var(--blue-dark);
-  color: var(--white);
+  background: var(--surface-raised);
+  color: var(--text-inverse);
   border-radius: var(--radius);
   padding: 1.5rem;
   margin: 1.5rem 0;
