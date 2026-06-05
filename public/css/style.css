@@ -379,6 +379,7 @@ a:focus-visible { outline: 2px solid var(--accent-primary); outline-offset: 3px;
 }
 .site-footer a { color: var(--text-muted); }
 .site-footer a:hover { color: var(--text-inverse); }
+.site-footer strong { color: var(--text-inverse); }
 
 /* --- Home Page --- */
 .hero {
