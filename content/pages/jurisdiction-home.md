@@ -30,7 +30,7 @@ pagination:
   <p><strong>AI research project — read with care.</strong> This guide was produced by an AI-assisted research project. It is a private work, not affiliated with the League of Women Voters, State of Maine, or any other official organization. Information may contain errors, omissions, or unintended bias. Always cross-check candidate positions and ballot question details with primary sources before voting.</p>
 </div>
 
-## Democratic Primary Ballot
+<h2 class="section-democratic">Democratic Primary Ballot</h2>
 
 <div class="race-grid">
 {% for r in effRaces %}
@@ -46,7 +46,7 @@ pagination:
 {% endfor %}
 </div>
 
-## Republican Primary Ballot
+<h2 class="section-republican">Republican Primary Ballot</h2>
 
 <div class="race-grid">
 {% for r in effRaces %}
@@ -62,7 +62,7 @@ pagination:
 {% endfor %}
 </div>
 
-## All Voters
+<h2 class="section-all-voters">All Voters</h2>
 
 <div class="race-grid">
 {% for r in effRaces %}
