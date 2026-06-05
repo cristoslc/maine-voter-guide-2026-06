@@ -11,7 +11,7 @@ The site currently has colors, typography, and layout patterns but no documented
 **Maine Voter Guide** is a nonpartisan, civic-information tool. Its visual identity communicates:
 
 - **Trust** — dark blue anchor, consistent spacing, predictable navigation
-- **Neutrality** — semantic color tokens decoupled from partisan hues; avoid red/blue as primary palette
+- **Neutrality** — semantic color tokens decoupled from partisan hues; the core palette (surfaces, body text, links, navigation) uses NO party colors. Party colors (`--party-*`) appear ONLY on UI elements rendered from data sources that carry that party's identification (candidate tags, race ballot-section accents).
 - **Clarity** — system font stack (no external loads), high contrast (7:1+), sans-serif body
 - **Accessibility** — WCAG 2.1 AA baseline; CCD election-specific contrast standards (7:1 body, 3:1 large text, 15:1 shaded boxes)
 
@@ -21,7 +21,7 @@ The site currently has colors, typography, and layout patterns but no documented
 
 ### Current problem
 
-Tokens like `--blue`, `--blue-dark`, `--gold`, `--red` encode hue, not purpose. A voter guide that uses `--blue` for both "Democratic party tag" and "hero background" and "link color" has lost semantic meaning, making theming and dark-mode maintenance harder.
+Tokens like `--blue`, `--blue-dark`, `--gold`, `--red` encode hue, not purpose. A voter guide that uses `--blue` for both "Democratic party tag" and "hero background" and "link color" has lost semantic meaning, making theming and dark-mode maintenance harder. Party colors also leak into non-party elements — the hero, links, and navigation all use blue, visually associating the site's core identity with one party.
 
 ### New token architecture
 
@@ -60,18 +60,26 @@ Tokens like `--blue`, `--blue-dark`, `--gold`, `--red` encode hue, not purpose. 
 | `--accent-good-bg` | Subtle background tint (green) | `#f0fdf4` | `#14532d` |
 | `--accent-bad-bg` | Subtle background tint (red) | `#fef2f2` | `#7f1d1d` |
 
-#### Partisan-specific tokens (only for party tags)
+#### Partisan-specific tokens (only for party-identified data objects)
 
-These are intentionally isolated — they exist ONLY for `.party-tag.d` and `.party-tag.r`. Everything else uses semantic tokens.
+These tokens MUST ONLY appear on UI elements rendered from data sources that carry an `id` matching the party key in `_data/parties.js`. Every party in the registry gets a token pair (`--party-{id}-bg`, `--party-{id}-text`). The party-independent `--party-inc-*` tokens cover the "incumbent" label (which is metadata, not party).
 
 | Token | Purpose | Light | Dark |
 |-------|---------|-------|------|
-| `--party-dem-bg` | Democratic tag background | `#dbeafe` | `#1e3a5f` |
-| `--party-dem-text` | Democratic tag text | `#1e40af` | `#93c5fd` |
-| `--party-rep-bg` | Republican tag background | `#fee2e2` | `#7f1d1d` |
-| `--party-rep-text` | Republican tag text | `#b91c1c` | `#fca5a5` |
-| `--party-inc-bg` | Incumbent tag background | `#dcfce7` | `#14532d` |
-| `--party-inc-text` | Incumbent tag text | `#15803d` | `#4ade80` |
+| `--party-democrat-bg` | Democratic tag background | `#dbeafe` | `#1e3a5f` |
+| `--party-democrat-text` | Democratic tag text | `#1e40af` | `#93c5fd` |
+| `--party-republican-bg` | Republican tag background | `#fee2e2` | `#7f1d1d` |
+| `--party-republican-text` | Republican tag text | `#b91c1c` | `#fca5a5` |
+| `--party-green-bg` | Green Independent tag background | `#dcfce7` | `#14532d` |
+| `--party-green-text` | Green Independent tag text | `#15803d` | `#4ade80` |
+| `--party-libertarian-bg` | Libertarian tag background | `#fefce8` | `#422006` |
+| `--party-libertarian-text` | Libertarian tag text | `#a16207` | `#fbbf24` |
+| `--party-inc-bg` | Incumbent tag background (any party) | `#f0fdf4` | `#14532d` |
+| `--party-inc-text` | Incumbent tag text (any party) | `#15803d` | `#4ade80` |
+
+Token names use the full party `id` from the registry (e.g. `democrat` not `dem`) for clarity. The CSS class / template helper maps `party.id` to `var(--party-${id}-*)`.
+
+**Enforcement**: No `--party-*` token may appear in a CSS selector that targets a non-party-identified element. A visual diff or audit should confirm: if an element carries a party token, its data source must have that party's `id`.
 
 #### Neutral semantic label tokens (for race card tags — non-partisan visual signaling)
 
@@ -137,11 +145,11 @@ The solid `--primary-dark` background is a good nonpartisan choice, already fixe
 
 Current: section headers "Democratic Primary Ballot" / "Republican Primary Ballot" and "All Voters" have no visual distinction beyond the text. Consider adding a subtle left-border accent per section:
 
-- **Democratic**: 3px left border `var(--party-dem-text)` 
-- **Republican**: 3px left border `var(--party-rep-text)`
+- **Democratic**: 3px left border `var(--party-democrat-text)`
+- **Republican**: 3px left border `var(--party-republican-text)`
 - **All Voters**: 3px left border `var(--accent-primary)`
 
-This provides subtle visual orientation without dominating the page.
+This provides subtle visual orientation without dominating the page. The party-colored borders are only applied to `<h2>` elements that carry a `.section-democratic` or `.section-republican` class — i.e., they are rendered from data that identifies the ballot section's party.
 
 ---
 
@@ -157,36 +165,87 @@ The current `docs/user-experience/design-system.md` needs to be updated to:
 
 ---
 
-## 6. Implementation Checklist
+## 6. Warrants
 
-### Phase 1 — CSS Token Migration
+Each warrant is a small, reviewable, deployable PR branching from `feat/visual-identity`. Dependencies use GitHub's PR body marker `Depends on #N`.
 
-- [ ] Add semantic surface/content/accent tokens to `:root {}`
-- [ ] Add semantic tokens to `[data-theme="dark"]`
-- [ ] Add semantic tokens to the auto-dark `@media (prefers-color-scheme: dark)` block
-- [ ] Add partisan-specific tokens
-- [ ] Add neutral label tokens
-- [ ] Replace hue-token references in ALL selectors (search: `--blue`, `--gold`, `--red`, `--green`, `--gray-`)
-- [ ] Add typography scale CSS comments
-- [ ] Remove old hue-based token aliases and `--tint-*` variables
-- [ ] Remove unused `--blue-lighter` (only used in `.date-table .highlight td` and dark mode — replace with a semantic equivalent)
+### W1 — Token Definitions
+**Branch:** `feat/visual-identity/token-defs` | **Files:** `public/css/style.css` (~30 lines added)
 
-Files affected: `public/css/style.css` (~400 selectors to audit for token replacement)
+- Add `--surface-*`, `--text-*`, `--accent-*`, `--party-*` (4 parties + inc), `--label-*` tokens to `:root`
+- Add same to `[data-theme="dark"]`
+- Add same to `@media (prefers-color-scheme: dark)`
+- Add typography scale CSS comments
 
-### Phase 2 — Section Header Accent (Jurisdiction Pages)
+Zero-risk: purely additive, no selector changes.
 
-- [ ] Add CSS for `.section-democratic` (left border `--party-dem-text`)
-- [ ] Add CSS for `.section-republican` (left border `--party-rep-text`)
-- [ ] Add CSS for `.section-all-voters` (left border `--accent-primary`)
-- [ ] Update `jurisdiction-home.md` to add class to each `<h2>`
+### W2 — Navigation / Header Selector Migration
+**Branch:** `feat/visual-identity/nav-header` | **Files:** `public/css/style.css` (~30 selectors) | **Depends on:** W1
 
-Files affected: `public/css/style.css`, `content/pages/jurisdiction-home.md`
+Replace `var(--blue-dark)` / `var(--blue)` in `.site-header`, `.nav`, `.nav-link`, `.mobile-menu`, `.header-anchor`, `.breadcrumb` selectors with `var(--surface-raised)` / `var(--text-inverse)`.
 
-### Phase 3 — Documentation
+### W3 — Hero + Page Chrome Selector Migration
+**Branch:** `feat/visual-identity/hero-chrome` | **Files:** `public/css/style.css` (~20 selectors) | **Depends on:** W1
 
-- [ ] Update `docs/user-experience/design-system.md` with the full visual identity
-- [ ] Update `docs/user-experience/accessibility.md` contrast table with CCD standards
-- [ ] Add a reference note in `UBIQUITOUS-LANGUAGE.md` linking to visual identity terms
+Replace hue tokens in `.hero`, `.hero-title`, `.hero-subtitle`, `.content-container`, `.main-content` selectors.
+
+### W4 — Race Card Selector Migration
+**Branch:** `feat/visual-identity/race-cards` | **Files:** `public/css/style.css` (~40 selectors) | **Depends on:** W1
+
+Replace hue tokens in `.race-card`, `.card-tag.*`, `.party-tag.*` selectors. Apply `--label-*` tokens on card-level labels, `--party-*` tokens only on `.party-tag.[d|r|g|l]`.
+
+### W5 — Candidate Detail Selector Migration
+**Branch:** `feat/visual-identity/candidate-detail` | **Files:** `public/css/style.css` (~30 selectors) | **Depends on:** W1
+
+Replace hue tokens in `.candidate-detail`, `.candidate-name`, `.candidate-party`, `.candidate-bio`, related selectors.
+
+### W6 — Footer + Utility Selector Migration
+**Branch:** `feat/visual-identity/footer-utilities` | **Files:** `public/css/style.css` (~20 selectors) | **Depends on:** W1
+
+Replace hue tokens in `.site-footer`, `.footer-*`, `.utility-*` selectors.
+
+### W7 — Tables, Tags, Labels Selector Migration
+**Branch:** `feat/visual-identity/tables-tags` | **Files:** `public/css/style.css` (~40 selectors) | **Depends on:** W1
+
+Replace hue tokens in `.date-table`, `.highlight`, `.tag-*`, `.label-*` selectors. Replace `--blue-lighter` with semantic equivalent in `.date-table .highlight td`.
+
+### W8 — Section Border Accents
+**Branch:** `feat/visual-identity/section-borders` | **Files:** `public/css/style.css`, `content/pages/jurisdiction-home.md` (~15 selectors + 3 template lines) | **Depends on:** W1
+
+Add `.section-democratic` (left border `--party-democrat-text`), `.section-republican` (left border `--party-republican-text`), `.section-all-voters` (left border `--accent-primary`). Update `jurisdiction-home.md` H2 elements with matching classes.
+
+### W9 — Party Token Audit
+**Branch:** `feat/visual-identity/party-audit` | **Depends on:** W4, W5, W8
+
+Audit all `--party-*` token usage: confirm none appear on elements without party-identified data sources. Fix any violations.
+
+### W10 — Cleanup
+**Branch:** `feat/visual-identity/cleanup` | **Files:** `public/css/style.css` (~10 lines removed) | **Depends on:** W2, W3, W4, W5, W6, W7
+
+Remove old hue-based token aliases, `--tint-*` variables, and unused `--blue-lighter`. Only safe after all migration warrants are merged.
+
+### W11 — Documentation
+**Branch:** `feat/visual-identity/docs` | **Files:** `docs/user-experience/design-system.md`, `docs/user-experience/accessibility.md`, `UBIQUITOUS-LANGUAGE.md` | **Depends on:** W1
+
+Update design-system.md with full visual identity and token tables. Update accessibility.md contrast standards. Add visual identity terms to UBIQUITOUS-LANGUAGE.md.
+
+### Dependency Graph
+
+```
+W1 ──┬── W2 (nav/header)
+     ├── W3 (hero/chrome)
+     ├── W4 (race cards) ──┐
+     ├── W5 (candidate) ───┤
+     ├── W6 (footer/util)  │
+     ├── W7 (tables/tags) ─┘
+     ├── W8 (section borders) ──┐
+     └── W10 (cleanup) ← W2+W3+W4+W5+W6+W7
+     └── W11 (docs)
+
+W9 (party audit) ← W4+W5+W8  (can run after those merge)
+```
+
+W2–W7 and W11 can all start in parallel once W1 merges. W9 blocks on W4+W5+W8. W10 must be last in the migration chain.
 
 ---
 

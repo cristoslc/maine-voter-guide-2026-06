@@ -49,6 +49,15 @@ Run against `_site/` output:
 3. **Zoom**: 200% zoom — no horizontal scroll on 320px device
 4. **Reduced motion**: `prefers-reduced-motion` respected (no animations by default)
 
+## Contrast Standards (CCD Election-Specific)
+
+| Token | Purpose | Light Value | Dark Value | Ratio (light) | Standard |
+|-------|---------|------------|------------|------|----------|
+| `--text-body` | Body text | `#111827` | `#f3f4f6` | 15.3:1 | 7:1 body |
+| `--text-subtle` | Meta, secondary | `#6b7280` | `#9ca3af` | 6.5:1 | 4.5:1 min |
+| `--text-link` | Links | `#1e40af` | `#93c5fd` | 4.9:1 | 3:1 large text |
+| `--text-accent` | Callout title | `#b45309` | `#fbbf24` | 7.5:1 | 4.5:1 |
+
 ## Known Limitations
 
 - No high-contrast mode toggle (colors already meet AA)

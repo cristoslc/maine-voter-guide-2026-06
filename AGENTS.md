@@ -32,6 +32,7 @@ Agent-specific detail lives in `.agents/agents-md-detail/`:
 
 - `project-navigation.md` — How to orient in this repo
 - `content-guidelines.md` — Nonpartisan writing standards, sourcing rules
+- `commission-warrant.md` — Commission/warrant two-tier PR workflow
 
 ## Data File Editing Conventions
 
@@ -55,6 +56,13 @@ Any plan document written to `docs/plans/` (e.g., architecture changes, methodol
 4. Only then execute the planned changes
 
 Approval must come from the user, not from any automated or plugin-based system. Do not self-approve or skip the review step.
+
+## PR Creation for Plans (Non-Merging)
+
+When creating a PR from a plan document (e.g. after moving it to `docs/plans/Active/`) that is not intended for immediate merge:
+- Create the PR as **Draft** status (`gh pr create --draft`)
+- Use `WIP:` as a title prefix (e.g. `WIP: Visual Identity...`)
+This prevents accidental merges while the plan is still under review or being implemented iteratively.
 
 ## Subagent Output Review
 
