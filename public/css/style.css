@@ -2,17 +2,7 @@
    Mobile-first. WCAG 2.1 AA. Zero JS. */
 
 :root {
-  /* Hue-based tokens (legacy — will be removed in W10) */
-  --blue: #1e40af;
-  --blue-dark: #1a365d;
-  --blue-light: #dbeafe;
-  --blue-lighter: #eff6ff;
-  --gold: #b45309;
-  --gold-light: #fef3c7;
-  --red: #b91c1c;
-  --red-light: #fee2e2;
-  --green: #15803d;
-  --green-light: #dcfce7;
+  /* Gray-scale tokens (still used for borders, table headers, subtle backgrounds) */
   --gray-900: #111827;
   --gray-700: #374151;
   --gray-500: #6b7280;
@@ -25,8 +15,8 @@
   /* Surface tokens */
   --surface-page: #f9fafb;
   --surface-card: #ffffff;
-  --surface-raised: var(--blue-dark);
-  --surface-hero: var(--blue-dark);
+  --surface-raised: #1a365d;
+  --surface-hero: #1a365d;
   --surface-footer: #111827;
   --surface-callout: #fef3c7;
 
@@ -77,17 +67,6 @@
 }
 
 [data-theme="dark"] {
-  /* Hue-based tokens (legacy — will be removed in W10) */
-  --blue: #93c5fd;
-  --blue-dark: #60a5fa;
-  --blue-light: #1e3a5f;
-  --blue-lighter: #0f172a;
-  --gold: #fbbf24;
-  --gold-light: #422006;
-  --red: #fca5a5;
-  --red-light: #7f1d1d;
-  --green: #4ade80;
-  --green-light: #14532d;
   --gray-900: #f3f4f6;
   --gray-700: #d1d5db;
   --gray-500: #9ca3af;
@@ -145,18 +124,6 @@
   --label-referendum-bg: #14532d;
   --label-referendum-text: #4ade80;
 
-  --tint-blue-bg: #eff6ff;
-  --tint-blue-border: #3b82f6;
-  --tint-amber-bg: #fffbeb;
-  --tint-amber-border: #d97706;
-  --tint-purple-bg: #faf5ff;
-  --tint-purple-border: #9333ea;
-  --tint-red-bg: #fef2f2;
-  --tint-red-border: #ef4444;
-  --tint-green-bg: #f0fdf4;
-  --tint-green-border: #22c55e;
-  --tint-slate-bg: #f8fafc;
-  --tint-slate-border: #64748b;
   --shadow: 0 1px 3px rgba(0,0,0,0.4), 0 1px 2px rgba(0,0,0,0.3);
   --shadow-md: 0 4px 6px rgba(0,0,0,0.4), 0 2px 4px rgba(0,0,0,0.3);
 }
@@ -218,16 +185,6 @@
 /* Auto mode: follows OS preference via prefers-color-scheme */
 @media (prefers-color-scheme: dark) {
   [data-theme="auto"] {
-    --blue: #93c5fd;
-    --blue-dark: #60a5fa;
-    --blue-light: #1e3a5f;
-    --blue-lighter: #0f172a;
-    --gold: #fbbf24;
-    --gold-light: #422006;
-    --red: #fca5a5;
-    --red-light: #7f1d1d;
-    --green: #4ade80;
-    --green-light: #14532d;
     --gray-900: #f3f4f6;
     --gray-700: #d1d5db;
     --gray-500: #9ca3af;
@@ -767,12 +724,12 @@ main li::marker { color: var(--text-subtle); }
 }
 
 /* Section tints for candidate-secondary and race-wide-box */
-.candidate-secondary.bg-blue, .race-wide-box.bg-blue { background: var(--tint-blue-bg); border-left: 3px solid var(--tint-blue-border); }
-.candidate-secondary.bg-amber, .race-wide-box.bg-amber { background: var(--tint-amber-bg); border-left: 3px solid var(--tint-amber-border); }
-.candidate-secondary.bg-purple, .race-wide-box.bg-purple { background: var(--tint-purple-bg); border-left: 3px solid var(--tint-purple-border); }
-.candidate-secondary.bg-red, .race-wide-box.bg-red { background: var(--tint-red-bg); border-left: 3px solid var(--tint-red-border); }
-.candidate-secondary.bg-green, .race-wide-box.bg-green { background: var(--tint-green-bg); border-left: 3px solid var(--tint-green-border); }
-.candidate-secondary.bg-slate, .race-wide-box.bg-slate { background: var(--tint-slate-bg); border-left: 3px solid var(--tint-slate-border); }
+.candidate-secondary.bg-blue, .race-wide-box.bg-blue { background: var(--accent-subtle-bg); border-left: 3px solid var(--accent-primary); }
+.candidate-secondary.bg-amber, .race-wide-box.bg-amber { background: var(--accent-warm-bg); border-left: 3px solid var(--accent-warm); }
+.candidate-secondary.bg-purple, .race-wide-box.bg-purple { background: #faf5ff; border-left: 3px solid #9333ea; }
+.candidate-secondary.bg-red, .race-wide-box.bg-red { background: var(--accent-bad-bg); border-left: 3px solid var(--accent-danger); }
+.candidate-secondary.bg-green, .race-wide-box.bg-green { background: var(--accent-good-bg); border-left: 3px solid var(--accent-success); }
+.candidate-secondary.bg-slate, .race-wide-box.bg-slate { background: #f8fafc; border-left: 3px solid #64748b; }
 
 /* Print */
 @media print {
