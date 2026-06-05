@@ -370,13 +370,13 @@ a:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; border-ra
 .container { max-width: 60rem; margin: 0 auto; padding: 0 1rem; }
 
 /* --- Skip Link --- */
-.skip-link { position: absolute; top: -100%; left: 0; background: var(--blue); color: var(--white); padding: 0.5rem 1rem; z-index: 100; text-decoration: none; border-radius: 0 0 var(--radius) 0; }
+.skip-link { position: absolute; top: -100%; left: 0; background: var(--accent-primary); color: var(--text-inverse); padding: 0.5rem 1rem; z-index: 100; text-decoration: none; border-radius: 0 0 var(--radius) 0; }
 .skip-link:focus { top: 0; }
 
 /* --- Header --- */
 .site-header {
-  background: var(--blue-dark);
-  color: var(--white);
+  background: var(--surface-raised);
+  color: var(--text-inverse);
   padding: 1rem 0;
   position: sticky;
   top: 0;
@@ -384,7 +384,7 @@ a:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; border-ra
   box-shadow: 0 1px 3px rgba(0,0,0,0.2);
 }
 .site-header .container { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0.5rem; }
-.site-header a { color: var(--white); text-decoration: none; }
+.site-header a { color: var(--text-inverse); text-decoration: none; }
 .site-title { font-size: 1.125rem; font-weight: 700; letter-spacing: -0.01em; }
 .site-title:hover { text-decoration: underline; }
 .nav-links { display: flex; gap: 1.25rem; list-style: none; font-size: 0.875rem; font-weight: 500; }
@@ -403,7 +403,7 @@ a:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; border-ra
   transition: border-color 0.15s, background 0.15s;
 }
 .theme-toggle:hover { border-color: rgba(255,255,255,0.6); background: rgba(255,255,255,0.1); }
-.theme-toggle:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.theme-toggle:focus-visible { outline: 2px solid var(--accent-primary); outline-offset: 2px; }
 [data-theme="dark"] .theme-toggle { border-color: rgba(255,255,255,0.2); }
 
 /* --- Footer --- */
@@ -477,9 +477,9 @@ a:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; border-ra
 .callout strong { color: var(--gold); }
 
 /* --- Race/Ballot Question Pages --- */
-.breadcrumb { font-size: 0.8125rem; color: var(--gray-500); margin-bottom: 1.5rem; padding-top: 1rem; }
-.breadcrumb a { color: var(--gray-500); text-decoration: none; }
-.breadcrumb a:hover { color: var(--blue); text-decoration: underline; }
+.breadcrumb { font-size: 0.8125rem; color: var(--text-subtle); margin-bottom: 1.5rem; padding-top: 1rem; }
+.breadcrumb a { color: var(--text-subtle); text-decoration: none; }
+.breadcrumb a:hover { color: var(--accent-primary); text-decoration: underline; }
 
 /* Candidate Cards */
 .candidate-card {
