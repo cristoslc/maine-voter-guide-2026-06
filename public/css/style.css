@@ -509,10 +509,10 @@ a:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; border-ra
 .party-tag.r { background: var(--party-republican-bg); color: var(--party-republican-text); }
 .party-tag.incumbent { background: var(--party-inc-bg); color: var(--party-inc-text); }
 
-.candidate-meta { font-size: 0.875rem; color: var(--gray-500); margin: 0.5rem 0 0.75rem; }
+.candidate-meta { font-size: 0.875rem; color: var(--text-subtle); margin: 0.5rem 0 0.75rem; }
 
-.source-ref { font-size: 0.75rem; color: var(--gray-500); margin-top: 0.25rem; }
-.source-ref a { color: var(--gray-500); }
+.source-ref { font-size: 0.75rem; color: var(--text-subtle); margin-top: 0.25rem; }
+.source-ref a { color: var(--text-subtle); }
 
 /* Comparison Tables */
 .compare-table {
@@ -641,7 +641,7 @@ main li::marker { color: var(--text-subtle); }
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
-  background: var(--white);
+  background: var(--surface-card);
   border: 1px solid var(--gray-200);
   border-radius: var(--radius);
   padding: 1.5rem;
@@ -659,7 +659,7 @@ main li::marker { color: var(--text-subtle); }
 .candidate-primary h3 { font-size: 1rem; margin-top: 1.25rem; margin-bottom: 0.5rem; }
 
 .candidate-secondary {
-  background: var(--gray-50);
+  background: var(--surface-page);
   border: 1px solid var(--gray-200);
   border-radius: var(--radius);
   padding: 1.25rem;
@@ -675,7 +675,7 @@ main li::marker { color: var(--text-subtle); }
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.07em;
-  color: var(--gray-500);
+  color: var(--text-subtle);
   margin: 0 0 0.5rem;
   border: none;
   padding: 0;
@@ -687,7 +687,34 @@ main li::marker { color: var(--text-subtle); }
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
-  background: var(--white);
+  background: var(--surface-card);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow);
+}
+@media (min-width: 768px) {
+  .ballot-group { grid-template-columns: 5fr 3fr; gap: 2rem; }
+}
+
+.ballot-primary { min-width: 0; }
+.ballot-secondary {
+  background: var(--surface-page);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  font-size: 0.875rem;
+  line-height: 1.55;
+  align-self: start;
+}
+
+/* Ballot question card layout */
+.ballot-group {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  background: var(--surface-card);
   border: 1px solid var(--gray-200);
   border-radius: var(--radius);
   padding: 1.5rem;
