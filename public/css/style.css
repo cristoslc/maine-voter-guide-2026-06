@@ -437,21 +437,21 @@ a:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; border-ra
 
 .race-card {
   display: block;
-  background: var(--white);
+  background: var(--surface-card);
   border: 1px solid var(--gray-200);
   border-radius: var(--radius);
   padding: 1.125rem;
   text-decoration: none;
-  color: var(--gray-900);
+  color: var(--text-body);
   box-shadow: var(--shadow);
   transition: box-shadow 0.15s, border-color 0.15s;
 }
 .race-card:hover {
-  border-color: var(--blue);
+  border-color: var(--accent-primary);
   box-shadow: var(--shadow-md);
 }
 .race-card:focus-visible {
-  outline: 2px solid var(--blue);
+  outline: 2px solid var(--accent-primary);
   outline-offset: 2px;
 }
 .race-card .card-tag {
@@ -464,17 +464,17 @@ a:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; border-ra
   border-radius: 999px;
   margin-bottom: 0.5rem;
 }
-.card-tag.partisan { background: var(--blue-light); color: var(--blue); }
-.card-tag.contested { background: var(--red-light); color: var(--red); }
-.card-tag.uncontested { background: var(--gray-100); color: var(--gray-500); }
-.card-tag.nonpartisan { background: var(--gold-light); color: var(--gold); }
-.card-tag.referendum { background: var(--green-light); color: var(--green); }
+.card-tag.partisan { background: var(--label-primary-bg); color: var(--label-primary-text); }
+.card-tag.contested { background: var(--label-contested-bg); color: var(--label-contested-text); }
+.card-tag.uncontested { background: var(--label-uncontested-bg); color: var(--label-uncontested-text); }
+.card-tag.nonpartisan { background: var(--surface-callout); color: var(--text-accent); }
+.card-tag.referendum { background: var(--label-referendum-bg); color: var(--label-referendum-text); }
 .race-card h2 { font-size: 1.0625rem; margin: 0 0 0.25rem; border: none; padding: 0; }
-.race-card .card-sub { font-size: 0.8125rem; color: var(--gray-500); margin: 0; }
+.race-card .card-sub { font-size: 0.8125rem; color: var(--text-subtle); margin: 0; }
 
-.callout { background: var(--gold-light); border: 1px solid var(--gold); border-radius: var(--radius); padding: 1rem 1.25rem; margin: 1.5rem 0; }
+.callout { background: var(--surface-callout); border: 1px solid var(--accent-warm); border-radius: var(--radius); padding: 1rem 1.25rem; margin: 1.5rem 0; }
 .callout p { margin: 0; font-size: 0.9375rem; }
-.callout strong { color: var(--gold); }
+.callout strong { color: var(--text-accent); }
 
 /* --- Race/Ballot Question Pages --- */
 .breadcrumb { font-size: 0.8125rem; color: var(--text-subtle); margin-bottom: 1.5rem; padding-top: 1rem; }
@@ -505,9 +505,9 @@ a:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; border-ra
   margin-left: 0.5rem;
   vertical-align: middle;
 }
-.party-tag.d { background: var(--blue-light); color: var(--blue); }
-.party-tag.r { background: var(--red-light); color: var(--red); }
-.party-tag.incumbent { background: var(--green-light); color: var(--green); }
+.party-tag.d { background: var(--party-democrat-bg); color: var(--party-democrat-text); }
+.party-tag.r { background: var(--party-republican-bg); color: var(--party-republican-text); }
+.party-tag.incumbent { background: var(--party-inc-bg); color: var(--party-inc-text); }
 
 .candidate-meta { font-size: 0.875rem; color: var(--gray-500); margin: 0.5rem 0 0.75rem; }
 
@@ -611,7 +611,7 @@ a:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; border-ra
 
 /* Race header banner */
 .race-header {
-  background: var(--white);
+  background: var(--surface-card);
   border: 1px solid var(--gray-200);
   border-radius: var(--radius);
   padding: 1.25rem;
@@ -619,16 +619,16 @@ a:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; border-ra
   box-shadow: var(--shadow);
 }
 .race-header h1 { margin-bottom: 0.25rem; }
-.race-header .race-meta { font-size: 0.875rem; color: var(--gray-500); }
+.race-header .race-meta { font-size: 0.875rem; color: var(--text-subtle); }
 
 /* Content Lists (markdown bullet/number lists) */
 main ul, main ol { margin: 0.5rem 0 1rem 1.5rem; padding: 0; }
 main li { margin-bottom: 0.35rem; }
-main li::marker { color: var(--gray-500); }
+main li::marker { color: var(--text-subtle); }
 
 /* Per-Candidate/Ballot Card Layout */
 .candidate-card {
-  background: var(--white);
+  background: var(--surface-card);
   border: 1px solid var(--gray-200);
   border-radius: var(--radius);
   padding: 1.5rem;
@@ -711,14 +711,14 @@ main li::marker { color: var(--gray-500); }
 
 /* Race-wide info boxes (between candidate groups) */
 .race-wide-box {
-  background: var(--white);
+  background: var(--surface-card);
   border: 1px solid var(--gray-200);
   border-radius: var(--radius);
   padding: 1rem 1.25rem;
   margin: 1.5rem 0;
   box-shadow: var(--shadow);
 }
-.race-wide-box h3 { margin-top: 0; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--gray-500); border: none; }
+.race-wide-box h3 { margin-top: 0; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-subtle); border: none; }
 .race-wide-box p { font-size: 0.9375rem; }
 
 /* Polling mini-table */
