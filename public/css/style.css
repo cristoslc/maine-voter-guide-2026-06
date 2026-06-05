@@ -373,11 +373,11 @@ a:focus-visible { outline: 2px solid var(--accent-primary); outline-offset: 3px;
   margin-top: 3rem;
   padding: 2rem 0;
   background: var(--surface-footer);
-  color: var(--text-subtle);
+  color: var(--text-muted);
   font-size: 0.8125rem;
   line-height: 1.7;
 }
-.site-footer a { color: var(--text-subtle); }
+.site-footer a { color: var(--text-muted); }
 .site-footer a:hover { color: var(--text-inverse); }
 
 /* --- Home Page --- */
