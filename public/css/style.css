@@ -348,23 +348,23 @@ body {
   font-family: var(--font);
   font-size: 1rem;
   line-height: 1.6;
-  color: var(--gray-900);
-  background: var(--gray-50);
+  color: var(--text-body);
+  background: var(--surface-page);
 }
 
 /* --- Typography --- */
 /* Scale: Display(1.5rem/700/1.15), H1(1.75rem/700/1.25), H2(1.25rem/700/1.3), H3(1.125rem/600/1.35), H4(1rem/600/1.4), Body(1rem/400/1.6), Small(0.875rem/400/1.5), Tag(0.6875rem/700/1.3/uppercase), Tiny(0.75rem/400/1.4) */
-h1 { font-size: 1.75rem; line-height: 1.25; color: var(--blue-dark); margin-bottom: 1rem; }
-h2 { font-size: 1.25rem; line-height: 1.3; color: var(--blue-dark); margin: 1.5rem 0 0.75rem; padding-bottom: 0.25rem; border-bottom: 2px solid var(--gray-200); }
-h3 { font-size: 1.125rem; line-height: 1.35; color: var(--gray-900); margin: 1.25rem 0 0.5rem; }
-h4 { font-size: 1rem; line-height: 1.4; color: var(--gray-700); margin: 0.75rem 0 0.25rem; }
+h1 { font-size: 1.75rem; line-height: 1.25; color: var(--text-body); margin-bottom: 1rem; }
+h2 { font-size: 1.25rem; line-height: 1.3; color: var(--text-body); margin: 1.5rem 0 0.75rem; padding-bottom: 0.25rem; border-bottom: 2px solid var(--gray-200); }
+h3 { font-size: 1.125rem; line-height: 1.35; color: var(--text-body); margin: 1.25rem 0 0.5rem; }
+h4 { font-size: 1rem; line-height: 1.4; color: var(--text-subtle); margin: 0.75rem 0 0.25rem; }
 p { margin-bottom: 0.75rem; }
-strong { color: var(--gray-900); }
+strong { color: var(--text-body); }
 
-a { color: var(--blue); text-decoration: underline; text-underline-offset: 2px; }
-a:hover { color: var(--blue-dark); }
-a:visited { color: var(--blue); }
-a:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; border-radius: 2px; }
+a { color: var(--text-link); text-decoration: underline; text-underline-offset: 2px; }
+a:hover { color: var(--accent-primary); }
+a:visited { color: var(--text-link); }
+a:focus-visible { outline: 2px solid var(--accent-primary); outline-offset: 3px; border-radius: 2px; }
 
 /* --- Layout --- */
 .container { max-width: 60rem; margin: 0 auto; padding: 0 1rem; }
@@ -415,7 +415,7 @@ a:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; border-ra
   font-size: 0.8125rem;
   line-height: 1.7;
 }
-.site-footer a { color: var(--gray-300); }
+.site-footer a { color: var(--text-subtle); }
 .site-footer a:hover { color: var(--text-inverse); }
 
 /* --- Home Page --- */
@@ -483,7 +483,7 @@ a:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; border-ra
 
 /* Candidate Cards */
 .candidate-card {
-  background: var(--white);
+  background: var(--surface-card);
   border: 1px solid var(--gray-200);
   border-radius: var(--radius);
   padding: 1.25rem;
@@ -535,18 +535,18 @@ a:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; border-ra
   background: var(--gray-100);
   font-weight: 700;
   font-size: 0.8125rem;
-  color: var(--gray-700);
+  color: var(--text-body);
 }
-.compare-table th:first-child { min-width: 6rem; background: var(--blue-dark); color: var(--white); }
+.compare-table th:first-child { min-width: 6rem; background: var(--surface-raised); color: var(--text-inverse); }
 
 /* Mobile table stacking */
 @media (max-width: 600px) {
   .compare-table, .compare-table tbody, .compare-table tr, .compare-table td { display: block; }
   .compare-table thead { display: none; }
-  .compare-table tr { margin-bottom: 0.75rem; border: 1px solid var(--gray-200); border-radius: var(--radius); background: var(--white); }
+  .compare-table tr { margin-bottom: 0.75rem; border: 1px solid var(--gray-200); border-radius: var(--radius); background: var(--surface-card); }
   .compare-table td { border: none; border-bottom: 1px solid var(--gray-100); padding: 0.5rem 0.75rem; }
   .compare-table td:last-child { border-bottom: none; }
-  .compare-table td:before { content: attr(data-label); display: block; font-weight: 700; font-size: 0.6875rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--gray-500); margin-bottom: 0.15rem; }
+  .compare-table td:before { content: attr(data-label); display: block; font-weight: 700; font-size: 0.6875rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-subtle); margin-bottom: 0.15rem; }
 }
 
 /* Ballot Question */
@@ -598,16 +598,16 @@ a:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; border-ra
   width: 100%;
   border-collapse: collapse;
   font-size: 0.875rem;
-  background: var(--white);
+  background: var(--surface-card);
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: var(--shadow);
   margin: 1rem 0;
 }
 .date-table th, .date-table td { border-bottom: 1px solid var(--gray-200); padding: 0.625rem 0.75rem; text-align: left; }
-.date-table th { background: var(--gray-100); font-weight: 700; color: var(--gray-700); font-size: 0.8125rem; }
-.date-table td:first-child { white-space: nowrap; font-weight: 600; color: var(--gray-700); }
-.date-table .highlight td { background: var(--blue-lighter); font-weight: 600; }
+.date-table th { background: var(--gray-100); font-weight: 700; color: var(--text-body); font-size: 0.8125rem; }
+.date-table td:first-child { white-space: nowrap; font-weight: 600; color: var(--text-body); }
+.date-table .highlight td { background: var(--accent-subtle-bg); font-weight: 600; }
 
 /* Race header banner */
 .race-header {
@@ -752,9 +752,9 @@ main li::marker { color: var(--text-subtle); }
 .poll-mini { width: 100%; border-collapse: collapse; font-size: 0.8125rem; }
 .poll-mini td { padding: 0.375rem 0; border-bottom: 1px solid var(--gray-100); }
 .poll-mini tr:last-child td { border-bottom: none; }
-.poll-mini td:first-child { color: var(--gray-500); }
-.poll-mini td:last-child { text-align: right; font-weight: 600; color: var(--gray-900); }
-.poll-mini tr:first-child td { color: var(--blue); font-size: 0.875rem; }
+.poll-mini td:first-child { color: var(--text-subtle); }
+.poll-mini td:last-child { text-align: right; font-weight: 600; color: var(--text-body); }
+.poll-mini tr:first-child td { color: var(--accent-primary); font-size: 0.875rem; }
 
 /* Mobile: secondary stacks below primary */
 @media (max-width: 767px) {
@@ -791,7 +791,7 @@ main li::marker { color: var(--text-subtle); }
 .calendar-title {
   font-size: 1rem;
   font-weight: 700;
-  color: var(--blue-dark);
+  color: var(--text-body);
   margin: 0 0 0.5rem;
   border: none;
   padding: 0;
@@ -802,7 +802,7 @@ main li::marker { color: var(--text-subtle); }
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 2px;
-  background: var(--white);
+  background: var(--surface-card);
   border: 1px solid var(--gray-200);
   border-radius: var(--radius);
   padding: 4px;
@@ -813,7 +813,7 @@ main li::marker { color: var(--text-subtle); }
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: var(--gray-500);
+  color: var(--text-subtle);
   text-align: center;
   padding: 0.375rem 0;
 }
@@ -821,7 +821,7 @@ main li::marker { color: var(--text-subtle); }
 .day {
   font-size: 0.75rem;
   font-weight: 600;
-  color: var(--gray-700);
+  color: var(--text-body);
   text-align: center;
   padding: 0.375rem 0.25rem;
   border-radius: 4px;
@@ -837,8 +837,8 @@ main li::marker { color: var(--text-subtle); }
   bottom: 100%;
   left: 50%;
   transform: translateX(-50%);
-  background: var(--gray-900);
-  color: var(--white);
+  background: var(--surface-footer);
+  color: var(--text-inverse);
   font-size: 0.625rem;
   font-weight: 500;
   white-space: nowrap;
@@ -853,25 +853,25 @@ main li::marker { color: var(--text-subtle); }
 
 /* Calendar event types */
 .day.event { cursor: default; }
-.day.event.election-day { background: var(--blue-dark); color: var(--white); }
-.day.event.deadline { background: var(--red-light); color: var(--red); }
-.day.event.absentee-start { background: var(--blue-lighter); color: var(--blue); }
-.day.event.extended { background: var(--gold-light); color: var(--gold); }
+.day.event.election-day { background: var(--accent-subtle-bg); color: var(--party-democrat-text); }
+.day.event.deadline { background: var(--accent-bad-bg); color: var(--accent-danger); }
+.day.event.absentee-start { background: var(--accent-subtle-bg); color: var(--party-democrat-text); }
+.day.event.extended { background: var(--accent-warm-bg); color: var(--accent-warm); }
 
 .calendar-legend {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   font-size: 0.75rem;
-  color: var(--gray-700);
+  color: var(--text-body);
   margin-bottom: 1rem;
 }
 .legend-item { display: flex; align-items: center; gap: 0.375rem; }
 .dot { display: inline-block; width: 12px; height: 12px; border-radius: 3px; flex-shrink: 0; }
-.dot.election-day { background: var(--blue-dark); }
-.dot.deadline { background: var(--red-light); border: 1px solid var(--red); }
-.dot.absentee-start { background: var(--blue-lighter); border: 1px solid var(--blue); }
-.dot.extended { background: var(--gold-light); border: 1px solid var(--gold); }
+.dot.election-day { background: var(--accent-subtle-bg); border: 1px solid var(--party-democrat-text); }
+.dot.deadline { background: var(--accent-bad-bg); border: 1px solid var(--accent-danger); }
+.dot.absentee-start { background: var(--accent-subtle-bg); border: 1px solid var(--party-democrat-text); }
+.dot.extended { background: var(--accent-warm-bg); border: 1px solid var(--accent-warm); }
 
 /* Mobile: show event labels inline */
 @media (max-width: 600px) {
@@ -889,8 +889,8 @@ main li::marker { color: var(--text-subtle); }
     margin-top: 1px;
     line-height: 1.2;
   }
-  .day.event.election-day .event-label { color: var(--white); }
-  .day.event.deadline .event-label { color: var(--red); }
-  .day.event.absentee-start .event-label { color: var(--blue); }
-  .day.event.extended .event-label { color: var(--gold); }
+  .day.event.election-day .event-label { color: var(--party-democrat-text); }
+  .day.event.deadline .event-label { color: var(--accent-danger); }
+  .day.event.absentee-start .event-label { color: var(--party-democrat-text); }
+  .day.event.extended .event-label { color: var(--accent-warm); }
 }
