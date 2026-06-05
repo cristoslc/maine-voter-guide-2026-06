@@ -15,8 +15,8 @@
   /* Surface tokens */
   --surface-page: #f9fafb;
   --surface-card: #ffffff;
-  --surface-raised: #1a365d;
-  --surface-hero: #1a365d;
+  --surface-raised: #1e293b;
+  --surface-hero: #1e293b;
   --surface-footer: #111827;
   --surface-callout: #fef3c7;
 
@@ -24,16 +24,16 @@
   --text-body: #111827;
   --text-subtle: #6b7280;
   --text-muted: #9ca3af;
-  --text-link: #1e40af;
+  --text-link: #0f766e;
   --text-inverse: #ffffff;
   --text-accent: #b45309;
 
   /* Accent tokens */
-  --accent-primary: #1e40af;
+  --accent-primary: #0d9488;
   --accent-warm: #b45309;
   --accent-success: #15803d;
   --accent-danger: #b91c1c;
-  --accent-subtle-bg: #eff6ff;
+  --accent-subtle-bg: #f1f5f9;
   --accent-warm-bg: #fffbeb;
   --accent-good-bg: #f0fdf4;
   --accent-bad-bg: #fef2f2;
@@ -51,8 +51,8 @@
   --party-inc-text: #15803d;
 
   /* Label tokens */
-  --label-primary-bg: #dbeafe;
-  --label-primary-text: #1e40af;
+  --label-primary-bg: #f1f5f9;
+  --label-primary-text: #475569;
   --label-contested-bg: #fef2f2;
   --label-contested-text: #b91c1c;
   --label-uncontested-bg: #f3f4f6;
@@ -88,12 +88,12 @@
   --text-body: #f3f4f6;
   --text-subtle: #9ca3af;
   --text-muted: #6b7280;
-  --text-link: #93c5fd;
+  --text-link: #5eead4;
   --text-inverse: #ffffff;
   --text-accent: #fbbf24;
 
   /* Accent tokens */
-  --accent-primary: #93c5fd;
+  --accent-primary: #5eead4;
   --accent-warm: #fbbf24;
   --accent-success: #4ade80;
   --accent-danger: #fca5a5;
@@ -115,8 +115,8 @@
   --party-inc-text: #4ade80;
 
   /* Label tokens */
-  --label-primary-bg: #1e3a5f;
-  --label-primary-text: #93c5fd;
+  --label-primary-bg: #1e293b;
+  --label-primary-text: #94a3b8;
   --label-contested-bg: #7f1d1d;
   --label-contested-text: #fca5a5;
   --label-uncontested-bg: #1f2937;
@@ -149,37 +149,37 @@
 [data-theme="dark"] .date-table td { border-color: #374151; color: #e5e7eb; }
 [data-theme="dark"] .calendar-days { background: #1a1a2e; border-color: #374151; }
 [data-theme="dark"] .day { background: #1f2937; color: #d1d5db; }
-[data-theme="dark"] .calendar-title { color: #93c5fd; }
+[data-theme="dark"] .calendar-title { color: #5eead4; }
 [data-theme="dark"] .day-header { color: #9ca3af; }
 [data-theme="dark"] .event-label { background: #111827; color: #e5e7eb; box-shadow: 0 2px 8px rgba(0,0,0,0.5); border: 1px solid #374151; }
-[data-theme="dark"] .day.event.election-day { background: #1e3a5f; color: #93c5fd; }
-[data-theme="dark"] .day.event.election-day .event-label { color: #93c5fd; }
+[data-theme="dark"] .day.event.election-day { background: var(--accent-subtle-bg); color: var(--accent-primary); }
+[data-theme="dark"] .day.event.election-day .event-label { color: var(--accent-primary); }
 [data-theme="dark"] .day.event.deadline { background: #7f1d1d; color: #fca5a5; }
 [data-theme="dark"] .day.event.deadline .event-label { color: #fca5a5; }
-[data-theme="dark"] .day.event.absentee-start { background: #0f172a; color: #93c5fd; }
-[data-theme="dark"] .day.event.absentee-start .event-label { color: #93c5fd; }
+[data-theme="dark"] .day.event.absentee-start { background: var(--accent-subtle-bg); color: var(--accent-primary); }
+[data-theme="dark"] .day.event.absentee-start .event-label { color: var(--accent-primary); }
 [data-theme="dark"] .day.event.extended { background: #422006; color: #fbbf24; }
 [data-theme="dark"] .day.event.extended .event-label { color: #fbbf24; }
 [data-theme="dark"] .calendar-legend { color: #d1d5db; }
-[data-theme="dark"] .billboard { background: #1e3a5f; }
+[data-theme="dark"] .billboard { background: #1e293b; }
 [data-theme="dark"] strong { color: #f3f4f6; }
 [data-theme="dark"] .party-tag.d { background: #1e3a5f; color: #93c5fd; border: 1px solid #60a5fa; }
 [data-theme="dark"] .party-tag.r { background: #7f1d1d; color: #fca5a5; border: 1px solid #fca5a5; }
 [data-theme="dark"] .party-tag.incumbent { background: #14532d; color: #4ade80; border: 1px solid #4ade80; }
 [data-theme="dark"] .candidate-meta { color: #d1d5db; }
 [data-theme="dark"] .source-ref { color: #d1d5db; }
-[data-theme="dark"] .source-ref a { color: #93c5fd; }
+[data-theme="dark"] .source-ref a { color: var(--text-link); }
 [data-theme="dark"] .candidate-primary h3 { color: #f3f4f6; }
 [data-theme="dark"] .candidate-primary p { color: #e5e7eb; }
-[data-theme="dark"] .candidate-secondary h4 { color: #93c5fd; }
+[data-theme="dark"] .candidate-secondary h4 { color: var(--text-link); }
 [data-theme="dark"] .candidate-secondary p { color: #d1d5db; }
 [data-theme="dark"] .candidate-group { background: #1a1a2e; border-color: #374151; }
 [data-theme="dark"] .ballot-group { background: #1a1a2e; border-color: #374151; }
-[data-theme="dark"] .ballot-secondary { background: #0f172a; border-color: #374151; color: #e5e7eb; }
-[data-theme="dark"] .position { background: #1a1a2e; border-left-color: #3b82f6; }
-[data-theme="dark"] .position .issue-label { color: #93c5fd; }
+[data-theme="dark"] .ballot-secondary { background: var(--accent-subtle-bg); border-color: #374151; color: #e5e7eb; }
+[data-theme="dark"] .position { background: #1a1a2e; border-left-color: var(--accent-primary); }
+[data-theme="dark"] .position .issue-label { color: var(--text-link); }
 [data-theme="dark"] .position .issue-text { color: #e5e7eb; }
-[data-theme="dark"] .context-section h4 { color: #93c5fd; }
+[data-theme="dark"] .context-section h4 { color: var(--text-link); }
 [data-theme="dark"] .context-section p { color: #d1d5db; }
 
 /* Auto mode: follows OS preference via prefers-color-scheme */
@@ -204,11 +204,11 @@
     --text-body: #f3f4f6;
     --text-subtle: #9ca3af;
     --text-muted: #6b7280;
-    --text-link: #93c5fd;
+    --text-link: #5eead4;
     --text-inverse: #ffffff;
     --text-accent: #fbbf24;
 
-    --accent-primary: #93c5fd;
+    --accent-primary: #5eead4;
     --accent-warm: #fbbf24;
     --accent-success: #4ade80;
     --accent-danger: #fca5a5;
@@ -228,8 +228,8 @@
     --party-inc-bg: #14532d;
     --party-inc-text: #4ade80;
 
-    --label-primary-bg: #1e3a5f;
-    --label-primary-text: #93c5fd;
+    --label-primary-bg: #1e293b;
+    --label-primary-text: #94a3b8;
     --label-contested-bg: #7f1d1d;
     --label-contested-text: #fca5a5;
     --label-uncontested-bg: #1f2937;
@@ -262,37 +262,37 @@
   [data-theme="auto"] .date-table td { border-color: #374151; color: #e5e7eb; }
 [data-theme="auto"] .calendar-days { background: #1a1a2e; border-color: #374151; }
 [data-theme="auto"] .day { background: #1f2937; color: #d1d5db; }
-[data-theme="auto"] .calendar-title { color: #93c5fd; }
+[data-theme="auto"] .calendar-title { color: #5eead4; }
 [data-theme="auto"] .day-header { color: #9ca3af; }
 [data-theme="auto"] .event-label { background: #111827; color: #e5e7eb; box-shadow: 0 2px 8px rgba(0,0,0,0.5); border: 1px solid #374151; }
-[data-theme="auto"] .day.event.election-day { background: #1e3a5f; color: #93c5fd; }
-[data-theme="auto"] .day.event.election-day .event-label { color: #93c5fd; }
+[data-theme="auto"] .day.event.election-day { background: var(--accent-subtle-bg); color: var(--accent-primary); }
+[data-theme="auto"] .day.event.election-day .event-label { color: var(--accent-primary); }
 [data-theme="auto"] .day.event.deadline { background: #7f1d1d; color: #fca5a5; }
 [data-theme="auto"] .day.event.deadline .event-label { color: #fca5a5; }
-[data-theme="auto"] .day.event.absentee-start { background: #0f172a; color: #93c5fd; }
-[data-theme="auto"] .day.event.absentee-start .event-label { color: #93c5fd; }
+[data-theme="auto"] .day.event.absentee-start { background: var(--accent-subtle-bg); color: var(--accent-primary); }
+[data-theme="auto"] .day.event.absentee-start .event-label { color: var(--accent-primary); }
 [data-theme="auto"] .day.event.extended { background: #422006; color: #fbbf24; }
 [data-theme="auto"] .day.event.extended .event-label { color: #fbbf24; }
 [data-theme="auto"] .calendar-legend { color: #d1d5db; }
-  [data-theme="auto"] .billboard { background: #1e3a5f; }
+  [data-theme="auto"] .billboard { background: #1e293b; }
   [data-theme="auto"] strong { color: #f3f4f6; }
   [data-theme="auto"] .party-tag.d { background: #1e3a5f; color: #93c5fd; border: 1px solid #60a5fa; }
   [data-theme="auto"] .party-tag.r { background: #7f1d1d; color: #fca5a5; border: 1px solid #fca5a5; }
   [data-theme="auto"] .party-tag.incumbent { background: #14532d; color: #4ade80; border: 1px solid #4ade80; }
   [data-theme="auto"] .candidate-meta { color: #d1d5db; }
   [data-theme="auto"] .source-ref { color: #d1d5db; }
-  [data-theme="auto"] .source-ref a { color: #93c5fd; }
+  [data-theme="auto"] .source-ref a { color: var(--text-link); }
   [data-theme="auto"] .candidate-primary h3 { color: #f3f4f6; }
   [data-theme="auto"] .candidate-primary p { color: #e5e7eb; }
-  [data-theme="auto"] .candidate-secondary h4 { color: #93c5fd; }
+  [data-theme="auto"] .candidate-secondary h4 { color: var(--text-link); }
   [data-theme="auto"] .candidate-secondary p { color: #d1d5db; }
   [data-theme="auto"] .candidate-group { background: #1a1a2e; border-color: #374151; }
   [data-theme="auto"] .ballot-group { background: #1a1a2e; border-color: #374151; }
-  [data-theme="auto"] .ballot-secondary { background: #0f172a; border-color: #374151; color: #e5e7eb; }
-  [data-theme="auto"] .position { background: #1a1a2e; border-left-color: #3b82f6; }
-  [data-theme="auto"] .position .issue-label { color: #93c5fd; }
+  [data-theme="auto"] .ballot-secondary { background: var(--accent-subtle-bg); border-color: #374151; color: #e5e7eb; }
+  [data-theme="auto"] .position { background: #1a1a2e; border-left-color: var(--accent-primary); }
+  [data-theme="auto"] .position .issue-label { color: var(--text-link); }
   [data-theme="auto"] .position .issue-text { color: #e5e7eb; }
-  [data-theme="auto"] .context-section h4 { color: #93c5fd; }
+  [data-theme="auto"] .context-section h4 { color: var(--text-link); }
   [data-theme="auto"] .context-section p { color: #d1d5db; }
 }
 
