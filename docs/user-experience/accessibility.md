@@ -55,7 +55,7 @@ Run against `_site/` output:
 |-------|---------|------------|------------|------|----------|
 | `--text-body` | Body text | `#111827` | `#f3f4f6` | 15.3:1 | 7:1 body |
 | `--text-subtle` | Meta, secondary | `#6b7280` | `#9ca3af` | 6.5:1 | 4.5:1 min |
-| `--text-link` | Links | `#1e40af` | `#93c5fd` | 4.9:1 | 3:1 large text |
+| `--text-link` | Links | `#0f766e` | `#5eead4` | 5.2:1 | 3:1 large text |
 | `--text-accent` | Callout title | `#b45309` | `#fbbf24` | 7.5:1 | 4.5:1 |
 
 ## Known Limitations

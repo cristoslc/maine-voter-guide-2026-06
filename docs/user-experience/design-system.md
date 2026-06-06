@@ -36,8 +36,8 @@ All tokens defined in `:root`, `[data-theme="dark"]`, and `@media (prefers-color
 |-------|---------|------------|------------|
 | `--surface-page` | Page background | `#f9fafb` | `#0d0d1a` |
 | `--surface-card` | Card/panel background | `#ffffff` | `#1a1a2e` |
-| `--surface-raised` | Elevated elements (header, callout) | `#1a365d` | `#0f172a` |
-| `--surface-hero` | Hero banner | `#1a365d` | `#0f172a` |
+| `--surface-raised` | Elevated elements (header, callout) | `#1e293b` | `#0f172a` |
+| `--surface-hero` | Hero banner | `#1e293b` | `#0f172a` |
 | `--surface-footer` | Footer | `#111827` | `#0f172a` |
 | `--surface-callout` | Informational callouts | `#fef3c7` | `#422006` |
 
@@ -48,7 +48,7 @@ All tokens defined in `:root`, `[data-theme="dark"]`, and `@media (prefers-color
 | `--text-body` | Body text | `#111827` | `#f3f4f6` |
 | `--text-subtle` | Meta, secondary info | `#6b7280` | `#9ca3af` |
 | `--text-muted` | Source refs, labels | `#9ca3af` | `#6b7280` |
-| `--text-link` | Links | `#1e40af` | `#93c5fd` |
+| `--text-link` | Links | `#0f766e` | `#5eead4` |
 | `--text-inverse` | Text on dark surfaces | `#ffffff` | `#ffffff` |
 | `--text-accent` | Emphasized text (callout title) | `#b45309` | `#fbbf24` |
 
@@ -56,11 +56,11 @@ All tokens defined in `:root`, `[data-theme="dark"]`, and `@media (prefers-color
 
 | Token | Purpose | Light | Dark |
 |-------|---------|-------|------|
-| `--accent-primary` | Primary accent (borders, links hover) | `#1e40af` | `#93c5fd` |
+| `--accent-primary` | Primary accent (borders, links hover) | `#0d9488` | `#5eead4` |
 | `--accent-warm` | Warning/info accent | `#b45309` | `#fbbf24` |
 | `--accent-success` | Incumbent, approved | `#15803d` | `#4ade80` |
 | `--accent-danger` | Error, deadline | `#b91c1c` | `#fca5a5` |
-| `--accent-subtle-bg` | Subtle background tint (blue) | `#eff6ff` | `#0f172a` |
+| `--accent-subtle-bg` | Subtle background tint (slate) | `#f1f5f9` | `#0f172a` |
 | `--accent-warm-bg` | Subtle background tint (amber) | `#fffbeb` | `#422006` |
 | `--accent-good-bg` | Subtle background tint (green) | `#f0fdf4` | `#14532d` |
 | `--accent-bad-bg` | Subtle background tint (red) | `#fef2f2` | `#7f1d1d` |
@@ -86,8 +86,8 @@ Token names use the full party `id` from `_data/parties.js` (e.g. `democrat` not
 
 | Token | Purpose | Light | Dark |
 |-------|---------|-------|------|
-| `--label-primary-bg` | "Partisan" race label bg | `#dbeafe` | `#1e3a5f` |
-| `--label-primary-text` | "Partisan" race label text | `#1e40af` | `#93c5fd` |
+| `--label-primary-bg` | "Partisan" race label bg | `#f1f5f9` | `#1e293b` |
+| `--label-primary-text` | "Partisan" race label text | `#475569` | `#94a3b8` |
 | `--label-contested-bg` | "Contested" race label bg | `#fef2f2` | `#7f1d1d` |
 | `--label-contested-text` | "Contested" race label text | `#b91c1c` | `#fca5a5` |
 | `--label-uncontested-bg` | "Uncontested" race label bg | `#f3f4f6` | `#1f2937` |
@@ -97,7 +97,7 @@ Token names use the full party `id` from `_data/parties.js` (e.g. `democrat` not
 
 ## Nonpartisan Visual Signaling
 
-- **Race card tags**: `.card-tag.partisan` uses `--label-primary-bg` (neutral blue). Party distinction handled by `.party-tag.[d|r|g|l]` inside the card — never by the card-level label.
+- **Race card tags**: `.card-tag.partisan` uses `--label-primary-bg` (neutral slate). Party distinction handled by `.party-tag.[d|r|g|l]` inside the card — never by the card-level label.
 - **Hero**: Solid dark background (`--surface-hero`), no party colors.
 - **Section headers**: Ballot section `<h2>` elements get 3px left-border accent based on party (Democratic → `--party-democrat-text`, Republican → `--party-republican-text`, All Voters → `--accent-primary`). Applied only to data-driven classes `.section-democratic`, `.section-republican`, `.section-all-voters`.
 
