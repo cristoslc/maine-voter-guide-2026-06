@@ -10,7 +10,7 @@ The site currently has colors, typography, and layout patterns but no documented
 
 **Maine Voter Guide** is a nonpartisan, civic-information tool. Its visual identity communicates:
 
-- **Trust** — dark blue anchor, consistent spacing, predictable navigation
+- **Trust** — teal/slate anchor (no party-associated hues), consistent spacing, predictable navigation
 - **Neutrality** — semantic color tokens decoupled from partisan hues; the core palette (surfaces, body text, links, navigation) uses NO party colors. Party colors (`--party-*`) appear ONLY on UI elements rendered from data sources that carry that party's identification (candidate tags, race ballot-section accents).
 - **Clarity** — system font stack (no external loads), high contrast (7:1+), sans-serif body
 - **Accessibility** — WCAG 2.1 AA baseline; CCD election-specific contrast standards (7:1 body, 3:1 large text, 15:1 shaded boxes)
@@ -31,8 +31,8 @@ Tokens like `--blue`, `--blue-dark`, `--gold`, `--red` encode hue, not purpose. 
 |-------|---------|------------|------------|
 | `--surface-page` | Page background | `#f9fafb` | `#0d0d1a` |
 | `--surface-card` | Card/panel background | `#ffffff` | `#1a1a2e` |
-| `--surface-raised` | Elevated elements (header, callout) | `var(--primary-dark)` | `#0f172a` |
-| `--surface-hero` | Hero banner | `var(--primary-dark)` | `#0f172a` |
+| `--surface-raised` | Elevated elements (header, callout) | `#1e293b` | `#0f172a` |
+| `--surface-hero` | Hero banner | `#1e293b` | `#0f172a` |
 | `--surface-footer` | Footer | `#111827` | `#0f172a` |
 | `--surface-callout` | Informational callouts | `#fef3c7` | `#422006` |
 
@@ -43,7 +43,7 @@ Tokens like `--blue`, `--blue-dark`, `--gold`, `--red` encode hue, not purpose. 
 | `--text-body` | Body text | `#111827` | `#f3f4f6` | 15.3:1 |
 | `--text-subtle` | Meta, secondary info | `#6b7280` | `#9ca3af` | 6.5:1 |
 | `--text-muted` | Source refs, labels | `#9ca3af` | `#6b7280` | 4.7:1 |
-| `--text-link` | Links | `#1e40af` | `#93c5fd` | 4.9:1 |
+| `--text-link` | Links | `#0f766e` | `#5eead4` | 5.2:1 |
 | `--text-inverse` | Text on dark surfaces | `#ffffff` | `#ffffff` | — |
 | `--text-accent` | Emphasized text (callout title) | `#b45309` | `#fbbf24` | 7.5:1 |
 
@@ -51,11 +51,11 @@ Tokens like `--blue`, `--blue-dark`, `--gold`, `--red` encode hue, not purpose. 
 
 | Token | Purpose | Light | Dark |
 |-------|---------|-------|------|
-| `--accent-primary` | Primary accent (borders, links hover) | `#1e40af` | `#93c5fd` |
+| `--accent-primary` | Primary accent (borders, links hover) | `#0d9488` | `#5eead4` |
 | `--accent-warm` | Warning/info accent | `#b45309` | `#fbbf24` |
 | `--accent-success` | Incumbent, approved | `#15803d` | `#4ade80` |
 | `--accent-danger` | Error, deadline | `#b91c1c` | `#fca5a5` |
-| `--accent-subtle-bg` | Subtle background tint (blue) | `#eff6ff` | `#0f172a` |
+| `--accent-subtle-bg` | Subtle background tint (slate) | `#f1f5f9` | `#0f172a` |
 | `--accent-warm-bg` | Subtle background tint (amber) | `#fffbeb` | `#422006` |
 | `--accent-good-bg` | Subtle background tint (green) | `#f0fdf4` | `#14532d` |
 | `--accent-bad-bg` | Subtle background tint (red) | `#fef2f2` | `#7f1d1d` |
@@ -85,8 +85,8 @@ Token names use the full party `id` from the registry (e.g. `democrat` not `dem`
 
 | Token | Purpose | Light | Dark |
 |-------|---------|-------|------|
-| `--label-primary-bg` | "Partisan" race label | `#dbeafe` | `#1e3a5f` |
-| `--label-primary-text` | "Partisan" race label text | `#1e40af` | `#93c5fd` |
+| `--label-primary-bg` | "Partisan" race label | `#f1f5f9` | `#1e293b` |
+| `--label-primary-text` | "Partisan" race label text | `#475569` | `#94a3b8` |
 | `--label-contested-bg` | "Contested" race label | `#fef2f2` | `#7f1d1d` |
 | `--label-contested-text` | "Contested" race label text | `#b91c1c` | `#fca5a5` |
 | `--label-uncontested-bg` | "Uncontested" race label | `#f3f4f6` | `#1f2937` |
