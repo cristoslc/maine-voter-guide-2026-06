@@ -351,6 +351,24 @@ if [ "$needs_get" -gt 0 ]; then
       printf "\r  [Brave] Done. %-70s\n" ""
     fi
   fi
+
+  # --- Phase 5: curl direct trust fallback (for bot-blocked but actually-live URLs) ---
+  if [ "$fail" -gt 0 ]; then
+    still_broken=()
+    for entry in "${broken_urls[@]}"; do
+      url="${entry%%|*}"
+      http_code=$(curl -s -o /dev/null -w "%{http_code}" -L -A "Mozilla/5.0" --max-time "$CURL_TIMEOUT" "$url" 2>/dev/null || echo "000")
+      if is_ok "$http_code"; then
+        pass=$((pass + 1))
+        fail=$((fail - 1))
+        echo "$url|ok" >> "$verified_file"
+      else
+        still_broken+=("$entry")
+      fi
+    done
+    broken_urls=()
+    for e in "${still_broken[@]+"${still_broken[@]}"}"; do broken_urls+=("$e"); done
+  fi
 fi
 
 # --- Update cache ---

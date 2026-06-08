@@ -2433,5 +2433,75 @@ module.exports = [
     "sourcesMain": [
       "source-075-ballotpedia-michael-dougherty"
     ]
+  },
+  {
+    "jurisdiction": "cumberland-county",
+    "slug": "da-2-democratic",
+    "title": "District Attorney District 2 — Democratic Primary",
+    "office": "District Attorney District 2 (Cumberland)",
+    "officeDesc": "Prosecutes all criminal cases in Cumberland County (except homicides, handled by the Attorney General). Oversees diversion programs, victim services, and restorative justice. Four-year term. Total compensation as of 2024: $155,800.",
+    "context": "A heated primary between the incumbent and one of her former prosecutors — fired after telling Sartoris she planned to run. Sartoris defends her progressive record on diversion and sex crimes prosecution. Adams argues the office is dysfunctional and promises real change.",
+    "voting": "You must choose a Democratic primary ballot to vote in this race.",
+    "sourcesMain": [
+      "source-107-press-herald-da-primary",
+      "source-108-vote-for-valerie",
+      "source-109-sartoris-campaign",
+      "source-110-south-portland-sample-ballot"
+    ],
+    "party": {
+      "party": "Democratic",
+      "candidates": [
+        {
+          "name": "Jacqueline Sartoris",
+          "tag": "d",
+          "meta": "Incumbent · Elected 2022 · Brunswick · Brunswick Town Council (former) · Created sex crimes team, diversion programs · Campaign website",
+          "primaryContent": [
+            {
+              "issue": "Sex Crimes Prosecution",
+              "text": "Secured federal grant to test backlogged sexual assault kits countywide. Created dedicated sex crimes prosecution team."
+            },
+            {
+              "issue": "Diversion & Restorative Justice",
+              "text": "Created diversion programs sending >10% of cases to recovery or restorative justice. New Portland Recovery Community Center partnership for first-time offenders."
+            },
+            {
+              "issue": "Prosecution Reform",
+              "text": "\"Smart on crime\" approach. Personally prosecutes the county's mental health docket. Supports Clean Slate Act. \"Are we going to continue with prosecution reform, or go back to stale policy?\""
+            }
+          ],
+          "secondaryContent": [
+            {
+              "heading": "Background",
+              "text": "Brunswick resident. Elected in 2022, unseating incumbent Jonathan Sahrbeck in a progressive-backed primary. Former assistant DA in Kennebec County. Former Brunswick Town Council member. Age 61. Endorsed by Portland councilors Pious Ali, April Fournier, and Kate Sykes."
+            }
+          ]
+        },
+        {
+          "name": "Valerie A. Adams",
+          "tag": "d",
+          "meta": "Age 41 · Pownal · Former ADA (Cumberland & Sagadahoc) · Defense attorney · Cape Elizabeth Town Council 2017-2020 · Campaign website",
+          "primaryContent": [
+            {
+              "issue": "Prosecutorial Reform",
+              "text": "Expand diversion including pre-charge diversion for minor first offenses so no formal criminal charge is ever filed. \"Reserve the most serious tools for the most serious cases.\""
+            },
+            {
+              "issue": "Office Leadership",
+              "text": "Calls Sartoris' leadership \"ineffective.\" Says low morale and dysfunction in the office impact victims' rights and defendants' rights. Promises transparency and availability."
+            },
+            {
+              "issue": "Community Partnerships",
+              "text": "Repair relationships between DA's office and community partners. Work with law enforcement, healthcare, social services, and defense bar on complex problems."
+            }
+          ],
+          "secondaryContent": [
+            {
+              "heading": "Background",
+              "text": "Portland native, Pownal resident. Mount Holyoke College (2008), UMaine Law (2014), Muskie School MPPM (2015). Former ADA in Sagadahoc County (2 years) and Cumberland County (9 months, terminated after telling Sartoris she would run). Now a criminal defense attorney representing indigent clients. Cape Elizabeth Town Council 2017-2020. Age 41. Endorsed by Portland councilors Wes Pelletier and Anna Bullett. Former longtime DA Stephanie Anderson has filed as an independent to run if Sartoris wins the primary."
+            }
+          ]
+        }
+      ]
+    }
   }
 ];

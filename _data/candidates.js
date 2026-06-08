@@ -425,6 +425,29 @@ module.exports = [
       "county-commissioner-4-democratic"
     ],
     "campaignWebsite": "https://sigridforcumberland.wordpress.com/"
+  },
+  {
+    "id": "valerie-adams",
+    "name": "Valerie A. Adams",
+    "party": "democrat",
+    "races": [
+      "da-2-democratic"
+    ],
+    "incumbent": false,
+    "residence": "Pownal",
+    "campaignWebsite": "https://www.voteforvalerie.org/",
+    "ballotpediaUrl": "https://ballotpedia.org/Valerie_A._Adams_(Maine_2nd_Prosecutorial_District_Attorney,_Maine,_candidate_2026)"
+  },
+  {
+    "id": "jacqueline-sartoris",
+    "name": "Jacqueline Sartoris",
+    "party": "democrat",
+    "races": [
+      "da-2-democratic"
+    ],
+    "incumbent": true,
+    "residence": "Brunswick",
+    "campaignWebsite": "https://sartoris4da.me/"
   }
 ]
 

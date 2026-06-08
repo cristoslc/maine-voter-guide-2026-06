@@ -227,5 +227,17 @@ module.exports = [
     aliases: ["Cumberland County Commissioner District 4"],
     jurisdiction: "cumberland-county",
     districtNote: "Covers Cape Elizabeth, South Portland, and part of Portland."
+  },
+  {
+    id: "district-attorney-2",
+    title: "District Attorney — District 2 (Cumberland)",
+    officerTitle: "District Attorney",
+    aliases: ["District Attorney District 2"],
+    jurisdiction: "cumberland-county",
+    termLength: "4 years",
+    termLimit: null,
+    seatsAvailable: 1,
+    officeDesc: "Prosecutes all criminal cases in Cumberland County (except homicides, handled by the Attorney General). Oversees diversion programs, victim services, and restorative justice. Four-year term.",
+    type: "partisan"
   }
 ];

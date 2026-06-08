@@ -1078,6 +1078,61 @@ module.exports = [
     ],
     "candidates": [],
     "accessed": null
+  },
+  {
+    "id": "source-107-press-herald-da-primary",
+    "url": "https://www.pressherald.com/2026/05/26/what-you-need-to-know-about-the-cumberland-county-da-primary/",
+    "label": "Press Herald — Cumberland County DA primary overview",
+    "summary": "What you need to know about the Cumberland County DA primary. Covers the Sartoris vs. Adams race — their history, policy differences, campaign finance, and the independent bid from Stephanie Anderson.",
+    "type": "article",
+    "races": [
+      "da-2-democratic"
+    ],
+    "candidates": [
+      "Valerie Adams",
+      "Jacqueline Sartoris"
+    ],
+    "accessed": "2026-06-08"
+  },
+  {
+    "id": "source-108-vote-for-valerie",
+    "url": "https://www.voteforvalerie.org/",
+    "label": "Valerie Adams campaign website",
+    "summary": "Valerie Adams campaign website with platform, bio, and donation information.",
+    "type": "source",
+    "races": [
+      "da-2-democratic"
+    ],
+    "candidates": [
+      "Valerie Adams"
+    ],
+    "accessed": "2026-06-08"
+  },
+  {
+    "id": "source-109-sartoris-campaign",
+    "url": "https://sartoris4da.me/",
+    "label": "Jackie Sartoris campaign website",
+    "summary": "Jackie Sartoris reelection campaign website highlighting accomplishments with sex assault prosecution, mental health, substance use, and diversion programs.",
+    "type": "source",
+    "races": [
+      "da-2-democratic"
+    ],
+    "candidates": [
+      "Jacqueline Sartoris"
+    ],
+    "accessed": "2026-06-08"
+  },
+  {
+    "id": "source-110-south-portland-sample-ballot",
+    "url": "https://www.southportland.gov/DocumentCenter/View/4525",
+    "label": "South Portland sample ballot — Democratic and Republican primary",
+    "summary": "Official sample ballot from the City of South Portland for the June 9, 2026 State Primary Election. Lists all races and candidates appearing on South Portland ballots including District Attorney District 2.",
+    "type": "official",
+    "races": [
+      "da-2-democratic"
+    ],
+    "candidates": [],
+    "accessed": "2026-06-08"
   }
 ]
 
