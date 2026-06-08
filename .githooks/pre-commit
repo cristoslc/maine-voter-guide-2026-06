@@ -353,10 +353,18 @@ if [ "$needs_get" -gt 0 ]; then
   fi
 
   # --- Phase 5: curl direct trust fallback (for bot-blocked but actually-live URLs) ---
+  # Skips Ballotpedia URLs — they return HTTP 202 for both valid pages and 404s,
+  # and their content is JS-rendered, so curl can't distinguish. Brave Search
+  # (Phase 4) is the only reliable check for Ballotpedia pages.
   if [ "$fail" -gt 0 ]; then
     still_broken=()
     for entry in "${broken_urls[@]}"; do
       url="${entry%%|*}"
+      # Skip Ballotpedia — 202 is ambiguous
+      if [[ "$url" == *ballotpedia.org* ]]; then
+        still_broken+=("$entry")
+        continue
+      fi
       http_code=$(curl -s -o /dev/null -w "%{http_code}" -L -A "Mozilla/5.0" --max-time "$CURL_TIMEOUT" "$url" 2>/dev/null || echo "000")
       if is_ok "$http_code"; then
         pass=$((pass + 1))

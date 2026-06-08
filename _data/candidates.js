@@ -89,7 +89,7 @@ module.exports = [
       "governor-republican"
     ],
     "residence": "Leeds",
-    "ballotpediaUrl": "https://ballotpedia.org/Bobby_Charles_(Maine)"
+    "ballotpediaUrl": "https://ballotpedia.org/Bobby_Charles"
   },
   {
     "id": "jonathan-bush",
@@ -99,7 +99,7 @@ module.exports = [
       "governor-republican"
     ],
     "residence": "Cape Elizabeth",
-    "ballotpediaUrl": "https://ballotpedia.org/Jonathan_Bush_(Maine)"
+    "ballotpediaUrl": "https://ballotpedia.org/Jonathan_Bush"
   },
   {
     "id": "garrett-mason",
@@ -129,7 +129,7 @@ module.exports = [
       "governor-republican"
     ],
     "residence": "Gorham",
-    "ballotpediaUrl": "https://ballotpedia.org/Owen_McCarthy_(Maine)"
+    "ballotpediaUrl": "https://ballotpedia.org/Owen_McCarthy"
   },
   {
     "id": "david-jones",
@@ -139,7 +139,7 @@ module.exports = [
       "governor-republican"
     ],
     "residence": "Falmouth",
-    "ballotpediaUrl": "https://ballotpedia.org/David_Jones_(Maine_governor)"
+    "ballotpediaUrl": "https://ballotpedia.org/David_Jones_(Maine_gubernatorial_candidate)"
   },
   {
     "id": "robert-wessels",
@@ -160,18 +160,7 @@ module.exports = [
       "cd1-republican"
     ],
     "residence": "Kennebunkport",
-    "ballotpediaUrl": "https://ballotpedia.org/Ron_Russell_(Maine)"
-  },
-  {
-    "id": "joshua-pietrowicz",
-    "name": "Joshua Pietrowicz",
-    "party": "republican",
-    "races": [
-      "cd1-republican"
-    ],
-    "residence": "New Gloucester",
-    "ballotpediaUrl": "https://ballotpedia.org/Joshua_Pietrowicz"
-  },
+},
   {
     "id": "anne-carney",
     "name": "Anne Carney",
@@ -210,8 +199,7 @@ module.exports = [
     "races": [
       "hd-121-democratic"
     ],
-    "residence": "South Portland",
-    "ballotpediaUrl": "https://ballotpedia.org/Robert_Cameron_(Maine)"
+    "residence": "South Portland"
   },
   {
     "id": "matthew-beck",
