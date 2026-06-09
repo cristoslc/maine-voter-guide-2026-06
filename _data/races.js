@@ -1326,7 +1326,8 @@ module.exports = [
     }
   },
   {
-    "jurisdiction": "south-portland",
+    "jurisdiction": "cumberland-county",
+    "appearsIn": ["south-portland", "cape-elizabeth"],
     "slug": "state-senate-29-democratic",
     "title": "State Senate District 29 — Democratic Primary",
     "office": "State Senator",
@@ -1401,7 +1402,8 @@ module.exports = [
     }
   },
   {
-    "jurisdiction": "south-portland",
+    "jurisdiction": "cumberland-county",
+    "appearsIn": ["south-portland", "cape-elizabeth"],
     "slug": "state-senate-29-republican",
     "title": "State Senate District 29 — Republican Primary",
     "office": "State Senator",
@@ -2216,6 +2218,7 @@ module.exports = [
   },
   {
     "jurisdiction": "cape-elizabeth",
+    "appearsIn": ["cape-elizabeth", "south-portland"],
     "slug": "hd-121-democratic",
     "title": "State House District 121 — Democratic Primary",
     "office": "State House District 121",
@@ -2250,6 +2253,7 @@ module.exports = [
   },
   {
     "jurisdiction": "cape-elizabeth",
+    "appearsIn": ["cape-elizabeth", "south-portland"],
     "slug": "hd-121-republican",
     "title": "State House District 121 — Republican Primary",
     "office": "State House District 121",

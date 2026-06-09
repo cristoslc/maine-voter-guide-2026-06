@@ -366,69 +366,74 @@ describe("findCrossPartyRace filter", () => {
   });
 });
 
-describe("filterByJurisdictions filter", () => {
-  const filterByJurisdictions = (races, jurisdictionIds) => {
-    if (!races || !jurisdictionIds) return [];
-    return races.filter(r => jurisdictionIds.includes(r.jurisdiction));
+describe("filterByJurisdictions filter (with appearsIn support)", () => {
+  const testGeography = [
+    { id: "maine", name: "Maine", type: "state" },
+    { id: "cumberland-county", name: "Cumberland County", type: "county", parent: "maine" },
+    { id: "south-portland", name: "South Portland", type: "city", parent: "cumberland-county" },
+    { id: "portland", name: "Portland", type: "city", parent: "cumberland-county" },
+    { id: "cape-elizabeth", name: "Cape Elizabeth", type: "town", parent: "cumberland-county" },
+    { id: "westbrook", name: "Westbrook", type: "city", parent: "cumberland-county" },
+  ];
+  const testJurisdictions = [
+    { id: "state-wide", geoRef: "maine" },
+    { id: "cumberland-county", geoRef: "cumberland-county" },
+    { id: "south-portland", geoRef: "south-portland" },
+    { id: "portland", geoRef: "portland" },
+    { id: "cape-elizabeth", geoRef: "cape-elizabeth" },
+    { id: "westbrook", geoRef: "westbrook" },
+  ];
+  const testParentMap = new Map(testGeography.map(g => [g.id, g.parent || null]));
+  const getEffIds = (jid) => {
+    const jur = testJurisdictions.find(j => j.id === jid);
+    if (!jur || !jur.geoRef) return [jid];
+    const geoIds = [jur.geoRef];
+    let parentId = testParentMap.get(jur.geoRef);
+    while (parentId) { geoIds.push(parentId); parentId = testParentMap.get(parentId); }
+    return testJurisdictions.filter(j => geoIds.includes(j.geoRef)).map(j => j.id);
   };
-
-  it("filters races by jurisdiction ids", () => {
-    const result = filterByJurisdictions(races, ["south-portland"]);
-    expect(result).toHaveLength(2);
-  });
-
-  it("returns empty for non-matching jurisdiction", () => {
-    const result = filterByJurisdictions(races, ["portland"]);
-    expect(result).toHaveLength(0);
-  });
-
-  it("returns empty for null input", () => {
-    expect(filterByJurisdictions(null, ["south-portland"])).toHaveLength(0);
-  });
-});
-
-describe("filterByAppearsIn filter", () => {
-  const filterByAppearsIn = (races, jurisdictionId) => {
+  const filterByJurisdictions = (races, jurisdictionId) => {
     if (!races || !jurisdictionId) return [];
+    const effJurIds = getEffIds(jurisdictionId);
     return races.filter(r => {
-      if (!r.appearsIn) return true;
-      return r.appearsIn.includes(jurisdictionId);
+      if (r.appearsIn) return r.appearsIn.includes(jurisdictionId);
+      return effJurIds.includes(r.jurisdiction);
     });
   };
 
-  it("passes races without appearsIn restriction", () => {
-    const result = filterByAppearsIn(races, "south-portland");
+  it("includes unrestricted races via hierarchy", () => {
+    const result = filterByJurisdictions(races, "south-portland");
     expect(result.length).toBeGreaterThan(0);
   });
 
   it("filters Portland-only races from South Portland", () => {
-    const result = filterByAppearsIn(races, "south-portland");
+    const result = filterByJurisdictions(races, "south-portland");
     const portlandOnly = result.filter(r => r.slug === "da-1-democratic" || r.slug === "county-commissioner-5-democratic");
     expect(portlandOnly).toHaveLength(0);
   });
 
   it("includes Portland-only races for Portland", () => {
-    const result = filterByAppearsIn(races, "portland");
+    const result = filterByJurisdictions(races, "portland");
     const da1 = result.find(r => r.slug === "da-1-democratic");
     expect(da1).toBeDefined();
   });
 
   it("includes SD 27 for Portland and Westbrook", () => {
-    const portland = filterByAppearsIn(races, "portland");
+    const portland = filterByJurisdictions(races, "portland");
     expect(portland.find(r => r.slug === "sd-27-democratic")).toBeDefined();
-    const westbrook = filterByAppearsIn(races, "westbrook");
+    const westbrook = filterByJurisdictions(races, "westbrook");
     expect(westbrook.find(r => r.slug === "sd-27-democratic")).toBeDefined();
   });
 
   it("excludes SD 27 from South Portland and Cape Elizabeth", () => {
-    const sp = filterByAppearsIn(races, "south-portland");
+    const sp = filterByJurisdictions(races, "south-portland");
     expect(sp.find(r => r.slug === "sd-27-democratic")).toBeUndefined();
-    const ce = filterByAppearsIn(races, "cape-elizabeth");
+    const ce = filterByJurisdictions(races, "cape-elizabeth");
     expect(ce.find(r => r.slug === "sd-27-democratic")).toBeUndefined();
   });
 
   it("returns empty for null input", () => {
-    expect(filterByAppearsIn(null, "south-portland")).toHaveLength(0);
+    expect(filterByJurisdictions(null, "south-portland")).toHaveLength(0);
   });
 });
 

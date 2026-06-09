@@ -83,16 +83,12 @@ module.exports = function (eleventyConfig) {
     return getEffectiveJurisdictionIds(jurisdictionId, geography, jurisdictions);
   });
 
-  eleventyConfig.addFilter("filterByJurisdictions", function(races, jurisdictionIds) {
-    if (!races || !jurisdictionIds) return [];
-    return races.filter(r => jurisdictionIds.includes(r.jurisdiction));
-  });
-
-  eleventyConfig.addFilter("filterByAppearsIn", function(races, jurisdictionId) {
+  eleventyConfig.addFilter("filterByJurisdictions", function(races, jurisdictionId, geography, jurisdictions) {
     if (!races || !jurisdictionId) return [];
+    const effJurIds = getEffectiveJurisdictionIds(jurisdictionId, geography, jurisdictions);
     return races.filter(r => {
-      if (!r.appearsIn) return true;
-      return r.appearsIn.includes(jurisdictionId);
+      if (r.appearsIn) return r.appearsIn.includes(jurisdictionId);
+      return effJurIds.includes(r.jurisdiction);
     });
   });
 
