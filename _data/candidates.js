@@ -159,8 +159,18 @@ module.exports = [
     "races": [
       "cd1-republican"
     ],
-    "residence": "Kennebunkport",
-},
+    "residence": "Kennebunkport"
+  },
+  {
+    "id": "joshua-pietrowicz",
+    "name": "Joshua Pietrowicz",
+    "party": "republican",
+    "races": [
+      "cd1-republican"
+    ],
+    "residence": "New Gloucester",
+    "ballotpediaUrl": "https://ballotpedia.org/Joshua_Pietrowicz"
+  },
   {
     "id": "anne-carney",
     "name": "Anne Carney",

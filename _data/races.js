@@ -2438,7 +2438,7 @@ module.exports = [
     "jurisdiction": "cumberland-county",
     "slug": "da-2-democratic",
     "title": "District Attorney District 2 — Democratic Primary",
-    "office": "District Attorney District 2 (Cumberland)",
+    "office": "District Attorney — District 2 (Cumberland)",
     "officeDesc": "Prosecutes all criminal cases in Cumberland County (except homicides, handled by the Attorney General). Oversees diversion programs, victim services, and restorative justice. Four-year term. Total compensation as of 2024: $155,800.",
     "context": "A heated primary between the incumbent and one of her former prosecutors — fired after telling Sartoris she planned to run. Sartoris defends her progressive record on diversion and sex crimes prosecution. Adams argues the office is dysfunctional and promises real change.",
     "voting": "You must choose a Democratic primary ballot to vote in this race.",
