@@ -1447,6 +1447,7 @@ module.exports = [
   {
     "jurisdiction": "cumberland-county",
     "slug": "sd-27-democratic",
+    "appearsIn": ["portland", "westbrook"],
     "title": "State Senate District 27 — Democratic Primary",
     "office": "State Senate District 27",
     "officeDesc": "One of 35 senators in Augusta. Portland's southern Senate district (Peaks Island, parts of eastern Portland). Votes on the two-year state budget, property tax relief, environmental regulations, and housing laws. Two-year term (state senate elections rotate in presidential cycles).",
@@ -2144,6 +2145,7 @@ module.exports = [
   {
     "jurisdiction": "cumberland-county",
     "slug": "county-commissioner-4-democratic",
+    "appearsIn": ["cape-elizabeth", "south-portland", "portland", "westbrook"],
     "title": "Cumberland County Commissioner District 4 — Democratic Primary",
     "office": "Cumberland County Commissioner District 4",
     "officeDesc": "Covers Cape Elizabeth, South Portland, and part of Portland. One of three County Commissioners elected at-large from districts. Two-year term. County Commissioners oversee the $130M county budget, sheriff's office, jail, and regional services.",
@@ -2567,6 +2569,7 @@ module.exports = [
   {
     "jurisdiction": "cumberland-county",
     "slug": "da-1-democratic",
+    "appearsIn": ["portland"],
     "title": "District Attorney District 1 — Democratic Primary",
     "office": "District Attorney — District 1 (Cumberland)",
     "officeDesc": "Prosecutes all criminal cases in Cumberland County's 1st Prosecutorial District (except homicides, handled by the Attorney General). Four-year term.",
@@ -2651,6 +2654,7 @@ module.exports = [
   {
     "jurisdiction": "cumberland-county",
     "slug": "county-commissioner-5-democratic",
+    "appearsIn": ["portland"],
     "title": "Cumberland County Commissioner District 5 — Democratic Primary",
     "office": "Cumberland County Commissioner — District 5",
     "officeDesc": "Covers Portland. One of three County Commissioners elected at-large from districts. County Commissioners oversee the $130M county budget, sheriff's office, jail, and regional services.",

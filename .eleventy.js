@@ -88,6 +88,14 @@ module.exports = function (eleventyConfig) {
     return races.filter(r => jurisdictionIds.includes(r.jurisdiction));
   });
 
+  eleventyConfig.addFilter("filterByAppearsIn", function(races, jurisdictionId) {
+    if (!races || !jurisdictionId) return [];
+    return races.filter(r => {
+      if (!r.appearsIn) return true;
+      return r.appearsIn.includes(jurisdictionId);
+    });
+  });
+
   eleventyConfig.addFilter("filterBallotQuestionsByJurisdictions", function(questions, jurisdictionIds) {
     if (!questions || !jurisdictionIds) return [];
     return questions.filter(q => jurisdictionIds.includes(q.jurisdiction));

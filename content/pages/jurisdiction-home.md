@@ -9,7 +9,7 @@ pagination:
 ---
 
 {% set effJurIds = jurisdiction.id | effectiveJurisdictionIds(geography, jurisdictions) %}
-{% set effRaces = races | filterByJurisdictions(effJurIds) %}
+{% set effRaces = races | filterByJurisdictions(effJurIds) | filterByAppearsIn(jurisdiction.id) %}
 {% set effBallots = ballotQuestions | filterBallotQuestionsByJurisdictions(effJurIds) %}
 
 <nav class="breadcrumb" aria-label="Breadcrumb">
