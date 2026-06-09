@@ -1133,6 +1133,35 @@ module.exports = [
     ],
     "candidates": [],
     "accessed": "2026-06-08"
+  },
+  {
+    "id": "source-111-ballotpedia-chellie-pingree",
+    "url": "https://ballotpedia.org/Chellie_Pingree",
+    "label": "Ballotpedia — Chellie Pingree",
+    "summary": "Ballotpedia profile for US Representative Chellie Pingree (ME-01), covering her career, voting record, committee assignments, and election history since 2008.",
+    "type": "reference",
+    "races": [
+      "cd1-democratic"
+    ],
+    "candidates": [
+      "Chellie Pingree"
+    ],
+    "accessed": "2026-06-08"
+  },
+  {
+    "id": "source-112-sos-primary-candidate-list",
+    "url": "https://www.maine.gov/sos/sites/maine.gov.sos/files/inline-files/2026%20Primary%20Candidate%20List%20posting%20FINAL%203.16.26.xlsx",
+    "label": "Maine SOS — 2026 Primary Candidate List (FINAL)",
+    "summary": "Official Maine Secretary of State candidate list for the June 9, 2026 primary election. Confirms all candidates filed for DA 1, Sheriff, Judge of Probate, and County Commissioner District 5.",
+    "type": "official",
+    "races": [
+      "da-1-democratic",
+      "sheriff-cumberland-democratic",
+      "judge-of-probate-cumberland-democratic",
+      "county-commissioner-5-democratic"
+    ],
+    "candidates": [],
+    "accessed": "2026-06-08"
   }
 ]
 

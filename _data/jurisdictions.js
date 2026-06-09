@@ -52,7 +52,7 @@ module.exports = [
     geoRef: "cape-elizabeth",
     geoScope: "municipal",
     county: "Cumberland",
-    stateSenateDistricts: [],
+    stateSenateDistricts: [29],
     stateHouseDistricts: [121, 123]
   },
   {

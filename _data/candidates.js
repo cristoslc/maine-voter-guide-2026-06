@@ -446,6 +446,58 @@ module.exports = [
     "incumbent": true,
     "residence": "Brunswick",
     "campaignWebsite": "https://sartoris4da.me/"
+  },
+  {
+    "id": "chellie-pingree",
+    "name": "Chellie Pingree",
+    "party": "democrat",
+    "races": [
+      "cd1-democratic"
+    ],
+    "incumbent": true,
+    "residence": "North Haven",
+    "ballotpediaUrl": "https://ballotpedia.org/Chellie_Pingree",
+    "campaignWebsite": "https://www.chelliepingree.com/"
+  },
+  {
+    "id": "kathryn-slattery",
+    "name": "Kathryn M. Slattery",
+    "party": "democrat",
+    "races": [
+      "da-1-democratic"
+    ],
+    "incumbent": true,
+    "residence": "Old Orchard Beach"
+  },
+  {
+    "id": "kevin-joyce",
+    "name": "Kevin J. Joyce",
+    "party": "democrat",
+    "races": [
+      "sheriff-cumberland-democratic"
+    ],
+    "incumbent": true,
+    "residence": "Standish"
+  },
+  {
+    "id": "paul-aranson",
+    "name": "Paul Aranson",
+    "party": "democrat",
+    "races": [
+      "judge-of-probate-cumberland-democratic"
+    ],
+    "incumbent": true,
+    "residence": "Scarborough"
+  },
+  {
+    "id": "marpheen-chann",
+    "name": "Marpheen Chann",
+    "party": "democrat",
+    "races": [
+      "county-commissioner-5-democratic"
+    ],
+    "incumbent": true,
+    "residence": "Portland"
   }
 ]
 

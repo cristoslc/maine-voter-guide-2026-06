@@ -239,5 +239,49 @@ module.exports = [
     seatsAvailable: 1,
     officeDesc: "Prosecutes all criminal cases in Cumberland County (except homicides, handled by the Attorney General). Oversees diversion programs, victim services, and restorative justice. Four-year term.",
     type: "partisan"
+  },
+  {
+    id: "cumberland-sheriff",
+    title: "Cumberland County Sheriff",
+    officerTitle: "Sheriff",
+    aliases: ["Sheriff"],
+    jurisdiction: "cumberland-county",
+    termLength: "4 years",
+    termLimit: null,
+    seatsAvailable: 1,
+    officeDesc: "Chief law enforcement officer for Cumberland County. Oversees the sheriff's office, county jail, court security, and civil process. Four-year term.",
+    type: "partisan"
+  },
+  {
+    id: "cumberland-judge-of-probate",
+    title: "Cumberland County Judge of Probate",
+    officerTitle: "Judge of Probate",
+    aliases: ["Judge of Probate"],
+    jurisdiction: "cumberland-county",
+    termLength: "4 years",
+    termLimit: null,
+    seatsAvailable: 1,
+    officeDesc: "Presides over the Cumberland County Probate Court. Handles wills, estates, guardianships, conservatorships, adoptions, and name changes. Four-year term.",
+    type: "partisan"
+  },
+  {
+    id: "district-attorney-1",
+    title: "District Attorney — District 1 (Cumberland)",
+    officerTitle: "District Attorney",
+    aliases: ["District Attorney District 1", "District Attorney District 1 (Cumberland)"],
+    jurisdiction: "cumberland-county",
+    termLength: "4 years",
+    termLimit: null,
+    seatsAvailable: 1,
+    officeDesc: "Prosecutes all criminal cases in Cumberland County's 1st Prosecutorial District (except homicides, handled by the Attorney General). Four-year term.",
+    type: "partisan"
+  },
+  {
+    id: "cumberland-county-commissioner-5",
+    extends: "county-commissioner",
+    title: "Cumberland County Commissioner — District 5",
+    aliases: ["Cumberland County Commissioner District 5"],
+    jurisdiction: "cumberland-county",
+    districtNote: "Covers Portland."
   }
 ];

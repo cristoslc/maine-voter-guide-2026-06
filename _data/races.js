@@ -2503,5 +2503,177 @@ module.exports = [
         }
       ]
     }
+  },
+  {
+    "jurisdiction": "state-wide",
+    "slug": "cd1-democratic",
+    "title": "Congressional District 1 — Democratic Primary",
+    "office": "US Representative — Congressional District 1",
+    "officeDesc": "Votes on federal laws and the federal budget. All spending bills originate in the House. Your representative votes on: healthcare, Social Security, taxes, immigration, foreign policy, and the federal budget that directly impacts Maine. Two-year term.",
+    "context": "Incumbent Chellie Pingree has held this seat since 2009. She is unopposed in the Democratic primary and will face the Republican primary winner in November.",
+    "voting": "You must choose a Democratic primary ballot to vote in this race.",
+    "sourcesMain": [
+      "source-111-ballotpedia-chellie-pingree"
+    ],
+    "party": {
+      "party": "Democratic",
+      "candidates": [
+        {
+          "name": "Chellie Pingree",
+          "tag": "d",
+          "meta": "Incumbent since 2009 · North Haven · Unopposed in Democratic primary",
+          "primaryContent": [
+            {
+              "issue": null,
+              "text": "Pingree has held this seat since 2009, winning by comfortable margins in a strongly Democratic district. CD1 voted for Harris by a significant margin in 2024. The Republican primary winner will face an uphill general election battle."
+            }
+          ],
+          "secondaryContent": [
+            {
+              "heading": "Background",
+              "text": "North Haven resident. First elected in 2008. Serves on the House Appropriations Committee. Mother of Hannah Pingree, Democratic gubernatorial candidate. Former Majority Leader of the Maine State Senate."
+            }
+          ]
+        }
+      ],
+      "crossPartyPreview": [
+        {
+          "name": "Ron Russell",
+          "party": "Republican",
+          "tag": "r",
+          "meta": "Retired Army colonel · Kennebunkport · Lost to Pingree in 2022",
+          "primaryContent": [
+            {
+              "issue": null,
+              "text": "Russell ran against Pingree in 2022, losing by 95,000+ votes."
+            }
+          ]
+        },
+        {
+          "name": "Joshua Pietrowicz",
+          "party": "Republican",
+          "tag": "r",
+          "meta": "Age 26 · New Gloucester · Sales professional · Political newcomer",
+          "primaryContent": [
+            {
+              "issue": null,
+              "text": "Pietrowicz offers \"new energy, new blood\" compared to Russell."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "jurisdiction": "cumberland-county",
+    "slug": "da-1-democratic",
+    "title": "District Attorney District 1 — Democratic Primary",
+    "office": "District Attorney — District 1 (Cumberland)",
+    "officeDesc": "Prosecutes all criminal cases in Cumberland County's 1st Prosecutorial District (except homicides, handled by the Attorney General). Four-year term.",
+    "context": "Incumbent Kathryn Slattery is unopposed in the Democratic primary. No Republican filed — she will be unopposed in November.",
+    "voting": "You must choose a Democratic primary ballot to vote in this race. Appears on Portland ballots (1st Prosecutorial District).",
+    "sourcesMain": [
+      "source-112-sos-primary-candidate-list"
+    ],
+    "party": {
+      "party": "Democratic",
+      "candidates": [
+        {
+          "name": "Kathryn M. Slattery",
+          "tag": "d",
+          "meta": "Incumbent · Old Orchard Beach",
+          "primaryContent": [
+            {
+              "issue": null,
+              "text": "Incumbent District Attorney for Cumberland County's 1st Prosecutorial District. Unopposed in the Democratic primary with no Republican filed for November."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "jurisdiction": "cumberland-county",
+    "slug": "sheriff-cumberland-democratic",
+    "title": "Sheriff (Cumberland) — Democratic Primary",
+    "office": "Cumberland County Sheriff",
+    "officeDesc": "Chief law enforcement officer for Cumberland County. Oversees the sheriff's office, county jail, court security, and civil process. Four-year term.",
+    "context": "Incumbent Kevin Joyce is the only candidate. No Republican filed — he will be unopposed in November.",
+    "voting": "You must choose a Democratic primary ballot to vote in this race.",
+    "sourcesMain": [
+      "source-112-sos-primary-candidate-list"
+    ],
+    "party": {
+      "party": "Democratic",
+      "candidates": [
+        {
+          "name": "Kevin J. Joyce",
+          "tag": "d",
+          "meta": "Incumbent · Standish",
+          "primaryContent": [
+            {
+              "issue": null,
+              "text": "Long-serving incumbent Cumberland County Sheriff. Unopposed in the Democratic primary with no Republican filed for November."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "jurisdiction": "cumberland-county",
+    "slug": "judge-of-probate-cumberland-democratic",
+    "title": "Judge of Probate (Cumberland) — Democratic Primary",
+    "office": "Cumberland County Judge of Probate",
+    "officeDesc": "Presides over the Cumberland County Probate Court. Handles wills, estates, guardianships, conservatorships, adoptions, and name changes. Four-year term.",
+    "context": "Incumbent Paul Aranson is the only candidate. No Republican filed — he will be unopposed in November.",
+    "voting": "You must choose a Democratic primary ballot to vote in this race.",
+    "sourcesMain": [
+      "source-112-sos-primary-candidate-list"
+    ],
+    "party": {
+      "party": "Democratic",
+      "candidates": [
+        {
+          "name": "Paul Aranson",
+          "tag": "d",
+          "meta": "Incumbent · Scarborough",
+          "primaryContent": [
+            {
+              "issue": null,
+              "text": "Incumbent Cumberland County Judge of Probate. Unopposed in the Democratic primary with no Republican filed for November."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "jurisdiction": "cumberland-county",
+    "slug": "county-commissioner-5-democratic",
+    "title": "Cumberland County Commissioner District 5 — Democratic Primary",
+    "office": "Cumberland County Commissioner — District 5",
+    "officeDesc": "Covers Portland. One of three County Commissioners elected at-large from districts. County Commissioners oversee the $130M county budget, sheriff's office, jail, and regional services.",
+    "context": "Incumbent Marpheen Chann is the only candidate. No Republican filed — he will be unopposed in November.",
+    "voting": "You must choose a Democratic primary ballot to vote in this race. Appears on Portland ballots.",
+    "sourcesMain": [
+      "source-112-sos-primary-candidate-list"
+    ],
+    "party": {
+      "party": "Democratic",
+      "candidates": [
+        {
+          "name": "Marpheen Chann",
+          "tag": "d",
+          "meta": "Incumbent · Portland",
+          "primaryContent": [
+            {
+              "issue": null,
+              "text": "Incumbent Cumberland County Commissioner for District 5 (Portland). Unopposed in the Democratic primary with no Republican filed for November."
+            }
+          ]
+        }
+      ]
+    }
   }
 ];
